@@ -1,0 +1,177 @@
+main {
+    padding: 100px 0;
+    background-color: rgb(15, 207, 255);
+    height: 100vh;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1140px;
+    
+}
+.header {
+    left: -300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.img_phone {
+    max-width: 500px;
+    height: auto;
+}
+.black {
+    left: 0;
+    position: absolute;
+    width: 500px;
+    height: 30px;
+    top: 400px;
+    z-index: 1;
+}
+img {
+    width: 100%;
+    object-fit: cover;
+
+}
+.img_phone {
+    animation: redmi 10s linear infinite ;
+    position: absolute;
+    width: 500px;
+    
+}
+.redmi {
+    z-index: 100;
+}
+@keyframes redmi {
+    0% {
+        top: -50px;
+        left: 0px;
+       transform: scale(0.5);
+    }
+    5% {
+        top: -40px;
+        left: -100px;
+         transform: scale(0.55);
+    }
+    10% {
+        top: -30px;
+        left: -200px;
+        transform: scale(0.6);
+    }
+    15% {
+        top: -20px;
+        left: -300px;
+        transform: scale(0.65);
+    }
+    20% {
+        top: -10px;
+        left: -400px;
+        transform: scale(0.70);
+    }
+     22.5% {
+        top: -5px;
+        left: -435px;
+        transform: scale(0.725);
+         transform: rotateY(30deg);
+    }
+    25% {
+        top: 0px;
+        left: -450px;
+        transform: scale(0.75);
+        transform: rotateY(45deg);
+    }
+     27.5% {
+        top: 5px;
+        left: -435px;
+        transform: scale(0.775);
+         transform: rotateY(30deg);
+    }
+    30%{
+        top: 10px;
+        left: -400px;
+        transform: scale(0.80);
+    }
+    35% {
+        top: 20px;
+        left: -300px;
+        transform: scale(0.85);
+    }
+    40%{
+        top: 30px;
+        left: -200px;
+        transform: scale(0.90);
+    }
+    45% {
+        top: 40px;
+        left: -100px;
+        transform: scale(0.95);
+    }
+    50%{
+        top: 50px;
+        left: 0px;
+        transform: scale(1);
+    }
+    55%{
+        top: 40px;
+        left: 100px;
+        transform: scale(0.95);
+    }
+    60%{
+        top: 30px;
+        left: 200px;
+        transform: scale(0.90);
+    }
+    65%{
+        top: 20px;
+        left: 300px;
+          transform: scale(0.85);
+    }
+    70%{
+        top: 10px;
+        left: 400px;
+        transform: scale(0.80);
+    }
+    72.5% {
+        top: 5px;
+        left: 435px;
+        transform: scale(0.775);
+    }
+    75%{
+       top: 0px;
+        left: 450px;
+        transform: scale(0.75);
+        transform: rotateY(180deg);
+    }
+    77.5% {
+        top: -5px;
+        left: 435px;
+        transform: scale(0.725);
+    }
+    80%{
+        top: -10px;
+        left: 400px;
+        transform: scale(0.70);
+    }
+    85%{
+        top: -20px;
+        left: 300px;
+        transform: scale(0.65);
+    }
+    90%{
+        top: -30px;
+        left: 200px;
+        transform: scale(0.6);
+    }
+    95%{
+        top: -40px;
+        left: 100px;
+        transform: scale(0.55);
+    }
+    100%{
+        top: -50px;
+        left: 0px;
+        transform: scale(0.50);
+    }
+}

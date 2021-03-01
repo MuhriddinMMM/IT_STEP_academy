@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(158, 158, 115);
+}
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+.round{
+
+    margin:100px 0 0 100px;
+    border: 10px solid #008b8b;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    border-radius: 50%;
+}
+.point{
+    margin:230px 0 0 230px;
+    border: 20px solid #008b8b;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+
+
+}
+.minute {
+    margin:245px 0 0 250px;
+    border: 5px solid #ff0707;
+    width: 170px;
+    height: 10px;
+    position: absolute;
+    border-radius: 10px;
+    transform-origin: left;
+    animation: minutes 3600s linear infinite;
+}
+
+@keyframes minutes{
+    from{ transform: rotate(0deg);
+
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.second{
+    margin:245px 0 0 250px;
+    border: 5px solid #d2ff07;
+    width: 210px;
+    height: 10px;
+    position: absolute;
+    border-radius: 100px;
+    transform-origin: left;
+    animation: seconds 60s linear infinite;
+   
+
+
+}
+@keyframes seconds{
+    from{ transform: rotate(0deg);
+
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+.hour{
+    margin:240px 0 0 250px;
+    border: 10px solid #8b0000;
+    width: 150px;
+    height: 10px;
+    position: absolute;
+    border-radius: 100px;
+    transform-origin: left;
+    animation: hours 216000s linear infinite;
+}
+@keyframes hours{
+    from{ transform: rotate(0deg);
+
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.number_twelve {
+    margin:30px 0 0 220px;
+    font-size: 48px;
+}

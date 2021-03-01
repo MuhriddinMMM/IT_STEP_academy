@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <style>
+        .btn {
+            padding: 5px 10px;
+            border-radius: 3px;
+            background-color: blueviolet;
+            color: white;
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+    <!-- 
+    <input type="button" value="Click me"
+        onclick="showAlert()"
+    > -->
+    <!-- <input value="Click me!" type="button" id="el"> -->
+
+    <div class="btn" id="btn" >
+        This is div
+    </div>
+
+    
+    <script>
+
+        // function showAlert(){
+        //    alert('Mouse Over!')
+        // }
+        // el.onclick = function () {
+        //     alert('Element clicked')
+        // }
+        // el.oncontextmenu = function () {
+        //     console.log('Context menu')
+        // }
+
+        // function sayThanks() {
+        //     alert('Thanks')
+        // }
+        // el.onclick = sayThanks
+
+        btn.onclick = function (event) {
+            // console.log(event.type)
+            // console.log(event.clientX)
+            // console.log(event.clientY)
+            // console.log(event.target.value)
+            btn.style.background = 'red'
+            btn.style.position = 'absolute'
+            btn.style.left = '50px'
+            btn.style.top = '100px'
+        }
+        
+
+    </script>
+
+</body>
+
+</html>

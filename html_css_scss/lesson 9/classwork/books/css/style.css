@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+    background-color: rgb(250, 250, 194);
+    
+}
+body{
+    overflow: hidden;
+    height: 100vh;
+    
+}
+.animation{
+    margin-left: 600px;
+    width: 1200px;
+}
+h2{
+    margin:100px 0 0 150px ;
+}
+
+.calc{
+    transform: rotate(330deg);
+    width: 60px;
+    height: 60px;
+    margin: 210px 0 0 85px;
+    position: absolute;
+    animation: calc 1s linear  alternate;
+}
+
+@keyframes calc{
+    from{
+        top:40vh;
+    }
+    to{
+       top: 130px;
+    }
+}
+.book{
+    transform: rotate(340deg);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin: 150px 0 0 160px;
+    animation: calc 1.5s linear  alternate;
+}
+
+.paper{
+    transform: rotate(20deg);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin: 150px 0 0 280px;
+    animation: calc 2s linear  alternate;
+}
+.pallete{
+    transform: rotate(220deg);
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    margin: 210px 0 0 380px;
+    animation: calc 2.5s linear  alternate;
+}
+.pencil{
+    transform: rotate(90deg);
+    width: 60px;
+    height: 60px;
+    margin: 280px 0 0 240px;
+    position: absolute;
+    animation: calc 3s linear  alternate;
+}

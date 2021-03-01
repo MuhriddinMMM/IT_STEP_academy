@@ -1,0 +1,7 @@
+.header_bg {
+    height: 50vw;
+    max-height: 90vh;
+    background-image: url(../img/christian-joudrey-u_nsiSvPEak-unsplash.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}

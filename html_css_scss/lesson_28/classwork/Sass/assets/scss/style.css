@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+input[type=text] {
+  border: none;
+  outline: none;
+}
+
+.card {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  background-color: #e7c5c5;
+}
+
+.card {
+  display: -ms-grid;
+  display: grid;
+  display: -webkit-grid;
+  -ms-grid-columns: 300px;
+      grid-template-columns: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5rem 0 0 0;
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    -ms-grid-columns: 600px;
+        grid-template-columns: 600px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    -ms-grid-columns: 700px;
+        grid-template-columns: 700px;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 968px) {
+  .card {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.card__item {
+  padding: 1rem 1.5rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  -ms-box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  -webkit-transition: .4s all;
+  transition: .4s all;
+}
+
+.card__item:hover {
+  -ms-box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card__data {
+  color: #333;
+}
+
+.card__title {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.card .button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.6rem;
+  background-color: #4b1919;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.card .button:hover {
+  background-color: #e7c5c5;
+}
+/*# sourceMappingURL=style.css.map */

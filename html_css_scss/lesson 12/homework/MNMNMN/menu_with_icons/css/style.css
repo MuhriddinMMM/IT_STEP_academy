@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color:#f6f6f6;
+    height: 100%;
+    position: relative;
+}
+.container {
+    margin: 0 auto;
+}
+.content {
+    margin-left: 200px;
+    padding: 50px;
+    text-align: left;
+} 
+ul {
+    padding: 0;
+    width: 400px;
+    background-color: #8a8a8a;
+}
+li {
+    overflow: hidden;
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    padding: 50px 0 50px 140px ;
+    display: block;
+    color: #fff;
+    margin: 0;
+    text-align: left;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.menus {
+    padding-left: 25px;
+}
+ul li:hover {
+    background-color: #696969;
+    cursor: pointer;
+}
+nav { 
+    width: 110px; 
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #8a8a8a;
+    overflow: hidden;
+    transition: 1s ease-in;
+}
+nav:hover {
+    left: 0;
+    width: 400px;
+}
+h2 {
+    font-size: 32px;
+    padding-top: 50px;
+}
+.edit {
+    background: url(../img/edit.png) 0 0/110px no-repeat;
+   
+}
+.favorites {
+    background: url(../img/favorites.png) 0 0/110px no-repeat;
+}
+.history {
+    background: url(../img/history.png) 0 0/110px no-repeat;
+}
+.security {
+    background: url(../img/security.png) 0 0/110px no-repeat;
+}
+.setting {
+    background: url(../img/settings.png) 0 0/110px no-repeat;
+}

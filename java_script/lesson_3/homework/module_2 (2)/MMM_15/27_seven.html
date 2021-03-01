@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        27. Переместить элемент массива из одной позиции в другую
+Напишите функцию moveElement(arr,from,to), которая позволяет переместить элемент массива из позиции from в позицию to.
+
+function moveElement(arr,from,to) {
+
+// Ваш код
+
+}
+
+var arr = [ 'a', 'b', 'c', 'd', 'e'];
+document.writeln(moveElement(arr,3,1)); // ["a", "d", "b", "c", "e"]
+    </p>
+    <script>
+        function moveElement(arr,from,to) {
+            arr.splice(to,0,arr.splice(from,1)[0]);
+            return arr;
+            
+}
+
+var arr = [ 'a', 'b', 'c', 'd', 'e'];
+document.writeln(moveElement(arr,3,1)); // ["a", "d", "b", "c", "e"]
+    </script>
+</body>
+</html>

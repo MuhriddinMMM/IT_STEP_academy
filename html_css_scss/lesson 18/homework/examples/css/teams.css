@@ -1,0 +1,43 @@
+.tab {
+    flex: 1 0 20%;
+    cursor: pointer;
+    overflow: hidden;
+    transition: flex-basis 500ms ease-in-out;
+    position: relative;
+}
+
+
+.tab:hover {
+    flex-basis: 35%;
+    overflow: visible;
+}
+.tab:hover .tab-details {
+    opacity: 1;
+}
+.name {
+    font-size: 1.3em;
+}
+
+.speciality {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.tab-details {
+    opacity: 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.57);
+    list-style-type: none;
+    line-height: 2;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transition: .5s;
+}
+
+.tab-info {
+    text-align: center;
+}
+.tab:hover .tab-info {margin-left: 20%;}
+.tab:hover .tab-details {left: 0;}

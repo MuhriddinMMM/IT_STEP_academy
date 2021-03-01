@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --header-height: 3rem;
+
+  //! Colors
+  --first-color: #da2535;
+  --first-color-alt: #c42130;
+  --first-color-send: #de3b49;
+  --title-color: #161212;
+  --text-color: #5b5757;
+  --text-color-light: #8f8a8a;
+  --body-color: #fefbfb;
+  --container-color: #fff;
+
+  //! Font and typography
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+
+  //! Font weight
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  //! Margenes
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  //! z index
+
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+//! Variables Dark theme
+body.dark-theme {
+  --first-color-send: #161212;
+  --title-color: #f3f1f1;
+  --text-color: #d1c7c8;
+  --body-color: #251d1e;
+  --container-color: #302728;
+}
+
+%container {
+  max-width: 1140px;
+  width: calc(100% - 3rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+%bd_container {
+  max-width: 968px;
+  width: calc(100% - 3rem);
+  margin-left: var(--mb-3);
+  margin-right: var(--mb-3);
+}
+
+@mixin mobile_min() {
+  @media screen and (min-width: 200px) {
+    @content;
+  }
+}
+
+@mixin mobile_max() {
+  @media screen and (max-width: 359px) {
+    @content;
+  }
+}
+
+@mixin tablet_min() {
+  @media screen and (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin laptop_min() {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin laptop_max() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop_min() {
+  @media screen and (min-width: 968px) {
+    @content;
+    :root {
+      --biggest-font-size: 3rem;
+      --h2-font-size: 1.75rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: 0.875rem;
+    }
+  }
+}

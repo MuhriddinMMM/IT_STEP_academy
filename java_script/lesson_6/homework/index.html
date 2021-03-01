@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .circle {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: bisque
+        }
+    </style>
+
+    <input type="text" name="" id="">
+
+    <button id="upt" class="btn">Update</button>
+    <div id="buttons">
+        <button class="btn" tag="some">Кнопка</button>
+        <button class="btn">Кнопка</button>
+        <button class="btn">Кнопка</button>
+        <button class="btn">Кнопка</button>
+        <button class="">Кнопка</button>
+        <button class="btn">Кнопка</button>
+        <button class="btn">Кнопка</button>
+    </div>
+
+    <div class="circle" id="circle">
+
+    </div>
+    <div class="card">
+        <div id="card-header">
+
+        </div>
+        <div class="card-body" id="card_body">
+            asd
+        </div>
+        <div id="card-footer"></div>
+    </div>
+
+
+
+    <script>
+        'use strict'
+        // console.log(window.navigator)
+        // console.log(window.history)
+        // var btn = document.getElementsByClassName('btn')
+        upt.onclick = function () {
+            // window.location.href = 'about.html';
+            // window.location.reload()
+
+            // for (var i = 0; i < btn.length; i++) {
+            //     if (i % 2 != 0) {
+            //        continue;
+            //     }
+            //     btn[i].style.background = 'red'
+            //     console.log()
+            // }
+            document.body.removeChild(circle)
+        }
+        // var btn = document.getElementById('upt')
+        // console.log(upt.parentNode)
+
+        var img = new Image(1000, 500);
+        img.src = 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg'
+        document.body.appendChild(img)
+
+
+        // console.log(upt)
+        // console.log(buttons.firstChild)
+       
+        var polygon = document.createElement('button')
+        var attr = document.createAttribute('id')
+        var className = document.createAttribute('class')
+        var text = document.createTextNode('Some text')
+        attr.value = 'change p'
+        className.value = 'class'
+        polygon.setAttributeNode(className)
+        
+        
+        
+        polygon.setAttributeNode(attr)
+        polygon.appendChild(text)
+        document.body.appendChild(polygon)
+        console.log(polygon)
+
+
+    </script>
+</body>
+
+</html>

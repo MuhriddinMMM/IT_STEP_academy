@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+ul, ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+    font-size: 1rem;
+    font-weight: normal;
+}
+input[type=text] {
+    border: none;
+    outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

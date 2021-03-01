@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    
+}
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+}
+.footer {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: #2a4f6e;
+}
+.footer .footer_top{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+div {
+    display: block;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+
+
+p{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 12px;
+    padding-top: 10px;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+ul{
+    text-decoration: none;
+    list-style: none;
+}
+.menu::before,
+.menu::after{
+    content: "";
+    display: table;
+}
+.menu::after{
+    clear: both;
+    content: "";
+}
+.first{
+    float: left;
+    padding: 30px 100px 0 100px;
+}
+.second{
+    float: left;
+    padding: 30px 100px 0 100px;
+}
+.third{
+    float: right;
+    padding: 40px 100px 20px 100px;
+    
+}
+
+.menu a:hover{
+    text-decoration: underline;
+}
+
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+li {
+    list-style: none;
+}
+.social{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin-left: 15px;
+    
+}
+a, button {
+    
+    outline: medium none;
+}
+.fb{
+    background: url(../img/fb_gray.png) 0 0/48px no-repeat;
+}
+.insta{
+    background: url(../img/insta_gray.png) 0 0/48px no-repeat;
+}
+.youtube{
+    background: url(../img/youtube_gray.png) 0 0/48px no-repeat;
+}
+.fb:hover{
+    background: url(../img/fb.png) 0 0/48px no-repeat;
+}
+.insta:hover{
+    background: url(../img/insta.png) 0 0/48px no-repeat;
+}
+.youtube:hover{
+    background: url(../img/youtube.png) 0 0/48px no-repeat;
+}
+
+.col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+
+
+
+
+.footer .copy-right_text {
+    padding-bottom: 30px;
+}
+.footer .footer_border {
+    border-top: 1px solid #f5f5f5;
+    padding-bottom: 10px;
+}

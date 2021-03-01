@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <label for="">
+                <span>First name</span>
+                <input type="text" id="fname" name="firstname">
+            </label>
+        </li>
+        <li>
+            <label for="">
+                <span>Last name</span>
+                <input type="text" id="lname" name="lastname">
+            </label>
+        </li>
+        <li>
+            <label for="">
+                <span>Email</span>
+                <input type="email" id="email" name="userEmail">
+            </label>
+        </li>
+        <li>
+            <label for="">
+                <span>Password</span>
+                <input type="password" id="password" name="userPassword">
+            </label>
+        </li>
+        <li>
+            <label for="">
+                <span>Subscribe?</span>
+                <input type="checkbox" id="news" name="newsCheck" checked >
+            </label>
+        </li>
+        <li>
+            <label for="">
+                <span>Choose pizza</span>
+                <select name="Nameofpizza" id="Nameofpizza">
+                    <option value="">Margherita</option>
+                    <option value="">PIzzaaaaa</option>
+                    <option value="">pizzzzzzz</option>
+                </select>
+            </label>
+        </li>
+        <fieldset>
+            <legend>Select size</legend>
+            <ul>
+                <li>
+                    <label for="">
+                        <span>Small</span>
+                        <input type="radio" id="small" name="size" value="small">
+                    </label>
+                </li>
+                <li>
+                    <label for="">
+                        <span>Medium</span>
+                        <input type="radio" id="Medium" name="size" value="medium" checked>
+                    </label>
+                </li>
+                <li>
+                    <label for="">
+                        <span>Large</span>
+                        <input type="radio" id="Large" name="size" value="Large" checked>
+                    </label>
+                </li>
+            </ul>
+        </fieldset>
+        <li>
+            <p>Gender</p>
+            <input type="radio" value="male" id="gender1" name="sex" checked>
+            <label for="gender1">Male</label>
+            <input type="radio" value="female" id="gender2" name="sex">
+            <label for="gender2">Female</label>
+            <input type="radio" value="other" id="gender3" name="sex" disabled>
+            <label for="gender3">Other</label>
+        </li>
+        <li id="buttons">
+            <input type="submit" id="submitBtn" value="Register">
+        </li>
+    </ul>
+</body>
+</html>

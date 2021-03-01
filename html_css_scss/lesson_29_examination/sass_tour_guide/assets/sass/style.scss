@@ -1,0 +1,51 @@
+@import "reset";
+@import "setup";
+
+//todo Header
+
+.l-header {
+  @include l-header();
+}
+
+.nav {
+  //*Mobile_view
+
+  @include nav();
+  @extend %container;
+  @include mobile(){
+    &__logo {
+      font-weight: $bold;
+      color: $text-color;
+      &:hover {
+        color: $border-color;
+      }
+    }
+    &__item {
+      margin-bottom: $secondary-size;
+    }
+    &__link {
+      color: $text-color;
+      font-weight: $bold;
+      transition: 0.3s;
+      &:hover {
+        color: #979797;
+      }
+    }
+    &__toggle {
+      color: $text-color;
+      font-weight: $bold;
+      font-size: 1.3rem;
+      cursor: pointer;
+      span {
+        width: 30px;
+        height: 4px;
+        margin-bottom: 6px;
+        background: $bgc-color;
+        display: block;
+      }
+    }
+  }
+ 
+  // @include tablet();
+
+}

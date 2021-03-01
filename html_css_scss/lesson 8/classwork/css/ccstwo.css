@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    min-height: 100&;
+}
+#callback{
+    position: fixed;
+    left: -300px;
+    top: 50vh;
+    width: 300px;
+    height: 150px;
+    background-color: rgba();
+    transition: all 0.3s ease-in-out;
+}
+#callback:hover{
+    left: 0;
+    box-shadow: 0 10px 30px 0 black;
+}
+#callback p{
+    color: grey;
+    padding: 30px;
+}
+#callback:after{
+    content: 'ABRATNAYA SVYAZ';
+    background-color: rgb(138, 67, 253);
+    text-align: center;
+    color: #f5f5f5;
+    border-radius: 0 0 8px 8px;
+    padding: 5px 0;
+    width: 150px; 
+    /* shirina psevda elementa */
+    position: absolute;
+    /* pazitsionirivanir absolyutnoe */
+    left: 300px;
+    /* pazitsiya sleva raven shirina bloka */
+    top: 150px;
+    /* pazitsiya sverxu ravna visote bloka */
+    transform: rotate(-90deg) translateX(0);
+    transform-origin: top left;
+
+}

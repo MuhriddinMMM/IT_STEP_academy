@@ -1,0 +1,18 @@
+body {
+    background: url(../img/3-35503_full-hd-wallpapers-full-hd-background-lamborghini.jpg) 0 0/cover no-repeat;
+}
+#teacher_book {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.bgc_reg {
+    padding: 30px 50px;
+    background-color: rgba(255, 255, 255, 0.527);
+    margin-bottom: 20px;
+}
+a {
+    text-decoration: none;
+    font-size: 12px;
+}

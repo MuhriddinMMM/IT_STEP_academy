@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+table{
+    border-collapse: collapse;
+}
+/* .first{
+    background-color:#e1e1e1 ;
+}
+.second{
+    background-color: #1ed6d8;
+}
+.third{
+    background-color: #95c754;
+}
+.forth{
+    background-color: #fdcf31;
+}
+.fifth{
+    background-color: #f54d40;
+} */
+
+tr td{
+    
+}
+tr th{
+      
+}
+tr td:first-child{
+    background-color:#e1e1e1;
+    
+    text-align: left;
+    width: 300px;
+    height: 50px;
+    padding-left: 10px;
+    
+    
+
+}
+tr th:first-child{
+    background-color:#e1e1e1;
+    
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    padding-left: 10px;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+
+}
+tr td:nth-child(2){
+    background-color: #1ed6d8;
+    width: 150px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    
+    
+   
+}
+tr th:nth-child(2){
+    background-color: #1ed6d8;
+    width: 150px;
+    height: 50px;
+    color: white;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+tr td:nth-child(3){
+    background-color: #95c754;
+    width: 150px;
+    height: 50px;
+    color: white;
+    text-align: center;
+   
+}
+tr th:nth-child(3){
+    background-color: #95c754;
+    width: 150px;
+    height: 50px;
+    color: white;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    
+}
+tr td:nth-child(4){
+    background-color: #fdcf31;
+    width: 150px;
+    height: 50px;
+    color: white;
+    text-align: center;
+}
+tr th:nth-child(4){
+    background-color: #fdcf31;
+    width: 150px;
+    height: 50px;
+    color: white;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+tr td:nth-child(5){
+    background-color: #f54d40;
+    width: 150px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    
+}
+tr th:nth-child(5){
+    background-color: #f54d40;
+    width: 150px;
+    height: 50px;
+    color: white;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+.border{
+    
+    border: 2px solid white;
+    border-radius: 50%;
+}

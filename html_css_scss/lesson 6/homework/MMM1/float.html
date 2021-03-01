@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 2px;
+            background-color: #ddd;
+            padding: 5px;
+            text-transform: uppercase;
+        }
+        header{
+            background-color: #923158;
+            padding: 30px 0 30px 100px;
+            margin-bottom: 10px;
+        }
+        nav, footer{
+            background-color: #6e1237;
+            padding: 15px 0 15px 100px;
+            margin-bottom: 10px;
+        }
+        .clearfix::before,
+        .clearfix::after{
+            content: '';
+            display: table;
+        }
+        .clearfix::after{
+            content: '';
+            clear: both;
+        }
+        main{
+            float: right;
+            width: 60%;
+            padding: 30px  100px;
+            background-color: #b65b80;
+            margin-right: 10px;
+        }
+        section{
+            padding: 20px 0 100px 80px;
+            background-color: #db92af;
+            margin: 20px 0;
+        }
+        #main{
+            margin-bottom: 10px;
+        }
+        .one{
+            margin-bottom: 10px;
+            height: 150px;
+            padding: 50px 0 20px 100px;
+            float: left; 
+            width: 28.5%;
+            background-color: #b65b80;
+            
+        }
+        .two{
+            padding: 70px 0 20px 100px;
+            height: 220px;
+            margin-bottom: 10px;
+            float: left; 
+            width: 28.5%;
+            background-color: #b65b80;
+            
+        }
+        .three{
+            float: right; 
+            width: 10%;
+            background-color: #b65b80;
+            height: 370px;
+            margin-bottom: 10px;
+            white-space: pre;
+            text-align: center;
+        }
+        li{
+            text-align: center;
+            list-style-type: none;
+            padding: 20px 0 0 0;
+        }
+        .number{
+            margin: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Header
+    </header>
+    <nav>Menu</nav>
+    <div id="main" class="clearfix">
+       
+        <aside class="three">
+
+            
+A
+S
+I
+D
+E
+
+3
+            </aside>
+
+        <main>Main content
+            <section>Section 1</section>
+            <section>Section 2</section>
+
+        </main>
+        <aside class="one">
+            Aside 1
+        </aside>
+        <aside class="two">
+            Aside 2
+        </aside>
+        
+            
+        
+    </div>
+    <footer>
+        Footer
+    </footer>
+</body>
+</html>

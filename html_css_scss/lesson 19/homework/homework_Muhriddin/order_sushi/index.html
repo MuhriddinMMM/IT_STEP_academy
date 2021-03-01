@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/unusual.css">
+    <title>Order Sushi</title>
+</head>
+<body>
+    <div class="main-nav">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a class="menu-item" href="#header">Home</a></li>
+                    <li><a class="menu-item" href="#orders">Order Sushi</a></li>
+                    <li><a class="menu-item" href="#map">Map</a></li>
+                    <li><a class="menu-item" href="#galler">Gallery</a></li>
+                    <li><a class="menu-item" href="#footer">Contacts</a></li>
+                </ul>
+            </nav>
+        </div><!-- /.container -->
+    </div><!-- /.main-nav -->
+
+    <!-- order form -->
+    <div id="order">
+        <div class="container">
+            <h2 class="heading">ORDER  SUSHI</h2>
+
+            <div id="galler" class="gallery">
+                <div id="carousel">
+                <figure id="spinner">
+                    <img src="img/gallery/one.jpg" alt>
+                    <img src="img/gallery/two.jpg" alt>
+                    <img src="img/gallery/three.jpg" alt>
+                    <img src="img/gallery/four.jpg" alt>
+                    <img src="img/gallery/five.jpg" alt>
+                    <img src="img/gallery/six.jpg" alt>
+                    <img src="img/gallery/seven.jpg" alt>
+                    <img src="img/gallery/eight.jpg" alt>
+                </figure>
+                </div>
+                <span style="float:left" class="ss-icon" onclick="galleryspin('-')">&lt;</span>
+                <span style="float:right" class="ss-icon" onclick="galleryspin('')">&gt;</span>
+            </div>
+
+            <div class="row">
+
+                <div id="orders" class="form">
+                    <h3>Delivery</h3>
+                    <form action="">
+                        <div class="column-1">
+                            <div class="column-2">
+                                <input type="text" id="name" placeholder="Name">
+                            </div>
+                            <div class="column-2">
+                                <input type="number" id="number" placeholder="+998 99 123 45 67">
+                            </div>
+                        </div>
+                        <p><span>* Find the delivery address on the map and click on it.</span></p>
+                        <div id="map" class="column-">
+                            <iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3A4b05ac487f05596c0bc3f431dc30b1ffa54cf301940ce40bdee837a6f93eaa93&amp;source=constructor" width="100%" height="600" frameborder="0"></iframe>
+                        </div>
+                        <div class="column-1">
+                            <div class="column-2">
+                               <input type="text" id="street" placeholder="street">
+                            </div>
+                            <div class="column-2">
+                               <input type="text" id="home" placeholder="Home">
+                            </div>
+                        </div>
+                        <div class="column-1">
+                            <div class="column-3">
+                               <input type="text" id="entrance" placeholder="Entrance">
+                            </div>
+                            <div class="column-3">
+                               <input type="text" id="floor" placeholder="floor">
+                            </div>
+                            <div class="column-3">
+                               <input type="text" id="apartment" placeholder="apartment">
+                            </div>
+                        </div>
+                        <div class="column-1">
+                            <div class="column-5">
+                                <div class="column-6">
+                                    <label for="email">Your email address</label>
+                                </div>
+                                <div>
+                                    <input  type="email" id="email" placeholder="muxriddin.murodov@mail.ru">
+                                </div>
+                            </div>
+                            <div class="column-4">
+                                <div class="column-6">
+                                    <label for="quantity">Quantity (between 1 and 100):</label>
+                                </div>
+                                <div>
+                                    <input type="number" id="quantity" name="quantity" min="1" max="100">
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Choose Your Sticks</h3>
+                        <div class="column-1 stick">
+                            
+                            <div class="column-3">
+                                <div class="column-6">
+                                    <input type="radio" id="black" name="type" value="black">
+                                </div>
+                                <div class="column-6">
+                                    <label for="black">Black
+                                        <img src="img/black.png" alt="">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="column-3">
+                                <div class="column-6">
+                                    <input type="radio" id="brown" name="type" value="brown">
+                                </div>
+                                <div class="column-6">
+                                    <label for="brown">Brown
+                                        <img src="img/brown.png" alt="">
+                                    </label>
+                                </div>
+                            </div>
+                            <div  class="column-3">
+                                <div class="column-6">
+                                    <input type="radio" id="white" name="type" value="white">
+                                </div>
+                                <div class="column-6">
+                                    <label for="white">White
+                                        <img src="img/white.png" alt="">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column-6 sushis">
+                            <div class="column-1">
+                                <div class="column-10 check">
+                                    <input type="checkbox" id="Makizushi" name="Makizushi" value="Makizushi"  class="checkbox">
+                                </div>
+                                <div  class="portfolio-item column-9" data-descr="Makizushi">
+                                    <label class="img-fluid" for="Makizushi">
+                                        <img src="img/Makizushi.jpg" alt="Makizushi">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="column-1">
+                                <div class="column-10 check">
+                                    <input type="checkbox" id="Temaki" name="Temaki" value="Temaki" class="checkbox">
+                                </div>
+                                <div   class="portfolio-item column-9" data-descr="Temaki">
+                                    <label  class="img-fluid" for="Temaki">
+                                        <img src="img/Temaki.jpg" alt="Temaki">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="column-1">
+                                <div class="column-10 check">
+                                    <input type="checkbox" id="Nigiri" name="Nigiri" value="Nigiri" class="checkbox">
+                                </div>
+                                <div  class="portfolio-item column-9" data-descr="Nigiri">
+                                    <label   class="img-fluid" for="Nigiri"> 
+                                        <img src="img/Nigiri.jpg" alt="Nigiri">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="column-1">
+                                <div class="column-10 check">
+                                    <input type="checkbox" id="Sasazushi" name="Sasazushi" value="Sasazushi" class="checkbox">
+                                </div>
+                                <div class="portfolio-item column-9" data-descr="Sasazushi">
+                                    <label  class="img-fluid"  for="Sasazushi">
+                                        <img src="img/Sasazushi2.jpg" alt="Sasazushi">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="column-1">
+                                <div class="column-10 check">
+                                    <input type="checkbox" id="Temari" name="Temari" value="Temari" class="checkbox">
+                                </div>
+                                <div   class="portfolio-item column-9" data-descr="Temari">
+                                    <label  class="img-fluid" for="Temari"> 
+                                        <img src="img/Temari.jpg" alt="Temari">
+                                    </label>
+                                </div>
+                            </div>
+                            <div  class="column-1">
+                                <div class="column-10 check">
+                                    <input type="checkbox" id="Chirashizushi" name="Chirashizushi" value="Chirashizushi" class="checkbox">
+                                </div>
+                                <div    class="portfolio-item column-9" data-descr="Chirashizushi">
+                                    <label  class="img-fluid" for="Chirashizushi"> 
+                                        <img src="img/Chirashizushi.jpg" alt="Chirashizushi">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column-1 napkins">
+                            <div class="column-2 check_one">
+                                <input type="checkbox" id="napkins" name="napkins" value="napkins" class="checkbox_one">
+                            </div>
+                            <div class="column-2">
+                                <label for="napkins">Do I need to put napkins?
+                                    <br>
+                                    <br>Нужно ли класть салфетки?
+                                </label>
+                            </div>
+                        </div>
+                        <h3>Select a Payment Method</h3>
+                        <div class="column-1 payment">
+                            <div class="column-7">
+                                <div class="column-">
+                                    <label for="cash">Cash</label>
+                                </div>
+                                <div class="column-">
+                                    <input type="radio" id="cash" name="money" value="cash">
+                                </div>  
+                            </div>
+                            <div class="column-7">
+                                <div class="column-">
+                                    <label for="visacard">Visa Card</label>
+                                </div>
+                                <div class="column-">
+                                    <input type="radio" id="visacard" name="money" value="visacard">
+                                </div>
+                            </div>
+                            <div  class="column-7">
+                                <div class="column-">
+                                    <label for="click">Click</label>
+                                </div>
+                                <div class="column-">
+                                    <input type="radio" id="click" name="money" value="click">
+                                </div>
+                            </div>
+                            <div  class="column-7">
+                                <div  class="column-">
+                                    <label for="payme">Payme</label>
+                                </div>
+                                <div  class="column-">
+                                    <input type="radio" id="payme" name="money" value="payme">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column-1">
+                            <div class="column-10">
+                                <label for="comments">Comment</label>
+                            </div>
+                            <div class="column-9">
+                                <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                        <div class="column-6">
+                            <button>
+                                To order
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="container">
+            <div class="row footer">
+                <div>
+                    <p>+998913112388</p>
+                </div>
+                <div>
+                    <p>+998900447797</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script >
+        var angle = 0;
+        function galleryspin(sign) { 
+            spinner = document.querySelector("#spinner");
+            if (!sign) { angle = angle + 45; } else { angle = angle - 45; }
+            spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
+        }
+    </script>
+</body>
+</html>

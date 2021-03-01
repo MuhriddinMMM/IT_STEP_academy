@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+
+    <script>
+        "use strict"
+
+
+        var user = {
+            firstName: 'UserName',
+            lastName: 'UserLastName',
+            age: 25
+        }
+        var key = 'firstName'
+        var array = [1, 2, 3, 4, 5, 6, 7, 8]
+        // console.log(user[key])
+        // console.log(array)
+
+
+        // var menu = {}
+        // menu.text = 'Some Text'
+        // menu.path = '/path'
+        // console.log(menu)
+
+
+
+
+        // Дан массив с элементами 'Привет, ', 'мир' и '!'. 
+        // Необходимо вывести на экран фразу 'Привет, мир!'.
+
+        var arr = ['Привет, ', 'мир', '!']
+        // console.log(arr[0] + arr[1] + arr[2])
+
+        // Дан массив['Привет, ', 'мир', '!'].
+        // Необходимо записать в нулевой элемент этого массива слово 'Пока, '
+        // (то есть вместо слова 'Привет, ' будет 'Пока, ').
+
+
+        var salaries = {
+            John: 100,
+            Ann: 160,
+            Pete: 130,
+            David: 160,
+            Sam: 200,
+            Saymon: 140
+        }
+        var sum = 0;
+        for (var key in salaries) {
+            // sum = sum + salaries[key]
+            sum += salaries[key]
+            // console.log(salaries[key])
+        }
+        // console.log(sum)
+        // Создайте функцию multiplyNumeric(obj),
+        //  которая умножает все числовые свойства объекта obj на 2.
+        // let menu = {
+        //     width: 200,
+        //     height: 300,
+        //     title: "My menu"
+        // };
+        //     function multiplyNumeric(obj){
+        //         for(var index in obj){
+        //             if(typeof obj[index] === 'number'){
+        //                 obj[index] *= 2
+        //             }
+        //         }
+        //         console.log(obj)
+        //     }
+        //     multiplyNumeric(menu)
+
+        // var arr = []
+        // arr.push('Dashg')
+        // console.log(arr)
+        // var data = ['David', 'John', 'Sam', 'Luis']
+        // console.log(data)
+        // var last = data.pop()
+        // console.log(data)
+        // data.push("Jayson")
+        // data.push("Jayson")
+        // console.log(data)
+
+        // var string = 'David-John-Sam-Luis'
+        // console.log(typeof string)
+
+        // arr = string.split('-')
+        // console.log(arr)
+
+
+        // var arr = ['First', 'Second', 'Third', 'Four', 'Five']
+        // console.log(arr)
+        // // delete arr[1]
+        // // arr.splice(1, 1)
+        // var cutted = arr.slice(2,4)
+        // console.log(cutted)
+        // console.log(arr);
+
+        function compare(a, b) {
+            if (a > b) return 1;
+            if (a < b) return -1; l
+        }
+        var arr = [2, 6, {
+            width: 200,
+            height: 200
+        }, 10, 7, 8]
+        // console.log(arr)
+        // arr.sort(compare);
+        // arr.reverse();
+        var newArr = arr.concat('C', 'K')
+        // console.log(arr)
+        // console.log(newArr)
+        // // console.log(newArr.indexOf('n'))
+        // newArr.forEach(function (variable, ind) {
+
+        //     if (typeof variable === 'number') {
+        //         console.log(variable)
+        //     }
+        //     if (typeof variable === 'object') {
+        //         console.log(variable.width)
+        //     }
+        // })
+        var users = [
+            {
+                name: 'Jack',
+                lastName: 'Some',
+                type: 'admin',
+            },
+            {
+                name: 'David',
+                lastName: 'Some',
+                type: 'manager',
+            },
+            {
+                name: 'Kohn',
+                lastName: 'Some',
+                type: 'admin',
+            },
+            {
+                name: 'Kohn',
+                lastName: 'Some',
+                type: 'diller',
+            },
+            {
+                name: 'Kohn',
+                lastName: 'Some',
+                type: 'admin',
+            },
+            {
+                name: 'Smith',
+                lastName: 'Some',
+                type: 'manager',
+            },
+            {
+                name: 'Kohn',
+                lastName: 'Some',
+                type: 'manager',
+            },
+            'Var'
+
+        ]
+
+        var newArr = [100, 200, 300, 400, 500, 600]
+
+        // var varSum = 0;
+        // newArr.forEach(function(item){  
+        //     varSum = varSum + item
+        // })
+        // console.log(varSum)
+        // newArr.push(prompt('asdasdasd'));
+        // // for(var i =0; i < users.length; i++){
+        // //     // do some
+        // // }
+        // users.forEach(function (item, index) {
+        //     if (item.type === 'manager' ||  item.type === 'diller') {
+        //         newArr.push(item)
+        //     }
+        // });
+        // console.log(newArr)
+        // var positive = users.filter(function(data){
+        //     return data.type === 'manager'
+        // })
+        // console.log(positive)
+        // Создайте массив styles с элементами «Джаз» и «Блюз».
+        // Добавьте «Рок - н - ролл» в конец.
+        // Замените значение в середине на «Классика».
+        // Ваш код для поиска значения в середине должен работать для массивов с любой длиной.
+        // Удалите первый элемент массива и покажите его.
+        // Вставьте «Рэп» и «Регги» в начало массива.
+
+        // function sayHi() {
+        //     alert('Hi')
+        // }
+        function sumNum(a, b) {
+            a = a || 25;
+            b = b || 35;
+            var res = a + b
+            return res
+        }
+        sum += sum
+        // sayHi();      55   
+        var data = sumNum(55,55, 45) //
+        console.log(data)
+    </script>
+
+</body>
+
+</html>

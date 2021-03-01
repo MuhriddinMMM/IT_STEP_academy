@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <p>Создайте пустой объект user.
+        <br>
+Добавьте свойство name со значением John.
+<br>
+Добавьте свойство surname со значением Smith.
+<br>
+Измените значение свойства name на Pete.
+<br>
+Удалите свойство name из объекта.</p>
+
+
+
+    <script>
+
+
+
+var user = {}
+console.log(user)
+
+
+user.name = 'John'
+console.log(user)
+
+
+user.surname = 'Smith'
+console.log(user)
+
+
+user.name = 'Pete'
+console.log(user)
+
+
+delete user.name;
+console.log(user)
+    </script>
+</body>
+</html>

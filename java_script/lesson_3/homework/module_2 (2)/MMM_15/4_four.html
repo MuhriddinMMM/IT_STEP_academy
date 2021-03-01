@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>4. Замена регистра символов
+Пользователь вводит строку кириллицей разного регистра. Напишите функцию, которая принимает строку в качестве аргумента и заменяет регистр каждого символа на противоположный. Например, если вводится «КаЖдЫй ОхОтНиК», то на выходе должен быть массив [кАжДыЙ оХоТнИк].
+
+const str = prompt('Введите слово', 'КаЖдЫй ОхОтНиК');
+
+function changeRegister (str) { 
+
+// Ваш код
+
+}
+
+document.writeln(changeRegister(str)); // [кАжДыЙ оХоТнИк] </p>
+
+<script>
+ 
+const str = prompt('Введите слово', 'КаЖдЫй ОхОтНиК');
+
+function changeRegister (str) {
+let UPPER = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
+let LOWER = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
+let result = [];
+  
+  for(var i=0; i<str.length; i++) {
+    if(UPPER.includes(str[i])) {
+      result.push(str[i].toLowerCase());
+    }
+    else if(LOWER.includes(str[i])) {
+      result.push(str[i].toUpperCase());
+    }
+    else {
+      result.push(str[i]);
+    }
+  }
+  return result.join('');
+};
+
+document.writeln(changeRegister(str)); // [кАжДыЙ оХоТнИк]
+
+</script>
+</body>
+</html>

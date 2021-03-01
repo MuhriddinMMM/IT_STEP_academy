@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://wm-school.ru/js/array_exercises.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Массив (Array) – Задачи и решения</title><meta name="description" content="Массив (Array) – упражнеия, практика, решение задач."><link rel="icon" href="https://wm-school.ru/js/favicon.ico" type="image/x-icon"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="index, follow"><link href="./Массив (Array) – Задачи_files/page_js.css" rel="stylesheet" type="text/css"><link href="./Массив (Array) – Задачи_files/dislocation_js.css" rel="stylesheet" type="text/css"><link href="./Массив (Array) – Задачи_files/font-awesome.css" rel="stylesheet" type="text/css"><link href="./Массив (Array) – Задачи_files/foundation.css" rel="stylesheet" type="text/css"><script src="./Массив (Array) – Задачи_files/f.txt"></script><script async="" src="./Массив (Array) – Задачи_files/async-ads.js.Без названия"></script><script async="" src="./Массив (Array) – Задачи_files/async-ads.js.Без названия"></script><script src="./Массив (Array) – Задачи_files/osd.js.Без названия"></script><script src="./Массив (Array) – Задачи_files/f(1).txt"></script><script src="./Массив (Array) – Задачи_files/f(2).txt" id="google_shimpl"></script><script type="text/javascript" async="" src="./Массив (Array) – Задачи_files/f(3).txt"></script><script id="twitter-wjs" src="./Массив (Array) – Задачи_files/widgets.js.Без названия"></script><script async="" src="./Массив (Array) – Задачи_files/tag.js.Без названия"></script><script src="./Массив (Array) – Задачи_files/litehighlighting.js.Без названия"></script><script src="./Массив (Array) – Задачи_files/jquery.js.Без названия"></script><meta itemprop="image" content="https://wm-school.ru/images/logo_square_ru.png"><link rel="image_src" href="https://wm-school.ru/images/logo_square_ru.png"><meta property="og:title" content="Массив (Array) – Задачи и решения"><meta property="og:image" content="https://wm-school.ru/images/logo_square_ru.png"><meta property="fb:admins" content="285950868552086"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Массив (Array) – Задачи и решения"><meta name="twitter:site" content="anatobel24"><meta property="og:description" content="Массив (Array) – упражнеия, практика, решение задач."><meta name="twitter:description" content="Массив (Array) – упражнеия, практика, решение задач."><meta name="twitter:creator" content="anatobel24"><meta name="twitter:image" content="https://wm-school.ru/images/logo_square_ru.png"><script data-ad-client="ca-pub-3011137288258947" async="" src="./Массив (Array) – Задачи_files/f(4).txt" data-checked-head="true"></script><!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(49069460, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/49069460" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --><script data-ad-client="ca-pub-3011137288258947" async="" src="./Массив (Array) – Задачи_files/f(4).txt" data-checked-head="true"></script><script src="./Массив (Array) – Задачи_files/embed.js.Без названия" data-timestamp="1613666758486"></script><meta http-equiv="origin-trial" content="A9ZgbRtm4pU3oZiuNzOsKcC8ppFSZdcjP2qYcdQrFKVzkmiWH1kdYY1Mi9x7G8+PS8HV9Ha9Cz0gaMdKsiVZIgMAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A3HucHUo1oW9s+9kIKz8mLkbcmdaj5lxt3eiIMp1Nh49dkkBlg1Fhg4Fd/r0vL69mRRA36YutI9P/lJUfL8csQoAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9ZgbRtm4pU3oZiuNzOsKcC8ppFSZdcjP2qYcdQrFKVzkmiWH1kdYY1Mi9x7G8+PS8HV9Ha9Cz0gaMdKsiVZIgMAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A3HucHUo1oW9s+9kIKz8mLkbcmdaj5lxt3eiIMp1Nh49dkkBlg1Fhg4Fd/r0vL69mRRA36YutI9P/lJUfL8csQoAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9ZgbRtm4pU3oZiuNzOsKcC8ppFSZdcjP2qYcdQrFKVzkmiWH1kdYY1Mi9x7G8+PS8HV9Ha9Cz0gaMdKsiVZIgMAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A3HucHUo1oW9s+9kIKz8mLkbcmdaj5lxt3eiIMp1Nh49dkkBlg1Fhg4Fd/r0vL69mRRA36YutI9P/lJUfL8csQoAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9ZgbRtm4pU3oZiuNzOsKcC8ppFSZdcjP2qYcdQrFKVzkmiWH1kdYY1Mi9x7G8+PS8HV9Ha9Cz0gaMdKsiVZIgMAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A3HucHUo1oW9s+9kIKz8mLkbcmdaj5lxt3eiIMp1Nh49dkkBlg1Fhg4Fd/r0vL69mRRA36YutI9P/lJUfL8csQoAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><script src="./Массив (Array) – Задачи_files/cse_element__ru.js.Без названия" type="text/javascript"></script><link type="text/css" rel="stylesheet" href="./Массив (Array) – Задачи_files/default+ru.css"><link type="text/css" rel="stylesheet" href="./Массив (Array) – Задачи_files/default.css"><link rel="preload" href="./Массив (Array) – Задачи_files/f(5).txt" as="script"><script type="text/javascript" src="./Массив (Array) – Задачи_files/f(5).txt"></script><link rel="preload" href="./Массив (Array) – Задачи_files/f(6).txt" as="script"><script type="text/javascript" src="./Массив (Array) – Задачи_files/f(6).txt"></script><style type="text/css">.gsc-control-cse{font-family:arial, sans-serif}.gsc-control-cse .gsc-table-result{font-family:arial, sans-serif}.gsc-refinementsGradient{background:linear-gradient(to left,rgba(255,255,255,1),rgba(255,255,255,0))}.gsc-control-cse{border-color:#FFFFFF;background-color:#FFFFFF}input.gsc-input,.gsc-input-box,.gsc-input-box-hover,.gsc-input-box-focus{border-color:#D9D9D9}.gsc-search-button-v2,.gsc-search-button-v2:hover,.gsc-search-button-v2:focus{border-color:#666666;background-color:#CECECE;background-image:none;filter:none}.gsc-search-button-v2 svg{fill:#FFFFFF}.gsc-tabHeader.gsc-tabhActive,.gsc-refinementHeader.gsc-refinementhActive{color:#CCCCCC;border-color:#CCCCCC;background-color:#FFFFFF}.gsc-tabHeader.gsc-tabhInactive,.gsc-refinementHeader.gsc-refinementhInactive{color:#CCCCCC;border-color:#CCCCCC;background-color:#FFFFFF}.gsc-webResult.gsc-result,.gsc-results .gsc-imageResult{border-color:#FFFFFF;background-color:#FFFFFF}.gsc-webResult.gsc-result:hover{border-color:#FFFFFF;background-color:#FFFFFF}.gs-webResult.gs-result a.gs-title:link,.gs-webResult.gs-result a.gs-title:link b,.gs-imageResult a.gs-title:link,.gs-imageResult a.gs-title:link b{color:#0000CC}.gs-webResult.gs-result a.gs-title:visited,.gs-webResult.gs-result a.gs-title:visited b,.gs-imageResult a.gs-title:visited,.gs-imageResult a.gs-title:visited b{color:#0000CC}.gs-webResult.gs-result a.gs-title:hover,.gs-webResult.gs-result a.gs-title:hover b,.gs-imageResult a.gs-title:hover,.gs-imageResult a.gs-title:hover b{color:#0000CC}.gs-webResult.gs-result a.gs-title:active,.gs-webResult.gs-result a.gs-title:active b,.gs-imageResult a.gs-title:active,.gs-imageResult a.gs-title:active b{color:#0000CC}.gsc-cursor-page{color:#0000CC}a.gsc-trailing-more-results:link{color:#0000CC}.gs-webResult:not(.gs-no-results-result):not(.gs-error-result) .gs-snippet,.gs-fileFormatType{color:#000000}.gs-webResult div.gs-visibleUrl{color:#008000}.gs-webResult div.gs-visibleUrl-short{color:#008000}.gsc-cursor-box{border-color:#FFFFFF}.gsc-results .gsc-cursor-box .gsc-cursor-page{border-color:#CCCCCC;background-color:#FFFFFF;color:#CCCCCC}.gsc-results .gsc-cursor-box .gsc-cursor-current-page{border-color:#CCCCCC;background-color:#FFFFFF;color:#CCCCCC}.gsc-webResult.gsc-result.gsc-promotion{border-color:#336699;background-color:#FFFFFF}.gsc-completion-title{color:#0000CC}.gsc-completion-snippet{color:#000000}.gs-promotion a.gs-title:link,.gs-promotion a.gs-title:link *,.gs-promotion .gs-snippet a:link{color:#0000CC}.gs-promotion a.gs-title:visited,.gs-promotion a.gs-title:visited *,.gs-promotion .gs-snippet a:visited{color:#0000CC}.gs-promotion a.gs-title:hover,.gs-promotion a.gs-title:hover *,.gs-promotion .gs-snippet a:hover{color:#0000CC}.gs-promotion a.gs-title:active,.gs-promotion a.gs-title:active *,.gs-promotion .gs-snippet a:active{color:#0000CC}.gs-promotion .gs-snippet,.gs-promotion .gs-title .gs-promotion-title-right,.gs-promotion .gs-title .gs-promotion-title-right *{color:#000000}.gs-promotion .gs-visibleUrl,.gs-promotion .gs-visibleUrl-short{color:#008000}.gcsc-find-more-on-google{color:#0000CC}.gcsc-find-more-on-google-magnifier{fill:#0000CC}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{vertical-align:middle;opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gssb_a{padding:0 9px}.gsib_a{padding:5px 9px 4px 9px}.gscb_a{line-height:27px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{vertical-align:middle;opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gssb_a{padding:0 9px}.gsib_a{padding:5px 9px 4px 9px}.gscb_a{line-height:27px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style><script charset="utf-8" src="./Массив (Array) – Задачи_files/button.cf7aaea83eb75b84ae4508f0ceb5dc4c.js.Без названия"></script><link rel="prefetch" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.4a251b79c005f7a6da462eb85b7e7daf.css"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.38ea27189bdb723eae3dabf5bc7b8c0b.js"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.7bf1d101409e2e3b869d93912e0de2a6.js"><link rel="prefetch" as="script" href="https://disqus.com/next/config.js"><script src="./Массив (Array) – Задачи_files/alfie_v4.63f1ab6d6b9d5807dc0c94ef3fe0b851.js.Без названия" async="" charset="UTF-8"></script></head><body aria-hidden="false"> 
+<header id="main-header"></header>  
+  <main id="content">
+ 
+<style>
+  #toc {
+    width: 80%;
+    position: static;
+    margin-top: 5px;    
+}
+</style> 
+      <div class="center clear"><div class="left-block"><script async="" src="./Массив (Array) – Задачи_files/f(4).txt"></script>
+<!-- js nav_left -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3011137288258947" data-ad-slot="2152088026" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>    <div class="main-content" id="document-main"><div class="center">
+        <div id="col-container" class="container">
+          <div class="column-container">
+               <div class="column-strip" id="toc-right"></div> 
+            <div id="center-content" class="column-half text-content">
+			<!-- реклама под верх меню -->
+<style type="text/css">
+@media screen and (max-width: 700px){
+#top-reklam {
+    height: 100px;
+}}
+</style>
+
+              <article>
+
+<div class="summary">
+<img src="./Массив (Array) – Задачи_files/javascript-icon.png" alt="Упражнения JavaScript" style="max-width:11%;display:block;height=auto"><p>Очень многие задачи программирования основаны на манипулировании целыми коллекциями данных, 
+и подраумевают свободное владение методами обработки массивов в JavaScript. Изучение этих методов является также отличным способом достижения очередного уровня мастерства в JavaScript.</p></div>
+
+
+<!-- <h2><i class="fa-question-circle color_main"></i> Задачи</h2>
+ --><div class="snippet">
+
+<div class="tabs-wrap">
+<ul id="tab-1" class="tab-nav clearfix">
+  <li> 
+ <div>
+<h2 id="nav_0">1. Клонирование массива</h2>
+<p>Напишите функцию <code>copyArr(arr)</code>, которая копирует массив не изменяя иригинал.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> vegetables = [<span class="hljs-string">'Капуста'</span>, <span class="hljs-string">'Репа'</span>, <span class="hljs-string">'Редиска'</span>, <span class="hljs-string">'Морковка'</span>];
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">arrayClone</span>(<span class="hljs-params">arr</span>) </span>{
+
+<span class="hljs-comment">// Ваш код</span>
+
+}
+
+<span class="hljs-keyword">var</span> arr1 = arrayClone(vegetables);
+
+<span class="hljs-built_in">document</span>.writeln(arr1); <span class="hljs-comment">// ['Капуста', 'Репа', 'Редиска', 'Морковка']</span>
+</code></pre></div>
+    
+  </div></div></li>
+  </ul> 
+<ul id="tab-2" class="tab-nav clearfix">
+  <li> 
+ <div>
+<h2 id="nav_1">2. Преобразование массива в строку</h2>
+<p>Напишите код, который преобразовывает и объединяет все элементы массива в одно строковое значение. Элементы массива будут разделены запятой. Получите результат двумя разными методами.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> vegetables = [<span class="hljs-string">'Капуста'</span>, <span class="hljs-string">'Репа'</span>, <span class="hljs-string">'Редиска'</span>, <span class="hljs-string">'Морковка'</span>];
+
+<span class="hljs-comment">// Ваш код</span>
+
+<span class="hljs-built_in">document</span>.writeln(str1); <span class="hljs-comment">// "Капуста, Репа, Редиска, Морковка"</span>
+<span class="hljs-built_in">document</span>.writeln(str2); <span class="hljs-comment">// "Капуста, Репа, Редиска, Морковка"</span>
+</code></pre></div>
+    
+  </div></div></li>
+  </ul> 
+<ul id="tab-3" class="tab-nav clearfix">
+  <li> 
+ <div>
+<h2 id="nav_2">3. Двоеточие между нечётными числами</h2>
+<p>Пользователь вводит многозначное число через <code>promt</code>. Напишите функцию colonOdd(num), которая принимает число <b>num</b> в качестве аргумента и вставляет двоеточие <code>(:)</code> между двумя нечетными числами. Например, если вводится число <b>55639217</b>, то на выход должно быть <b>5:563:921:7</b>.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> num = prompt(<span class="hljs-string">'Введите число'</span>, <span class="hljs-number">55</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">colonOdd</span> (<span class="hljs-params">num</span>) </span>{
+
+<span class="hljs-comment">// Ваш код</span>
+
+}
+
+<span class="hljs-built_in">document</span>.writeln(colonOdd(num)); <span class="hljs-comment">// 5:5</span>
+</code></pre></div>
+     
+  </div></div></li>
+  </ul> 
+<ul id="tab-4" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_3">4. Замена регистра символов</h2>
+<p>Пользователь вводит строку кириллицей разного регистра. Напишите функцию, которая принимает строку в качестве аргумента и заменяет регистр каждого символа на противоположный. Например, если вводится <code>«КаЖдЫй ОхОтНиК»</code>, то на выходе должен быть массив <code>[кАжДыЙ оХоТнИк]</code>.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> str = prompt(<span class="hljs-string">'Введите слово'</span>, <span class="hljs-string">'КаЖдЫй ОхОтНиК'</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">changeRegister</span> (<span class="hljs-params">str</span>) </span>{ 
+
+<span class="hljs-comment">// Ваш код</span>
+
+}
+
+<span class="hljs-built_in">document</span>.writeln(changeRegister(str)); <span class="hljs-comment">// [кАжДыЙ оХоТнИк] </span>
+</code></pre></div>
+   
+  </div></div></li>
+  </ul>  
+  <ul id="tab-5" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_4">5. Удалить повторяющиеся элементы массива</h2>
+<p>Напишите функцию <code>removeDuplicates(arr)</code>, которая возвращает массив, в котором удалены повторяющиеся элементы из массива <code>arr</code> (игнорируйте чувствительность к регистру).</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">"php"</span>, <span class="hljs-string">"php"</span>, <span class="hljs-string">"css"</span>, <span class="hljs-string">"css"</span>,
+  <span class="hljs-string">"script"</span>, <span class="hljs-string">"script"</span>, <span class="hljs-string">"html"</span>, <span class="hljs-string">"html"</span>, <span class="hljs-string">"java"</span>
+];
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">removeDuplicates</span>(<span class="hljs-params">arr</span>) </span>{
+
+<span class="hljs-comment">// Ваш код</span>
+
+}
+
+<span class="hljs-built_in">document</span>.writeln(result);  <span class="hljs-comment">// [php,css,script,html,java] </span>
+</code></pre></div>
+     
+  </div></div></li>
+  </ul>  
+  <ul id="tab-6" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_5">6. Найдите високосные годы</h2>
+<p>Високосным годом является каждый четвертый год и века начинаются только на высокостные года, отличие високосного года от обычного заключается в появлении 366-го дня. Напишите функцию <code>chooseYears(start, end)</code>, которая принимает в качестве аргументов диапозон лет и возвращает массив високосных лет в заданном диапазоне.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">chooseYears</span>(<span class="hljs-params">start, end</span>) </span>{
+
+<span class="hljs-comment">// Ваш код</span>
+
+}
+
+<span class="hljs-built_in">document</span>.writeln(chooseYears(<span class="hljs-number">2000</span>,<span class="hljs-number">2018</span>)); <span class="hljs-comment">// [2000,2004,2008,2012,2016]</span>
+</code></pre></div>
+    
+  </div></div></li>
+  </ul>  
+  <ul id="tab-7" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_6">7. Отобразить элементы в случайном порядоке</h2>
+<p>Используя метод <code>sort</code> перепишите предсталенный ниже код, который с помощью цикла <code>for</code> случайно изменяет порядок расстановки элементов массива.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">shuffle</span>(<span class="hljs-params">arr</span>) </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = arr.length - <span class="hljs-number">1</span>; i &gt; <span class="hljs-number">0</span>; i--) {
+        <span class="hljs-keyword">var</span> j = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * (i + <span class="hljs-number">1</span>));
+        <span class="hljs-keyword">var</span> temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    <span class="hljs-keyword">return</span> arr;
+}
+
+<span class="hljs-keyword">var</span> array = [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>];
+<span class="hljs-built_in">document</span>.writeln(shuffle(array));
+</code></pre></div>
+    
+  </div></div></li>
+  </ul>  
+<ul id="tab-8" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_7">8. Получить первые элементы массива</h2>
+<p>Напишите функцию <code>getFirst(array, n)</code>, которая возвращает фрагмент массива, содержащий первые <b>'n'</b> элементов массива.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs php"><span class="hljs-keyword">var</span> <span class="hljs-keyword">array</span> = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>];
+
+ <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getFirst</span><span class="hljs-params">(array, n)</span> </span>{
+    ваш код
+};
+
+document.writeln(getFirst(<span class="hljs-keyword">array</span>));    <span class="hljs-comment">// 1</span>
+document.writeln(getFirst(<span class="hljs-keyword">array</span>, <span class="hljs-number">4</span>)); <span class="hljs-comment">// 1,2,3,4</span>
+document.writeln(getFirst(<span class="hljs-keyword">array</span>,<span class="hljs-number">-3</span>)); <span class="hljs-comment">// 1,2,3,4,5,6 </span>
+</code></pre></div>
+    
+  </div></div></li>
+  </ul>  
+<ul id="tab-9" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_8">9. Получить последние элементы массива</h2>
+<p>Напишите функцию <code>getLast(array, n)</code>, которая возвращает фрагмент массива, содержащий последние <b>'n'</b> элементов массива.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs php"><span class="hljs-keyword">var</span> <span class="hljs-keyword">array</span> = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>];
+
+ <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getLast</span><span class="hljs-params">(array, n)</span> </span>{
+    ваш код
+};
+
+document.writeln(getLast(<span class="hljs-keyword">array</span>));     <span class="hljs-comment">// 9</span>
+document.writeln(getLast(<span class="hljs-keyword">array</span>, <span class="hljs-number">4</span>));  <span class="hljs-comment">// 6,7,8,9</span>
+document.writeln(getLast(<span class="hljs-keyword">array</span>, <span class="hljs-number">12</span>)); <span class="hljs-comment">// 1,2,3,4,5,6,7,8,9 </span>
+</code></pre></div>
+    
+  </div></div></li>
+  </ul> 
+<ul id="tab-10" class="tab-nav clearfix">
+  <li> 
+ </li>
+  </ul> 
+<ul id="tab-11" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_10">11. Количество повторяющихся элементов в массиве</h2>
+<p>Напишите функцию <code>countIdentic(arr)</code>, которая возвращает количество повторяющихся элементов в массиве.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs php"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">countIdentic</span><span class="hljs-params">(arr)</span> </span>{
+
+     ваш код
+}
+
+countIdentic([<span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">7</span>, <span class="hljs-number">7</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>, <span class="hljs-number">8</span>, <span class="hljs-number">8</span>]) <span class="hljs-comment">// 4</span>
+countIdentic([<span class="hljs-number">15</span>,<span class="hljs-number">14</span>,<span class="hljs-number">13</span>,<span class="hljs-number">19</span>,<span class="hljs-number">13</span>,<span class="hljs-number">14</span>,<span class="hljs-number">14</span>,<span class="hljs-number">14</span>,<span class="hljs-number">7</span>,<span class="hljs-number">9</span>,<span class="hljs-number">9</span>]) <span class="hljs-comment">// 3  </span>
+</code></pre></div>
+     
+  </div></div></li>
+  </ul>  
+<ul id="tab-12" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_11">12. Разворачивание массива массивов</h2>
+<p>Напишите функцию <code>expand(arr)</code>, которая разворачивает вложенный массив любой глубины.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> arr1 = [<span class="hljs-number">1</span>, [<span class="hljs-number">2</span>,[<span class="hljs-number">3</span>,[<span class="hljs-number">4</span>]]]];
+<span class="hljs-keyword">var</span> arr2 = [<span class="hljs-number">1</span>, [<span class="hljs-number">2</span>], [<span class="hljs-number">3</span>, [[<span class="hljs-number">4</span>]]],[<span class="hljs-number">5</span>,<span class="hljs-number">6</span>]];
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">expand</span>(<span class="hljs-params">arr</span>) </span>{
+
+     ваш код
+}
+
+<span class="hljs-built_in">document</span>.writeln(expand(arr1)); <span class="hljs-comment">// 1,2,3,4</span>
+<span class="hljs-built_in">document</span>.writeln(expand(arr2)); <span class="hljs-comment">// 1,2,3,4,5,6</span>
+</code></pre></div>
+    
+  </div></div></li>
+  </ul>  
+<ul id="tab-13" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_12">13. Объединить два массива без дублирования элементов</h2>
+<p>Напишите функцию <code>union</code>, которая возвращает массив состоящий только из уникальных элементов из каждого массива.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> array1 = [<span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">-10</span>, <span class="hljs-number">8</span>];
+<span class="hljs-keyword">var</span> array2 = [<span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">-9</span>, <span class="hljs-number">3</span>, <span class="hljs-number">7</span>]; 
+
+<span class="hljs-keyword">var</span> union = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">array1, array2</span>) </span>{
+
+     ваш код
+}
+
+<span class="hljs-built_in">document</span>.writeln(union(array1, array2)); <span class="hljs-comment">// [-10,8,5,2,1,-9,3,7] </span>
+</code></pre></div>
+     
+  </div></div></li>
+  </ul>  
+<ul id="tab-14" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_13">14. Разница между двумя массивами</h2>
+<p>Напишите функцию <code>union</code>, которая возвращает массив, содержащий все элементы <b>arr1</b>, которые не находятся в <b>arr2</b> и наоборот.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> arr1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-string">'a'</span>];
+<span class="hljs-keyword">var</span> arr2 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-string">'b'</span>];  
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">arrayDiff</span>(<span class="hljs-params">arr1, arr2</span>) </span>{
+
+     ваш код
+}
+
+<span class="hljs-built_in">document</span>.writeln(arrayDiff(arr1, arr2)); <span class="hljs-comment">// [a,3,4,b]</span>
+</code></pre></div>
+     
+  </div></div></li>
+  </ul>  
+<ul id="tab-15" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_14">15. Сортировка массива по убыванию</h2>
+<p>Напишите функцию <code>compareNumbers(arr)</code>, которая возвращает массив, элементы которого отсортированы по убыванию их значений.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs php"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">-4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>];  
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compareNumbers</span><span class="hljs-params">(arr)</span></span>{
+
+     ваш код
+}
+
+compareNumbers(numbers); <span class="hljs-comment">// -4,1,2,3,3,5,6,7,8</span>
+</code></pre></div>
+    
+  </div></div></li>
+  </ul>  
+<ul id="tab-16" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_15">16. Наиболее часто используемый элемент массива</h2>
+<p>Напишите код, который находит наиболее часто используемый элемент массива.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> arr1=[<span class="hljs-number">7</span>, <span class="hljs-string">'z'</span>, <span class="hljs-string">'z'</span>, <span class="hljs-string">'z'</span>, <span class="hljs-number">3</span>, <span class="hljs-number">7</span>, <span class="hljs-string">'z'</span>, <span class="hljs-number">7</span>, <span class="hljs-string">'z'</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">9</span>, <span class="hljs-number">7</span>];  
+
+     ваш код
+
+<span class="hljs-built_in">document</span>.writeln(output); <span class="hljs-comment">// z повторяется 5 раз </span>
+</code></pre></div>
+    
+  </div></div></li>
+  </ul>  
+<ul id="tab-17" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_16">17. Сумма квадратов значений массива</h2>
+<p>Напишите функцию <code>sumOfSquares(arr)</code>, которая возвращает сумму квадратов значений массива.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sumOfSquares</span>(<span class="hljs-params">arr</span>) </span>{ 
+
+     ...ваш код...
+}
+
+<span class="hljs-built_in">document</span>.writeln(sumOfSquares([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>])); <span class="hljs-comment">// 55</span>
+</code></pre></div>
+     
+  </div></div></li>
+  </ul>  
+<ul id="tab-18" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_17">18. Сумма и произведение значений массива</h2>
+<p>Напишите код, который определяет сумму и произведение значений массива.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs php"><span class="hljs-keyword">var</span> arr = [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span> , <span class="hljs-number">3</span> , <span class="hljs-number">4</span> , <span class="hljs-number">5</span> , <span class="hljs-number">6</span> , <span class="hljs-number">7</span>, <span class="hljs-number">8</span> ,<span class="hljs-number">9</span>];
+
+     ...ваш код...
+
+document.writeln(<span class="hljs-string">" Сумма : "</span>+sum + <span class="hljs-string">"Произведение : "</span> + product); <span class="hljs-comment">/* Сумма : 45
+                                     Произведение : 362880 */</span>
+</code></pre></div>
+     
+  </div></div></li>
+  </ul>  
+<ul id="tab-19" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_18">19. Удаление ложных значений из массива</h2>
+<p>Напишите функцию <code>filterFalse(arr)</code>, которая очищает массив от ложных (false) значений: <b>false, null, undefined, 0, –0, NaN и ""</b> (пустя строка).</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript">array = [<span class="hljs-literal">NaN</span>, <span class="hljs-number">0</span>, <span class="hljs-number">77</span>, <span class="hljs-literal">false</span>, <span class="hljs-number">-17</span>, <span class="hljs-string">''</span>,<span class="hljs-literal">undefined</span>, <span class="hljs-number">99</span>, <span class="hljs-literal">null</span>];
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">filterFalse</span>(<span class="hljs-params">arr</span>) </span>{
+
+     ...ваш код...
+
+}
+
+<span class="hljs-built_in">document</span>.writeln(filterFalse(array)); <span class="hljs-comment">// [ 77, -17, 99 ]</span>
+</code></pre></div>
+     <a href="https://wm-school.ru/js/array_exercises_19.php" class="show-answer" target="_blank">Показать решение</a>
+  </div></div></li>
+  </ul>  
+<ul id="tab-20" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_19">20. Сортировка массива объектов</h2>
+<p>Напишите код, который отсортирует массив объектов <code>litmir</code> по значению свойства <code>title</code>.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs php"><span class="hljs-keyword">var</span> litmir = [ 
+   { author: <span class="hljs-string">'Хэленка'</span>, title: <span class="hljs-string">'Улетела сказка'</span>},
+   { author: <span class="hljs-string">'Коул Кресли'</span>, title: <span class="hljs-string">'Восстание Аркан'</span>},
+   { author: <span class="hljs-string">'Райчел Мид'</span>, title: <span class="hljs-string">'Золотая лилия'</span>}
+   ];
+
+     ...ваш код...
+
+<span class="hljs-comment">// Восстание Аркан Золотая лилия Улетела сказка </span>
+
+</code></pre></div>
+    
+  </div></div></li>
+  </ul>  
+<ul id="tab-21" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_20">21. Найти пары чисел, сумма которых равна заданному значению</h2>
+<p>Напишите функцию <code>findCouple(array, number)</code>, которая ищет в массиве все пары целых чисел, сумма которых равна заданному значению.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> num = <span class="hljs-number">5</span>;
+<span class="hljs-keyword">var</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span>, <span class="hljs-number">11</span>, <span class="hljs-number">10</span>, <span class="hljs-number">18</span>];
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">findCouple</span>(<span class="hljs-params">array, number</span>) </span>{ 
+
+     ...ваш код...
+
+}
+
+<span class="hljs-built_in">document</span>.writeln(findCouple(arr, num));
+<span class="hljs-comment">// Ваша пара чисел: 1 + 4,Ваша пара чисел: 2 + 3</span>
+</code></pre></div>
+    
+  </div></div></li>
+  </ul>  
+<ul id="tab-22" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_21">22. Найти все значения данного свойства в массиве объектов</h2>
+<p>Напишите функцию <code>propertyValue(array, key)</code>, которая принимает в качестве аргументов массив объектов и имя свойства, а затем возвращает все значения данного свойства из массива объектов.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs php"><span class="hljs-keyword">var</span> litmir = [ 
+   { author: <span class="hljs-string">'Хэленка'</span>, title: <span class="hljs-string">'Улетела сказка'</span>},
+   { author: <span class="hljs-string">'Коул Кресли'</span>, title: <span class="hljs-string">'Восстание Аркан'</span>},
+   { author: <span class="hljs-string">'Райчел Мид'</span>, title: <span class="hljs-string">'Золотая лилия'</span>}
+   ];
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">propertyValue</span><span class="hljs-params">(array, key)</span> </span>{
+
+     ...ваш код...
+
+}
+
+propertyValue(litmir, <span class="hljs-string">'title'</span>);  <span class="hljs-comment">// Улетела сказка,Восстание Аркан,Золотая лилия</span>
+propertyValue(litmir, <span class="hljs-string">'author'</span>); <span class="hljs-comment">// Хэленка,Коул Кресли,Райчел Мид </span>
+</code></pre></div>
+    
+  </div></div></li>
+  </ul>  
+  <ul id="tab-23" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_22">23. Общая стартовая подстрока в массиве строк</h2>
+<p>Напишите функцию <code>startingSubstring(arr)</code>, которая возвращает общую начальную подстроку в массиве строк.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> arr1 = [<span class="hljs-string">'Капуста'</span>, <span class="hljs-string">'Капитал'</span>];
+<span class="hljs-keyword">var</span> arr2 = [<span class="hljs-string">'Репа'</span>, <span class="hljs-string">'Редиска'</span>];
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">startingSubstring</span>(<span class="hljs-params">arr</span>) </span>{
+
+<span class="hljs-comment">// Ваш код</span>
+
+}
+
+<span class="hljs-keyword">var</span> res1 = startingSubstring(arr1);
+<span class="hljs-keyword">var</span> res2 = startingSubstring(arr2);
+
+<span class="hljs-built_in">document</span>.writeln(res1); <span class="hljs-comment">// Кап</span>
+<span class="hljs-built_in">document</span>.writeln(res2); <span class="hljs-comment">// Ре</span>
+</code></pre></div>
+    
+  </div></div></li>
+  </ul>  
+<ul id="tab-24" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_23">24. Удалить определенный элемент из массива</h2>
+<p>Напишите функцию <code>removeItem(arr, num)</code>, которая удаляет определенный элемент из массива.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">removeItem</span>(<span class="hljs-params">arr, num</span>) </span>{
+
+<span class="hljs-comment">// Ваш код</span>
+
+}
+
+<span class="hljs-built_in">document</span>.writeln(removeItem([<span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">5</span>], <span class="hljs-number">5</span>)); <span class="hljs-comment">// [3,7,8] </span>
+</code></pre></div>
+    
+  </div></div></li>
+  </ul>  
+<ul id="tab-25" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_24">25. Вернуть случайный элемент из массива</h2>
+<p>Напишите функцию <code>randomElement(arr)</code>, которая возвращает случайный элемент из массива.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">randomElement</span>(<span class="hljs-params">arr</span>) </span>{
+
+<span class="hljs-comment">// Ваш код</span>
+
+}
+
+<span class="hljs-keyword">var</span> arr = [<span class="hljs-number">24</span>, <span class="hljs-number">45</span>, <span class="hljs-number">22</span>, <span class="hljs-number">35</span>, <span class="hljs-number">43</span>];
+<span class="hljs-built_in">document</span>.writeln(randomElement(arr)); <span class="hljs-comment">// 22</span>
+</code></pre></div>
+    
+  </div></div></li>
+  </ul>  
+
+  <ul id="tab-26" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_25">26. Массив с заданным количеством элементов</h2>
+<p>Напишите функцию <code>arrayFilled(len, value)</code>, которая возвращает массив с заданным количеством <code>len</code> элементов <code>value</code>.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">arrayFilled</span>(<span class="hljs-params">len, value</span>) </span>{
+
+<span class="hljs-comment">// Ваш код</span>
+
+}
+
+<span class="hljs-built_in">document</span>.writeln(arrayFilled(<span class="hljs-number">5</span>, <span class="hljs-number">1</span>));   <span class="hljs-comment">// [1,1,1,1,1]</span>
+<span class="hljs-built_in">document</span>.writeln(arrayFilled(<span class="hljs-number">4</span>, <span class="hljs-number">12</span>));  <span class="hljs-comment">// [12,12,12,12] </span>
+</code></pre></div>
+    
+  </div></div></li>
+  </ul>  
+
+<ul id="tab-27" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_26">27. Переместить элемент массива из одной позиции в другую</h2>
+<p>Напишите функцию <code>moveElement(arr,from,to)</code>, которая позволяет переместить элемент массива из позиции <code>from</code> в позицию <code>to</code>.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">moveElement</span>(<span class="hljs-params">arr,from,to</span>) </span>{
+
+<span class="hljs-comment">// Ваш код</span>
+
+}
+
+<span class="hljs-keyword">var</span> arr = [ <span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>, <span class="hljs-string">'d'</span>, <span class="hljs-string">'e'</span>];
+<span class="hljs-built_in">document</span>.writeln(moveElement(arr,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>)); <span class="hljs-comment">// ["a", "d", "b", "c", "e"]</span>
+</code></pre></div>
+    
+  </div></div></li>
+  </ul>  
+
+<ul id="tab-28" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_27">28. Массив указанной длины</h2>
+<p>Напишите функцию <code>generateNumbers(start, len)</code>, которая генерирует массив заданной длины <code>len</code>, заполненный целыми числами, где каждое число больше предыдущего на единицу.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">generateNumbers</span>(<span class="hljs-params">start, len</span>) </span>{
+
+<span class="hljs-comment">// Ваш код</span>
+
+}
+
+<span class="hljs-built_in">document</span>.writeln(generateNumbers(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>));  <span class="hljs-comment">// 0,1,2,3,4</span>
+<span class="hljs-built_in">document</span>.writeln(generateNumbers(<span class="hljs-number">-5</span>, <span class="hljs-number">4</span>)); <span class="hljs-comment">// -5,-4,-3,-2 </span>
+</code></pre></div>
+    
+  </div></div></li>
+  </ul>  
+
+<ul id="tab-29" class="tab-nav clearfix">
+  <li> 
+ <div> 
+<h2 id="nav_28">29. Массив, содержащий все целые числа между start и end</h2>
+<p>Напишите функцию <code>generateRange(start, end)</code>, которая генерирует массив заданной длины <code>len</code>, заполненный целыми числами. Каждое последующее число в массиве должно быть больше предыдущего на единицу.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">generateRange</span>(<span class="hljs-params">start, end</span>) </span>{
+
+<span class="hljs-comment">// Ваш код</span>
+
+}
+
+<span class="hljs-built_in">document</span>.writeln(generateNumbers(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>));  <span class="hljs-comment">// 0,1,2,3,4</span>
+<span class="hljs-built_in">document</span>.writeln(generateNumbers(<span class="hljs-number">-5</span>, <span class="hljs-number">4</span>)); <span class="hljs-comment">// -5,-4,-3,-2 </span>
+</code></pre></div>
+    
+  </div></div></li>
+  </ul>  
+
+  <ul id="tab-30" class="tab-nav clearfix">
+  <li> 
+ <div>
+<h2 id="nav_29">30. Массив длин строковых элементов</h2>
+<p>Используя метод <code>map()</code> напишите код, который получает из массива строк новый массив, содержащий их длины.</p>
+<div class="snippet-code">
+ <div class="example">
+<pre><code class="hljs php"><span class="hljs-keyword">var</span> vegetables = [<span class="hljs-string">'Капуста'</span>, <span class="hljs-string">'Репа'</span>, <span class="hljs-string">'Редиска'</span>, <span class="hljs-string">'Морковка'</span>];
+
+<span class="hljs-comment">// Ваш код</span>
+
+alert( vegetableLength ); <span class="hljs-comment">// 7,4,7,8</span>
+</code></pre></div>
+   
+  </div></div></li>
+  </ul>  
+<!-- вторая задача-->
+<ul id="tab-31" class="tab-nav clearfix">
+  <li> 
+ <div>
+
+<h2 id="nav_30">31. Массив сумм чисел</h2>
+<p>Имеется массив простых чисел: <b>numbers = [2, 3, 5, 7, 11, 13, 17, 19]</b>.
+Использую метод <b>reduce()</b> напишите функцию <b>currentSums(numbers)</b>, которая возвращает новый массив из такого же числа элементов, в котором на каждой позиции будет находиться сумма элементов массива <b>numbers</b> до этой позиции включительно.</p>
+  <div class="snippet-code">
+<div class="example">
+<pre><code class="hljs cpp">для numbers = [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">11</span>, <span class="hljs-number">13</span>, <span class="hljs-number">17</span>]
+
+<span class="hljs-comment">// ваш код</span>
+
+currentSums(numbers); <span class="hljs-comment">// [2, 2+3, 2+3+5, 2+3+5+7, 2+3+5+7+11, 2+3+5+7+11+13, 2+3+5+7+11+13+17] = [ 2,5,10,17,28,41,58]</span>
+</code></pre></div>   
+     
+  </div></div></li>
+  </ul>  
+
+<ul id="tab-32" class="tab-nav clearfix">
+  <li> 
+ <div>
+<h2 id="nav_31">32. Равные в сумме пары чисел</h2>
+<p>Напишите код, который получает из массива чисел новый массив, содержащий пары чисел, которые в сумме должны быть равны семи: (0:7), (1:6) и т.д.</p>
+  <div class="snippet-code">
+<div class="example">
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>];
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sumSeven</span>(<span class="hljs-params">numbers</span>) </span>{
+
+ <span class="hljs-comment">// ваш код</span>
+
+}
+
+<span class="hljs-built_in">document</span>.writeln(sumSeven(numbers)); <span class="hljs-comment">// [0:7, 1:6, 2:5, 3:4]</span>
+
+</code></pre></div>   
+   
+  </div></div></li>
+  </ul>  
+
+<ul id="tab-33" class="tab-nav clearfix">
+  <li> 
+ <div>
+<h2 id="nav_32">33. Массив из первых букв</h2>
+<p>Перед вами переменная, содержащая строку. Напишите код, создащий массив, который будет состоять из первых букв слов строки <b>str</b>. При написании данного кода, позаимствуйте у объека <b>Array</b> метод <b>filter</b>.</p>
+  <div class="snippet-code">
+<div class="example">
+<pre><code class="hljs php"><span class="hljs-keyword">var</span> str = <span class="hljs-string">"Каждый охотник желает знать, где сидит фазан."</span>; 
+
+<span class="hljs-comment">// Ваш код </span>
+
+document.write(<span class="hljs-keyword">array</span>);  <span class="hljs-comment">// [К,о,ж,з,г,с,ф]</span>
+</code></pre></div>   
+    
+  </div></div></li>
+  </ul>  
+  <ul id="tab-34" class="tab-nav clearfix">
+  <li> 
+ <div>
+<h2 id="nav_33">34. Массив строк по три символа</h2>
+<p>Перед вами переменная, содержащая строку. Напишите код, создащий массив, который будет состоять из строк, состоящих из предыдущего, текущего и следующего символа строки <b>str</b>. При написании данного кода, позаимствуйте у объека <b>Array</b> метод <b>map</b>.</p>
+  <div class="snippet-code">
+<div class="example">
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> str = <span class="hljs-string">"JavaScript"</span>; 
+
+<span class="hljs-comment">// Ваш код </span>
+
+<span class="hljs-built_in">document</span>.writeln(arr); <span class="hljs-comment">// [Ja,Jav,ava,vaS,aSc,Scr,cri,rip,ipt,pt] </span>
+</code></pre></div>   
+    
+  </div></div></li>
+  </ul>  
+  <ul id="tab-35" class="tab-nav clearfix">
+  <li> 
+ <div>
+<h2 id="nav_34">35. Получить массив цифр по убыванию</h2>
+<p>Напишите код, преобразующий массив цифр, которые располагаются неупорядоченно, в массив цифр расположенных по убыванию их значений.</p>
+  <div class="snippet-code">
+<div class="example">
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numerics = [<span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">2</span>, <span class="hljs-number">9</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">8</span>];
+
+<span class="hljs-comment">// Ваш код </span>
+
+<span class="hljs-built_in">document</span>.writeln(numerics); <span class="hljs-comment">// [9,8,7,5,3,2,1] </span>
+</code></pre></div>   
+   
+  </div></div></li>
+  </ul> 
+
+<h2 id="nav_35">36.  Слияние массивов</h2>
+<p>Напишите код, объединяющий три массива цифр, и располагающий, с помощью метода <b>pop()</b>, цифры в полученном массиве в порядке убывания их значений через пробел.</p>
+  <div class="snippet-code">
+<div class="example">
+<pre><code class="hljs php"><span class="hljs-keyword">var</span> a = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>];
+<span class="hljs-keyword">var</span> b = [<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>];
+c = [<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>];
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getArr</span><span class="hljs-params">(a, b, c)</span> </span>{
+
+<span class="hljs-comment">// Ваш код </span>
+
+}
+
+getArr(a, b, c); <span class="hljs-comment">// [9 8 7 6 5 4 3 2 1] </span>
+</code></pre></div>   
+     
+  
+   
+
+    
+</div>
+<br><br>
+<a href="https://kwork.ru/?ref=633720" target="_blank"></a>
+
+
+<div id="disqus_thread"></div>
+<script>
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://http-wm-school-ru.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>         
+<script>
+  /*  Задачи*/ 
+ jQuery(document).ready(function($) {
+  (function() {
+    var $tabsNav       = $('.sidebar-nav'),
+      $tabsNavLis    = $tabsNav.children('li'),
+      $tabsContainer = $('.tabs-wrap');
+
+    $tabsNav.each(function() {
+      var $this = $(this);
+      $this.next().children('.tab-nav').stop(true,true).hide()
+      .siblings( $this.find('a').attr('href') ).show();
+      $this.children('li').first().addClass('active').stop(true,true).show();
+    });
+
+    $tabsNavLis.on('click', function(e) {
+      var $this = $(this);
+
+      $this.siblings().removeClass('active').end()
+      .addClass('active');
+      
+      $this.parent().next().children('.tab-nav').stop(true,true).hide()
+      .siblings( $this.find('a').attr('href') ).fadeIn();
+      e.preventDefault();
+    }).children( window.location.hash ? 'a[href=' + window.location.hash + ']' : 'a:first' ).trigger('click');
+  })();    
+    }); //END ready
+</script>
+               
+      </div></article>
+            </div>
+ <div class="column-strip">                  
+  <div class="quick-links" id="quick-links">     
+ <ol> 
+  <!-- <li><a href="javascript:void(0);"><strong>Задачи JavaScript:</strong></a></li> -->
+  <li><a onclick="open_nav(&#39;guide&#39;)" href="javascript:void(0);"><i class="fa-caret-right" style="display:none"></i><i class="fa-caret-down"></i>&nbsp; Задачи JavaScript:</a>
+  <div> 
+   <ol id="nav_guide" style="display:block">   
+      <!-- <li><a href="index.php">Введение в JavaScript</a></li> 
+      <li><a href="javascript_in_HTML.php">Подключение JavaScript</a></li> 
+      <li><a href="javascript_popup_boxes.php">Диалоговые окна JavaScript</a></li> 
+      <li><a href="javascript_syntax.php">Синтаксис JavaScript</a></li> 
+      <li><a href="js_data_types.php">Типы данных JavaScript</a></li> 
+      <li><a href="js_types_conversion.php">Преобразование типов данных</a></li> 
+      <li><a href="js_variables.php">Переменные</a></li> 
+      <li><a href="js_operators.php">Операторы</a></li> 
+      <li><a href="js_assignment.php">Операторы присваивания</a></li> 
+      <li><a href="js_comparisons.php">Операторы сравнения</a></li> 
+      <li><a href="js_booleans.php">Логические операторы</a></li> 
+      <li><a href="js_bitwise.php">Побитовые операторы</a></li> 
+      <li><a href="js_if_else.php">Условные операторы: (if), (?:)</a></li> 
+      <li><a href="js_other operators.php">Прочие операторы</a></li> 
+      <li><a href="js_switch.php">Инструкция switch</a></li> 
+      <li><a href="js_loop_for.php">Циклы</a></li> 
+      <li><a href="js_functions.php">Функции</a></li> 
+      <li><a href="js_functions_1.php">Рекурсия</a></li> 
+      <li><a href="js_functions_2.php">Замыкания</a></li> 
+      <li><a href="js_objects.php">Объекты</a></li> 
+      <li><a href="js_obj_properties.php">Свойства объектов</a></li> 
+      <li><a href="js_object-for-in.php">Перебор свойств</a></li> 
+      <li><a href="js_object-check.php">Проверка наличия свойств</a></li> 
+      <li><a href="js_call-and-apply.php">Методы call() и apply()</a></li>   -->
+      <li><a href="https://wm-school.ru/js/string_exercises.php">Строка (String)</a></li>
+      <li class="active"><a href="https://wm-school.ru/js/array_exercises.php" class="active">Массив (Array)</a></li> 
+      
+   </ol></div>
+  </li>   
+ </ol> 
+</div>
+
+
+
+</div>              
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- ends "main-content" -->
+      </div>
+
+  </main>
+
+<footer>
+<div id="down">
+    
+  </div>
+  </footer>
+
+  <script type="text/javascript" src="./Массив (Array) – Задачи_files/example.js.Без названия"></script>
+  <script type="text/javascript" src="./Массив (Array) – Задачи_files/highlight.pack.js.Без названия"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script id="dsq-count-scr" src="./Массив (Array) – Задачи_files/count.js.Без названия" async=""></script><!-- <script type="text/javascript" src="example.js"></script>
+<script type='text/javascript' src='highlight.pack.js'></script>
+<script>hljs.initHighlightingOnLoad();</script> -->
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" src="./Массив (Array) – Задачи_files/ads.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!1" data-load-complete="true"></iframe></ins></ins></ins><table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 2px; display: none; top: 3px; position: absolute; left: -1px;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gstl_51 gssb_c" style="width: 2px; display: none; top: 3px; position: absolute; left: -1px;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><iframe id="google_osd_static_frame_4382731618223" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Массив (Array) – Задачи_files/saved_resource.html"></iframe><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Массив (Array) – Задачи_files/widget_iframe.6e189c4f2b6d88c453045806323cdcf3.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe style="display: none;" src="./Массив (Array) – Задачи_files/saved_resource(1).html"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Массив (Array) – Задачи_files/saved_resource(2).html"></iframe></body><iframe id="google_esf" name="google_esf" src="./Массив (Array) – Задачи_files/zrt_lookup.html" data-ad-client="ca-pub-3011137288258947" style="display: none;"></iframe><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; clear: none !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: fixed !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647 !important; background-color: transparent;" aria-hidden="true" data-vignette-loaded="true"><ins id="aswift_2_expand" style="display: inline-table !important; border: none !important; height: 100vh !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; width: 100vw !important; background-color: transparent !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_2_anchor" style="display: block !important; border: none !important; height: 100vh !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; width: 100vw !important; background-color: transparent !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_2" name="" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" src="./Массив (Array) – Задачи_files/zrt_lookup(1).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" style="width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" data-google-container-id="a!3" data-google-query-id="CPfpo5Xx8-4CFQqIGQodDz4P0A" data-load-complete="true"></iframe></ins></ins></ins></html>

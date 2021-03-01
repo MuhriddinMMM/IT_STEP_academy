@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+.menu{
+    position: relative;
+    text-align: center;
+    padding: 0;
+}
+.main > li{
+    float: left;
+}
+
+.main
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    
+}
+li{
+    display: inline-block;
+    background-color: chartreuse;
+    width: 200px;
+    height: 40px;
+    
+}
+li a{
+    text-decoration: none;
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    
+}
+.visibility_hidden{
+    visibility: hidden;
+    position: absolute;
+}
+.absalut{
+    position: absolute;
+}
+.menu .categori:hover .categ{
+    visibility: visible;
+   
+
+}
+.relativ{
+    position: relative;
+}
+.woman:hover .womans{
+    visibility: visible;
+}

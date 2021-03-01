@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      33. Массив из первых букв Перед вами переменная, содержащая строку.
+      Напишите код, создащий массив, который будет состоять из первых букв слов
+      строки str. При написании данного кода, позаимствуйте у объека Array метод
+      filter. var str = "Каждый охотник желает знать, где сидит фазан."; // Ваш
+      код document.write(array); // [К,о,ж,з,г,с,ф]
+    </p>
+
+    <script>
+     
+var str = "Каждый охотник желает знать, где сидит фазан.";  
+
+
+function firstChar(value, index, arr) {  
+    if (index == 0)  
+        return true;  
+    else  
+        return arr[index - 1] === " ";  
+}  
+
+
+var array = [].filter.call(str, firstChar);  
+
+document.write(array);  // [К,о,ж,з,г,с,ф]
+    </script>
+  </body>
+</html>

@@ -1,0 +1,388 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    color: #555;
+    font-family: Cambria, serif;
+    margin: 0;
+    position: relative;
+    line-height: 24px;
+}
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+.text-center{
+    text-align: center;
+}
+header{
+    /* width: 1600px; */
+    height: 770px;
+    color: #fff;
+    background: url(../img/header_bg.jpg) 0 0/cover no-repeat;
+    padding-top: 40px;
+
+}
+h1, h2, h3, h4, h5{
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+h1{
+    font-size: 3rem;
+    padding-top: 260px;
+    margin-bottom: 35px;
+}
+header h2{
+    font-family: Cambria, serif;
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 55px;
+}
+.btn_started{
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 18px 44px;
+    background-color: transparent;
+    transition: 0.5s;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.btn_started:hover,
+.btn_started:focus{
+    background-color: #fff;
+    color: #5e150f;
+}
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+[class^="column"]{
+    float: left;
+    padding: 0 15px;
+
+}
+.row{
+    margin: 0 -15px;
+
+}
+.row::before,
+.row::after{
+    content: "";
+    display: table;
+}
+.row::after{
+    clear: both;
+    content: "";
+}
+.column-2{
+    width: 50%;
+}
+.column-3{
+    width: 33.33%;
+}
+.column-4{
+    width: 25%;
+}
+.column-5{
+    width: 42%;
+}
+.column-6{
+    width: 58%;
+}
+.menu{
+    float: right;
+    text-align: right;
+    font-family: sans-serif;
+    margin: 2px 0;
+}
+.menu a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 25px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+.menu a:hover{
+    text-decoration: underline;
+}
+#services{
+    padding: 100px 0 100px 0;
+}
+.line_header::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #555;
+    margin: 30px auto;
+    border: solid;
+
+
+}
+.intro-text {
+    margin-bottom: 70px;
+    font-size: 16px;
+}
+.service p {
+    font-size: 14px;
+    line-height: 24px;
+}
+.service h3 {
+    font-style: 1em;
+    margin: 30px 0 25px;
+}
+#about_us {
+    padding: 100px 0 100px 0;
+    background-color: #f8f8f8;
+}
+.menu-2 {
+   
+    text-align: center;
+    font-family: sans-serif;
+    margin: 2px 0;
+    padding-bottom: 70px;
+}
+.menu-2 a {
+    color: #666666;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 25px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+.menu-2 a:hover {
+    
+    color: #cc3333;
+}
+#latest_works{
+    padding: 100px 0 100px 0;
+}
+.rasmlar{
+    padding-bottom: 20px;
+}
+.bgc{
+    background: url(../img/our_work.jpg) 0 0/cover no-repeat;
+    height: 368px;
+}
+.bgc .container h2{
+    text-transform: none;
+    color: #ffffff;
+    font-family: Cambria, serif;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 55px;
+    
+}
+.bgc .container .yozuv{
+    font-size: 30px;
+    padding-top: 100px;
+    line-height: 44px;
+}
+.knopka_2{
+    text-align: center;
+}
+.btn_touch{
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 18px 46px;
+    background-color: transparent;
+    transition: 0.5s;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.btn_touch:hover,
+.btn_touch:focus{
+    background-color: #fff;
+    color: #cc3333;
+}
+#blog_post{
+    padding: 100px 0 100px 0;
+    background-color: #ffffff;
+}
+.october{
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666666;
+    border: 2px solid;
+    height: 72px;
+    width: 72px;
+    padding-top: 12px;
+    float: left;
+    margin: 0;
+    
+}
+.oct_18{
+    font-size: 24px;
+    line-height: 20px;
+
+}
+.redtext{
+    color: #cc3333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+.blacktext{
+    color: #666666;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+.oct18 a:hover{
+    color:  #cc3333;;
+}
+.post_h3{
+    font-size:13px ;
+    font-style: italic;
+    text-transform: none;
+    padding-left: 100px;
+   
+}
+.post_h2{
+    padding-left: 100px;
+    padding-top: 10px;
+    margin: 0;
+}
+.posttext{
+    margin-top: 20px;
+    text-align: justify;
+}
+.paddingp{
+    padding-bottom: 70px;
+}
+.blogpadding{
+    padding-bottom: 80px;
+}
+
+
+
+
+#dorham{
+    background-color: #f8f8f8;
+    padding: 100px 0 100px 0;
+}
+.column-9{
+    width: 100%;
+}
+
+#dorham img{
+    padding-left: 62px;
+    
+    
+}
+#dorham p{
+    font-size: 18px;
+    font-style: italic;
+    
+}
+#dorham h5{
+    text-transform: none;
+    font-size: 20px;
+    font-weight: normal;
+   
+}
+.partners{
+    padding-bottom: 70px;
+    padding-left: 80px;
+}
+.deorham{
+    padding-bottom: 10px;
+}
+.malik{
+    padding-bottom: 15px;
+}
+.because{
+    padding-bottom: 15px;  
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+.active, .dot:hover {
+    background-color: #cc3333;
+}
+footer{
+    padding: 100px 0 100px 0;
+    background-color: #c0301c;
+}
+
+.twitter{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url(../img/twitter.png) 6px 7px/16px no-repeat;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+.line_footer::before{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    margin: 30px auto;
+    border: solid;
+
+
+}
+footer p{
+    font-size: 12px;
+    color: white;
+}
+.team-member{
+    position: relative;
+    
+}
+
+.team-member img {
+    transition: filter .5s;
+}
+.team-member:hover img {
+    filter: brightness(70%);
+}
+
+.social-logo {
+    position: absolute;
+    width: 100%;
+    left:0;
+    bottom: 40px;
+    opacity: 0;
+    transition: 0.6s;
+}
+.social-logo a {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 32px;
+}
+.team-member:hover .social-logo a img {filter: none;} 
+
+.social-logo a:hover{
+   
+    background-color: #c0301c;
+}
+.team-member:hover .social-logo{
+    bottom: 150px;
+    opacity: 1;
+}

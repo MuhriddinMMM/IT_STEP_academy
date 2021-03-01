@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>35. Получить массив цифр по убыванию
+Напишите код, преобразующий массив цифр, которые располагаются неупорядоченно, в массив цифр расположенных по убыванию их значений.
+
+var numerics = [5, 7, 2, 9, 3, 1, 8];
+
+// Ваш код 
+
+document.writeln(numerics); // [9,8,7,5,3,2,1]</p>
+<script>
+    var numerics = [5, 7, 2, 9, 3, 1, 8];
+
+function matching(first, second)
+{
+    if (first == second)
+        return 0;
+    if (first > second)
+        return -1;
+    else
+        return 1;
+ 
+
+numerics = numerics.sort(matching);
+document.writeln(numerics); // [9,8,7,5,3,2,1]
+</script>
+</body>
+</html>

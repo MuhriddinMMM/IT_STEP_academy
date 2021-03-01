@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {margin:0;}
+       div{
+            margin: 40px;
+        }
+        *{
+            box-sizing: border-box;
+            
+        }
+        li{
+            text-transform: uppercase;
+            list-style-type: none;
+            font-family: sans-serif;
+            
+        }
+        ul{
+            color: #e7e7e7;
+            background-color: #808080;
+            width: 300px;
+            padding: 0;
+        }
+        ul li:hover{
+            cursor: pointer;
+            background-color: #5e5e5e;
+            color: #ffffff;
+        }
+        a{  
+            padding:40px 0 40px 120px;
+            display: block;
+            color: inherit;
+            text-decoration: none;
+            text-align: left;
+            font-size: 18px;
+        }
+        .edit{
+            background: url(edit.png) 0 0/80px no-repeat; 
+            background-position: 10%;  
+        }
+        .Favorites{
+            background: url(favorites.png) 0 0/80px no-repeat;
+            background-position: 10%;
+        }
+        .History{
+            background: url(history.png) 0 0/80px no-repeat;
+            background-position: 10%;
+        }
+        .Security{
+            background: url(security.png) 0 0/80px no-repeat;
+            background-position: 10%;
+        }
+        .Settings{
+            background: url(settings.png) 0 0/80px no-repeat;
+            background-position: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+        <li><a class="edit" href="#">Edit</a></li>
+        <li><a class="Favorites" href="#">Favorites</a></li>
+        <li><a class="History" href="#">History</a></li>
+        <li><a class="Security" href="#">Security</a></li>
+        <li><a class="Settings" href="#">Settings</a></li>
+         </ul>
+    </div>
+</body>
+</html>

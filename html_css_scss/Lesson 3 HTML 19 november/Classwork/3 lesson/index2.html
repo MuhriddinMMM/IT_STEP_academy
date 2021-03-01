@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .roman{
+            list-style-type: upper-roman;
+        }
+.alfa{
+    list-style-type: lower-alpha;
+
+}
+html, body{
+    margin: 20px;
+}
+ol{
+    color: rgb(0, 63, 136);
+    counter-reset: num;
+
+}
+li::before{
+    content: counter(num)'. ';
+    counter-increment: num;
+    font-weight: bold;
+    color: black;
+}
+    </style>
+</head>
+<body>
+    <h2>Contents</h2>
+    <ol class="roman">
+        <li class="content1"> History
+            <ol>
+                <li class="history">Development</li>
+                <li class="history">HTML versions timeline
+                    <ol class="alfa">
+                        <li class="htmlversion">HTML draft version timeline</li>
+                        <li class="htmlversion">XHTML versions</li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+        <li class="content2">Markup
+            <ol>
+                <li class="markup">Elements
+                    <ol class="alfa">
+                        <li class="elements">Element examples</li>
+                        <li class="elements">Attributes</li>
+                    </ol>
+                </li>
+                <li class="markup">Character and entity references</li>
+                <li class="markup">Data types</li>
+                <li class="markup">Document type declaration</li>
+            </ol>
+        </li>
+        <li class="content3">Semantic HTML</li>
+        <li class="content4">Delivery
+            <ol>
+                <li class="delivery">HTTP</li>
+                <li class="delivery">HTML e-mail</li>
+                <li class="delivery">Naming conventions</li>
+                <li class="delivery">HTML Application</li>
+            </ol>
+        </li>
+        <li class="content5">HTML4 variations
+            <ol>
+                <li class="html4">SGML-based versus XML-based HTML</li>
+                <li class="html4">Transitional versus strict</li>
+                <li class="html4">Frameset versus transitional</li>
+                <li class="html4">Summary of specification versions</li>
+            </ol>
+        </li>
+        <li class="content6">HTML5 variants
+            <ol>
+                <li class="html5">WHATWG HTML versus HTML5</li>
+            </ol>
+        </li>
+        <li class="content7">Hypertext features not in HTML</li>
+        <li class="content8">WYSIWYG editors</li>
+        <li class="content9">See also</li>
+        <li class="content10">References</li>
+        <li class="content11">External links</li>
+    </ol>
+</body>
+</html>

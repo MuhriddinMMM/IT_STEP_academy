@@ -1,0 +1,147 @@
+//!  Font
+$font-family: "Segoe UI", serif;
+$main-size: 1rem;
+$secondary-size: 1.8rem;
+$big-size: 3rem;
+
+//!   Font Weightts
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+//!  Colors
+$bgc-color: #e7e7e7;
+$text-color: #161212;
+$border-color: #d9d9d9;
+
+//!   Margins
+$mb-1: 1rem;
+$mb-2: 1.5rem;
+
+//! Box shadow
+$first-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+$second-shadow: rgba(0, 0, 0, 0.18) 5px 5px 2px;
+$third-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+  rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+//!  Line height
+$line-height: 1.5;
+
+body {
+  margin: 3rem 0 0 0;
+  font-family: $font-family;
+  font-size: 1rem;
+  background-color: $bgc-color;
+  color: #161212;
+  line-height: 1.6;
+}
+
+%container {
+  max-width: 1140px;
+  width: calc(100% - 3rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin color($color) {
+  width: 80px;
+  height: 80px;
+  top: -40px;
+  position: relative;
+  background-color: $color;
+  padding: 20px;
+}
+
+@mixin bgc_img($one) {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: $one 0 0 / cover no-repeat;
+}
+
+@mixin mobile_min() {
+  @media screen and (min-width: 200px) {
+    @content;
+    &__list {
+      background-color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      margin-bottom: 40px;
+      box-shadow: $second-shadow;
+    }
+    &__item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__title {
+      border-top: 1px solid grey;
+    }
+    &__text p {
+      color: $text-color;
+      font-size: 0.9rem;
+      text-align: right;
+    }
+    &__text h3 {
+      color: $text-color;
+      font-size: $secondary-size;
+      font-weight: normal;
+      text-align: right;
+    }
+    &__title p {
+      font-size: 0.8rem;
+      padding-top: 20px;
+      color: grey;
+    }
+  }
+}
+
+@mixin mobile_max() {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin tablet_min() {
+  @media screen and (min-width: 500px) {
+    @content;
+  }
+}
+
+@mixin tablet_max() {
+  @media screen and (max-width: 650px) {
+    @content;
+  }
+}
+
+@mixin laptop_min () {
+  @media screen and (min-width: 650px) {
+    @content;
+  }
+}
+
+@mixin laptop_max() {
+  @media screen and (max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin desktop_min() {
+  @media screen and (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin desktop_max() {
+  @media screen and (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin huge_min() {
+  @media screen and (min-width: 1000px) {
+    @content;
+  }
+}

@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+}
+.square{
+    margin:100px 0 0 100px;
+    border: 10px solid ;
+    width: 720px;
+    height: 220px;
+    position: absolute;
+}
+.block{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(173, 121, 0);
+    
+    position: absolute;
+   
+    transition:all 500ms linear;
+    animation: anim 2s ease-in-out infinite alternate;
+}
+@keyframes anim{
+    /* 0%{
+        top: 0;
+    }
+
+    50%{
+        
+    }
+
+    100%{
+        bottom: 200px;
+    } */
+
+
+    from{
+
+        left: 0;
+    }
+    to{
+        left: 500px;
+    }
+}
+
+
+
+
+
+
+/* .block:hover{
+    background-color: rgb(255, 0, 21);
+    transform: scale(1.1) ;
+    box-shadow: 0 0 20px rgb(255, 0, 21);
+} */
+
+
+
+
+
+
+/*
+.square{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: salmon;
+    position: absolute;
+    top: calc(50% - 75px);
+
+    left: calc(50% - 75px);
+
+}
+.round{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(255, 251, 0);
+    position: absolute;
+    top: calc(50% - 25px);
+
+    left: calc(50% - 25px);
+} */
+/* .arrow{
+    background: url(../img/arrow.png) no-repeat left center;
+    position: absolute;
+    background-size: 500px;
+    left: 100px;
+
+
+} */
+
+
+

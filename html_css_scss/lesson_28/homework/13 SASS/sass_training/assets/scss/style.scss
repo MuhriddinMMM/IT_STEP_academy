@@ -1,0 +1,41 @@
+@import "setup";
+
+
+.nav{
+    @extend %d-flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo_link{
+        font-size: $second-size;
+        font-weight: $medium;
+        color: $main-color;
+        @extend %d-flex;
+        align-items: center;
+
+        .bold{
+            font-weight: $bold;
+        }
+        &:before{
+            content: "";
+            display: inline-block;
+            background: url(../img/Logo.svg);
+            width: 35px;
+            height: 36.23px;
+            margin-right: 10px;
+        }
+    }
+    &__menu{
+        @extend %d-flex;
+    }
+    &__link{
+        text-align: center;
+        color: $main-color;
+        font-size: $normal-size;
+        margin: 0 20px;
+    }
+    
+}
+
+

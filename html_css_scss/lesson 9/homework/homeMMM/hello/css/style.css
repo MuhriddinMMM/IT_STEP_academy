@@ -1,0 +1,44 @@
+*{
+    box-sizing:border-box ;
+}
+.container {
+    width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+p {
+    margin: 0;
+}
+.hello {
+    
+    width: 50%;
+    height: 200px;
+    background-color: rgb(245, 235, 235);
+    text-align: center;
+    line-height: 200px;
+    vertical-align:middle;
+    float: left;
+}
+.overflow {
+    width: 50%;
+    height: 200px;
+    overflow: hidden;
+    float: left;
+}
+img{
+    display: block;
+    height: 200px;
+    vertical-align:middle;
+    
+    overflow: hidden; 
+    transition: all 1s ease;
+   
+}
+.block_one:hover {
+    filter: brightness(70%);
+}
+.block_one:hover img {
+    transform:scale(1.8);
+    -webkit-transform:scale(1.8); /* Safari and Chrome */
+      
+}

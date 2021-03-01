@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+//!  Colors
+$main-color: #333;
+$secondary-color: #fff;
+$back-color: rgb(75, 25, 25);
+$hover-color: rgb(231, 197, 197);
+
+$black-color: black;
+$white-color: white;
+$red-color: red;
+$green-color: green;
+
+//!   Font Weightts
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+//!  Font 
+$font: 'Poppins', sans-serif;
+$main-size: 1rem;
+$secondary-size: 1.25rem;
+$big-size: 3rem;
+
+
+//!   Margins
+$mb-1: 1rem;
+$mb-2: 1.5rem;
+
+//!  Line height
+$line-height:1.5;
+
+
+//! Box shadow
+$first-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+$second-shadow:   rgba(0, 0, 0, 0.18) 0px 2px 4px;
+$third-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+//!  Mixins
+@mixin button($back, $color, $hover) {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.6rem;
+    background-color: $back;
+    color: $color;
+    transition: 0.4s;
+    &:hover {
+        background-color: $hover;
+    }
+
+}
+
+
+@mixin table($one, $two, $three) {
+    background-color: $one;
+    color: $three;
+    &:hover {
+        background-color: $two;
+    }
+}
+.table_form{
+
+    @include table($black-color,$green-color, $white-color)
+}
+
+
+
+
+@mixin tablet() {
+    @media screen and (max-width:576px){
+        @content;
+    }
+}
+
+@mixin laptop() {
+    @media screen and (min-width:768px){
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @media screen and (min-width:968px){
+        @content;
+    }
+}
+
+@mixin boxShadow($shadow) {
+    -ms-box-shadow: $shadow;
+    -webkit-box-shadow: $shadow;
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+@mixin grid() {
+    display: -ms-grid;
+    display: grid;
+    display: -webkit-grid;
+}
+
+
+
+
+%container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+body {
+    font-family: $font;
+    overflow: hidden;
+    background-color: $hover-color;
+}

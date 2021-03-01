@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        30. Массив длин строковых элементов
+Используя метод map() напишите код, который получает из массива строк новый массив, содержащий их длины.
+
+var vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
+
+// Ваш код
+
+alert( vegetableLength ); // 7,4,7,8
+    </p>
+
+    <script>
+        var vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
+        var vegetableLength = vegetables.map(function(piece){
+            return piece.length;
+        } );
+
+        alert(vegetableLength);
+    </script>
+</body>
+</html>

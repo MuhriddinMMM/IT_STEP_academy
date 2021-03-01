@@ -1,0 +1,171 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: #019e9e;
+}
+.flex_container {
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#boards .flex_container {
+    overflow-x: scroll;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+[class*="column-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+    min-width: 1px;
+    max-width: 100%;
+}
+.column-2 {
+    margin:0 20px;
+    border-radius: 5px;
+    flex: 0 0 400px;
+    background-color: #dcdcdc;
+    overflow-y: auto;
+    height: 600px;
+}
+.column-3 {
+    flex: 0 0 33.33%;
+}
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    background-color: #008b8b;
+}
+h2 {
+
+    margin: 0 auto;
+    margin-top: 0;
+    padding: 30px;
+    color: #fff;
+}
+#boards {
+    background-color: #019e9e;
+    color: black;
+}
+.board {
+    margin:130px 30px 30px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.message {
+    background-color: #f5f5f5;
+    display: grid;
+    grid-template-columns:  1fr;
+    grid-template-rows: 60px 60px;
+    margin: 10px;
+    padding: 10px;
+}
+.mp{
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+#boards .flex_container::-webkit-scrollbar {
+    width: 6px;
+}
+#boards .flex_container::-webkit-scrollbar-thumb {
+    background-color: #045858;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 10px;
+}
+.column-2::-webkit-scrollbar {
+    width: 6px;
+}
+.column-2::-webkit-scrollbar-thumb {
+    background-color: #045858;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+}
+.text {
+    text-align: left;
+    display: grid;
+    grid-column: 1;
+}
+.text p {
+    text-align: left;
+}
+.pics_one {
+    display: grid;
+    grid-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 30px 45px 30px 30px  35px 60px;
+    grid-template-areas: "justifypgn checkbox  attach comments . mens";
+}
+.pics_two{
+    display: grid;
+    grid-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 30px 45px 30px 30px  35px 60px;
+    grid-template-areas: "justifypgn checkbox  attach comments . avatarwomen";
+}
+.pics_three{
+    display: grid;
+    grid-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 30px 45px 30px 30px  35px 60px;
+    grid-template-areas: "justifypgn checkbox  attach comments . avatarman";
+}
+.pic_1 {
+    grid-area: attach;
+    background: url(../img/attach_26.png) 0 0/18px no-repeat;
+    width: 100%;
+    height: 20px;
+}
+.pic_2 {
+    grid-area: avatarman;
+    background: url(../img/avatar_3.png) 0 0/40px no-repeat;
+    width: 100%;
+    height: 50px;
+}
+.pic_3 {
+    grid-area: avatarwomen;
+    background: url(../img/avatar_2.png) 0 0/40px no-repeat;
+    width: 100%;
+    height: 50px;
+}
+.pic_4 {
+    grid-area: checkbox;
+    background: url(../img/checkbox_26.png) 0 0/18px no-repeat;
+    width: 100%;
+    height: 20px;
+}
+.pic_5 {
+    grid-area: comments;
+    background: url(../img/comments_26.png) 0 0/18px no-repeat;
+    width: 100%;
+    height: 20px;
+}
+.pic_6 {
+    grid-area: justifypgn;
+    background: url(../img/justify_26.png) 0 0/18px no-repeat;
+    width: 100%;
+    height: 20px;
+}
+.pic_7 {
+    grid-area: mens;
+    background: url(../img/avatar_1.png) 0 0/40px no-repeat;
+    width: 100%;
+    height: 50px;
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            max-width: 50%;
+            height: 100px;
+            font-size: 48px;
+            padding: 50px 0;
+            background-color: rgb(179, 0, 0);
+            color: bisque;
+            text-align: center;
+        }
+        .ball{
+            position: absolute; width: 50px; height: 50px; border:5px solid grey; border-radius: 50%; background-color: #fff;
+            transition: 0.5s linear;
+        }
+        .layout{
+            position: relative; width: 540px; height: 540px; background-color: rgb(15, 241, 27); border: 20px solid black;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- <input type="button"  value="Click me!" onclick="alert('Click')">
+
+    <script>
+        "use strict"
+        function showAlert(){
+
+            alert('Clicked')
+        }
+
+    </script> -->
+
+
+<!-- 
+      <input type="button"  value="Click me!" id="shams">
+    <script>
+        "use strict"
+        shams.onclick = function(){
+            alert('element clicked')
+        }
+
+        function sayThanks(){
+            alert('Thanks')
+        }
+        shams.onclick = sayThanks
+    </script> -->
+
+
+
+
+<!-- <div id="btn" class="btn" value="valli">
+    This is div
+</div>
+
+
+    <script>
+        "use strict"
+        btn.onclick = function (event){
+            console.log(event.type)
+            console.log(event.clientX)
+            console.log(event.clientY)
+            console.log(event.target)
+            console.log(event.target.value)
+            btn.style.background = 'green'
+            btn.style.position = 'absolute'
+            btn.style.top = '30%'
+        }
+
+    </script> -->
+<!-- 
+    <button type="submit" id="button" style="background-color: blue; font-size: large; color: burlywood;">
+        lalalallalalalla
+    </button>
+
+    <p id="text">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi aliquid exercitationem suscipit facilis rerum cum blanditiis saepe voluptates quibusdam, dolor doloribus, vero sunt illum dolorem quas eligendi commodi inventore error!
+    </p>
+
+    <script>
+        "use strict"
+    button.onclick = function (event){
+            text.style.visibility = 'hidden'    
+
+
+} -->
+ </script>
+
+    <div class="layout" id="layout" class="layout">
+        <div class="ball" id="ball" class="ball">
+
+        </div>
+    </div>
+   
+    
+    <script>
+        "use strict"
+            layout.onclick = function (event){
+              let left = event.clientX
+              console.log(left)
+              if(left >535){
+                left=535
+              }
+               else if(left < 55){
+                left=55
+              }
+              
+               ball.style.left = left-55+'px' 
+
+
+               
+             let top = event.clientY
+              if(top >535){
+                top=535
+              }
+               else if(top < 55){
+                top=55
+              }
+                
+                ball.style.top= top-55+'px'
+                
+ } 
+
+    </script>
+
+    
+    <script>
+        "use strict"
+
+
+    </script>
+
+    
+    <script>
+        "use strict"
+
+
+    </script>
+
+
+
+    <script>
+        "use strict"
+
+
+    </script>
+
+    
+    <script>
+        "use strict"
+
+
+    </script>
+
+    
+    <script>
+        "use strict"
+
+
+    </script>
+
+    
+    <script>
+        "use strict"
+
+
+    </script>
+
+    
+    <script>
+        "use strict"
+
+
+    </script>
+
+
+
+    <script>
+        "use strict"
+      
+    </script>
+
+    
+    <script>
+        "use strict"
+
+
+    </script>
+
+    
+    <script>
+        "use strict"
+
+
+    </script>
+</body>
+</html>

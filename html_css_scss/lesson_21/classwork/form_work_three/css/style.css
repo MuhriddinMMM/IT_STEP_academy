@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+header {
+    background-color: #0f4371;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+h1 {
+    margin: 0;
+    padding: 20px;
+    font-weight: normal;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+li::after {
+    content: " /";
+}
+li {
+    display: block;
+    padding:10px;
+}

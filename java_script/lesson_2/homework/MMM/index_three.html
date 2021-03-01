@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(119, 119, 119);
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 1140px;
+            margin: 0 auto;
+
+        }
+        h3{
+            color: rgb(29, 3, 3);
+            letter-spacing: 0.6px;
+            line-height: 30px;
+        }
+        button {
+            width: 50%;
+            height: 100px;
+            font-size: 48px;
+            background-color: rgb(168, 2, 2);
+            border: none;
+            color: bisque;
+            font-weight: bold;
+            letter-spacing: 5px;
+            outline: none;
+            box-shadow: 5px  5px 20px black;
+        }
+        button:hover {
+            background-color: rgb(5, 104, 46);
+            outline: none;
+        }
+        button:active{
+            background-color: rgb(155, 152, 1);
+            outline: none;
+
+        }
+        h1 {
+            margin: 50px 0;
+            font-size: 48px;
+            color: rgb(53, 26, 7);
+            font-weight: bold;
+        }
+    </style>
+  </head>
+  <body>
+    
+   <main>
+        <h3>Создайте двухмерный массив. Первые два ключа - это 'ru' и 'en'. Пусть
+          первый ключ содержит элемент, являющийся массивом названий дней недели
+          по-русски, а второй - по-английски. Выведите с помощью этого массива
+          понедельник по-русски и среду по английски (пусть понедельник - это
+          нулевой день).<br> <br>Пусть теперь в переменной lang хранится язык (она принимает
+          одно из значений или 'ru', или 'en' - либо то, либо то), а в переменной
+          day - номер дня. Выведите словом день недели, соответствующий переменным
+          lang и day. То есть: если, к примеру, lang = 'ru' и day = 3 - то выведем
+          'среда'.</h3>
+       
+        <h2>JavaScript Prompt</h2>
+       
+        <button onclick="myFunction()">Try again</button>
+       
+        <h1 id="demo"></h1>
+   </main>
+
+    <script>
+      function myFunction() {
+        var arr = [["ru"], ["en"]];
+        let value = prompt("Введите язык 'ru' \nChoose language 'en'", "ru");
+        if (value == arr[0]) {
+          let day = prompt("Введите номер", 1);
+          switch (day) {
+            case "1":
+             alert("Понеделник");
+              break;
+
+            case "2":
+              alert("Вторник");
+              break;
+
+            case "3":
+              alert("Среда");
+              break;
+
+            case "4":
+              alert("Четверг");
+              break;
+
+            case "5":
+              alert("Пятница");
+              break;
+
+            case "6":
+              alert("Суббота");
+              break;
+
+            case "7":
+              alert("Воскресенье");
+              break;
+
+            default:
+              alert("TRY AGAIN")
+          }
+          txt = "Ваш язык    " + arr[0]+ "     вы набрали  " + day ;
+        } else if (value == arr[1]) {
+          let day = prompt("write number", 1);
+          switch (day) {
+            case "1":
+             var days = alert("Monday");
+              break;
+
+            case "2":
+              alert("Tuesday");
+              break;
+
+            case "3":
+              alert("Wednesday");
+              break;
+
+            case "4":
+              alert("Thursday");
+              break;
+
+            case "5":
+              alert("Friday");
+              break;
+
+            case "6":
+              alert("Saturday");
+              break;
+
+            case "7":
+              alert("Sunday");
+              break;
+
+            default:
+              alert("TRY AGAIN")
+          }
+
+          txt = "your language   " + arr[1] +"  you write  " + day;
+        } else if (value != arr[1] || value != arr[0]) {
+          alert("TRY AGAIN");
+          txt = "User cancelled the prompt.";
+        }
+        document.getElementById("demo").innerHTML = txt;
+      }
+    </script>
+  </body>
+</html>

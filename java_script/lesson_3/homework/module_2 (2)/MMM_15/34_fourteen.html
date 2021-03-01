@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        34. Массив строк по три символа
+Перед вами переменная, содержащая строку. Напишите код, создащий массив, который будет состоять из строк, состоящих из предыдущего, текущего и следующего символа строки str. При написании данного кода, позаимствуйте у объека Array метод map.
+
+var str = "JavaScript"; 
+
+// Ваш код 
+
+document.writeln(arr); // [Ja,Jav,ava,vaS,aSc,Scr,cri,rip,ipt,pt] 
+    </p>
+
+    <script>
+        var word = "JavaScript";  
+
+
+function getChars(value, index, str) {
+
+    return str.substring(index - 1, index + 2);
+}
+
+
+var arr = Array.prototype.map.call(word, getChars);
+
+document.writeln(arr); // [Ja,Jav,ava,vaS,aSc,Scr,cri,rip,ipt,pt]
+    </script>
+</body>
+</html>

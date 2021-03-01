@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    text-transform: uppercase;
+    color: rgb(31, 31, 31);
+    padding-top: 30px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    height: 100vh;
+    overflow: hidden;
+
+    background-color: rgb(255, 243, 139);
+}
+h1{
+    margin-bottom: 50px;
+}
+
+.block{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 0 20px;
+    position: relative; 
+}
+.images1{
+    background: url(/icons/calc.png);
+    background-size: 100px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    transform: rotate(-30deg) translateY(50px);
+    animation: high 0.4s linear;
+
+
+}
+.images2{
+    background: url(/icons/book.png);
+    background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(-15deg);
+    animation: high 0.8s linear;
+  
+}
+.images3{
+    background: url(/icons/paper.png);
+    background-size: 150px;
+    transform: rotate(15deg);
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: high 1.2s linear;
+}
+.images4{
+    background: url(/icons/pallete.png);
+    background-size: 100px;
+    background-position: center;
+    background-position: center bottom;
+    transform: rotate(30deg) translateY(50px);
+    background-repeat: no-repeat;
+    animation: high 1.6s linear;
+  
+}
+.images5{
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    transform-origin: center;
+    transform: rotate(90deg) ;
+    background: url(/icons/pencil.png);
+    background-position: center;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    animation: high 2s linear;
+   
+}
+
+
+@keyframes high{
+    from{
+        top: 100vh;
+    }
+    to{
+        top: 0px;
+    }
+}
+
+
