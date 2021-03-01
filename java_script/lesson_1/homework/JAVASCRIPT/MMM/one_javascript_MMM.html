@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--! 1.	Написать скрипт решающий квадратное уравнение ax2 + bx + c = 0 -->
+
+    <script language="javascript">
+function equation(a, b, c){
+    var D = b * b - 4 * a *c;
+    if (D > 0) {
+        var x1 = ( -b + Math.sqrt(D)) / (2 * a)
+        var x2 = ( -b - Math.sqrt(D)) / (2 * a)
+        
+        alert(x1)
+        alert(x2)
+    } else if ( D == 0) {
+        var x = -b / 2 * a
+
+        alert (x)
+    } else if (D < 0){
+        alert('Ne Imeet Korney :(')
+    }
+}
+equation(-1, 10, 1)
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>1. Клонирование массива
+Напишите функцию copyArr(arr), которая копирует массив не изменяя иригинал.
+
+var vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
+function arrayClone(arr) {
+
+// Ваш код
+
+}
+
+var arr1 = arrayClone(vegetables);
+
+document.writeln(arr1); // ['Капуста', 'Репа', 'Редиска', 'Морковка']</p>
+    <script>
+      var vegetables = ["Капуста", "Репа", "Редиска", "Морковка"];
+
+      function arrayClone(arr) {
+        return arr.slice(0);
+      }
+
+      var arr1 = arrayClone(vegetables);
+
+      document.writeln(arr1);
+    </script>
+</body>
+</html>

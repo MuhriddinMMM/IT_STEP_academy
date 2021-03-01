@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+$big-font: 3rem;
+$normal-font: 1rem;
+$line-height: 1.5;
+$font-color: #f6f6f6;
+$dark: #161616;
+$font: "Potta One", cursive;
+%base_card {
+  box-shadow: 0 2px 6px rgba($color: #000000, $alpha: 0.4);
+  background-color: #f6f6f6;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+@mixin button() {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(104, 43, 43);
+    border-radius: 0.25rem;
+    font-size: $normal-font;
+    padding: 0.625rem $normal-font;
+    transition: 0.4s;
+    width: 100%;
+    text-align: center;
+    // &:hover {
+    //         background-color: rgb(0, 0, 0);
+    //     }
+
+}
+
+%container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+%grid {
+  display: grid;
+  gap:1.5rem;
+}
+%grid_setup {
+  @extend %grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+%grid_setup_second {
+  @extend %grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+body {
+    padding: 0;
+    margin: 0;
+  font-family: $font;
+  text-align: center
+}
+.container {
+    @extend %container;
+}
+.cards {
+    padding: 4rem 0;
+    background-color: $dark;
+    
+    &_row {
+        @extend %grid_setup;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    &_item{
+        @extend %base_card;
+        
+    }
+    &_title {
+        font-size: $big-font;
+    }
+    &_text {
+        font-size: $normal-font;
+        line-height: $line-height;
+    }
+    .button {
+        @include button();
+        &:hover {
+            background-color: rgb(0, 0, 0);
+        }
+    }
+}
+.text {
+    color: blue;
+    background-color: yellow;
+    line-height: 1.9;
+}
+.text_second {
+    @extend .text
+}

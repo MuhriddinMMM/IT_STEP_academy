@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+.loves{
+    margin: 100px 0 0 100px;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    filter: grayscale(100%);
+    transition: all 1s linear;
+    
+    
+}
+
+.loves:hover{
+    transform: scale(2);
+    filter: grayscale(0%);
+
+
+}
+
+
+/* @keyframes lovee{
+    from{
+        filter: grayscale(100%);
+    }
+    to{
+        filter: grayscale(0%);
+        transform: scale(2);
+    }
+} */

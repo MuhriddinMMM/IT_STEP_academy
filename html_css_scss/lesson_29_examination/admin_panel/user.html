@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="l-header">
+      <nav class="nav">
+        <div class="nav__menu">
+          <div class="nav__toggle">
+            <span></span> <span></span> <span></span>
+          </div>
+          <div class="nav__title">
+            <a href="">User Profile</a>
+          </div>
+        </div>
+      </nav>
+      <aside class="aside">
+        <div class="aside__logo">
+          <a href=""><h1>Company</h1></a>
+        </div>
+        <div class="aside__menu">
+          <ul class="aside__bar">
+            <li>
+              <a class="aside__links" href="index.html"
+                ><i class="bx bxs-dashboard"></i>User Profile</a
+              >
+            </li>
+            <li>
+              <a class="aside__links active-link" href="user.html"
+                ><i class="bx bxs-user"></i>User Profile</a
+              >
+            </li>
+            <li>
+              <a class="aside__links" href="#"
+                ><i class="bx bxs-map"></i>Maps</a
+              >
+            </li>
+            <li>
+              <a class="aside__links" href="#"
+                ><i class="bx bx-note"></i> Notifications</a
+              >
+            </li>
+            <li>
+              <a class="aside__links" href="#"
+                ><i class="bx bx-support"></i>Support</a
+              >
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </header>
+    <main class="l-main" id="dashboard">
+      <section>
+        <div class="page__title">
+          <h2>User Profile</h2>
+        </div>
+      </section>
+      <section class="about">
+        <div class="ceo">
+          <div class="ceo__container">
+            <div class="ceo__img">
+              <img src="assets/img/jobs.jpg" alt="stevejobs">
+            </div>
+            <p class="ceo__title">
+              CEO / CO-FOUNDER
+            </p>
+            <h2>
+              Steve Jobs
+            </h2>
+            <p class="ceo__text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, laboriosam quasi quibusdam explicabo velit dolores.
+            </p>
+          </div>
+        </div>
+          <div class="form">
+            <div class="form__container">
+              <div class="form__purple">
+                <h3>Edit Profile</h3>
+                <p>Complete your profile</p>
+              </div>
+                  <form action="" method="POST">
+  
+                      <div class="line__one">
+                          <div class="company">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" placeholder="">
+                          </div>
+                          <div class="username">
+                            <label for="username">Username</label>
+                              <input type="text" id="username" placeholder="">
+                          </div>
+                          <div class="email">
+                            <label for="email">Your email</label>
+                            <input type="email" id="email" placeholder="">
+                          </div>
+                      </div>
+  
+                      <div class="line2">
+                        <div class="firstname">
+                          <label for="firstname">Firstname</label>
+                            <input type="text" id="firstname" placeholder="">
+                        </div>
+                        <div class="lastname">
+                          <label for="lastname">Lastname</label>
+                            <input type="text" id="lastname" placeholder="">
+                        </div>
+                      </div>
+  
+                      <div class="line3">
+                          <label for="address">Address</label>
+                          <input type="text" name="address" id="anddress">
+                      </div>
+                      <div class="line4">
+                              <div class="city">
+                                <label for="city">City</label>
+                                <input type="text" id="city" placeholder="">
+                              </div>
+                              <div class="country">
+                                <label for="country">Country</label>
+                                  <input type="text" id="country" placeholder="">
+                              </div>
+                              <div class="code">
+                                <label for="code">Postal Code</label>
+                                <input type="email" id="code" placeholder="">
+                              </div>
+                          </div>
+      
+                          <div class="line5">
+                              <label for="">About me</label>
+                                  <div class="massage">
+                                      <textarea name="massage" id="massage" cols="" rows=""></textarea>
+                                  </div>
+                          </div>
+                          <div class="hr"></div>
+                          <div class="line6">
+                              <div class="btn">
+                                <button>
+                                <p>
+                                  Update Profile
+                                </p>
+                              </button>
+                            </div>
+                          </div>
+                  </form>
+            </div>
+          </div>
+      </section>
+
+
+       <foooter class="footer" id="footer">
+        <div class="footer__items">
+          <div class="footer__menu">
+            <a href="#" class="footer__links">ABOUT</a>
+            <a href="#" class="footer__links">BLOG</a>
+            <a href="#" class="footer__links">LICENSS</a>
+          </div>
+  
+          <div class="footer__about">
+            <p class="footer__text">
+              2019 - made with love
+            </p>
+          </div>
+        </div>
+      </foooter>
+    </main>
+  </body>
+</html>

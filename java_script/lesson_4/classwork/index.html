@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var strlit = "some string"
+      // var strobj = new String ('Some string')
+
+      // console.log(strlit.length)
+      // console.log(strobj.length)
+
+      // console.log(strlit.toUpperCase())
+      // console.log(strobj.toLowerCase())
+      // var today = new Date()
+      // console.log(new Date)
+      // console.log(today.getDate())
+      // console.log(Math.pow(2, 3))
+      // Math.sqrt
+      // console.log(Math.trunc(Math.random()*1000))
+      // console.log(Math.random(1, 5))
+      // console.log(Math.round(1.7))
+    </script>
+
+    <script>
+      // function Car(color, wheels, volume, power){
+      //     this.color = color;
+      //     this.wheels = wheels;
+      //     this.engine = {
+      //         volume: volume,
+      //         power: power
+      //     };
+      // }
+
+      // var audi = new Car ('red', 4, 2.0, 225)
+    </script>
+
+    <script>
+      //   function bio(name, surname) {
+      //     this.name = name;
+      //     this.surname = surname;
+      //   }
+      //   var shams = new bio("Shamsiddin", "Shukurov", "nigga");
+      //   console.log(shams.name);
+      //   console.log(shams.surname);
+    </script>
+
+    <script>
+      // class Employee {
+      //     constructor(name, salary){
+      //         this.name = name,
+      //         this.salary = salary
+
+      //     }
+      //     raiseSalary(percent){
+      //         this.salary *=1+ percent/100;
+
+      //     }
+
+      // }
+      // var user = new Employee('John', 1500)
+      // user.raiseSalary(10);
+      // console.log(user);
+    </script>
+
+    <script>
+      // function worker(name, salary, money, day) {
+      //     this.name = name,
+      //         this.salary = salary,
+      //         this.money = money,
+      //         this.day = day
+      // }
+      //  class Worker {
+      //     constructor(name, salary, money, day){
+      //         this.name = name;
+      //         this.salary = salary;
+      //         this.money = money;
+      //         this.day = day;
+
+      //     }
+      //     getSalary(){
+      //         return this.day*this.money;
+
+      //     }
+      // }
+
+      // var worker = new Worker('John', 'shams' , 10 ,30)
+      // console.log(worker.getSalary())
+    </script>
+
+    <script>
+      // class men {
+      //     constructor(name, salary, money, day){
+      //         this.name = name;
+      //         this.lastname = lastname;
+      //     }
+      //     set name(){
+      //        return this.name = Shamsiddin;
+      //     }
+      // }
+      // console.log(men.name)
+    </script>
+
+    2. Написать скрипт проверки введенных данных в prompt 1. Если введенные
+    данные числа выдавать тип данных number 2. Если введенные данные строки
+    выдавать тип данных string 3. Так же скрипт должен понимать типы данных:
+    null, undefined
+
+    <script>
+      var someText = prompt("Введите данные: ");
+      console.log(Number(someText));
+      if (typeof Number(someText) === "number") {
+        alert(someText + " is a number type");
+      } else if (typeof string(someText) == "string" || Number(someText) == NaN) {
+        alert(someText + " is a string type");
+      }
+    </script>
+  </body>
+</html>

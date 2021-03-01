@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    3.	Написать скрипт, который определяет по введеной дате рождения сколько было лет в период всей жизни. Скрипт должен быть выполнен во всех циклах
+    <script>
+        var year = prompt('Year: ');
+var month  = prompt('Month: ');
+var day = prompt('Day: ');
+
+var today = new Date();
+var birthDate = new Date(year, month, day);
+var age = today.getFullYear() - birthDate.getFullYear();
+var m = today.getMonth() - birthDate.getMonth();
+if(m < 0 || (m === 0 && today.getDate() < birthDate.getDate())){
+    age--;
+}
+    alert('I am  ' +age );
+    console.log(age)
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>5. Удалить повторяющиеся элементы массива
+Напишите функцию removeDuplicates(arr), которая возвращает массив, в котором удалены повторяющиеся элементы из массива arr (игнорируйте чувствительность к регистру).
+
+var arr = ["php", "php", "css", "css",
+  "script", "script", "html", "html", "java"
+];
+function removeDuplicates(arr) {
+
+// Ваш код
+
+}
+
+document.writeln(result);  // [php,css,script,html,java] </p>
+<script>
+ 
+var arr = ["php", "php", "css", "css",
+  "script", "script", "html", "html", "java"
+];
+function removeDuplicates(arr) {
+  var obj = {},
+      out=[];
+  for (var i = 0; i < arr.length; i++) {
+    var str = arr[i];
+    obj[str] = true; // запомнить строку в виде свойства объекта
+  }
+     for (i in obj) {
+       out.push(i);
+     }
+     return out;
+ // return Object.keys(obj); // вместо второго цикла можно так
+}
+result = removeDuplicates(arr);
+document.writeln(arr + '<br>'); // [php,php,css,css,script,script,html,html,java]
+document.writeln(result);       // [php,css,script,html,java]
+
+</script>
+</body>
+</html>

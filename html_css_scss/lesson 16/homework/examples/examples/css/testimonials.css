@@ -1,0 +1,35 @@
+.testimonial {
+    display: -webkit-inline-flex;
+    display: -ms-inline-flex;
+    display: inline-flex;
+    transition: .5s;
+    height: 100%;
+    background-color: #fff;
+}
+
+.testimonial:hover {
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.38);
+}
+
+.testimonial-author {
+    display: block;
+    margin: 20px;
+    align-self: flex-start;
+}
+
+.testimonial-body {
+    margin: 20px;
+}
+
+.testimonial-body p {
+    margin-top: 0;
+    text-align: justify;
+}
+
+.testimonial-body footer {
+    text-align: right;
+    font-weight: bold;
+    font-style: italic;
+    padding-top: 15px;
+    border-top: 2px solid #dbdbdb;
+}

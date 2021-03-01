@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- !2.	Написать скрипт проверки введенных данных в prompt -->
+
+    2. Написать скрипт проверки введенных данных в prompt 1. Если введенные
+    данные числа выдавать тип данных number 2. Если введенные данные строки
+    выдавать тип данных string 3. Так же скрипт должен понимать типы данных:
+    null, undefined
+
+    <script>
+      //     const str = prompt('Введите слово', '');
+
+      // function changeRegister (str) {
+      // let nums = '1234567890';
+      // let abcd = 'qwertyuiopasdfghjklzxcvbnm';
+      // let result = [];
+
+      //   for(var i=0; i<str.length; i++) {
+      //     if(nums.includes(str[i])){
+      //       alert( str +" is a number type");
+      //     }
+      //     else if(abcd.includes(str[i])){
+      //       alert( str +" is a string type");
+      //     }
+      //   }
+      //   return result.join('');
+      // };
+
+      // document.writeln(changeRegister(str));
+    </script>
+    <script>
+      // var someText = prompt(someText);
+      //         switch (someText){
+      //             case Number: //number
+      //                 console.log(typeof (someText));
+      //                 break;
+
+      //             case "asd": //Undefined
+      //                 console.log(typeof (asd));
+      //                 break;
+
+      //             case ".": //String
+      //                 console.log(typeof '.');
+      //                 break;
+      //             case "":
+      //                 break;
+      //                 default:
+      //                 console.log(someText)
+      //         }
+    </script>
+    <script>
+      // var someText= 111;
+      // console.log(typeof someText)
+    </script>
+    <script>
+      //     var someText = prompt("Введите данные: ");
+      //     var typed = + someText;
+      //      if (typeof typed === "number"){
+      //     alert( typed +" is a number type");
+
+      // }
+
+      //   else  if (typeof typed === "string"){
+      //     alert( typed +" is a string type");
+      // }
+    </script>
+
+    <script>
+      // const str = prompt("Введите слово", "");
+
+      //     function changeRegister(str) {
+      //       if (
+      //         str.toUpperCase(str) === "TRUE" ||
+      //         str.toUpperCase(str) === "FALSE"
+      //       ) {
+      //         alert(str + " is Boolean");
+      //       } else if (str === "undefined") {
+      //         alert(str + " is undefined");
+      //       } else if (str === "") {
+      //         alert(str + " is NaN");
+      //       } else if (str === "null") {
+      //         alert(str + " is null");
+      //       } else if (typeof str === "number") {
+      //         alert(str + " is number");
+      //       } else {
+      //         alert(str + " is string");
+      //       }
+      //     }
+      //     console.log(Number(str));
+      //     changeRegister(str);
+    </script>
+
+    <script>
+      const str = prompt("Введите слово", "");
+
+      function changeRegister(str) {
+        let nums = "1234567890";
+        let abcd = "qwertyuiopasdfghjklzxcvbnm";
+        let result = [];
+
+        if (str === null) {
+          alert("Tип данных – null");
+        } else if (str == "") {
+          alert("Tип данных – undefined");
+        } else if (
+          str.toUpperCase(str) === "TRUE" ||
+          str.toUpperCase(str) === "FALSE"
+        ) {
+          alert(str + " is Boolean");
+        } else {
+          for (var i = 0; i < str.length; i++) {
+            if (nums.includes(str[i])) {
+              alert(str + " is a number type");
+              break;
+            } else if (abcd.includes(str[i])) {
+              alert(str + " is a string type");
+              break;
+            }
+          }
+          return result.join("");
+        }
+      }
+
+      document.writeln(changeRegister(str));
+    </script>
+
+    <script>
+      //     var index = prompt("Введите данные: ");
+      //   var result = (typeof index === 'number');
+      //   alert(result+" number");
+      // //   Output: true
+      // var description = "w3resource";
+      //   var result = (typeof description === 'string');
+      //   alert(result+" string");
+    </script>
+
+    <script>
+      // var data = prompt("Введите данные: ");
+
+      // if (data === null){
+      // alert("Tип данных – null");
+      // }
+
+      // else if (data == ""){
+      // alert("Tип данных – undefined");
+      // }
+
+      // //    typeof num === "number"
+      // else if (typeof +data == "number")
+      // {
+      //   alert("Tип данных – number: "+data);
+      // }
+
+      // else{
+      //    alert("Tип данных – string: "+data);}
+    </script>
+
+    <script>
+      // var data = prompt("Введите данные: ");
+
+      // if (data === null){
+      // alert("Tип данных – null");
+      // }
+
+      // else if (data == ""){
+      // alert("Tип данных – undefined");
+      // }
+
+      // //    typeof num === "number"
+      // else if (typeof data == "number")
+      // {
+      //   alert("Tип данных – number: "+data);
+      // }
+
+      // else{
+      //    alert("Tип данных – string: "+data);}
+    </script>
+
+    <!-- 
+<h2>JavaScript Prompt</h2>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var txt;
+  var person = prompt("Please enter your name:", "Harry Potter");
+  console.log(typeof person)
+  if (person == null || person == "") {
+    txt = "User cancelled the prompt.";
+  } else {
+    txt = "Hello " + person + "! How are you today?";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script> -->
+  </body>
+</html>

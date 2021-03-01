@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 50px 100px;
+}
+table{
+    border-collapse: collapse;
+    
+    
+}
+td {
+    
+    padding: 20px;
+    
+}
+th {
+    
+    padding: 20px;
+    color: #fff;
+}
+tr th:nth-child(1){
+    background-color: #7987ac;
+}
+tr th:nth-child(2){
+    background-color: #4f628d;
+}
+tr th:nth-child(3){
+    background-color: #2f4173;
+}
+tr th:nth-child(4){
+    background-color: #162954;
+}
+tr th:nth-child(5){
+    background-color: #07153a;
+}
+
+tbody tr:nth-child(2n-1) td:nth-child(2n-1) {
+    background-color: #d3d0d0;
+}
+tbody tr:nth-child(2n-1) td:nth-child(2n) {
+    background-color: #e5e2e2;
+}
+tbody tr:nth-child(2n) td:nth-child(2n-1) {
+    background-color: #ececec;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid grey;
+    padding: 5px 20px;
+    background-color: #d3d0d0;
+}
+.price_number {
+    font-size: 32px;
+}
+tbody tr td:first-child {
+    text-align: left;
+}

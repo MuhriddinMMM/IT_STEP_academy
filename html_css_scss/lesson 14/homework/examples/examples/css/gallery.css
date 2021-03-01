@@ -1,0 +1,41 @@
+.portfolio-item {
+    margin: .5rem 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    border: 4px solid transparent;
+    transition: 400ms ease-out;
+}
+
+.portfolio-item img {
+    display: block;
+    border: 4px solid #dbdbdb;
+    transition: 400ms ease-out;
+}
+
+.portfolio-item:hover {
+    border-color: #fff;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.38);
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.15);
+}
+.portfolio-item::after {
+    content: attr(data-descr);
+    display: block;
+    position: absolute;
+    left: 0;
+    top:100%;
+    width: 100%;
+    padding: 20% 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 1.5rem;
+    transition: 500ms ease-out 200ms;
+    pointer-events: none;
+}
+.portfolio-item:hover::after{
+    top: 20%;
+}

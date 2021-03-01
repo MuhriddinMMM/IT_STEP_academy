@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html{
+            padding: 0 20px 0 10px;
+            font-family: sans-serif;
+        }
+        li::after{
+            content: "×";
+            color: #8d1300;
+            font-weight: bold;
+            padding-left: 20px;
+            
+            
+        }
+        li{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 30px;
+        }
+        span{
+            padding-left: 20px;
+            
+        }
+        ul{
+            list-style-type: none;
+        }
+        h3{
+            padding-left: 50px;
+        }
+        .kukbir{
+            background-color: #a5ccda;
+        }
+        .kulrang{
+            background-color: #e2e2e2;
+        }
+        .kulrangikki{
+            background-color: #c1ecfa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"><h3>My To Do List</h3>
+      <ul>
+           <li class="kukbir"><img src="icons/unchecked_16.png"><span>Hit the gym</span></li>
+           <li class="kulrang"><img src="icons/checked_16.png"><span><s>Pay bills</s></span></li>
+           <li class="kukbir"><img src="icons/unchecked_16.png"><span>Meet John</span></li>
+           <li class="kulrangikki"><img src="icons/unchecked_16.png"><span>Buy eggs</span></li>
+           <li class="kulrang"><img src="icons/checked_16.png"><span><s>Read a book</s></span></li>
+           <li class="kulrangikki"><img src="icons/unchecked_16.png"><span>Organize office</span></li>
+           <li class="kukbir"><img src="icons/unchecked_16.png"><span>Eat dinner</span></li>
+           <li class="kulrangikki"><img src="icons/unchecked_16.png"><span>Buy apples</span></li>
+           <li class="kukbir"><img src="icons/unchecked_16.png"><span>Meet George</span></li>
+           <li class="kulrangikki"><img src="icons/unchecked_16.png"><span>Feed the cat</span></li>
+           <li class="kulrang"><img src="icons/checked_16.png"><span><s>Write a letter</s></span></li>
+           <li class="kulrangikki"><img src="icons/unchecked_16.png"><span>Run 1 km</span></li>
+      </ul>
+    </div>
+</body>
+</html>

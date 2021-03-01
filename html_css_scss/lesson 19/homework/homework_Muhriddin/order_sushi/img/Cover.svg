@@ -1,0 +1,38 @@
+<svg width="1920" height="960" viewBox="0 0 1920 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<rect width="1920" height="960" fill="#110026"/>
+<g filter="url(#filter0_b)">
+<rect x="2104.48" y="-23.267" width="1085.28" height="2464.06" rx="40" transform="rotate(89.7088 2104.48 -23.267)" fill="url(#paint0_radial)"/>
+<rect x="2106.23" y="-25.0258" width="1088.78" height="2467.56" rx="41.75" transform="rotate(89.7088 2106.23 -25.0258)" stroke="url(#paint1_radial)" stroke-width="3.5"/>
+<rect x="2106.23" y="-25.0258" width="1088.78" height="2467.56" rx="41.75" transform="rotate(89.7088 2106.23 -25.0258)" stroke="url(#paint2_radial)" stroke-width="3.5"/>
+<rect x="2106.23" y="-25.0258" width="1088.78" height="2467.56" rx="41.75" transform="rotate(89.7088 2106.23 -25.0258)" stroke="url(#paint3_linear)" stroke-width="3.5"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_b" x="-405.061" y="-68.7847" width="2560.58" height="1188.83" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImage" stdDeviation="21"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur" result="shape"/>
+</filter>
+<radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(2104.48 -23.267) rotate(66.2292) scale(2692.47 1380.24)">
+<stop stop-color="white" stop-opacity="0.4"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(2647.12 1208.76) rotate(90) scale(1232.03 876.829)">
+<stop stop-color="#8C4424"/>
+<stop offset="1" stop-color="#8C4424" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint2_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(2647.12 1208.76) rotate(90) scale(1232.03 21.9904)">
+<stop stop-color="#F53E02"/>
+<stop offset="1" stop-color="#F53E02" stop-opacity="0.58"/>
+</radialGradient>
+<linearGradient id="paint3_linear" x1="2647.12" y1="-23.267" x2="2647.12" y2="2440.79" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clip0">
+<rect width="1920" height="960" fill="white"/>
+</clipPath>
+</defs>
+</svg>

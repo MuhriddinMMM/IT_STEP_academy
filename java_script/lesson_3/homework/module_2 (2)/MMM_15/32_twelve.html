@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        32. Равные в сумме пары чисел
+Напишите код, который получает из массива чисел новый массив, содержащий пары чисел, которые в сумме должны быть равны семи: (0:7), (1:6) и т.д.
+
+var arr = [0, 1, 2, 3, 4, 5, 6, 7];
+function sumSeven(numbers) {
+
+ // ваш код
+
+}
+
+document.writeln(sumSeven(numbers)); // [0:7, 1:6, 2:5, 3:4]
+    </p>
+    <script>
+        var numbers =  [0, 1, 2, 3, 4, 5, 6, 7];
+        function sumSeven(numbers){
+            var obj = {};
+            var result = [];
+
+            for(var i = 0; i<numbers.length; i++){
+                var elem = numbers[i];
+
+
+                for(var j=i+1; j<numbers.length; j++){
+                    var item = numbers[j];
+                    if(elem +item != 7) continue;
+                    var num = elem + ':' + item;
+                    obj[num]=num;
+                }
+            }
+            for( var key in obj){
+                result.push(obj[key]);
+
+            }
+            return result;
+        }
+
+        document.writeln(sumSeven(numbers));
+
+    </script>
+</body>
+</html>

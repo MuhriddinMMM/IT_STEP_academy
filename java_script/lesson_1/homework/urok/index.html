@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basic</title>
+</head>
+
+<body>
+
+
+    <script>
+        var number = 20;
+        var stringVar = "This is some text"
+        var bool = true;
+
+
+        //    var result = prompt(stringVar)
+        //    alert(result);   
+
+        // var isAdmin = confirm('Are you admin?')
+
+
+
+        // for (  var i = 0; i < number;  ++i){
+        //     console.log(i)
+        // }
+        var i = 0;
+        // while (i < number) {
+        //     i++
+        //     console.log(i)
+
+
+
+        // // }
+        // do{
+        //     i++;
+        //     if(i == 11) continue;
+        //     console.log(i);
+        // }while(i < number)
+        var day = 8;
+        var role = 'manager'
+        switch (role) {
+            case 1:
+                console.log('Mon')
+                break;
+            case "manager":
+            case "admin":
+                console.log("Wenseday")
+                break;
+            case 4:
+                console.log('Thuersday')
+                break;
+            case 5:
+                console.log('Friyday')
+                break;
+            case 6:
+                console.log('Saturday')
+                break;
+            case 7:
+                console.log('Sunday')
+                break;
+            default:
+                console.log('Day of NaN')
+                break;
+        }
+
+        function showMessage(name, second = 'Defaul') {
+            console.log('Hello ' + name)
+            console.log(second)
+        }
+
+        //   showMessage('David', 'Changed')
+        //   showMessage('Pitter', 'Changed')
+        //   showMessage('Ericson', 'Second')
+        //   function multiple (a, b, callback){
+        //     return a*b + ();
+        //   }
+        //   var value = multiple(2,3, callback)
+        //   console.log(value)
+        //   function callback() {
+        //       return a +2;
+        //   }
+
+
+        function Equation(a, b, c) {
+            var D = b * b - 4 * a * c;
+            if (D > 0) {
+                var x1 = (-b + Math.sqrt(D)) / 2 * a
+                var x2 = (-b - Math.sqrt(D)) / 2 * a
+
+                alert(x1)
+                alert(x2)
+            }else if( D == 0) {
+                var x = -b / 2*a
+                alert(x)
+            }else{
+                alert('Ne imeet korney')
+            }
+        }
+
+
+        Equation(4, -3, -1)
+
+        Equation(5, -6, 5)
+    </script>
+</body>
+
+</html>

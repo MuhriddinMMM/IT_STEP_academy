@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap");
+
+//!  Font
+$font-family: "Cormorant Garamond", serif;
+$main-size: 1rem;
+$secondary-size: 1.5rem;
+$big-size: 3rem;
+
+//!   Font Weightts
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+//!  Colors
+$bgc-color: #f9f9f9;
+$text-color: #161212;
+$border-color: #d9d9d9;
+
+//!   Margins
+$mb-1: 1rem;
+$mb-2: 1.5rem;
+
+//! Box shadow
+$first-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+$second-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+$third-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+  rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+//!  Line height
+$line-height: 1.5;
+
+body {
+  margin: 3rem 0 0 0;
+  font-family: $font-family;
+  font-size: 1rem;
+  background-color: $bgc-color;
+  color: #161212;
+  line-height: 1.6;
+}
+
+@mixin l-header() {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: $bgc-color;
+}
+
+@mixin nav {
+  height: $big-size;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%container {
+  max-width: 1140px;
+  width: calc(100% - 3rem);
+  margin-left: var(1.5rem);
+  margin-right: var(1.5rem);
+}
+
+@mixin mobile() {
+  @media screen and (min-width: 200px) {
+    @content;
+
+    
+  }
+}

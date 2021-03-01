@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: verdana;
+            background-color: #f6f6f6;
+        }
+        .center{
+            text-align: center;
+        }
+        .product{
+            max-width: 1000px;
+            margin: auto;
+            padding-bottom: 5px;
+            
+
+        }
+        .product::before,
+        .product::after{
+            content: "";
+            display: table;
+        }
+        .product::after{
+            content: "";
+            clear: both;
+            
+        }
+        .food{
+            float: left;
+            border: 2px solid rgb(189, 188, 188);
+            border-radius: 10%;
+            margin: 10px;
+            padding: 20px;
+        }
+        .line{
+            border-top: 2px solid rgb(189, 188, 188);
+            width: 1100px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2 class="center">What do I have in my fridge?</h2>
+        <div class="product">
+            <div class="food">
+                <img src="Food_C247-128.png" alt="Pepper">
+                <p class="center">Pepper</p>
+            </div>
+            <div class="food">
+                <img src="Food_C240-128.png" alt="Apple">
+                <p class="center">Apple</p>
+            </div>
+            <div class="food">
+                <img src="Food_C217-128.png" alt="Cheese">
+                <p class="center">Cheese</p>
+            </div>
+            <div class="food">
+                <img src="Food_C245-128.png" alt="Corn">
+                <p class="center">Corn</p>
+            </div>
+            <div class="food">
+                <img src="Food_C239-128.png" alt="Mushroom">
+                <p class="center">Mushroom</p>
+            </div>
+            <div class="food">
+                <img src="Food_C238-128.png" alt="Garlic">
+                <p class="center">Garlic</p>
+            </div>
+            <div class="food">
+                <img src="Food_C225-128.png" alt="Beef">
+                <p class="center">Beef</p>
+            </div>
+            <div class="food">
+                <img src="Food_C205-128.png" alt="Fish">
+                <p class="center">Fish</p>
+            </div>
+            <div class="food">
+                <img src="Food_C203-128.png" alt="Eggs">
+                <p class="center">Eggs</p>
+            </div>
+            <div class="food">
+                <img src="Food_C235-128.png" alt="Coriander">
+                <p class="center">Coriander</p>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="bottom">
+        <strong>
+            <p class="center line">
+                ...that's all...
+            </p>
+        </strong>
+    </div>
+</body>
+</html>

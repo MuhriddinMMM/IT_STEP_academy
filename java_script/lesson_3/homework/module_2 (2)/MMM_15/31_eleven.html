@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        31. Массив сумм чисел
+Имеется массив простых чисел: numbers = [2, 3, 5, 7, 11, 13, 17, 19]. Использую метод reduce() напишите функцию currentSums(numbers), которая возвращает новый массив из такого же числа элементов, в котором на каждой позиции будет находиться сумма элементов массива numbers до этой позиции включительно.
+
+для numbers = [2, 3, 5, 7, 11, 13, 17]
+
+// ваш код
+
+currentSums(numbers); // [2, 2+3, 2+3+5, 2+3+5+7, 2+3+5+7+11, 2+3+5+7+11+13, 2+3+5+7+11+13+17] = [ 2,5,10,17,28,41,58]
+    </p>
+
+    <script>
+        var numbers = [2, 3, 5, 7, 11, 13, 17];
+        function currentSums(numbers){
+            var result= [];
+
+            numbers.reduce(function(sum, current, i){
+                return result[i]= sum+current;
+
+            }, 0);
+            alert(result);
+
+        }
+        currentSums(numbers);
+    </script>
+</body>
+</html>

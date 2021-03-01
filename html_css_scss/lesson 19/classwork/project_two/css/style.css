@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(251, 255, 214);
+}
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+li{
+    padding: 0.2em;
+}
+form {
+    width: 300px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 15px;
+    padding: 1em;
+    border: 1px solid grey;
+    border-radius: 1em;
+}
+input {
+    font: 1em sans-serif;
+    width: 150px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    
+}
+input:focus {
+    border-color: royalblue;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+}
+input [id="submitBtn"] {
+    display: block;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}

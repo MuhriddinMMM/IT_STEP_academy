@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+ --header-height: 3rem;
+    /* colors */
+    --first-color: #DA2535;
+    --first-color-alt:#C42130;
+    --first-color-send: #de3b49;
+    --title-color:#161212 ;
+    --text-color: #5b5757;
+    --text-color-light:#8f8a8a;
+    --body-color:#Fefbfb;
+    --container-color: #fff;
+
+    /* font and typography */
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size:2rem;
+    --h2-font-size:1.25rem;
+    --h3-font-size:1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+
+    /* font weight */
+    --font-semi-bold:600;
+    --font-bold:700;
+
+    /* margenes */
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+
+    /* z index */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+@media screen and (min-width:968px) {
+    :root {
+        --biggest-font-size:3rem;
+        --h2-font-size: 1.75rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+    }
+
+}
+/* base */
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body.dark-theme {
+    --first-color-send:#161212;
+    --title-color: #f3f1f1;
+    --text-color: #d1c7c8;
+    --body-color: #251d1e;
+    --container-color: #302728;
+}
+
+/* button dark light */
+.change-theme {
+    position: absolute;
+    right: 1.5rem;
+    top: 2.2rem;
+    display: flex;
+    color: var(--title-color);
+    font-size: 2rem;
+    cursor: pointer;
+}
+body {
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3, ul, p{
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+}
+ul {
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Class css */
+.section {
+    padding: 4rem 0 2rem;
+}
+
+.section-title, .section-title-center {
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    text-align: center;
+    margin-bottom: var(--mb-3);
+}
+
+/* layout */
+.l-main {
+    overflow: hidden;
+}
+.bd-container {
+    min-width: 968px;
+    width: calc(100%-3rem);
+    margin-left: var(--mb-3);
+    margin-right: var(--mb-3);
+}
+.bd-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.l-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+}
+
+/* nav */
+.nav {
+ height: var(--header-height);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .nav_menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        right: 0;
+        width: 90%;
+        margin: 0 auto;
+        padding: 2.5rem 0 0;
+        text-align: center;
+        background-color: var(--body-color);
+        transition: .4s;
+        box-shadow: 0 0 4px rgba(0, 0, 0, .1);
+        border-radius: 2rem;
+        z-index: var(--z-fixed);
+    }
+}
+    /* li */
+.nav_item {
+        margin-bottom: var(--mb-3);
+    }
+.nav_link, .nav_logo, .nav_toggle {
+        color: var(--title-color);
+        font-weight: var(--font-semi-bold);
+    }
+
+    .nav_logo:hover {
+        color: var(--first-color);
+    }
+
+.nav_link {
+    transform: .3s;
+}
+.nav_link:hover {
+    color: var(--first-color);
+}
+.nav_toggle {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.show_menu {
+    top: calc(var(--header-height) + 1rem);
+}
+
+.active-link {
+    position: relative;
+}
+.active-link::before {
+    content: "";
+    position: absolute;
+    bottom: -.75rem;
+    left: 45%;
+    width: 5px;
+    height: 5px;
+    background-color: var(--title-color);
+    border-radius: 50%;
+}
+.scroll-header {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+}
+.scrolltop {
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+    background-color: rgba(218, 37, 53, .5);
+    border-radius: .4rem;
+    z-index: var(--z-tooltip);
+    visibility: hidden;
+}
+.scrolltop:hover {
+    background-color: var(--first-color);
+}
+
+.scrolltop_icon {
+    font-size: 1.5rem;
+    color: var(--body-color);
+}
+
+.show-scroll {
+    visibility: visible;
+    bottom: 1.5rem;
+}
+
+

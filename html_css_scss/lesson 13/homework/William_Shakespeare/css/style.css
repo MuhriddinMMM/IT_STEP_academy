@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: rgb(243, 243, 243);
+}
+.container{
+    width: 1140px;
+    margin: 0 auto;
+    
+   
+}
+.row{
+    margin: 0 -15px;
+
+}
+.row::before,
+.row::after{
+    content: "";
+    display: table;
+}
+.row::after{
+    clear: both;
+    content: "";
+}
+.relative {
+    position: relative;
+    left: 20%;
+    text-align: center;
+}
+nav {
+    background-color: #a23645;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+   
+}
+ul{
+    list-style: none;
+  
+}
+.main_menu > li{
+    float: left; 
+}
+.main_menu:after{
+    content: '';
+    clear: both;
+}
+li{
+    width: 200px;
+    background-color: #a23645;
+    text-align: center;
+}
+ul li a{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    width: 200px;
+    padding: 20px 0;
+}
+ul li:hover{
+    background-color:#912f3c;
+}
+.writers, .Anne_Hathaway {
+    position: relative;
+}
+.sub_menu{
+    display: none;
+    position: absolute;
+    top: 63px;
+    left: 0;
+}
+.sub_sub_menu{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 200px;
+}
+.writers:hover .sub_menu{
+    display: block;
+}
+.Anne_Hathaway:hover .sub_sub_menu{
+    display: block;
+}
+.line_header::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #555;
+    margin: 30px auto;
+}
+[class^="column"]{
+    float: left;
+    padding: 0 15px;
+
+}
+#william {
+    padding: 100px 0 100px 0;
+    background-color: rgb(247, 238, 189);
+}
+.column-1 {
+    width: 70%;
+    text-align: left;
+}
+.column-2 {
+    width: 30%;
+    text-align: left;
+}
+.bold {
+    font-weight: bold;
+}
+p {
+    line-height: 32px;
+}
+.column-2 img {
+    width: 260px;
+    height: auto;
+    padding: 15px;
+    display: block;
+}
+.position {
+    position: sticky;
+    top: 100px;
+    left: 0;
+    margin-bottom: 20px;
+    height: 50px;
+}
+.column {
+    width: 16.6666%;
+ 
+}
+h4 {
+    padding: 20px;
+    font-size: 18px;
+}
+.column img {
+    width: 100%;
+    display: block;
+    height: 230px;
+}
+.column-10 {
+    width: 100%;
+    margin: 20px;
+    padding: 20px 0 20px 0;
+    border: 1px solid grey;
+}

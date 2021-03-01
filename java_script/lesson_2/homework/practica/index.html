@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+
+    <script>
+        "use strict"
+
+
+        var user = {
+            firstName: 'UserName',
+            lastName: 'UserLastName',
+            age: 25
+        }
+        var key = 'firstName'
+        var array = [1, 2, 3, 4, 5, 6, 7, 8]
+        // console.log(user[key])
+        // console.log(array)
+
+
+        // var menu = {}
+        // menu.text = 'Some Text'
+        // menu.path = '/path'
+        // console.log(menu)
+
+
+
+
+        // Дан массив с элементами 'Привет, ', 'мир' и '!'. 
+        // Необходимо вывести на экран фразу 'Привет, мир!'.
+
+        var arr = ['Привет, ', 'мир', '!']
+        // console.log(arr[0] + arr[1] + arr[2])
+
+        // Дан массив['Привет, ', 'мир', '!'].
+        // Необходимо записать в нулевой элемент этого массива слово 'Пока, '
+        // (то есть вместо слова 'Привет, ' будет 'Пока, ').
+
+
+        var salaries = {
+            John: 100,
+            Ann: 160,
+            Pete: 130,
+            David: 160,
+            Sam: 200,
+            Saymon: 140
+        }
+        var sum = 0;
+        for (var key in salaries) {
+            // sum = sum + salaries[key]
+            sum += salaries[key]
+            // console.log(salaries[key])
+        }
+        // console.log(sum)
+        // Создайте функцию multiplyNumeric(obj),
+        //  которая умножает все числовые свойства объекта obj на 2.
+        // let menu = {
+        //     width: 200,
+        //     height: 300,
+        //     title: "My menu"
+        // };
+        //     function multiplyNumeric(obj){
+        //         for(var index in obj){
+        //             if(typeof obj[index] === 'number'){
+        //                 obj[index] *= 2
+        //             }
+        //         }
+        //         console.log(obj)
+        //     }
+        //     multiplyNumeric(menu)
+
+        var arr = []
+        arr.push('Dashg')
+        console.log(arr)
+        var data = ['David', 'John', 'Sam', 'Luis']
+        console.log(data)
+        var last = data.pop()
+        console.log(data)
+        data.push("Jayson")
+        data.push("Jayson")
+        console.log(data)
+
+        var string = 'David-John-Sam-Luis'
+        console.log(typeof string)
+
+        arr = string.split('-')
+        console.log(arr)
+
+    </script>
+
+</body>
+
+</html>

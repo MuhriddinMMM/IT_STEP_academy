@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- !2.	Написать скрипт проверки введенных данных в prompt -->
+
+    2. Написать скрипт проверки введенных данных в prompt 1. Если введенные
+    данные числа выдавать тип данных number 2. Если введенные данные строки
+    выдавать тип данных string 3. Так же скрипт должен понимать типы данных:
+    null, undefined
+
+    <script>
+              const str = prompt("Введите слово", "");
+
+      function changeRegister(str) {
+        let nums = "1234567890";
+        let abcd = "ABCDEFGHIJKLMNOPQRSTUVWXYZqwertyuiopasdfghjklzxcvbnmабвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+        let result = [];
+
+        if (str === null) {
+          alert("Tип данных – null");
+        } else if (str == "") {
+          alert("Tип данных – undefined");
+        } else if (
+          str.toUpperCase(str) === "TRUE" ||
+          str.toUpperCase(str) === "FALSE"
+        ) {
+          alert(str + " is Boolean");
+        } else {
+          for (var i = 0; i < str.length; i++) {
+            if (nums.includes(str[i])) {
+              alert(str + " is a number type");
+              break;
+            } else if (abcd.includes(str[i])) {
+              alert(str + " is a string type");
+              break;
+            }
+          }
+          return result.join("");
+        }
+      }
+
+      document.writeln(changeRegister(str));
+    </script>
+</body>
+</html>

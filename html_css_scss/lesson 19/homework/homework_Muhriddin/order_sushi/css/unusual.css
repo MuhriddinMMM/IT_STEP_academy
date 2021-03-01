@@ -1,0 +1,157 @@
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.portfolio-item {
+    margin: .5rem 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    border: 4px solid transparent;
+    transition: 400ms ease-out;
+}
+.portfolio-item img {
+    display: block;
+    border: 4px solid #dbdbdb;
+    transition: 400ms ease-out;
+}
+.portfolio-item:hover {
+    border-color: #fff;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.38);
+}
+.portfolio-item:hover img {
+    transform: scale(1.15);
+}
+.portfolio-item::after {
+    content: attr(data-descr);
+    display: block;
+    position: absolute;
+    left: 0;
+    top:100%;
+    width: 100%;
+    padding: 20% 15px;
+    background-color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    font-size: 3rem;
+    transition: 500ms ease-out 200ms;
+    pointer-events: none;
+    color: #1a1a1a;
+    text-shadow: 0 0  3px red;
+    font-weight: bold;
+}
+.portfolio-item:hover::after{
+    top: 20%;
+}
+.sushis .column-1 {
+    padding: 20px 0;
+}
+.checkbox {
+    display: inline-block;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid  rgb(128, 0, 0);
+    /* background-color: rgb(255, 0, 0); */
+    background: url(../img/sad.png) 8px 8px/60px no-repeat;
+    box-shadow: 0 0 10px 2px rgb(128, 0, 0);
+    border-radius: 2px ;
+    outline: none;
+    transition: 0.5s;
+} 
+.checkbox:checked {
+    outline: none;
+    box-shadow: 0 0 10px 5px rgb(255, 238, 0);
+    transition: 0.5s;
+    background: url(../img/happy.png) -10px 10px/100px no-repeat;
+    border: 1px solid rgb(255, 238, 0);
+}
+.checkbox_one {
+    display: inline-block;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid  rgb(128, 0, 0);
+    /* background-color: rgb(255, 0, 0); */
+    background: url(../img/no.png) 5px 0/150px no-repeat;
+    box-shadow: 0 0 10px 2px rgb(128, 0, 0);
+    border-radius: 2px ;
+    outline: none;
+    transition: 0.5s;
+} 
+.checkbox_one:checked {
+    outline: none;
+    box-shadow: 0 0 10px 5px rgb(255, 238, 0);
+    transition: 0.5s;
+    background: url(../img/yes.png) 0 -5px/150px no-repeat;
+    border: 1px solid rgb(255, 238, 0);
+}
+.check_one {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+
+div#carousel { 
+    perspective: 1200px; 
+    background: rgb(180, 180, 180); 
+    padding-top: 5%; 
+    font-size:0; 
+    margin-bottom: 3rem; 
+    overflow: hidden; 
+}
+figure#spinner { 
+    transform-style: preserve-3d; 
+    height: 300px; 
+    transform-origin: 50% 50% -500px; 
+    transition: 1s; 
+} 
+figure#spinner img { 
+    width: 40%; max-width: 425px; 
+    position: absolute; left: 30%;
+    transform-origin: 50% 50% -500px;
+    outline:1px solid transparent; 
+}
+figure#spinner img:nth-child(1) { transform:rotateY(0deg); 
+}
+figure#spinner img:nth-child(2) {
+     transform: rotateY(-45deg); 
+}
+figure#spinner img:nth-child(3) { 
+    transform: rotateY(-90deg); 
+}
+figure#spinner img:nth-child(4) {
+       transform: rotateY(-135deg); 
+}
+figure#spinner img:nth-child(5) { 
+    transform: rotateY(-180deg); 
+}
+figure#spinner img:nth-child(6) { 
+    transform: rotateY(-225deg); 
+}
+figure#spinner img:nth-child(7) { 
+    transform: rotateY(-270deg); 
+}
+  figure#spinner img:nth-child(8) { 
+      transform: rotateY(-315deg); 
+}
+div#carousel ~ span { 
+    color: rgb(255, 255, 255); 
+    margin: 5%; 
+    display: inline-block; 
+    text-decoration: none; 
+    font-size: 2rem; 
+    transition: 0.6s color; 
+    position: relative; 
+    margin-top: -6rem; 
+    border-bottom: none; 
+    line-height: 0; 
+}
+div#carousel ~ span:hover {
+     color: rgb(0, 0, 0); cursor: pointer;
+}

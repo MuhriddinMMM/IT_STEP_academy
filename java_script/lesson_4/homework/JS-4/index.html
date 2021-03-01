@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        var strLit = "Some String"
+        var strObj = new String('Some String')
+
+        console.log(strLit.length)
+        console.log(strObj.length)
+
+        // console.log(strLit.substr(0, 5))
+        console.log(strLit.toUpperCase());
+        console.log(strObj.toLowerCase())
+
+        const date = new Date();
+        console.log(date.getDate())
+
+        console.log(Math.trunc(Math.random() * 100))
+
+        // var audi = {
+        //     color: "red",
+        //     wheels: 4,
+        //     engine: {
+        //         volume: 2.0,
+        //         power: 225
+        //     }
+        // }
+        // var bmw = {
+        //     color: "black",
+        //     wheels: 4,
+        //     engine: {
+        //         volume: 2.2,
+        //         power: 255
+        //     }
+        // }
+        function Car(color, wheels, volume , power){
+            this.color = color;
+            this.wheels = wheels;
+            this.engine = {
+                volume: volume,
+                power: power
+            };
+        }
+
+        var audi = new Car('red', 4, 2.0,225 )
+        var bmw = new Car('black', 4, 2.5,225 )
+        var toyota = new Car('green', 4, 2.2,225 )
+        console.log(audi)
+        console.log(bmw)
+        console.log(toyota);
+        console.log(bmw.engine)
+
+
+        class Worker {
+            constructor(name, lastname, rate, salary){
+                this.name = name;
+                this.salary = salary
+            }
+            raiseSalary(percent){
+                this.salary *=1 + percent/100;
+            }
+            setName(name){
+                this.name = name
+            }
+        }
+        // var user = new Employee('John', 1500)
+        // user.raiseSalary(20);
+        // console.log(user);
+
+        var worker = new Worker('Иван', 'Иванов', 10, 31);
+        console.log(worker);
+        worker.setName('Петя')
+        console.log(worker)
+    </script>
+</body>
+</html>

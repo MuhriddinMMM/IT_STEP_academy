@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: verdana;
+            background-color: #d4d4d4;
+        }
+        article{
+            width: 1000px;
+            margin: 40px auto;
+            background-color: #f0f0f0f0;
+            padding: 20px 150px 60px;
+            box-shadow: 0 0 16px rgba(0,0,0,7);
+        }
+            .clearfix::before,
+            .clearfix::after,
+            .block::before,
+            .block::after{
+            content: '';
+            display: table;
+
+        }
+        .clearfix::after{
+            content: '';
+            clear: both;
+        }
+        
+        .block{
+            /* background-color: rgb(210, 221, 175); */
+            padding: 30px;
+        }
+        h1,h2,h3{
+            font-family: 'Century Gothic', monospace;
+        }
+        #logo{
+            float: left;
+        }
+        #slogan{
+            float: right;
+            font-style: italic;
+            font-size: 0.7rem;
+            color: #909090;
+            width: 30%;
+        }
+        header{
+            padding: 30px 15px;
+        }
+        .block:first-child,
+        .block:last-child{
+            text-align: center;
+        }
+        .alignleft{
+            float: left;
+            margin-right: 15px;
+        }
+        .alignright{
+            float: right;
+            margin-left: 15px;
+        }
+        .block img{
+            border-radius: 50%;
+        }
+        #main{
+            border-left: 2px solid #ddd;
+            border-right: 2px solid #ddd;
+        }
+        .block:nth-child(odd){
+            border-top: 2px solid #ddd;
+            border-bottom: 2px solid #ddd;
+            background-color: #f8f8f8;
+        }
+        img{
+            
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <header class="clearfix">
+            <div id="logo">
+            <img src="logo-inky-black.png" alt="logo">
+            </div>
+            <div id="slogan"><h1>Daily Deals for Creative Professionals</h1></div>
+        </header>
+        <div id="main">
+            <div class="block">
+                <h2>Here is what InkyDeals is all about</h2>
+                <p>We've made a lot of friends along the way and nothing would make us happier than being able to consider you part of our community. So let's get to know each other better. Here are some insights about us:</p>
+            </div>
+            
+            <div class="block">
+                <img src="average-discount.jpg" alt="discount" class="alignright" width="100" height="100">
+                <h3>Avarage discount:</h3>
+                <p>The average discount for our products was <strong>93.40%</strong></p>
+            </div>
+
+            <div class="block">
+                <img src="rating.jpg" alt="rating" class="alignleft" width="100" height="100">
+                <h3>Average users rating:</h3>
+                <p>The average users rating for our deals was <strong>4.5 out of 5 stars</strong></p>
+            </div>
+
+            <div class="block">
+                <img src="savings.jpg" alt="saving" class="alignright" width="100" height="100">
+                <h3>Total saved by members:</h3>
+                <p>InkyDeals members have saved <strong>$28,320,804</strong> in 2018 alone.</p>
+            </div>
+
+            <div class="block">
+                <img src="members.jpg" alt="members" class="alignleft" width="100" height="100">
+                <h3>Total community members:</h3>
+                <p>Our awesome community has reached  <strong> 350,000 design enthusiasts</strong>in March.</p>
+            </div>
+
+            <div class="block">
+                <img src="total-deals.jpg" alt="total-deals" class="alignright" width="100" height="100">
+                <h3>Total number of deals:</h3>
+                <p>In the last 5 months we've launched <strong> 134 new deals.</strong></p>
+            </div>
+            <div class="block">
+                <h3>More than 78% of our clients return for a second purchase within the next 56 days</h3>
+                <p>Don't hesitate to drop us a line whether you'd like to tell us something about you or if you want to know more about a deal, a design bundle, or us - cause we're pretty sociable:). </p>
+            </div>
+        </div>
+        
+
+
+    </article>
+</body>
+</html>

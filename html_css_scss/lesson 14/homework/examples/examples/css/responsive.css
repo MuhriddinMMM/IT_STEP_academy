@@ -1,0 +1,152 @@
+@media (max-width: 960px) {
+    header {
+        height: 450px;
+        background-image: url(https://source.unsplash.com/NVHDSYqBZCE/1000x450);
+    }
+
+    .column-3 {
+        flex-basis: 50%;
+    }
+
+    .portfolio-item {
+        margin-bottom: 0;
+        padding-top: 0;
+    }
+
+    .portfolio-item:hover {
+        box-shadow: none;
+    }
+
+    .portfolio-item:hover img {
+        transform: scale(1.05);
+    }
+
+    .portfolio-item::after,
+    .portfolio-item:hover::after {
+        top: auto;
+        width: calc(100% - 38px);
+        left: 19px;
+        bottom: 25px;
+        padding: 20px 15px;
+    }
+
+    .testimonial-body,
+    .testimonial-author {
+        margin: 15px;
+    }
+
+    .testimonial-author {
+        width: 120px;
+    }
+
+    .tab,
+    .tab:hover {
+        flex: 0 0 calc(50% - 30px);
+    }
+
+    .tab {
+        background-color: #fff;
+        padding-top: 20px;
+        margin: 0 15px 25px;
+    }
+
+    .tab:hover .tab-info {
+        margin-left: 0;
+    }
+
+    .tab-details {
+        opacity: 1;
+        position: static;
+        background-color: transparent;
+        width: auto;
+        text-align: center;
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    header {padding: 15px;
+        text-align: center;}
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .column-2 {
+        flex-basis: 100%;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+
+    .mobile-toggle span {
+        width: 30px;
+        height: 4px;
+        margin-bottom: 6px;
+        background: #000000;
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .main-nav.open nav {
+        display: block;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    nav ul li {
+        width: 100%;
+        padding: 7px 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    nav ul li:first-child {
+        margin-top: 30px;
+    }
+
+    #footer div {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    header h2 {
+        font-size: 1.5em;
+    }
+    .heading {font-size: 2.5rem;margin: 2rem 0;}
+    .tab,
+    .tab:hover {
+        flex-basis: calc(100% - 30px);
+    }
+
+    header {
+        height: 350px;
+        background-image: url(https://source.unsplash.com/NVHDSYqBZCE/500x350);
+    }
+
+    [class*="column-"] {
+        flex-basis: 100%;
+    }
+
+    .testimonial {
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 15px;
+    }
+
+    .testimonial-author {
+        margin: 20px auto;
+    }
+}

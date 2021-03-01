@@ -1,0 +1,49 @@
+@import "reset";
+@import "setup";
+
+.card {
+    @extend %container;
+    @include grid();
+    grid-template-columns: 300px;
+    justify-content: center;
+    padding: 5rem 0 0 0;
+
+    @include tablet(){
+        grid-template-columns: 600px;
+    }
+    @include laptop(){
+        grid-template-columns: 700px;
+        padding: 0;
+    }
+    @include desktop() {
+        grid-template-columns: 1fr;
+    }
+    &__item {
+        padding: 1rem 1.5rem;
+        background-color: $secondary-color;
+        border-radius: 1rem;
+        @include boxShadow($second-shadow);
+        transition: .4s all;
+        &:hover {
+            @include boxShadow($third-shadow);
+        }
+    }
+    &__data {
+        color: $main-color;
+    }
+    &__title {
+        font-size: $big-size;
+        font-weight: $medium;
+        margin-bottom:  $mb-1;
+    }
+    .button {
+
+
+        @include button($back-color, $secondary-color, $hover-color)
+        // color: red;
+
+        // .card & {
+        //     color: blue;
+        // }
+    }
+}

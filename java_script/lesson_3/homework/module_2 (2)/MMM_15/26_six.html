@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>26. Массив с заданным количеством элементов
+Напишите функцию arrayFilled(len, value), которая возвращает массив с заданным количеством len элементов value.
+
+function arrayFilled(len, value) {
+
+// Ваш код
+
+}
+
+document.writeln(arrayFilled(5, 1));   // [1,1,1,1,1]
+document.writeln(arrayFilled(4, 12));  // [12,12,12,12] </p>
+
+
+<script>
+function arrayFilled(len, value) {
+  var array = [];
+  for(len; len > 0; len--) {
+    array.push(value);
+  }
+  return array;
+}
+
+document.writeln(arrayFilled(5, 1) + '<br>'); // [1,1,1,1,1]
+document.writeln(arrayFilled(4, 12));         // [12,12,12,12]
+</script>
+</body>
+</html>

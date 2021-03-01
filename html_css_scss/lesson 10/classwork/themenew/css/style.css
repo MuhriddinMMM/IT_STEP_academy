@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
+header{
+    background-color: red;
+    padding: 20px 20px;
+    margin-bottom: 15px;
+}
+nav, footer{
+    background-color: slateblue;
+    padding: 10px 20px;
+}
+.sect{
+    background-color: springgreen;
+    margin-bottom: 15px;
+    padding: 20px 20px;
+    height: 100px;
+}
+.right{
+    background-color: #5546;
+    
+}
+main{
+    padding: 20px;
+    background-color: violet;
+
+}
+section{
+    background-color:yellow;
+    padding: 20px;
+    margin: 15px;
+    height: 100px;
+}
+#MAIN{
+    margin-bottom: 15PX;
+}
+.clearfix{
+    margin: 0 -5px;
+}
+.clearfix::before,
+.clearfix::after{
+content: "";
+display: table;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+}
+.column{
+    float: left;
+    padding: 0 5px;
+}
+.column-1{
+width: 20%;
+}
+.colmnn-2{
+width: 65%;
+}
+.column-3{
+width: 15%;
+}

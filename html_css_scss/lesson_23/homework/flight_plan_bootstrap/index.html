@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col d-flex align-items-center">
+            <div><a href="#" class="logo_user">Flights - Search List</a></div>
+          </div>
+          <div class="col d-flex align-items-center justify-content-end">
+            <ul class="menu d-flex pl-3">
+              <li class="ml-6"><a href="">Home</a></li>
+              <li class="ml-6"><a href="">Flights Search List</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="plans">
+      <div class="container">
+        <div class="row">
+          <form action="">
+            <div class="col-12">
+              <div
+                class="d-flex flex-row align-items-center justify-content-start"
+              >
+                <div
+                  class="col-3 d-flex flex-row align-items-center justify-content-start"
+                >
+                  <div class="col-1 align-self-start">
+                    <input type="radio" name="way" id="oneway" />
+                  </div>
+                  <div class="col align-self-start">
+                    <label for="oneway">One Way</label>
+                  </div>
+                </div>
+
+                <div
+                  class="col-2 d-flex flex-row align-items-center justify-content-start"
+                >
+                  <div class="col-1 align-self-start">
+                    <input type="radio" name="way" id="roundtrip" />
+                  </div>
+                  <div class="col align-self-start">
+                    <label for="roundtrip">Round Trip</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 search_section">
+              <div
+                class="d-flex flex-row justify-content-center align-items-center"
+              >
+                <div class="col-2 position-relative search_section_icon">
+                  <input type="text" id="from" name="from" placeholder="From" />
+                  <i class="bx bxs-map" style="color: #757272"></i>
+                </div>
+                <div class="col-2 position-relative search_section_icon">
+                  <input type="text" id="to" name="to" placeholder="To" />
+                  <i class="bx bxs-map" style="color: #757272"></i>
+                </div>
+                <div class="col-2 position-relative search_section_date">
+                  <input type="date" placeholder="Depart Date" required />
+                </div>
+                <div class="col-2 position-relative search_section_date">
+                  <input type="date" placeholder="Return Date" required />
+                </div>
+                <div class="col-2 position-relative">
+                  <select name="class" id="class">
+                    <option value="economy">Economy Class</option>
+                    <option value="business">Business Class</option>
+                  </select>
+                </div>
+                <div class="col-2 position-relative">
+                  <button type="button">Search</button>
+                </div>
+              </div>
+            </div>
+
+            <div id="filter_route" class="col-12">
+              <div
+                class="d-flex flex-row align-items-center justify-content-between"
+              >
+                <div
+                  class="filter_section col-3 d-flex flex-column align-self-start justify-content-center"
+                >
+                  <div>
+                    <h3>Filter</h3>
+                  </div>
+                  <div>
+                    <div><h4>No. of Stops</h4></div>
+                    <div class="d-flex flex-row">
+                      <div class="col-1">
+                        <input type="checkbox" name="nonstop" id="nonstop" />
+                      </div>
+                      <div class="col">
+                        <label for="nonstop">Non Stop</label>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                      <div class="col-1">
+                        <input type="checkbox" name="onestop" id="onestop" />
+                      </div>
+                      <div class="col"><label for="nonstop">1 Stop</label></div>
+                    </div>
+                    <div class="d-flex flex-row">
+                      <div class="col-1">
+                        <input type="checkbox" name="lotstop" id="lotstop" />
+                      </div>
+                      <div class="col">
+                        <label for="lotstop">2+ Stops</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column filter_route_minmax">
+                    <div><h4>Price</h4></div>
+                    <div class="d-flex flex-row">
+                      <div class="d-flex flex-column mr-3">
+                        <div class="">
+                          <label for="min">Min:</label>
+                        </div>
+                        <div class="d-flex flex-row align-items-center">
+                          <input
+                            type="number"
+                            name="min"
+                            id="min"
+                            placeholder="0"
+                          />
+                          <div><p>$</p></div>
+                        </div>
+                      </div>
+
+                      <div class="d-flex flex-column">
+                        <div>
+                          <label for="max">Max:</label>
+                        </div>
+                        <div class="d-flex flex-row align-items-center">
+                          <input
+                            type="number"
+                            name="max"
+                            id="max"
+                            placeholder="1000"
+                          />
+                          <div><p>$</p></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column">
+                    <div><h4>Airlines</h4></div>
+                    <div class="d-flex flex-row">
+                      <div class="col-1">
+                        <input type="checkbox" id="Asiana" name="Asiana" />
+                      </div>
+
+                      <div class="col">
+                        <label for="Asiana">Asiana Airlines</label>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                      <div class="col-1">
+                        <input type="checkbox" id="American" name="American" />
+                      </div>
+                      <div class="col">
+                        <label for="American">American Airlines</label>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                      <div class="col-1">
+                        <input type="checkbox" id="Canada" name="Canada" />
+                      </div>
+                      <div class="col">
+                        <label for="Canada">Air Canada</label>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                      <div class="col-1">
+                        <input type="checkbox" id="India" name="India" />
+                      </div>
+
+                      <div class="col">
+                        <label for="India">Air India</label>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                      <div class="col-1">
+                        <input type="checkbox" id="Jet" name="Jet" />
+                      </div>
+
+                      <div class="col">
+                        <label for="Jet">Jet Airways</label>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                      <div class="col-1">
+                        <input type="checkbox" id="Spicejet" name="Spicejet" />
+                      </div>
+                      <div class="col">
+                        <label for="Spicejet">Spicejet</label>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                      <div class="col-1">
+                        <input type="checkbox" id="Indigo" name="Indigo" />
+                      </div>
+                      <div class="col">
+                        <label for="Indigo">Indigo</label>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                      <div class="col-1">
+                        <input type="checkbox" id="Multiple" name="Multiple" />
+                      </div>
+                      <div class="col">
+                        <label for="Multiple">Multiple Airlines</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="route_section col-9 d-flex flex-column align-self-start ml-4"
+                >
+                  <h3>Dehli to Sydney</h3>
+
+
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Airlines</th>
+                        <th>Departure</th>
+                        <th>Duration</th>
+                        <th>Arrival</th>
+                        <th>Price</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Indigo <br><span>6E-2489</span></td>
+                        <td>23:30 <br> <span>Dehli</span></td>
+                        <td>18h 55m <br> <span>Non Stop</span></td>
+                        <td>18:15 <br> <span>Sydney</span></td>
+                        <td>$980</td>
+                        <td><button>Book</button><br><a href="#">Flights Details</a></td>
+                      </tr>
+                      <tr>
+                        <td>Indigo <br><span>6E-2489</span></td>
+                        <td>23:30 <br> <span>Dehli</span></td>
+                        <td>18h 55m <br> <span>Non Stop</span></td>
+                        <td>18:15 <br> <span>Sydney</span></td>
+                        <td>$980</td>
+                        <td><button>Book</button><br><a href="#">Flights Details</a></td>
+                      </tr>
+                      <tr>
+                        <td>Indigo <br><span>6E-2489</span></td>
+                        <td>23:30 <br> <span>Dehli</span></td>
+                        <td>18h 55m <br> <span>Non Stop</span></td>
+                        <td>18:15 <br> <span>Sydney</span></td>
+                        <td>$980</td>
+                        <td><button>Book</button><br><a href="#">Flights Details</a></td>
+                      </tr>
+                      <tr>
+                        <td>Indigo <br><span>6E-2489</span></td>
+                        <td>23:30 <br> <span>Dehli</span></td>
+                        <td>18h 55m <br> <span>Non Stop</span></td>
+                        <td>18:15 <br> <span>Sydney</span></td>
+                        <td>$980</td>
+                        <td><button>Book</button><br><a href="#">Flights Details</a></td>
+                      </tr>
+                      <tr>
+                        <td>Indigo <br><span>6E-2489</span></td>
+                        <td>23:30 <br> <span>Dehli</span></td>
+                        <td>18h 55m <br> <span>Non Stop</span></td>
+                        <td>18:15 <br> <span>Sydney</span></td>
+                        <td>$980</td>
+                        <td><button>Book</button><br><a href="#">Flights Details</a></td>
+                      </tr>
+                      <tr>
+                        <td>Indigo <br><span>6E-2489</span></td>
+                        <td>23:30 <br> <span>Dehli</span></td>
+                        <td>18h 55m <br> <span>Non Stop</span></td>
+                        <td>18:15 <br> <span>Sydney</span></td>
+                        <td>$980</td>
+                        <td><button>Book</button><br><a href="#">Flights Details</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
