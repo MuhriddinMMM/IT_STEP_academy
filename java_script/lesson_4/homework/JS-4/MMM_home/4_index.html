@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Реализуйте класс MyString, который будет иметь следующие методы: метод
+    reverse(), который параметром принимает строку, а возвращает ее в
+    перевернутом виде, метод ucFirst(), который параметром принимает строку, а
+    возвращает эту же строку, сделав ее первую букву заглавной и метод ucWords,
+    который принимает строку и делает заглавной первую букву каждого слова этой
+    строки.
+
+    <script>
+      class MyString {}
+
+      function reverse(s) {
+        return s.split("").reverse().join("");
+      }
+      var dragon = reverse("muhriddin  shamsiddin");
+      console.log(dragon);
+
+      function ucFirst(str) {
+        if (!str) return str;
+
+        return str[0].toUpperCase() + str.slice(1);
+      }
+      alert(ucFirst(dragon));
+
+      let words = dragon.split(" ");
+      for (let i = 0; i < words.length; i++) {
+        words[i] = words[i].slice(0, 1).toUpperCase() + words[i].slice(1);
+      }
+      let result = words.join(" ");
+      console.log(result);
+    </script>
+
+    <script></script>
+  </body>
+</html>

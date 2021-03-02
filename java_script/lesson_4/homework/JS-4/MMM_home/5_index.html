@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Реализуйте класс Validator, который будет проверять строки. К примеру, у
+    него будет метод isEmail параметром принимает строку и проверяет, является
+    ли она корректным емейлом или нет. Если является - возвращает true, если не
+    является - то false. Кроме того, класс будет иметь следующие методы: метод
+    isDomain для проверки домена, метод isDate для проверки даты и метод isPhone
+    для проверки телефона
+    <script>
+        class Validator{
+            setIsEmail(email){
+                if(this._checkEmail(email)){
+                    this._email=email;
+                }
+            }
+            _checkEmail(email){
+                let emails = "@."
+                    for(var i = 0; i <emails.lenght; i++){
+                        if(nums.includes(emails[i])){
+                            return true;
+                        }
+
+                    }
+                
+            }
+            getIsEmail(){
+                return this._email;
+            }
+        }
+
+    
+      var validator = new Validator();
+        validator.setIsEmail('sdjaadsaj@mail.ru')
+    //   console.log(validator.isEmail("phphtml@mail.ru"));
+    //   console.log(validator.isDomain("phphtml.net"));
+    //   console.log(validator.isDate("12.05.2020"));
+    //   console.log(validator.isPhone("+375 (29) 817-68-92")); //тут можете формат своей страны
+    </script>
+  </body>
+</html>
