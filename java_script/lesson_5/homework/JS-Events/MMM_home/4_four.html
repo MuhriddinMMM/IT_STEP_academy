@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- !!! first -->
+    <style>
+      .menu ul {
+        margin: 20px 0;
+        list-style: none;
+        padding-left: 20px;
+        display: none;
+      }
+
+      .menu .title {
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      .menu .title::before {
+        content: "▶ ";
+        font-size: 80%;
+        color: rgb(255, 0, 0);
+      }
+
+      .menu.open .title::before {
+        content: "▼  ";
+      }
+      .menu li {
+        padding: 20px;
+        background-color: rgb(89, 253, 60);
+        width: 206px;
+        margin-left: -20px;
+      }
+
+      .menu.open ul {
+        display: block;
+        border: 1px solid rgb(5, 73, 5);
+        width: 226px;
+        box-shadow: 1px 1px 5px grey;
+        position: relative;
+      }
+      span {
+        padding: 20px;
+        background-color: rgb(0, 217, 255);
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+      }
+    </style>
+    <!--!!! second -->
+    <style>
+      .dropbtn {
+        background-color: #3498db;
+        color: white;
+        padding: 16px 40px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .dropbtn:hover,
+      .dropbtn:focus {
+        background-color: #2980b9;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown a:hover {
+        background-color: #ddd;
+      }
+
+      .show {
+        display: block;
+      }
+      #main {
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Создать раскрывающееся меню важность: 5 Создать меню, которое по нажатию
+      открывается либо закрывается: P.S. HTML/CSS исходного документа можно и
+      нужно менять.
+    </p>
+
+    <!--!!! first -->
+    <main>
+      <div id="sweeties" class="menu">
+        <span class="title">Сладости (нажми меня)!</span>
+        <ul>
+          <li id="li">Пирожное</li>
+          <li>Пончик</li>
+          <li>Мёд</li>
+        </ul>
+      </div>
+    </main>
+    <!--!!! first -->
+    <script>
+      let menuElement = document.getElementById("sweeties");
+      let titleElement = menuElement.querySelector(".title");
+
+      titleElement.onclick = function () {
+        menuElement.classList.toggle("open");
+      };
+    </script>
+
+    <!--!!! second -->
+    <main id="main">
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="#">example</a>
+          <a href="#">example</a>
+          <a href="#">example</a>
+          <a href="#">example</a>
+          <a href="#">example</a>
+          <a href="#">example</a>
+          <a href="#">example</a>
+        </div>
+      </div>
+    </main>
+    <!--!!! second -->
+    <script>
+      // shtobi atkrit i zakrit
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      //  kogda na drugoy meste najal knopku menu bil zakritom
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

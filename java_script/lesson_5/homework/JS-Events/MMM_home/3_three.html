@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn {
+        max-width: 50%;
+        height: 100px;
+        font-size: 48px;
+        padding: 50px 0;
+        background-color: rgb(179, 0, 0);
+        color: bisque;
+        text-align: center;
+      }
+      .ball {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border: 5px solid grey;
+        border-radius: 50%;
+        background-color: #fff;
+        transition: 0.5s linear;
+      }
+      .layout {
+        position: relative;
+        width: 540px;
+        height: 540px;
+        background-color: rgb(15, 241, 27);
+        border: 20px solid black;
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Передвиньте мяч по полю важность: 5 Пусть мяч перемещается при клике на
+      поле, туда, куда был клик, вот так: Требования: Центр мяча должен
+      совпадать с местом нажатия мыши (если это возможно без пересечения краёв
+      поля); CSS-анимация желательна, но не обязательна; Мяч ни в коем случае не
+      должен пересекать границы поля; При прокрутке страницы ничего не должно
+      ломаться; Заметки: Код должен уметь работать с различными размерами мяча и
+      поля, не привязываться к каким-либо фиксированным значениям. Используйте
+      свойства event.clientX/event.clientY для определения координат мыши при
+      клике.
+    </p>
+
+    <div class="layout" id="layout" class="layout">
+      <div class="ball" id="ball" class="ball"></div>
+    </div>
+<!--!!! При прокрутке страницы ничего не должно ломаться;  dlya proverki lorem10000-->
+    <p>lorem10000</p>
+
+    <script>
+      "use strict";
+      layout.onclick = function (event) {
+        let left = event.clientX;
+        console.log(left);
+        if (left > 535) {
+          left = 535;
+        } else if (left < 55) {
+          left = 55;
+        }
+
+        ball.style.left = left - 55 + "px";
+
+        let top = event.clientY;
+        if (top > 535) {
+          top = 535;
+        } else if (top < 55) {
+          top = 55;
+        }
+
+        ball.style.top = top - 55 + "px";
+      };
+    </script>
+  </body>
+</html>

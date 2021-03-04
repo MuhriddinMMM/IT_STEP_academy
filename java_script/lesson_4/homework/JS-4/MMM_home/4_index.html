@@ -16,20 +16,22 @@
 
     <script>
       class MyString {}
-
+      // возвращает ее в    перевернутом виде
       function reverse(s) {
         return s.split("").reverse().join("");
       }
       var dragon = reverse("muhriddin  shamsiddin");
       console.log(dragon);
 
+
+      // сделав ее первую букву заглавной
       function ucFirst(str) {
         if (!str) return str;
-
         return str[0].toUpperCase() + str.slice(1);
       }
-      alert(ucFirst(dragon));
 
+      // делает заглавной первую букву каждого слова
+      alert(ucFirst(dragon));
       let words = dragon.split(" ");
       for (let i = 0; i < words.length; i++) {
         words[i] = words[i].slice(0, 1).toUpperCase() + words[i].slice(1);

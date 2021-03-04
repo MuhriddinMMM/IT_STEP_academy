@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #tekst {
+        background-color: rgb(18, 206, 223);
+        padding: 100px;
+      }
+      p{
+          background-color: rgb(158, 15, 15);
+          padding: 100px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    Добавьте JavaScript к кнопке button, чтобы при нажатии элемент code
+    <!-- <div id="text">  -->
+    исчезал.
+
+    <button id="btn">Нажмите, чтобы спрятать текст</button>
+    <p id="tekst">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut velit facilis
+      minus, corporis hic quae impedit quibusdam nesciunt, temporibus
+      voluptatum, ad quas quis quia soluta minima iure excepturi consequuntur.
+      Totam earum nisi expedita, ipsum omnis ullam pariatur aliquid tempore
+      tenetur, corrupti modi adipisci neque autem molestias perferendis vel
+      quae, consequatur distinctio dolore maxime sunt inventore itaque at. Est
+      culpa cum nam expedita necessitatibus magni dicta ipsa. Doloremque, quis
+      in! Quibusdam saepe libero sunt quae quaerat incidunt veniam, possimus
+      dignissimos repellat assumenda harum sed veritatis, cum adipisci dicta
+      dolorem sint? In voluptate dolore dolorem ex ratione fuga obcaecati,
+      facilis tempore ab.
+    </p>
+
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores ratione, et quos non nam architecto aspernatur explicabo? Doloribus, velit repellat. Dolores tempora cum, aliquam molestiae nobis reprehenderit ratione voluptas voluptates. Quae dolorem et magni nesciunt hic necessitatibus, cumque veritatis quasi, consequuntur temporibus explicabo neque. Numquam repellendus ad dolorum eius ea! Illo sint id veritatis saepe dicta necessitatibus voluptate provident ea, corrupti, maiores iusto qui accusamus non sed tempore, quas minus ex! Accusamus, accusantium atque quasi repudiandae dolor voluptates consectetur, itaque maxime provident, delectus mollitia eaque sed? Eius necessitatibus qui eveniet nobis, accusantium recusandae cum modi, temporibus eos quibusdam quisquam doloribus.
+    </p>
+    <script>
+      btn.onclick = function (event) {
+        var x = document.getElementById("tekst");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
