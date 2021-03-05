@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        position: relative;
+      }
+      main{
+        margin: 10px auto;
+        max-width: 900px;
+      }
+
+      h3 {
+        margin: 0;
+        padding-bottom: 0.3em;
+        padding-right: 20px;
+        font-size: 1.1em;
+      }
+
+      p {
+        margin: 0;
+        padding: 0 0 0.5em;
+      }
+
+      .pane {
+        background: #edf5e1;
+        padding: 10px 20px 10px;
+        border-top: solid 2px #c4df9b;
+        position: relative;
+      }
+
+      .remove-button {
+        position: absolute;
+        font-size: 110%;
+        top: 0;
+        color: rgb(0, 0, 0);
+        right: 10px;
+        display: block;
+        width: 24px;
+        height: 24px;
+        border: none;
+        background: yellow;
+        cursor: pointer;
+        border: 1px solid red;
+      }
+      .razer{
+          top: 50%;
+          left: -250px;
+          background-color: rgb(70, 216, 3);
+          position: absolute;
+          width: 300px;
+          padding: 20px;
+          border-radius: 20px;
+          text-align: center;
+          transition: 0.5s linear;
+          box-shadow: 0.5px 0.5px 20px  rgb(92, 92, 92);
+          font-size: large;
+          font-weight: bold;
+      }
+      .razer:hover {
+        left: 0px;
+      }
+    </style>
+  </head>
+  <body>
+   <main>
+        <p>
+          Добавить кнопку закрытия важность: 5 Есть список сообщений. При помощи
+          JavaScript для каждого сообщения добавьте в верхний правый угол кнопку
+          закрытия. Результат должен выглядеть, как показано здесь:
+        </p>
+       
+        <div>
+          <div class="pane">
+            <h3>Лошадь</h3>
+            <p>
+              Домашняя лошадь — животное семейства непарнокопытных, одомашненный и
+              единственный сохранившийся подвид дикой лошади, вымершей в дикой
+              природе, за исключением небольшой популяции лошади Пржевальского.
+            </p>
+          </div>
+          <div class="pane">
+            <h3>Осёл</h3>
+            <p>
+              Домашний осёл (лат. Equus asinus asinus), или ишак, — одомашненный
+              подвид дикого осла (Equus asinus), сыгравший важную историческую роль
+              в развитии хозяйства и культуры человека и по-прежнему широко в
+              хозяйстве многих развивающихся стран.
+            </p>
+          </div>
+          <div class="pane">
+            <h3>Кошка</h3>
+            <p>
+              Кошка, или домашняя кошка (лат. Felis silvestris catus), — домашнее
+              животное, одно из наиболее популярных(наряду с собакой)
+              «животных-компаньонов». Являясь одиночным охотником на грызунов и
+              других мелких животных, кошка — социальное животное, использующее для
+              общения широкий диапазон звуковых сигналов.
+            </p>
+          </div>
+        </div>
+       
+       
+        <div class="lg" id="lg">
+        <p class="razer">
+           RAZER
+        </p>        
+        </div>
+       
+   </main>
+    <script>
+      let panes = document.querySelectorAll(".pane");
+
+      for (let pane of panes) {
+        pane.insertAdjacentHTML(
+          "afterbegin",
+          '<button class="remove-button">x</button>'
+        );
+        // кнопка становится первым потомком плитки (pane)
+        pane.firstChild.onclick = () => pane.remove();
+      }
+
+      let raze = document.querySelectorAll(".razer");
+
+      for (let lg of raze){
+          lg.insertAdjacentHTML(
+              "afterbegin",
+              '<button class="remove-button">x</button>'
+          );
+          lg.firstChild.onclick=()=>lg.remove();
+      }
+    </script>
+  </body>
+</html>
