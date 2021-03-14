@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS-Forms</title>
-</head>
+  </head>
 
-<body>
-    <input type="text" name="" id="input_field" value="">
-    <button type="button" id="result"> Равно</button>
+  <body>
+    <input type="text" name="" id="input_field" value="" />
+    <button type="button" id="result">Равно</button>
     <form action="">
-        <input type="button" name="" id="" value="+">
+      <input type="button" class="value" name="" id="" value="+" />
+      <input type="button" name="" id="" value="-" />
     </form>
     <form action="">
-        <input type="button" value="0">
-        <input type="button" value="1">
-        <input type="button" value="2">
-        <input type="button" value="3">
-        <input type="button" value="4">
-        <input type="button" value="5">
-        <input type="button" value="6">
-        <input type="button" value="7">
-        <input type="button" value="8">
-        <input type="button" value="9">
+      <input type="button" value="0" />
+      <input type="button" value="1" />
+      <input type="button" value="2" />
+      <input type="button" value="3" />
+      <input type="button" value="4" />
+      <input type="button" value="5" />
+      <input type="button" value="6" />
+      <input type="button" value="7" />
+      <input type="button" value="8" />
+      <input type="button" value="9" />
     </form>
     <!-- <form action="" method="get" id="first">
         <input type="text">
@@ -55,33 +55,65 @@
 
     </script> -->
 
+    <!-- <script>
+      var numbers = document.forms[1];
 
+      for (var i = 0; i < numbers.length; i++) {
+        // console.log(numbers[i])
+        numbers[i].onclick = function () {
+          // console.log(this.value)
+          input_field.value += this.value;
+          console.log(input_field.value);
+        };
+      }
+
+      var action = document.forms[0];
+      for (var i = 0; i < action.length; i++) {
+        action[i].onclick = function () {
+          input_field.value += this.value;
+        };
+      }
+
+      result.onclick = function () {
+        var tmp = input_field.value.split("+");
+        console.log();
+        result = +tmp[0] + +tmp[1];
+        alert(result);
+      };
+      console.log();
+    </script> -->
 
     <script>
-        var numbers = document.forms[1]
-       
-        for(var i = 0 ; i < numbers.length; i++){
-            // console.log(numbers[i])
-            numbers[i].onclick = function(){
-                // console.log(this.value)
-                input_field.value += this.value;
-                console.log(input_field.value)
-            }
-        }
+      var numbers = document.forms[1];
+      
+      for (var i = 0; i < numbers.length; i++) {
+        // console.log(numbers[i])
+        numbers[i].onclick = function () {
+          // console.log(this.value)
+          input_field.value += this.value;
+          console.log(input_field.value);
+        
+        };
+      }
+      console.log(numbers)
+      var action = document.forms[0];
+      for (var i = 0; i < action.length; i++) {
+        action[i].onclick = function () {
+          input_field.value += this.value;
+        };
+      }
+      
+      result.onclick = function () {
+        
+          var tmp = input_field.value.split("+");
+        console.log();
+        result = +tmp[0] + +tmp[1];
+        alert(result);
 
-        var action = document.forms[0]
-       for(var i = 0; i < action.length; i++){
-           action[i].onclick = function(){
-                input_field.value +=this.value
-           }
-       }
-       result.onclick = function(){
-           var tmp = input_field.value.split('+')
-           console.log()
-           result = +tmp[0] + +tmp[1]
-           alert(result)
-       }
+        
+        
+      };
+      console.log();
     </script>
-</body>
-
+  </body>
 </html>

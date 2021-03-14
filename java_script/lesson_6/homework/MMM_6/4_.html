@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Задача . Квадрат содержимого инпута Задача. Повторите поведение кнопки по
+      нажатию на нее (она выводит алертом содержимое инпута, возведенное в
+      квадрат):
+    </p>
+
+
+    <button id="btn">
+        push square number
+    </button>
+
+    <input type="number" id="num">
+    <script>
+        btn.onclick = function(){
+            let numb = document.getElementById('num').value
+            alert(Math.pow(numb, 2))
+        }
+    </script>
+  </body>
+</html>

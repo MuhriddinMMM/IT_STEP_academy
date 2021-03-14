@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+
+      td {
+        border: 1px solid;
+        padding: 5px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <p>
+      3. .Дана таблица с юзерами с двумя колонками: имя и фамилия. Под таблицей
+      сделайте форму, с помощью которой можно будет добавить нового юзера в
+      таблицу. Сделайте так, чтобы при клике на любую ячейку появлялся prompt, с
+      помощью которого можно изменить текст ячейки.
+    </p>
+
+    <ul>
+      <li>пункт 1</li>
+      <li>пункт 2</li>
+      <li>пункт 3</li>
+    </ul>
+
+    <table>
+      <tr>
+        <th>NAME</th>
+        <th>SURNAME</th>
+      </tr>
+      <tr>
+        <td>Сергей</td>
+        <td>Светлавков</td>
+      </tr>
+      <tr>
+        <td>Михаил</td>
+        <td>Галусттян</td>
+      </tr>
+      <tr>
+        <td>Иван</td>
+        <td>Ургант</td>
+      </tr>
+    </table>
+    <br />
+
+    <form action="">
+      <input type="text" class="name" placeholder="Введите имя" />
+      <input type="text" class="surname" placeholder="Введите фамимлию" />
+    </form>
+    <br />
+    <button>Add user</button>
+
+    <script>
+      $("table").on("dblclick", "td:odd", function () {
+        let $age = prompt("name", "muhr");
+        $(this).html("");
+        return $(this).append($age);
+      });
+
+      $("table").on("dblclick", "td:even", function () {
+        let $ages = prompt("surname", "shams");
+        $(this).html("");
+        return $(this).append($ages);
+      });
+
+      $("button").on("click", function () {
+        let $tr = $("<tr></tr>");
+        let $td1 = $("<td></td>");
+        let $td2 = $("<td></td>");
+        $td1.html($("input.name").val());
+        $td2.html($("input.surname").val());
+        $tr.append($td1);
+        $tr.append($td2);
+        $("table").append($tr);
+      });
+    </script>
+
+    <!--! Note for Muhriddin -->
+
+    <script>
+      //   $("li").click(function () {
+      //     alert("!");
+      //   });
+    </script>
+
+    <script>
+      //   $("li").click(function () {
+      //     $(this).append("!");
+      //   });
+    </script>
+
+    <!-- <p>
+      click, blur, focus, focusin, focusout, load, resize, scroll, unload,
+      click, dblclick, mousedown, mouseup, mousemove, mouseover, mouseout,
+      mouseenter, mouseleave, change, select, submit, keydown, keypress, keyup,
+      error
+    </p> -->
+
+    <script>
+      //   $("li").click(func);
+      //   function func() {
+      //     $(this).append("!");
+      //     $(this).unbind("click", func);
+      //   }
+    </script>
+
+    <script>
+      //         $('li').click(function func() {
+      // 	$(this).append('!');
+      // 	$(this).unbind('click', func);
+      // });
+    </script>
+
+    <script>
+      //   $("li").on("click", function () {
+      //     $(this).append("!");
+      //   });
+    </script>
+
+    <script>
+      //   $("li").on("click", function func() {
+      //     $(this).append("!");
+      //     $(this).off("click", func);
+      //   });
+    </script>
+
+    <script>
+      //   $("li").on("click mousemove", function func() {
+      //     $(this).append("!");
+      //   });
+    </script>
+
+    <script>
+      //   $("ul").on("click", "li", function () {
+      //     $(this).append("!");
+      //   });
+    </script>
+
+    <script>
+      //   $("li").one("click", function () {
+      //     $(this).append("!");
+      //   });
+    </script>
+
+    <!-- <a href="/" id="link">ссылка</a>
+
+    <script>
+      var link = document.getElementById("link");
+
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        alert("Вы не можете перейти по этой ссылке!");
+      });
+    </script> -->
+  </body>
+</html>
