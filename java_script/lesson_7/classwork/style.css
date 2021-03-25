@@ -1,0 +1,24 @@
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+table{
+      border-collapse: collapse;
+}
+td, th {
+  
+    width: 100px;
+    height: 50px;
+    border: 1px solid grey;
+}
+a {
+    display: inline-block;
+    width: 100px;
+}
+button {
+    margin: 20px;
+    padding: 20px 50px;
+}

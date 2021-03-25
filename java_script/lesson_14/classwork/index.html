@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var numbers = '[0,1,2,3]'
+      // console.log(numbers)
+      // numbers = JSON.parse(numbers)
+      // console.log(numbers)
+
+      // var obj = {
+      //     name:'John',
+      //     lastName: 'Doe',
+      //     age:29
+      // }
+      // var json = {
+      //     "name":"John",
+      //     "lastName": "Doe",
+      //     "age": 29,
+      //     "roles": {
+      //         "isAdmin":false,
+      //         "isEditor":true
+      //     }
+      // }
+      // console.log(obj)
+      // console.log(json)
+      // // json = JSON.stringify(json)
+      // // console.log( json)
+      // json = JSON.stringify(json, "" , 4)
+      // console.log( json)
+    </script>
+
+    <form action="">
+      <input type="text" name="firstname" id="firstname" />
+      <input type="text" name="lastname" id="lastname" />
+      <input type="password" name="password" id="password" />
+        <input type="checkbox" id="checkbox">
+      <button type="button" id="submit_btn">submit</button>
+    </form>
+
+    <script>
+      submit_btn.onclick = function () {
+        var json = {
+          name: document.getElementById("firstname").value,
+          lastName: document.getElementById("lastname").value,
+          password: document.getElementById("password").value,
+          checkbox: document.getElementById("checkbox").checked
+        };
+        console.log(json);
+        json = JSON.stringify(json, "", 2);
+        console.log( json);
+      };
+
+      
+
+    </script>
+  </body>
+</html>

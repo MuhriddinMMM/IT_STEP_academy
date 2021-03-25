@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Какой обработчик запустится? важность: 5 В переменной button находится
+      кнопка. Изначально на ней нет обработчиков. Который из обработчиков
+      запустится? Что будет выведено при клике после выполнения кода?
+      button.addEventListener("click", () => alert("1"));
+      button.removeEventListener("click", () => alert("1")); button.onclick =
+      ()=> alert(2);
+    </p>
+    <button id="button">button</button>
+    <script>
+      function handler() {
+        alert(1);
+      }
+
+      button.addEventListener("click", handler);
+      button.removeEventListener("click", handler);
+      button.onclick = () => alert(2);
+    </script>
+
+    Первый обработчик сработает, потому что он не был удалён методом
+    removeEventListener. Чтобы удалить обработчик, необходимо передать именно ту
+    функцию, которая была назначена в качестве обработчика. Несмотря на то, что
+    код идентичен, в removeEventListener передаётся новая, другая функция. Для
+    того чтобы удалить функцию-обработчик, нужно где-то сохранить ссылку на неё
+    <!-- !!!!! -->
+    Обработчик button.onclick сработает независимо от
+    addEventListener.
+  </body>
+</html>

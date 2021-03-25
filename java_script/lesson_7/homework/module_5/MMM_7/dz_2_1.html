@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      1. Создайте функцию avg() , которая будет находить среднее значение по
+      всем своим аргументам (аргументы величины числовые).
+    </p>
+
+    <script>
+      "use strict";
+
+      var arr = [-10, 20, -15, 28];
+      var average = 0;
+
+      for (var i = 0; i < arr.length; i++) {
+        average += arr[i];
+      }
+
+      average /= arr.length;
+      console.log("Average is : " + average);
+    </script>
+  </body>
+</html>

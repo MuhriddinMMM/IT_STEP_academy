@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <p>
+      Задача . По нажатию на кнопку меняется ее текст Задача. Повторите
+      поведение кнопки по нажатию на нее (поменяется ее текст): Решение: в
+      данной задаче воспользуемся кнопкой, созданной через input с атрибутом
+      type в значении button, чтобы легко можно было сменить ее текст,
+      обратившись к атрибуту value (в кнопке через тег button текст меняется
+      через innerHTML, это тема следующего урока).
+    </p>
+    <input type="button" onclick="buttonClick(this)" value="Нажми на меня" />
+    <input type="button" onclick="buttonClick(this)" value="Нажми на меня" />
+    <script>
+      function buttonClick(elem) {
+        elem.value = "Новый текст кнопки";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <style>
+        button {
+            background-color: rgb(7, 241, 18);
+            border: none;
+            box-shadow: 0px 0px 10px 1px rgb(255, 145, 0);
+            padding: 10px 20px;
+        }
+        button:active, button:focus {
+            border: none;
+            outline: none;
+            background-color: rgb(222, 177, 135);
+        }
+        button i {
+            font-size: 20px;
+            color: crimson;
+        }
+         button:active i, button:focus i {
+             color: rgb(2, 112, 7);
+         }
+    </style>
+  </head>
+  <body>
+    <p>
+      Создать html-страницу с кнопкой Like, при нажатии на кото- рую
+      увеличивается счетчик лайков.
+    </p>
+    <button type="button" onClick="onClick()"><p><i class="fas fa-thumbs-up"></i>  LIKE <a id="clicks">0</a></p></button>
+    
+    <script>
+      var clicks = 0;
+
+      function onClick() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+      }
+    </script>
+    
+  </body>
+</html>

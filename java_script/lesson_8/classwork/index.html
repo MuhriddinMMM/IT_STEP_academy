@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <form id="one" action="get">
+      <input type="text" />
+      <input type="text" />
+      <input type="text" />
+      <input type="text" />
+      <input type="checkbox">
+      <input type="hidden">
+      <button type="button" id="bclick">click</button>
+    </form> -->
+    <!-- <form id="two" action="get">
+      <input type="text" />
+      <input type="text" />
+      <input type="text" />
+      <input type="text" />
+      <input type="button"  value="click" />
+    </form> -->
+
+    <script>
+      //   console.log(document.forms[0].method);
+
+      //   bclick.onclick = function () {
+      //     var form = document.forms[0];
+      //     //   console.log(form);
+      //     for (var i = 0; i < form.elements.length; i++) {
+      //       if (form.elements[i].type == "text") {
+      //         console.log(form.elements[i].value);
+      //       }
+      //     }
+      //   };
+      //   document.forms[0].onsubmit= function(){
+      //       alert
+      //   }
+    </script>
+    <script>
+      //      bclick.onclick = function () {
+      //     var form = document.forms[0];
+      //     //   console.log(form);
+      //     for (var i = 0; i < form.elements.length; i++) {
+      //       if (form.elements[i].type == "checkbox") {
+      //         console.log(form.elements[i].checked= true);
+      //       }
+      //     }
+      //   };
+      //   document.forms[0].onsubmit= function(){
+      //       alert('submited')
+      //   }
+    </script>
+
+
+    <!-- <form action="">
+      <button type="button" id="plus">+</button>
+      <button type="button" id="minus">-</button>
+      <button type="button" id="mminus">/</button>
+      <button type="button" id="pplus">*</button>
+    </form>
+
+
+    
+    <form action="">
+     <input id="display" name="tex" type="text" />
+      <button value="1" type="button" id="one">1</button>
+      <button type="button" id="two">2</button>
+      <button type="button" id="three">3</button>
+      <button type="button" id="four">4</button>
+      <button type="button" id="five">5</button>
+      <button type="button" id="six">6</button>
+      <button type="button" id="seven">7</button>
+      <button type="button" id="eight">8</button>
+      <button type="button" id="nine">9</button>
+      <button type="button" id="zero">0</button>
+    </form> -->
+
+    <input type="text" id="input_field">
+<form action="">
+    <input type="button" value="1">
+    <input type="button" value="2">
+    <input type="button" value="3">
+    <input type="button" value="4">
+    <input type="button" value="5">
+    <input type="button" value="6">
+    <input type="button" value="7">
+    <input type="button" value="8">
+    <input type="button" value="9">
+    <input type="button" value="0">
+    
+
+</form>
+
+<form  action="">
+    <input id="one" type="button" value="-">
+    <input type="button" value="+">
+    <input type="button" value="/">
+    <input type="button" value="*">
+</form>
+
+    <script>
+         let nums = "+-/*";
+        var numbers = document.forms[0];
+        console.log(numbers)
+        for (var i = 0; i < numbers.length; i++){
+            numbers[i].onclick=function(){
+              input_field.value+=this.value
+
+                let shams = input_field.value
+                console.log(shams)
+            }
+        }
+        
+        var calc = document.forms[1];
+        for (var i = 0; i < calc.length; i++){
+            calc[i].onclick=function(){
+               
+              for (var i = 0; i < calc.length; i++){
+                  
+                if(nums.includes(calc[0])){
+                    break;
+                }
+            
+              }
+                input_field.value = this.value
+                
+            
+              
+
+                
+            }
+        }
+
+
+  
+    </script>
+    <script>
+        // document.forms[1].button;
+
+        // function 
+        // var form =document.forms[1];
+        // one.onclick.document.getElementByTag('input').tex.value+='1';
+        // for (var i = 0; i < form.elements.length; i++) {
+        //     if (one.onclick[i].type == "text") {
+        //       console.log(form.elements[i].value);
+        //     }
+        //   }
+       
+
+
+        // let display = document.getElementById("display");
+        // function calc() {
+        //   display.value = eval(display.value);
+        // }
+        // let text = document.getElementById("text").value;
+
+        // plus.onclick = function () {
+        //   document.getElementById("").value = text.push();
+        // };
+        // minus.onclick = function () {
+        //   document.getElementById("text").value = "-";
+        // };
+
+        // one.onclick = function () {
+        //   document.getElementById("text").value = "1";
+        // };
+    </script>
+
+
+
+
+
+
+
+
+<form name="calculator">
+
+</br>
+    <input type="textfield" name="ans" value="">
+</br>
+<input type="button" value="+" onclick="document.calculator.ans.value+='+'">
+</br>
+<input type="button" value="-" onclick="document.calculator.ans.value+='-'">
+</br>
+<input type="button" value="/" onclick="document.calculator.ans.value+='/'">
+</br>
+<input type="button" value="*" onclick="document.calculator.ans.value+='*'">
+</br>
+<input type="button" value="1" onclick="document.calculator.ans.value+='1'">
+</br>
+<input type="button" value="2" onclick="document.calculator.ans.value+='2'">
+</br>
+<input type="button" value="3" onclick="document.calculator.ans.value+='3'"> 
+</br>
+<input type="button" value="4" onclick="document.calculator.ans.value+='4'">
+</br>
+<input type="button" value="5" onclick="document.calculator.ans.value+='5'">
+</br>
+<input type="button" value="6" onclick="document.calculator.ans.value+='6'">
+</br>
+<input type="button" value="7" onclick="document.calculator.ans.value+='7'">
+</br>
+<input type="button" value="8" onclick="document.calculator.ans.value+='8'">
+</br>
+<input type="button" value="9" onclick="document.calculator.ans.value+='9'">
+
+</br>
+<input type="button" value="0" onclick="document.calculator.ans.value+='0'">
+</br>
+
+
+
+
+
+</form>
+  </body>
+</html>

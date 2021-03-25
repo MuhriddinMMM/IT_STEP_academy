@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 10px;
+      }
+
+      .carousel {
+        position: relative;
+        width: 900px;
+        padding: 10px 40px;
+        border-radius: 15px;
+        background-color: burlywood;
+      }
+      li {
+        margin-left: 5px;
+      }
+
+      .carousel img {
+        width: 245px;
+        max-width: 100%;
+        height: 400px;
+        object-fit: cover;
+      }
+
+      .arrow {
+        position: absolute;
+        color: darksalmon;
+        top: 45%;
+        background: rgba(0, 0, 0, 0.582);
+        border-radius: 100%;
+        border: 1px solid grey;
+        font-size: 32px;
+        display: block;
+      }
+
+      .arrow:focus {
+        outline: none;
+      }
+
+      .arrow:hover {
+        background-color: rgb(93, 93, 93);
+        cursor: pointer;
+      }
+
+      .prev {
+        left: 7px;
+      }
+
+      .next {
+        right: 7px;
+      }
+
+      .gallery {
+        width: 750px;
+        overflow: hidden;
+        display: flex;
+        margin: 0 70px;
+      }
+
+      .gallery ul {
+        height: 400px;
+        width: 9999px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        transition: margin-left 250ms;
+        font-size: 0;
+      }
+
+      .gallery li {
+        display: inline-block;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>
+        Карусель важность: 4 Создайте «Карусель» –- ленту изображений, которую
+        можно листать влево-вправо нажатием на стрелочки. В дальнейшем к ней
+        можно будет добавить анимацию, динамическую подгрузку и другие
+        возможности. P.S. В этой задаче разработка структуры HTML/CSS составляет
+        90% решения.
+      </p>
+
+      <div id="carousel" class="carousel">
+        <button class="arrow prev">⇦</button>
+        <div class="gallery">
+          <ul class="images">
+            <li>
+              <img
+                src="https://images.unsplash.com/photo-1450098722705-562182a09e45?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://images.unsplash.com/photo-1519865885898-a54a6f2c7eea?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=695&q=80"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://images.unsplash.com/photo-1525431836161-e40d6846e656?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://images.unsplash.com/photo-1538300342682-cf57afb97285?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://images.unsplash.com/photo-1518469164615-97026679ea59?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://images.unsplash.com/photo-1507072757289-c7de1a8c075e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=564&q=80"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://images.unsplash.com/photo-1530631673369-bc20fdb32288?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://images.unsplash.com/photo-1520966523720-2569d0357923?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://images.unsplash.com/photo-1533656218217-315d259a8d70?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://images.unsplash.com/photo-1584367368257-ee6a92b4b33d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                alt=""
+              />
+            </li>
+          </ul>
+        </div>
+        <button class="arrow next">⇨</button>
+      </div>
+    </main>
+    <script></script>
+
+    <script>
+      let i = 1;
+      for (let li of carousel.querySelectorAll("li")) {
+        li.style.position = "relative";
+        li.insertAdjacentHTML(
+          "beforeend",
+          `<span style="position:absolute;left:0;top:0">${i}</span>`
+        );
+        i++;
+      }
+
+      let width = 250;
+      let count = 3;
+
+      let list = carousel.querySelector("ul");
+      let listElems = carousel.querySelectorAll("li");
+
+      let position = 0;
+
+      carousel.querySelector(".prev").onclick = function () {
+        position += width * count;
+
+        position = Math.min(position, 0);
+        list.style.marginLeft = position + "px";
+      };
+
+      carousel.querySelector(".next").onclick = function () {
+        position -= width * count;
+
+        position = Math.max(position, -width * (listElems.length - count));
+        list.style.marginLeft = position + "px";
+      };
+    </script>
+  </body>
+</html>

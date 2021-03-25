@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-DnD</title>
+</head>
+
+<style>
+    .dropzone {
+        min-height: 200px;
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 15px;
+        margin-bottom: 25px;
+    }
+</style>
+
+<body>
+
+    <!-- 
+    dragstart — происходит, когда пользователь начинает перетаскивать элемент.
+    drag — происходит, когда элемент перетаскивается.
+    dragend — происходит, когда пользователь закончил перетаскивание элемента.
+    dragenter — происходит, когда перетаскиваемый элемент попадает в целевой объект.
+    dragleave — происходит, когда перетаскиваемый элемент покидает целевой объект.
+    dragover — происходит, когда перетаскиваемый элемент находится над целью.
+    drop — происходит, когда перетаскиваемый элемент падает на целевой объект. -->
+
+
+
+    <!-- важная информация! События делятся на две группы.
+         Для перемещаемого элемента (тот кого мы
+    перетаскиваем): 
+
+    dragstart,
+    Drag, 
+    Dragend. 
+     
+    Для принимающего элемента (куда перетаскиваем):
+
+    Dragenter,
+    Dragleave,
+    Dragover, 
+    Drop.
+    
+    И эти события не могут работать наоборот, но они могут работать друг без друга. -->
+    <!-- <img src="./ball.png" id="ball"> -->
+    <div class="dropzone">
+        <img src="./ball.png" class="ball" id='ball1'>
+        <img src="./ball.png" class="ball" id='ball2'>
+        <img src="./ball.png" class="ball" id='ball3'>
+        <img src="./ball.png" class="ball" id='ball4'>
+        <img src="./ball.png" class="ball" id='ball5'>
+    </div>
+    <div class="dropzone">
+
+    </div>
+    <script>
+
+        var draggedItem = null;
+        ball = document.querySelectorAll('.ball');
+        console.log(ball);
+        ball.forEach(element => {
+            element.ondragstart = function (e) {
+                e.dataTransfer.setData('id', e.target.id);
+
+            }
+        });
+    
+        ball.ondragend = function () {
+            console.log('drag-end')
+        }
+
+        var dropzones = document.querySelectorAll('.dropzone');
+        console.log(dropzones)
+        dropzones[1].ondragover = function (event) {
+            event.preventDefault();
+            event.target.style.borderColor = 'red';
+            event.target.style.borderWidth = '5px';
+        }
+        dropzones[0].ondrop = function (event) {
+            var id = event.dataTransfer.getData('id');
+            var draggItem = document.getElementById(id);
+            console.log(draggItem);
+            draggItem.parentNode.removeChild(draggItem);
+            event.target.appendChild(draggItem)
+        }
+        dropzones[1].ondrop = function (event) {
+            var id = event.dataTransfer.getData('id');
+            var draggItem = document.getElementById(id);
+            draggItem.parentNode.removeChild(draggItem);
+            event.target.appendChild(draggItem);
+        }
+        // ball.onmousedown = function (event) {
+        //     // console.log(event)
+        //     ball.style.position = 'absolute';
+        //     moveTo(event)
+        //     document.body.appendChild(ball)
+        //     ball.style.zIndex = 1000;
+
+        //     function moveTo(event) {
+        //         console.log(ball.style.left);
+        //         ball.style.left = event.pageX - ball.offsetWidth / 2 + 'px';
+        //         ball.style.top = event.pageY - ball.offsetWidth / 2 + 'px';
+        //     }
+        //     document.onmousemove = function (event) {
+        //         moveTo(event)
+        //     }
+        //     ball.onmouseup = function () {
+        //         document.onmousemove = null;
+        //         ball.onmouseup = null;
+        //     }
+        //     ball.ondragstart = function () {
+        //         return false;
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

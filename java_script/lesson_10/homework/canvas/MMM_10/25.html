@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Используя цикл нарисуйте на канвасе следующую фигуру:
+    <canvas
+      id="canvas"
+      width="200"
+      height="200"
+      style="background: #f4f4f4"
+    ></canvas>
+
+    <script>
+      var ctx = document.getElementById("canvas").getContext("2d");
+      for (var i = 1; i <= 10; i++) {
+        ctx.moveTo(40, 10 * i + 40);
+        ctx.lineTo(150, 10 * i + 40);
+      }
+      for (var i = 1; i <= 10; i++) {
+        ctx.moveTo(10 * i + 40, 40);
+        ctx.lineTo(10 * i + 40, 150);
+      }
+      ctx.stroke();
+    </script>
+  </body>
+</html>

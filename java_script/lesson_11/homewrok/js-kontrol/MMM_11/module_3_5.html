@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+     <style>
+      .menu_in {
+        position: relative;
+      }
+      .menu {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+      }
+      li {
+        list-style-type: none;
+      }
+      a:focus, a:active {
+        background-color: rgb(0, 25, 253);
+      }
+      nav a {
+        padding: 10px 30px;
+        text-decoration: none;
+        display: block;
+        background-color: rgb(69, 99, 182);
+        color: blanchedalmond;
+        width: 100px;
+        text-align: center;
+      }
+      .inner_menu {
+        position: absolute;
+        left: 0;
+        padding: 0;
+        display: none;
+      }
+      .block {
+        display: block;
+      }
+      .none {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Задание 5 Создать html-страницу с меню, которое имеет выпадающие списки.
+      Список с элементами подменю должен появляться по щелчку на соответствующий
+      элемент меню.
+    </p>
+    <header>
+      <nav>
+        <ul id="categori" class="menu">
+          <li class="menu_in">
+            <a href="#">Home</a>
+            <ul class="inner_menu">
+              <li><a href="#">Dresses</a></li>
+              <li><a href="#">Shirts</a></li>
+              <li><a href="#">Jeans</a></li>
+              <li><a href="#">Shoes</a></li>
+            </ul>
+          </li>
+          <li class="menu_in">
+            <a href="#">Categories</a>
+            <ul class="inner_menu toggle">
+              <li><a href="#">Dresses</a></li>
+              <li><a href="#">Shirts</a></li>
+              <li><a href="#">Jeans</a></li>
+              <li><a href="#">Shoes</a></li>
+            </ul>
+          </li>
+          <li class="menu_in">
+            <a href="#">About</a>
+            <ul class="inner_menu toggle">
+              <li><a href="#">Dresses</a></li>
+              <li><a href="#">Shirts</a></li>
+              <li><a href="#">Jeans</a></li>
+              <li><a href="#">Shoes</a></li>
+            </ul>
+          </li>
+          <li class="menu_in">
+            <a href="#">Contact</a>
+            <ul class="inner_menu toggle">
+              <li><a href="#">Dresses</a></li>
+              <li><a href="#">Shirts</a></li>
+              <li><a href="#">Jeans</a></li>
+              <li><a href="#">Shoes</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <script>
+
+      categori.onclick = function (event) {
+        event.target.nextElementSibling.classList.toggle("block");
+        
+
+      };
+    </script>
+  </body>
+</html>

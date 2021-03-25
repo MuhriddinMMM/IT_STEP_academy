@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Задание 3 Реализовать класс, описывающий новостную ленту. Класс должен
+      содержать: ■■ массив новостей; ■■ get-свойство, которое возвращает
+      количество новостей; ■■ метод для вывода на экран всех новостей; ■■ метод
+      для добавления новости; ■■ метод для удаления новости; ■■ метод для
+      сортировки новостей по дате (от последних но- востей до старых); ■■ метод
+      для поиска новостей по тегу (возвращает массив новостей, в которых указан
+      переданный в метод тег). Продемонстрировать работу написанных методов.
+    </p>
+
+    <script>
+      class News {
+        constructor(title, text, data) {
+          this.title = title;
+          this.text = text;
+          this.data = data;
+        }
+        addNews(titles, texts, datas) {
+          return `<h2>${titles} </h2> <p> ${texts} </p>  <p>${datas} </p>`;
+        }
+        getNews() {
+          return `<h2>${this.title} </h2> <p> ${this.text} </p>  <p>${this.data} </p>`;
+          //  return  document.write( `<h2>${this.title} </h2> <h4> ${this.text} </h4>  <p>${this.data} </p>`)
+        }
+      }
+      let newss = [
+        new News("Title1", "text1", "data1"),
+        new News("Title2", "text2", "data2"),
+        new News("Title3", "text3", "data3"),
+        new News("Title4", "text4", "data4"),
+      ];
+      console.log(newss.length);
+      for (let novost of newss) document.write(novost.getNews());
+
+      // console.log( newss.push(("Title5", "text5", "data5")))
+
+      var ne = new News();
+      document.write(ne.addNews("Title5", "text5", "data5"));
+      console.log(newss.length);
+    </script>
+  </body>
+</html>

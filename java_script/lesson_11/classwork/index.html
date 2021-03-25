@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <style>
+      .menu_in {
+        position: relative;
+      }
+      .menu {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+      }
+      li {
+        list-style-type: none;
+      }
+      nav a {
+        padding: 10px 30px;
+        text-decoration: none;
+        display: block;
+        background-color: rgb(7, 52, 175);
+        color: blanchedalmond;
+        width: 100px;
+        text-align: center;
+      }
+      .inner_menu {
+        position: absolute;
+        left: 0;
+        padding: 0;
+        display: none;
+      }
+      .block {
+        display: block;
+      }
+      .none {
+        display: none;
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- <script>
+      class PrintMachine {
+        constructor(fontSize, color, fontFamily, text) {
+          this.fontSize = fontSize;
+          this.color = color;
+          this.fontFamily = fontFamily;
+          this.text = text;
+        }
+        print(p) {
+          document.write(
+            `<p style="font-family: ${this.fontFamily}; color: ${this.color};  font-size: ${this.fontSize}px;">${this.text} </p>`
+          );
+        }
+      }
+      var str = new PrintMachine(38, "red", "serif", "shamsiddin");
+      console.log(str.print());
+    </script> -->
+
+    <!-- <script>
+      class Article {
+        constructor(header, data, text, teg) {
+          this.header = header;
+          this.data = data;
+          this.text = text;
+          this.teg = teg;
+        }
+        println() {
+          document.write(`<h1>${this.header}</h1> <p>${this.data}</p> <p>${this.text}</p>
+            <p>${this.teg}</p>`);
+        }
+      }
+      var str = new Article('Lorem ipsum dolor sit amet?', '10.10.2022', 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.', '#djfkd #jjkfkjd #jjhjkh');
+     str.println();
+    </script> -->
+    <!-- <script>
+        class Article {
+        constructor(header, data, text, teg) {
+          this.header = header;
+          this.data = data;
+          this.text = text;
+          this.teg = teg;
+        }
+        println() {
+            var hOne = document.createElement('h1')
+            hOne.innerText = this.header
+            var dat = document.createElement('p')
+            dat.innerText = this.data
+            var tex = document.createElement('p')
+            tex.innerText = this.text
+            var tegs = document.createElement('p')
+            tegs.innerText = this.teg
+            // var html  = ''
+            // html +=`<h2>` + this.founder +`</h2>`
+            // document.body.innerHTML = html
+            // var dateArr = this.date.split('.')
+            // var curDateArr = '11.03.2021'
+            // var date = curDateArr[0]- dateArr[0];
+            // html +=`<p><small>`+data `days ago</small> </p>`
+            // this.tags.forEach(el = > {html += `<span>#` + el +`</span>`})
+           document.body.append(hOne)
+            document.body.append(dat)
+             document.body.append(tex)
+              document.body.append(tegs)
+              
+        }
+      }
+      var str = new Article('Lorem ipsum dolor sit amet?', '10.10.2022', 'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.', '#kjhk #kjhkj #jjkllkjh');
+     str.println();
+    </script> -->
+
+    <!-- <header>
+      <nav>
+        <ul id="categori" class="menu">
+          <li  class="menu_in">
+            <a href="#">Home</a>
+            <ul class="inner_menu">
+              <li><a href="#">Dresses</a></li>
+              <li><a href="#">Shirts</a></li>
+              <li><a href="#">Jeans</a></li>
+              <li><a href="#">Shoes</a></li>
+            </ul>
+          </li>
+          <li class="menu_in">
+            <a href="#">Categories</a>
+            <ul class="inner_menu toggle">
+              <li><a href="#">Dresses</a></li>
+              <li><a href="#">Shirts</a></li>
+              <li><a href="#">Jeans</a></li>
+              <li><a href="#">Shoes</a></li>
+            </ul>
+          </li>
+          <li  class="menu_in">
+            <a href="#">About</a>
+            <ul class="inner_menu toggle">
+              <li><a href="#">Dresses</a></li>
+              <li><a href="#">Shirts</a></li>
+              <li><a href="#">Jeans</a></li>
+              <li><a href="#">Shoes</a></li>
+            </ul>
+          </li>
+          <li  class="menu_in">
+            <a href="#">Contact</a>
+            <ul class="inner_menu toggle ">
+              <li><a href="#">Dresses</a></li>
+              <li><a href="#">Shirts</a></li>
+              <li><a href="#">Jeans</a></li>
+              <li><a href="#">Shoes</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header> -->
+    <!-- <script>
+      categori.onclick = function (event) {
+        event.target.nextElementSibling.classList.toggle("block");
+
+
+      };
+
+
+
+
+      //       document.querySelectorAll('button.toggle').forEach(button =>
+      //   button.addEventListener('click', event =>
+      //     event.target.nextElementSibling.classList.toggle('expanded')))
+    </script> -->
+
+    <script>
+      let news = [
+        { title: "Title1", text: "Text 1", data: new Date("2019-01-03") },
+        { title: "Title2", text: "Text 2", data: new Date("2019-02-03") },
+        { title: "Title3", text: "Text 3", data: new Date("2019-03-03") },
+        { title: "Title4", text: "Text 4", data: new Date("2019-04-03") },
+      ];
+      let news1 = { title: "Title5", text: "Text 5", data: new Date("2019-05-03") }
+      news.unshift(news1)
+      console.log(news);
+    </script>
+  </body>
+</html>

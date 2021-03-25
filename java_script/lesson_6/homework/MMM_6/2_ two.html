@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <p>
+      Задача . Изменение текста в инпуте Задача. Повторите поведение кнопки по
+      нажатию на нее (она меняет текст в инпуте): Нажми на меня ??? Решение:
+
+      <!-- <button onclick="buttonClick()">Нажми на меня</button>
+    <input type="text" id="input" value="???" /> -->
+      function buttonClick() { var input = document.getElementById('input');
+      input.value = '!!!'; }
+    </p>
+
+    <button onclick="buttonClick()">Нажми на меня</button>
+    <input type="text" id="input" value="???" />
+
+    <script>
+      function buttonClick() {
+        var input = document.getElementById("input");
+        input.value = "!!!";
+      }
+    </script>
+  </body>
+</html>

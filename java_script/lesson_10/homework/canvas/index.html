@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+
+<body>
+    <canvas height="500" width="500" id="canvas"></canvas>
+
+    <script>
+        let canvas = document.getElementById('canvas')
+        ctx = canvas.getContext('2d')
+        ctx.fillStyle = 'orange'
+        // ctx.strokeStyle = 'orange'
+        // ctx.strokeRect(50,50,100,200);
+        // // ctx.fillRect(100,100,100,200)
+        // // ctx.clearRect(75,75, 100,100);
+        // // ctx.fillRect(0,0, 150,150)
+        // ctx.fillRect(350,350, 150,150)
+        // for (var i = 0; i < 10; i++) {
+        //     ctx.fillRect(i*25, i*25, 25, 25)
+        //     ctx.fillRect(475 - i*25, 0 + i*25,25,25)
+        // }
+        // ctx.lineWidth = 4
+        // ctx.beginPath()
+        // ctx.moveTo(50, 50)
+        // ctx.lineTo(150, 150)
+        // ctx.lineTo(400, 150)
+        // ctx.lineTo(420, 350)
+        // ctx.stroke()
+        //    ctx.closePath()
+        // ctx.beginPath()
+        // ctx.moveTo(75, 75)
+        // ctx.lineTo(175, 50)
+        // ctx.stroke();
+        // ctx.beginPath()
+        // ctx.moveTo(50,50)
+        // ctx.lineTo(50,150)
+        // ctx.stroke()
+
+        // ctx.beginPath()
+        // ctx.moveTo(50,70)
+        // ctx.lineTo(100,35)
+        // ctx.stroke()
+
+        // ctx.beginPath()
+        // ctx.moveTo(50,70)
+        ctx.lineWidth = 14
+        ctx.beginPath()
+        ctx.arc(150, 150, 80, 0, Math.PI * 2  , true)
+        
+        ctx.stroke()
+        ctx.beginPath()
+        // ctx.moveTo(150,150)
+        // ctx.lineTo(150,10)
+        ctx.stroke()
+    </script>
+</body>
+
+</html>

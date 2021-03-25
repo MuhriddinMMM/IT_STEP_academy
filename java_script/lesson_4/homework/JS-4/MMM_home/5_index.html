@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Реализуйте класс Validator, который будет проверять строки. К примеру, у
+    него будет метод isEmail параметром принимает строку и проверяет, является
+    ли она корректным емейлом или нет. Если является - возвращает true, если не
+    является - то false. Кроме того, класс будет иметь следующие методы: метод
+    isDomain для проверки домена, метод isDate для проверки даты и метод isPhone
+    для проверки телефона
+    <script>
+      class Validator {
+        isEmail() {
+          if (
+            email.indexOf("@") > 0 &&
+            email.indexOf(".") > email.indexOf("@") &&
+            email.indexOf(".") < email.length - 2
+          ) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+        isDomain() {
+          if (
+            domain.indexOf(".") > 0 &&
+            domain.indexOf(".") < domain.length - 2
+          ) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+
+        isPhone() {
+          if (
+            phone.indexOf("+") == 0 &&
+            phone.indexOf("+") < 1 &&
+            phone.length - 1 == 12
+          ) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+
+        isDate() {
+          var today = new Date();
+          var dd = String(today.getDate()).padStart(2, "0");
+          var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+          var yyyy = today.getFullYear();
+          var newDate = date.split(".");
+          if (
+            newDate[2] < yyyy
+          ) {
+            return true;
+          }
+          else if(newDate[2] == yyyy && newDate[1] > mm){
+            return true;
+          }
+          else if(newDate[2] == yyyy && newDate[1] <= mm && newDate[0] > dd){
+            return true;
+          }
+          else {
+            return false;
+          }
+        }
+      }
+
+      var validator = new Validator();
+
+      // email proverka
+      var email = "phphtml@mail.ru";
+      console.log(email.indexOf("@") > 0);
+      console.log(email.indexOf(".") > email.indexOf("@"));
+      console.log(email.indexOf(".") < email.length - 2);
+      console.log("vash email  " + validator.isEmail("phphtml@mail.ru"));
+
+      //domain proverka
+      var domain = "phphtml.net";
+      console.log(domain.indexOf(".") > 0);
+      console.log(domain.indexOf(".") < email.length - 2);
+      console.log("vash domain  " + validator.isDomain());
+
+      // proverka nomer
+      var phone = "+998901234567";
+      console.log(phone.indexOf("+") == 0);
+      console.log(phone.indexOf("+") < 1);
+      console.log(phone.length - 1 == 12);
+       console.log("vash nomer  " + validator.isPhone());
+
+      // proverka date
+      var date = "12.05.2020";
+      console.log("eta proshedshe vremya  " +  validator.isDate());
+    </script>
+  </body>
+</html>

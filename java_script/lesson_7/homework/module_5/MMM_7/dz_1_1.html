@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      1. Написать конструктор элементов HTML, который должен принимать следующие
+      параметры: a. Тип тега: p, a, input=text, input=password, select b.
+      Атрибуты тега: class, id, name, если поля формы то еще и value i. для тега
+      select реализовать добавление option-ов c параметрами (value, text)
+      c.Содержимое тега (текст) d. Алгоритм или логика конструктора должна быть
+      реализована через ООП e. Удачи)
+    </p>
+    <script>
+      class Builder {
+        printTag(name, className, id, text, type) {
+          if (name === "a" || name === "p" || name === "select") {
+            let a = document.createElement(name);
+            let aclass = document.createAttribute("class");
+            aclass.value = className;
+            a.setAttributeNode(aclass);
+            let aId = document.createAttribute("id");
+            aId.value = id;
+            a.setAttributeNode(aId);
+            a.innerText = text;
+            document.body.append(a);
+          } else if (
+            name === "input" &&
+            (type === "password" || type === "text")
+          ) {
+            let a = document.createElement(name);
+            let aclass = document.createAttribute("class");
+            aclass.value = className;
+            a.setAttributeNode(aclass);
+            let aId = document.createAttribute("id");
+            aId.value = id;
+            a.setAttributeNode(aId);
+            a.innerText = text;
+            document.body.append(a);
+            let atype = document.createAttribute("type");
+            atype.value = type;
+            a.setAttributeNode(atype);
+            let avalue = document.createAttribute("value");
+            avalue.value = text;
+            a.setAttributeNode(avalue);
+          }
+        }
+      }
+      let str = new Builder("men  test ett e tetet tetete");
+
+      var tags = str.printTag("input", "classNameTag", "idTag", "lorem100", "text");
+    </script>
+  </body>
+</html>

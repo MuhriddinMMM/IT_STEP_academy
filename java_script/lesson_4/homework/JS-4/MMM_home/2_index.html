@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Модифицируйте класс Worker из предыдущей задачи следующим образом: сделайте
+    все его свойства приватными, а для их чтения сделайте методы-геттеры. Наш
+    класс теперь будет работать так:
+    <script>
+      class Worker {
+        constructor(name, surname) {
+          this._name = name;
+          this._surname = surname;
+          this._rate = 0;
+          this._days = 0;
+        }
+        getSurName() {
+          return this._surname;
+        }
+        getName() {
+          return this._name;
+        }
+        getFullName() {
+          return this._name + " " + this._surname;
+        }
+        setRate(rate) {
+          this._rate = rate;
+        }
+        getRate() {
+          return this._rate;
+        }
+        setDays(days) {
+          this._days = days;
+        }
+        getDays() {
+          return this._days;
+        }
+
+        getSalary() {
+          return "$" + this._rate * this._days;
+        }
+      }
+
+      let vasya = new Worker("Василий", "Иванович");
+      alert(vasya.getName());
+      alert(vasya.getSurName());
+      alert(vasya.getFullName());
+      vasya.setRate(100);
+      vasya.setDays(22);
+      alert(vasya.getRate());
+      alert(vasya.getDays());
+      alert(vasya.getSalary());
+
+      // vasya.rate = 100;
+      // vasya.days = 22;
+
+      alert(vasya.getFullName() + " " + vasya.getSalary());
+    </script>
+  </body>
+</html>

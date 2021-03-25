@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      2. Существует некая HTML разметка. Все элементы разметки имеют шрифт
+      равный 11px. Написать скрипт “Версия для слабовидящих”, то есть есть некий
+      неподвижный селект, который содержит список размеров шрифтов (14, 18, 22).
+      По клику он должен меняться высоту шрифта всего HTML документа
+    </p>
+
+    <label for="sel1">size of font:</label>
+    <select class="form-control" id="sel1" onchange="changeSize(this);">
+      <option>4</option>
+      <option>8</option>
+      <option>12</option>
+      <option>16</option>
+      <option>20</option>
+      <option>24</option>
+      <option>28</option>
+      <option>32</option>
+      <option>36</option>
+      <option>40</option>
+      <option>44</option>
+      <option>48</option>
+      <option>52</option>
+      <option>56</option>
+      <option>58</option>
+    </select>
+    <div id="demo">DEMO</div>
+
+    <script>
+      function changeSize(n) {
+        var s = document.getElementById("demo");
+        s.style.fontSize = n.value + "px";
+      }
+    </script>
+  </body>
+</html>

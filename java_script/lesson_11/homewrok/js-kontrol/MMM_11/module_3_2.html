@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p  ondblclick="alert('Тест')" onselectstart="return false" onmousedown="return false">
+      Задание 2 Создать html-страницу с любым содержимым и запретить
+      пользователю выделять текст и вызывать контекстное меню кли- ком правой
+      кнопки.
+    </p>
+
+    <script> document.oncontextmenu = cmenu; function cmenu() { return false; } </script>
+
+    
+  </body>
+</html>

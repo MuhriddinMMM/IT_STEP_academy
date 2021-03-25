@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        div {
+            font-size: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>
+      POPUP
+    </h1>
+    <div id="message"></div>
+    <div id="passwordone"></div>
+    <div id="passwordtwo"></div>
+    <script>
+      window.addEventListener("message", function (e) {
+        if (e.data) {
+          var str = e.data;
+        }
+
+        document.getElementById("message").innerText = str;
+        var res = str.split(".");
+        document.getElementById("passwordtwo").innerText = "Name " + res[0];
+
+        console.log(res);
+        console.log(res[1]);
+        if (res[1] === res[2]) {
+          document.getElementById("passwordone").innerText = "matching";
+          document.getElementById("passwordone").style.color = "green";
+
+        } else {
+          document.getElementById("passwordone").innerText = "not matching";
+          document.getElementById("passwordone").style.color = "red";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Задача . Обмен содержимым между инпутами Задача. Повторите поведение
+      кнопки по нажатию на нее (она осуществляет обмен содержимым между двумя
+      инпутами, можете понажимать на нее несколько раз или вручную сменить
+      содержимое инпутов):
+    </p>
+
+    <button onclick="buttonClick()">Нажми на меня</button>
+    <input type="text" id="input1" value="!!!" /><input
+      type="text"
+      id="input2"
+      value="???"
+    />
+    <script>
+      function buttonClick() {
+        var input1 = document.getElementById("input1");
+        var input2 = document.getElementById("input2");
+        var input1Value = input1.value;
+        var input2Value = input2.value;
+        input1.value = input2Value;
+        input2.value = input1Value;
+      }
+    </script>
+  </body>
+</html>

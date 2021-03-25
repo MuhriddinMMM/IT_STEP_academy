@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Задача . Блокирование полей ввода Задача. Повторите поведение кнопок по
+      нажатию на них (одна из них блокирует инпут с помощью атрибута disabled, а
+      другая разблокирует):
+    </p>
+    <button onclick="button1Click()">Заблокировать</button>
+    <button onclick="button2Click()">Отблокировать</button>
+    <input type="text" id="input" value="Какой-то текст!" />
+    <script>
+      function button1Click() {
+        var input = document.getElementById("input");
+        input.disabled = true;
+      }
+
+      //Отблокирует элемент
+      function button2Click() {
+        var input = document.getElementById("input");
+        input.disabled = false;
+      }
+    </script>
+  </body>
+</html>
