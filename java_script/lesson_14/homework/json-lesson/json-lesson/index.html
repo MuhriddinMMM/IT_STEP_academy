@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Strigify</title>
+</head>
+
+<body>
+
+
+    <input type="file" id="file">
+    <script>
+        var obj =  require('./object.json');
+        console.log(obj)
+
+        // var number = "[0,1,2,3]"
+        // console.log(typeof number)
+        // number = JSON.parse(number);
+        // console.log(number);
+        var obj = {
+            name: 'John',
+            lastName: 'Doe',
+            age: 29
+        }
+        // console.log(obj)
+        // obj = JSON.stringify(obj, '', )
+        // console.log(obj);
+
+        document.getElementById('file').onchange = function(){
+            var files = this.files
+
+            console.log(files)
+        }
+
+    </script>
+</body>
+
+</html>

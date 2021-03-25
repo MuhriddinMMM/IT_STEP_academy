@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - XHR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <table class="table table-stripped" id="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+  </div>
+
+    <script>
+        var requestUrl = 'https://jsonplaceholder.typicode.com/users'
+
+        var request = new XMLHttpRequest();
+        
+        var user = {
+            name: 'John',
+            email: 'johndoe@gmail.com'
+        }
+        request.onload = function(){
+            
+            // console.log(request.response)
+        //     var data = JSON.parse(request.response)
+        //     data.forEach(element => {
+        //         var table = document.getElementById('table')
+        //         var tr = document.createElement('tr')
+              
+        //         // console.log(element)
+        //         for(key in element){
+                
+        //             if(key == 'id'){
+        //                 var td = document.createElement('td');
+        //                 tr.appendChild(td)
+        //                 td.innerText = element.id
+        //             }else if(key == 'name'){
+        //                 var td = document.createElement('td')
+        //                 tr.appendChild(td);
+        //                 td.innerText = element.name
+        //             }else if(key == 'email'){
+        //                 var td = document.createElement('td')
+        //                 tr.appendChild(td);
+        //                 td.innerText = element.email
+        //             }
+        //             // console.log(element[key])s
+                   
+        //             // break;
+        //         }
+        //         table.appendChild(tr);
+                 
+        //     });
+            
+        }
+
+        // request.open('GET', requestUrl, true);
+        // request.send()
+
+        request.open('Post', requestUrl)
+        request.setRequestHeader('Content-Type', 'application/json')
+        request.send(JSON.stringify(user))
+        
+    </script>
+    
+</body>
+</html>
