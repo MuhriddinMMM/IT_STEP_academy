@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
+    <!-- <style>
       .menu_in {
         position: relative;
       }
@@ -38,7 +38,7 @@
       .none {
         display: none;
       }
-    </style>
+    </style> -->
   </head>
   <body>
     <!-- <script>
@@ -111,7 +111,7 @@
      str.println();
     </script> -->
 
-    <header>
+    <!-- <header>
       <nav>
         <ul id="categori" class="menu">
           <li  class="menu_in">
@@ -152,8 +152,8 @@
           </li>
         </ul>
       </nav>
-    </header>
-    <script>
+    </header> -->
+    <!-- <script>
       categori.onclick = function (event) {
         event.target.nextElementSibling.classList.toggle("block");
 
@@ -166,6 +166,18 @@
       //       document.querySelectorAll('button.toggle').forEach(button =>
       //   button.addEventListener('click', event =>
       //     event.target.nextElementSibling.classList.toggle('expanded')))
+    </script> -->
+
+    <script>
+      let news = [
+        { title: "Title1", text: "Text 1", data: new Date("2019-01-03") },
+        { title: "Title2", text: "Text 2", data: new Date("2019-02-03") },
+        { title: "Title3", text: "Text 3", data: new Date("2019-03-03") },
+        { title: "Title4", text: "Text 4", data: new Date("2019-04-03") },
+      ];
+      let news1 = { title: "Title5", text: "Text 5", data: new Date("2019-05-03") }
+      news.unshift(news1)
+      console.log(news);
     </script>
   </body>
 </html>

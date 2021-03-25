@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        transition: 0.5s linear;
+      }
+      .dropzone {
+        background-color: chartreuse;
+        min-height: 200px;
+        border: 5px solid rgb(0, 0, 0);
+        border-radius: 15px;
+        padding: 15px;
+        margin-bottom: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="dropzone">
+      <img src="ball.png" alt="" id="ball" class="ball" />
+      <img src="ball.png" alt="" id="ball2" class="ball" />
+      <img src="ball.png" alt="" id="ball3" class="ball" />
+    </div>
+    <div class="dropzone"></div> -->
+    <script>
+    //    let ball = document.querySelectorAll('.ball')
+    //     ball.forEach(element => {
+    //         element.ondragstart=function(e)
+    //         {
+    //             e.dataTransfer.setData('id', e.target.id)
+               
+    //         }
+    //     });
+     
+    //   var dropzones = document.querySelectorAll(".dropzone");
+    //   console.log(dropzones);
+
+    //   dropzones[1].ondragover = function (event) {
+    //     event.preventDefault();
+    //     event.target.style.borderColor = "red";
+    //     event.target.style.borderWidth = "5px";
+    //   };
+    //   dropzones[1].ondrop = function (event) {
+    //       var id = event.dataTransfer.getData('id')
+    //       var draggedItem = document.getElementById(id)
+    //     draggedItem.parentNode.removeChild(draggedItem);
+    //     event.target.appendChild(draggedItem)
+    //   };
+    </script>
+
+        <div class="dropzone">
+      <img src="ball.png" alt="" id="ball" class="ball" />
+      <img src="ball.png" alt="" id="ball2" class="ball" />
+      <img src="ball.png" alt="" id="ball3" class="ball" />
+    </div>
+    <div class="dropzone"></div>
+<script>
+    let ball = document.querySelectorAll('.ball')
+        ball.forEach(element => {
+            element.ondragstart=function(e)
+            {
+                e.dataTransfer.setData('id', e.target.id)
+               
+            }
+        });
+     
+      var dropzones = document.querySelectorAll(".dropzone");
+      console.log(dropzones);
+
+      dropzones[1].ondragover = function (event) {
+        event.preventDefault();
+        event.target.style.borderColor = "red";
+        event.target.style.borderWidth = "5px";
+      };
+      dropzones[1].ondrop = function (event) {
+          var id = event.dataTransfer.getData('id')
+          var draggedItem = document.getElementById(id)
+        draggedItem.parentNode.removeChild(draggedItem);
+        event.target.appendChild(draggedItem)
+      };
+</script>
+
+<script>
+
+</script>
+    <!-- <img id="ball" src="ball.png" alt="" /> -->
+<!-- <script>
+    ball.ondragend = function(){
+
+    }
+</script> -->
+    <!-- <script>
+      ball.onmousedown = function (event) {
+        ball.style.position = "absolute";
+        moveTo(event);
+        document.body.appendChild(ball);
+        ball.style.zIndex = 1000;
+
+        function moveTo(event) {
+          ball.style.left = event.pageX - ball.offsetWidth / 2 + "px";
+          ball.style.top = event.pageY - ball.offsetWidth / 2 + "px";
+        }
+        document.onmousemove = function (event) {
+          moveTo(event);
+        };
+        ball.onmouseup = function () {
+          document.onmousemove = null;
+          ball.onmouseup = null;
+        };
+        ball.ondragstart = function () {
+          return false;
+        };/////////////////////////////////
+      };
+    </script> -->
+    <!-- 
+    <script>
+      ball.onmousedown = function (event) {
+        let shiftX = event.clientX - ball.getBoundingClientRect().left;
+        let shiftY = event.clientY - ball.getBoundingClientRect().top;
+
+        ball.style.position = "absolute";
+        ball.style.zIndex = 1000;
+        document.body.append(ball);
+
+        moveAt(event.pageX, event.pageY);
+
+        // moves the ball at (pageX, pageY) coordinates
+        // taking initial shifts into account
+        function moveAt(pageX, pageY) {
+          ball.style.left = pageX - shiftX + "px";
+          ball.style.top = pageY - shiftY + "px";
+        }
+
+        function onMouseMove(event) {
+          moveAt(event.pageX, event.pageY);
+        }
+
+        // move the ball on mousemove
+        document.addEventListener("mousemove", onMouseMove);
+
+        // drop the ball, remove unneeded handlers
+        ball.onmouseup = function () {
+          document.removeEventListener("mousemove", onMouseMove);
+          ball.onmouseup = null;
+        };
+      };
+
+      ball.ondragstart = function () {
+        return false;
+      };
+    </script> -->
+  </body>
+</html>

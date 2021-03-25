@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      th,
+      td {
+        padding: 10px 20px;
+        border: 1px solid grey;
+      }
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Задание 1 Создать html-страницу с таблицей. При наведении мышкой на ячейку
+      таблицы, у этой ячейки должен меняться фон. Учтите, что когда мышку уводят
+      с ячейки, то ее фон возвращается к прежнему. Выполнить задание с помощью
+      JS, а не с помощью CSS.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Company</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bill</td>
+          <td>Gates</td>
+          <td>Microsoft</td>
+        </tr>
+        <tr>
+          <td>Timothy</td>
+          <td>Cook</td>
+          <td>Apple</td>
+        </tr>
+        <tr>
+          <td>Larry</td>
+          <td>Page</td>
+          <td>Google</td>
+        </tr>
+        <tr>
+          <td>Mark</td>
+          <td>Zuckerberg</td>
+          <td>Facebook</td>
+        </tr>
+      </tbody>
+    </table>
+    <script>
+      let tb = document.getElementsByTagName("td");
+      console.log(tb);
+      i = 1;
+      for (i > 0; i < tb.length; i++) {
+        var css = "table td:hover{ background-color: yellow }";
+        var style = document.createElement("style");
+
+        if (style.styleSheet) {
+          style.styleSheet.cssText = css;
+        } else {
+          style.appendChild(document.createTextNode(css));
+        }
+
+        document.getElementsByTagName("head")[0].appendChild(style);
+      }
+      console.log(tb);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Разобрать выражение Арифметическое выражение включает два числа и оператор
+      между ними. Например: 1 + 2 1.2 * 3.4 -3 / -6 -2 - 2 Оператором может
+      быть: "+", "-", "*" или "/". В выражении могут быть пробелы в начале, в
+      конце или между частями выражения. Создайте функцию parse(expr), которая
+      принимает выражение и возвращает массив из трёх элементов: Первое число.
+      Оператор. Второе число.
+    </p>
+
+    <script>
+      "use strict";
+      
+
+      function parse(expr) {
+        let regexp = /(-?\d+(?:\.\d+)?)\s*([-+*\/])\s*(-?\d+(?:\.\d+)?)/;
+
+        let result = expr.match(regexp);
+
+        if (!result) return [];
+        result.shift();
+
+        return result;
+      }
+
+      alert(parse("-5.61 / 9.22")); 
+    
+      
+    </script>
+  </body>
+</html>

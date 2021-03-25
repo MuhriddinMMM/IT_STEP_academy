@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Задание 2 Реализовать класс, описывающий новость (заголовок, текст, массив
+      тегов, дата публикации). В классе необходимо реализовать один метод print,
+      который выводит всю информацию в таком виде, как на рисунке 1. Обратите
+      внимание на то, как выводится дата: ■■ если с даты публикации прошло менее
+      дня, то выводится «сегодня»; 2 Практическое задание №4 ■■ если с даты
+      публикации прошло менее недели, то выво- дится «N дней назад»; ■■ в
+      остальных случаях, полная дата в формате «дд.мм.гггг».
+    </p>
+
+    <script>
+      class Article {
+        constructor(header, data, text, teg) {
+          this.header = header;
+          this.data = data;
+          this.text = text;
+          this.teg = teg;
+        }
+        println() {
+          document.write(`<h1>${this.header}</h1> <p>${this.data}</p> <p>${this.text}</p>
+            <p>${this.teg}</p>`);
+        }
+      }
+      var str = new Article(
+        "Lorem ipsum dolor sit amet?",
+        "10.10.2022",
+        "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.",
+        "#djfkd #jjkfkjd #jjhjkh"
+      );
+      str.println();
+
+      // class News {
+      //   constructor(title, text, tags, date) {
+      //     this.title = title;
+      //     this.text = text;
+      //     this.tags = tags;
+      //     this.date = date;
+      //   }
+      //   print() {
+      //     var html = "";
+      //     html += "<h1>" + this.title + "</h1>";
+      //     var dateArr = this.date.split(".");
+      //     var curDateArr = "11.03.2021";
+      //     curDateArr = curDateArr.split(".");
+      //     var date = curDateArr[0] - dateArr[0];
+
+      //     html += "<p><small>" + date + " days ago</small></p>";
+
+      //     html += "<p>" + this.text + "</p>";
+
+      //     this.tags.forEach(function (el) {
+      //       html += "<span>#" + el + " </span>";
+      //     });
+
+      //     document.body.innerHTML = html;
+      //   }
+      // }
+
+      // var news = new News(
+      //   "What is Lorem",
+      //   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, cum.",
+      //   ["lorem", "ipsum", "text"],
+      //   "10.03.2021"
+      // );
+      // news.print();
+    </script>
+  </body>
+</html>

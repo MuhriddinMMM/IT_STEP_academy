@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Используя методы fillRect и clearRect, нарисуйте на канвасе следующую
+    фигуру:
+    <canvas
+      id="canvas"
+      width="200"
+      height="200"
+      style="background: #f4f4f4"
+    ></canvas>
+    <script>
+      var ctx = document.getElementById("canvas").getContext("2d");
+      ctx.fillRect(25, 25, 100, 100);
+      ctx.clearRect(40, 40, 50, 50);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 600px;
+      }
+      .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+      }
+
+      .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+      }
+
+      .tab button:hover {
+        background-color: rgb(121, 243, 117);
+        transition: 0.5s linear;
+      }
+
+      .tab button.active {
+        background-color: rgb(6, 167, 0);
+        transition: 0.5s linear;
+      }
+
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'js')">
+          Javascript
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'jquery')">
+          Jquery
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'dom')">DOM</button>
+        <button class="tablinks" onclick="openTab(event, 'css')">CSS</button>
+      </div>
+
+      <div id="js" class="tabcontent">
+        <h3>Javascript</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum vero
+          porro possimus commodi placeat laborum velit totam delectus! Dolorem,
+          tenetur.
+        </p>
+      </div>
+
+      <div id="jquery" class="tabcontent">
+        <h3>Jquery</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate,
+          blanditiis consequuntur. Sint fugit, reiciendis sit similique
+          voluptate magni quibusdam, totam sequi, obcaecati distinctio repellat
+          velit?
+        </p>
+      </div>
+
+      <div id="dom" class="tabcontent">
+        <h3>DOM</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium
+          nemo laudantium harum magni incidunt eaque iste id natus animi
+          molestias quasi, soluta cumque.
+        </p>
+      </div>
+      <div id="css" class="tabcontent">
+        <h3>css</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+          sit dolor unde earum asperiores dicta explicabo cum suscipit quasi
+          sunt! Ducimus, esse laboriosam.
+        </p>
+      </div>
+    </main>
+
+    <script>
+      function openTab(evt, openTab)  {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(openTab).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </body>
+</html>

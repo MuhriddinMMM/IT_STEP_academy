@@ -11,60 +11,48 @@
       1. Написать конструктор элементов HTML, который должен принимать следующие
       параметры: a. Тип тега: p, a, input=text, input=password, select b.
       Атрибуты тега: class, id, name, если поля формы то еще и value i. для тега
-      select реализовать добавление option-ов c параметрами (value, text) c.
-      Содержимое тега (текст) d. Алгоритм или логика конструктора должна быть
+      select реализовать добавление option-ов c параметрами (value, text)
+      c.Содержимое тега (текст) d. Алгоритм или логика конструктора должна быть
       реализована через ООП e. Удачи)
     </p>
     <script>
       class Builder {
-        constructor(a, inputText, inputPassword, select) {
-          this.a = a;
-          this.inputText = inputText;
-          this.inputPassword = inputPassword;
-          this.select = select;
+        printTag(name, className, id, text, type) {
+          if (name === "a" || name === "p" || name === "select") {
+            let a = document.createElement(name);
+            let aclass = document.createAttribute("class");
+            aclass.value = className;
+            a.setAttributeNode(aclass);
+            let aId = document.createAttribute("id");
+            aId.value = id;
+            a.setAttributeNode(aId);
+            a.innerText = text;
+            document.body.append(a);
+          } else if (
+            name === "input" &&
+            (type === "password" || type === "text")
+          ) {
+            let a = document.createElement(name);
+            let aclass = document.createAttribute("class");
+            aclass.value = className;
+            a.setAttributeNode(aclass);
+            let aId = document.createAttribute("id");
+            aId.value = id;
+            a.setAttributeNode(aId);
+            a.innerText = text;
+            document.body.append(a);
+            let atype = document.createAttribute("type");
+            atype.value = type;
+            a.setAttributeNode(atype);
+            let avalue = document.createAttribute("value");
+            avalue.value = text;
+            a.setAttributeNode(avalue);
+          }
         }
-        print(tag, inputType, avalues) {
-          var a = document.createElement(tag);
-          var aclass = document.createAttribute("class");
-          aclass.value = "alink";
-          a.setAttributeNode(aclass);
-          var aId = document.createAttribute("id");
-          aId.value = "aID";
-          a.setAttributeNode(aId);
-          var atype = document.createAttribute("type");
-          atype.value = inputType;
-          a.setAttributeNode(atype);
-
-          var avalue = document.createAttribute("value");
-          avalue.value = avalues;
-          a.setAttributeNode(avalue);
-
-          a.innerText = this.a;
-          document.body.append(a);
-          
-        }
-        // printInput(){
-        //   var input = document.createElement(tag);
-        //   var aclass = document.createAttribute("class")
-        //   aclass.value = "alink"
-        //   a.setAttributeNode(aclass)
-        //   var aId = document.createAttribute("id")
-        //   aId.value="aID"
-        //   a.setAttributeNode(aId)
-        //   a.innerText = this.a;
-        //   document.body.append(a)
-        // }
       }
-      var str = new Builder("men  test ett e tetet tetete");
-      str.print("a");
-      str.print("p");
-      str.print("input", "text" , 'wfsffas');
-      str.print("input", "password", 'afsfa');
-      str.print("h2")
-      str.print("h1")
-      str.print("select")
-      str.print("shamsiddin")
-      str.print("span")
+      let str = new Builder("men  test ett e tetet tetete");
+
+      var tags = str.printTag("input", "classNameTag", "idTag", "lorem100", "text");
     </script>
   </body>
 </html>

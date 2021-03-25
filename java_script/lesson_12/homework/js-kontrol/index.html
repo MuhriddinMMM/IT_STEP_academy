@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // class PrintMachine{
+        //     constructor(fontSize, color, fontFamily){
+        //         this.fontSize = fontSize
+        //         this.color = color
+        //         this.fontFamily = fontFamily
+        //     }
+        //     print(text){
+        //         var p = document.createElement('p')
+        //         p.innerText = text
+        //         document.body.append(p)
+        //         console.log(document.getElementsByTagName('p'));
+        //         document.getElementsByTagName('p')[0].style.color = this.color
+        //         document.getElementsByTagName('p')[0].style.fontSize = this.fontSize
+        //         document.getElementsByTagName('p')[0].style.fontFamily = this.fontFamily
+        //     }
+        // }
+        // var prt = new PrintMachine('60px','yellow', 'san-serif')
+        // prt.print('asdadasdqweqweqweqw')
+        // var prt2 = new PrintMachine('90px','#ccc', 'arial')
+        // prt2.print('yweuryiquweryiuqwyei');
+        class News {
+            constructor(title, text, tags, date) {
+                this.title = title;
+                this.text = text;
+                this.tags = tags;
+                this.date = date;
+            }
+            print() {
+                var html = ''
+                html += '<h1>' + this.title + '</h1>'
+                var dateArr = this.date.split('.')
+                var curDateArr = '11.03.2021'
+                curDateArr = curDateArr.split('.')
+                var date = curDateArr[0] - dateArr[0];
+
+                html += '<p><small>' + date 
+                     + ' days ago</small></p>';
+
+                html += '<p>' + this.text + '</p>'
+                
+                this.tags.forEach(function(el) {
+                   html+='<span>#'+ el+' </span>'
+                })
+
+
+
+                document.body.innerHTML = html
+            }
+        }
+
+        var news = new News('What is Lorem', 
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, cum.',
+         ['lorem', 'ipsum', 'text'],
+          '10.03.2021')
+        news.print()
+    </script>
+</body>
+
+</html>

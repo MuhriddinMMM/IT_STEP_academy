@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Iframe Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque fuga dolor necessitatibus aliquam illo voluptatum, nesciunt ipsa obcaecati cum quia illum! Quaerat beatae dolore, id consequatur accusantium officiis quam repudiandae.</h1>
+    <div id="message">
+
+    </div>
+</body>
+<script>
+    window.addEventListener('message', function(){
+        var message = event.data;
+        console.log(event.origin)
+        if(event.origin !== 'http://127.0.0.1:5500'){
+            alert('zapros iz drugogo domena')
+            return
+        }
+        if(message){
+            var str= ' soobesheniye'+message 
+        }
+        document.getElementById('message').innerHTML = str;
+    });
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Задание 1 Реализовать класс PrintMaсhine, которой состоит из: ■■ размера
+      шрифта; ■■ цвета шрифта; ■■ семейства шрифта; ■■ метода print(), который
+      принимает текст и печатает его соответствующим шрифтом с помощью
+      document.write(). Создать объект такого класса и продемонстрировать работу
+      метода.
+    </p>
+    <script>
+      class PrintMachine {
+        constructor(fontSize, color, fontFamily, text) {
+          this.fontSize = fontSize;
+          this.color = color;
+          this.fontFamily = fontFamily;
+          this.text = text;
+        }
+        print(p) {
+          document.write(
+            `<p style="font-family: ${this.fontFamily}; color: ${this.color};  font-size: ${this.fontSize}px;">${this.text} </p>`
+          );
+        }
+      }
+      var str = new PrintMachine(38, "red", "serif", "shamsiddin");
+      console.log(str.print());
+    </script>
+  </body>
+</html>

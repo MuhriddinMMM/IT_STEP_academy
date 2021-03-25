@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-XSS</title>
+</head>
+
+<body>
+    <style>
+        iframe {
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+    <h1>PostMessage</h1>
+    <button id="btn_iframe">Отправить в iframe</button>
+    <button id="btn_popup">Открыть popup</button>
+    <button id="btn_send">Отправить содержимое в popup</button>
+
+    <iframe src="iframe.html" frameborder="0" id="iframe"></iframe>
+
+    <script>
+        var popup = null;
+        var message = 'Text 111';
+
+        // document.getElementById('btn_iframe').onclick = function () {
+
+        //    var iframe = document.getElementById('iframe')
+
+        //    iframe.contentWindow.postMessage(message, document.location);
+
+        // }
+        document.getElementById('btn_iframe').addEventListener('click', 
+        function () {
+            // console.log('click')
+            var iframe = document.getElementById('iframe')
+            // console.log(document.location.origin)
+            iframe.contentWindow.postMessage(message, document.location);
+        })
+
+        document.getElementById('btn_popup').addEventListener('click', 
+        function(){
+           popup =  window.open('popup.html', 'popup', 
+ 'location=yes, width=500, height=500');
+           
+        })
+
+        document.getElementById('btn_send').addEventListener('click',
+        function(){
+            popup.postMessage(message, '*')
+        })
+
+        window.addEventListener('message', function(e){
+            // console.log(e.data)
+        })
+    </script>
+
+</body>
+
+</html>
