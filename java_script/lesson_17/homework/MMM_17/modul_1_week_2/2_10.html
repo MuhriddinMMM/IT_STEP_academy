@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <p>
+      Запросить дату (день, месяц, год) и вывести следующую за ней дату. Учтите
+      возможность перехода на следующий месяц, год, а также високосный год.
+    </p>
+    <script>
+      let date = prompt("Enter the date - day-month-year ");
+      date = date.split("-");
+      let oldDate = new Date(date[2], date[1] - 1, date[0]);
+      oldDate.setDate(oldDate.getDate() + 1);
+      alert(oldDate);
+    </script>
+  </body>
 </html>

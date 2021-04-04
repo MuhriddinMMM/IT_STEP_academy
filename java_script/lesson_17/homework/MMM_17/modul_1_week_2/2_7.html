@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <p>
+      Запросить у пользователя сумму покупки и вывести сумму к оплате со
+      скидкой: от 200 до 300 – скидка будет 3%, от 300 до 500 – 5%, от 500 и
+      выше – 7%.
+    </p>
+
+    <script>
+      let amount = prompt("Enter the value of purchase:");
+      if (amount >= 200 && amount < 300)
+        alert((amount / 100) * 97 + "$ with 3% discount");
+      else if (amount >= 300 && amount < 500)
+        alert((amount / 100) * 95 + "$ with 5% discount");
+      else if (amount >= 500) alert((amount / 100) * 93 + "$ with 7% discount");
+    </script>
+  </body>
 </html>

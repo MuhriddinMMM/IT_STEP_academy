@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <p>
+      Задать пользователю 3 вопроса, в каждом вопросе по 3 ва- рианта ответа. За
+      каждый правильный ответ начисляется 2 балла. После вопросов выведите
+      пользователю количество набранных баллов.
+    </p>
+
+    <script>
+      let capital = prompt(
+        "What is the capital of Great Britain? 1 - London 2 - New York 3 - Paris"
+      );
+      let currency = prompt(
+        "What is the currency of the USA? 1 - USD 2 - UAH 3 - RMB"
+      );
+      let country = prompt(
+        "What is the most populated country? 1 - the USA 2 - Japan 3 - China"
+      );
+      let score = 0;
+      if (capital == 1) score += 2;
+      if (currency == 1) score += 2;
+      if (country == 3) score += 2;
+      alert("Your score is " + score);
+    </script>
+  </body>
 </html>

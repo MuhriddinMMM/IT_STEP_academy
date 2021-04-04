@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <p>
+      Запросить у пользователя пятиразрядное число и опреде- лить, является ли
+      оно палиндромом.
+    </p>
+
+    <script>
+      let number = prompt("Enter the number from 10000 to 99999", 0);
+      number = number + "";
+      if (number === number.split("").reverse().join("")) alert("palindrome");
+      else alert("NOT palindrome");
+    </script>
+  </body>
 </html>

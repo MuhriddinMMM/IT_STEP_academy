@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <p>
+      Запросить у пользователя длину окружности и периметр квадрата. Определить,
+      может ли такая окружность поме- ститься в указанный квадрат.
+    </p>
+
+    <script>
+      let lengt = prompt("Запросить у пользователя длину окружности", "30");
+      let peremetr = prompt("периметр квадрата", "50");
+
+      let result1 = Number(lengt) / Math.PI;
+      console.log(result1);
+      let result2 = Number(peremetr) / 4;
+      if (result1 < result2) {
+        alert(" такая окружность можна поместиться в указанный квадрат");
+      } else if (result1 > result2) {
+        alert("nelzya");
+      }
+    </script>
+  </body>
 </html>
