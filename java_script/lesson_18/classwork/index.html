@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;700&display=swap');
+
+body {
+  text-align: center;
+  font-family: 'Jost', sans-serif;
+  background-color: #f0f5ff;
+}
+
+h1 {
+  font-size: 48px;
+  color: #232c3d;
+}
+
+.wrapper {
+  width: 590px;
+  margin: auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, .1);
+}
+
+.buttonWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+button {
+  letter-spacing: 3px;
+  border: none;
+  padding: 10px;
+  background-color: #bccbe9;
+  color: #232c3d;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: #d5e3ff;
+}
+
+button.active {
+  background-color: white;
+}
+
+.active {
+  background-color: white;
+}
+
+p {
+  text-align: left;
+  padding: 10px;
+}
+
+.content {
+  display: none;
+  padding: 10px 20px;
+}
+
+.content.active {
+  display: block;
+}
+</style>
+    <style>
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0 auto;
+      }
+      .random {
+        width: 300px;
+        height: 300px;
+        background-color: rgb(240, 216, 1);
+        justify-content: center;
+        text-align: center;
+      }
+      .main {
+        display: block;
+      }
+      .non {
+        display: none;
+      }
+      .tab {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .text_item1,
+      .text_item2,
+      .text_item3,
+      .text_item4 {
+        display: none;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        display: block;
+        width: 200px;
+        padding: 20px 30px;
+        background-color: aqua;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="main" class="main">
+      <div class="random">
+        <p>Random number</p>
+        <h2 id="numb">23</h2>
+        <button id="btn">Generate random number</button>
+      </div>
+    </main>
+    <button id="none">NONE</button>
+    <script>
+      let btn = document.getElementById("btn");
+      btn.onclick = function () {
+        let numbe = Math.ceil(Math.random() * 100);
+        document.getElementById("numb").innerHTML = numbe;
+      };
+      document.getElementById("none").onclick = function () {
+        if (document.getElementById("main").classList.length === 1) {
+          document.getElementById("main").classList.add("non");
+        } else {
+          document.getElementById("main").classList.remove("non");
+        }
+      };
+    </script>
+
+    <div>
+      <p class="p1">X= <span id="p11" class="p11"></span></p>
+      <p class="p2">Y= <span id="p22" class="p22"></span></p>
+    </div>
+    <!-- <script>
+      document.querySelector("body").onmousemove = function (e) {
+        document.getElementById("p11").innerHTML = e.screenX;
+        document.getElementById("p22").innerHTML = e.screenY;
+      };
+    </script> -->
+    <!-- <div class="tab">
+      <ul class="menu">
+        <li ><a class="menu_list1" href="">lorem111111111</a></li>
+        <li ><a class="menu_list2" href="">lorem2222222222</a></li>
+        <li ><a class="menu_list3" href="">lorem33333333333</a></li>
+        <li ><a class="menu_list4" href="">lorem44444444</a> </li>
+      </ul>
+      <ul class="text">
+        <li class="text_item1">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, atque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus deserunt saepe quibusdam blanditiis dolore eos eveniet esse, est quisquam delectus repudiandae corrupti rem. Nesciunt maiores repellat excepturi inventore delectus explicabo voluptatem, autem sit eum accusantium natus id distinctio molestias iure ipsum iste placeat. Fugit delectus vitae quis possimus dicta consequatur quas eius maxime praesentium fuga officia quasi earum commodi provident, ducimus numquam? Corporis voluptatum laborum quam, repellat ex iste deserunt natus neque distinctio accusamus eaque vero deleniti vitae aperiam ut fuga in! Aperiam quidem, cupiditate amet animi corrupti, hic atque, a officiis magnam optio natus voluptatem maiores consequatur saepe labore.</p>
+        </li>
+        <li class="text_item2">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat nam ad reprehenderit vel architecto nihil quas inventore fuga quo explicabo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, atque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus deserunt saepe quibusdam blanditiis dolore eos eveniet esse, est quisquam delectus repudiandae corrupti rem. Nesciunt maiores repellat excepturi inventore delectus explicabo voluptatem, autem sit eum accusantium natus id distinctio molestias iure ipsum iste placeat. Fugit delectus vitae quis possimus dicta consequatur quas eius maxime praesentium fuga officia quasi earum commodi provident, ducimus numquam? Corporis voluptatum laborum quam, repellat ex iste deserunt natus neque distinctio accusamus eaque vero deleniti vitae aperiam ut fuga in! Aperiam quidem, cupiditate amet animi corrupti, hic atque, a officiis magnam optio natus voluptatem maiores consequatur saepe labore.</p>
+        </li>
+        <li class="text_item3">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, excepturi! Nesciunt odit voluptatum temporibus? Vero, ratione sed itaque quos quae voluptas eligendi iusto eveniet incidunt impedit velit dolor? Saepe, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, atque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus deserunt saepe quibusdam blanditiis dolore eos eveniet esse, est quisquam delectus repudiandae corrupti rem. Nesciunt maiores repellat excepturi inventore delectus explicabo voluptatem, autem sit eum accusantium natus id distinctio molestias iure ipsum iste placeat. Fugit delectus vitae quis possimus dicta consequatur quas eius maxime praesentium fuga officia quasi earum commodi provident, ducimus numquam? Corporis voluptatum laborum quam, repellat ex iste deserunt natus neque distinctio accusamus eaque vero deleniti vitae aperiam ut fuga in! Aperiam quidem, cupiditate amet animi corrupti, hic atque, a officiis magnam optio natus voluptatem maiores consequatur saepe labore.</p>
+        </li>
+        <li class="text_item4">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error praesentium alias obcaecati itaque est adipisci recusandae minus. Doloribus iure, eaque incidunt debitis, laborum animi in illo sequi praesentium nam ad! Sint saepe quaerat distinctio pariatur rerum commodi ducimus facere eius.Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, atque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus deserunt saepe quibusdam blanditiis dolore eos eveniet esse, est quisquam delectus repudiandae corrupti rem. Nesciunt maiores repellat excepturi inventore delectus explicabo voluptatem, autem sit eum accusantium natus id distinctio molestias iure ipsum iste placeat. Fugit delectus vitae quis possimus dicta consequatur quas eius maxime praesentium fuga officia quasi earum commodi provident, ducimus numquam? Corporis voluptatum laborum quam, repellat ex iste deserunt natus neque distinctio accusamus eaque vero deleniti vitae aperiam ut fuga in! Aperiam quidem, cupiditate amet animi corrupti, hic atque, a officiis magnam optio natus voluptatem maiores consequatur saepe labore.</p>
+        </li>
+      </ul>
+   </div> -->
+    <script>
+      //  console.log(document.getElementsByClassName('text_item1'));
+      //     document.getElementsByClassName('menu_list1').onclick = function(){
+      //      document.getElementsByClassName('text_item1').style.display = 'block'
+
+      //     }
+    </script>
+    <div class="wrapper">
+      <div class="buttonwrapper">
+        <button data-id="home" class="tab-button active">Home</button>
+        <button data-id="about" class="tab-button">About</button>
+        <button data-id="contact" class="tab-button">Contact</button>
+      </div>
+      <div class="contentwrapper">
+        <p id="home" class="content active" >
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint non
+          velit dolorem pariatur, earum soluta deserunt sunt debitis dolorum
+          amet numquam dolores exercitationem? Dolorum, accusantium assumenda
+          libero provident pariatur non recusandae alias possimus aliquid
+          sapiente esse porro ut ex sit reprehenderit necessitatibus eum modi,
+          voluptas enim, voluptate quae doloremque earum quia deserunt! Cumque
+          corrupti consectetur magnam pariatur, iste est repellendus ex mollitia
+          dolorum, quae commodi officiis? Ex, saepe vitae accusamus ipsa,
+          officiis quis repellat aut pariatur beatae, labore similique
+          recusandae. Qui, blanditiis ea. Neque quidem odio amet eaque quasi
+          impedit eius quis ipsam at voluptatum. Reprehenderit sed quo aperiam
+          veritatis?
+        </p>
+        <p id="about" class="content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+          minima, facere quisquam iste tenetur, voluptatem autem suscipit
+          voluptatum eum vero officiis nihil eligendi. Animi, minus? Enim totam
+          beatae voluptates dolor facere a, quasi sunt soluta. Nisi architecto
+          soluta, nam vitae consectetur sunt eaque cumque quam veritatis.
+          Laudantium sed, cumque vitae iure, inventore enim dolores quae labore
+          nam minima suscipit? Explicabo, quidem rem, voluptas qui facere
+          cupiditate adipisci accusantium libero deleniti non et eligendi
+          labore. Autem, rerum iure. Soluta libero incidunt tenetur velit eaque
+          dignissimos, a nam nihil voluptatem praesentium quaerat. Blanditiis
+          tenetur recusandae dicta mollitia ab error placeat est veritatis.
+        </p>
+        <p id="contact" class="content">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis,
+          fugiat aperiam! Saepe quisquam in ad? Vel fuga, laborum quisquam
+          exercitationem atque illum nulla asperiores illo temporibus obcaecati
+          vero ut culpa ducimus id consequatur sunt veniam distinctio,
+          voluptatem fugiat nostrum aliquid unde expedita deleniti? Fuga id
+          culpa, nemo incidunt amet illum maxime aspernatur ipsa tempora? Vero
+          sunt quisquam corporis, aut numquam laudantium quasi sapiente! Impedit
+          ipsum dolorem dolore rerum quidem, nobis corrupti harum saepe
+          reiciendis dolores pariatur autem labore accusamus officiis nulla?
+          Neque suscipit, inventore iure ipsam cumque praesentium quasi,
+          pariatur perferendis vero aperiam accusamus doloribus sed, ullam
+          tempore aut fugit?
+        </p>
+      </div>
+    </div>
+    <script>
+      const tabs = document.querySelector(".wrapper");
+      const tabButton = document.querySelectorAll(".tab-button");
+      const contents = document.querySelectorAll(".content");
+
+      tabs.onclick = (e) => {
+        const id = e.target.dataset.id;
+        if (id) {
+          tabButton.forEach((btn) => {
+            btn.classList.remove("active");
+          });
+          e.target.classList.add("active");
+
+          contents.forEach((content) => {
+            content.classList.remove("active");
+          });
+          const element = document.getElementById(id);
+          element.classList.add("active");
+        }
+      };
+    </script>
+  </body>
+</html>

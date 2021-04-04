@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+      }
+      section {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-wrap: wrap;
+      }
+      section div {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+      }
+      button {
+        padding: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="razer"></div>
+      </section>
+      <button id="btn" class="btn">adddd</button>
+    </main>
+    <script>
+      document.getElementById("btn").onclick = function () {
+        let divs = document.createElement("div");
+        let clas = document.createAttribute("class");
+        clas.innerText = "razer";
+        divs.setAttribute(clas);
+        document.body.appendChild(divs);
+      };
+    </script>
+  </body>
+</html>

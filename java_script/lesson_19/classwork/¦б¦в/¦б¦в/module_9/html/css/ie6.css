@@ -1,0 +1,4 @@
+#sidebar .text-container { height: 221px; }
+.slider-nav ul li a  { background-image: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/slider-nav.png', sizingMethod='image');}
+.slider-nav ul li a:hover,
+.slider-nav ul li a.active  { background-image: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/slider-nav-hover.png', sizingMethod='image');}

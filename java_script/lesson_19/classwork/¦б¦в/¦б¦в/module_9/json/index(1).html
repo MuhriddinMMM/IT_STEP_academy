@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #drop{
+            background: #ccc;
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+            border: 2px solid #666;
+        }
+    </style>
+    <input type="file" id="file" multiple>
+    <div id="drop"></div>
+
+    <script>
+        var file = document.getElementById('file');
+
+        file.onchange = function(){
+            var files = file.files;
+            var len = files.length;
+
+            for(var i =0; i < len; i++){
+                console.log('Filename: ' + files[i].name);
+                console.log('Type: ' + files[i].type);
+                console.log('Size: ' + files[i].size);
+            }
+        }
+
+        var dropFile = document.getElementById('drop');
+        dropFile.addEventListener('dragover', function(event){
+            event.preventDefault();
+        });
+        dropFile.addEventListener('drop', function(event){
+            event.preventDefault();
+
+            var files = event.dataTransfer.files;
+            var len = files.length;
+
+            for(var i =0; i < len; i++){
+                console.log('Filename: ' + files[i].name);
+                console.log('Type: ' + files[i].type);
+                console.log('Size: ' + files[i].size);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+}
+main div {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+button {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  background-color: aqua;
+  margin: 10px;
+  cursor: pointer;
+}
+body {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.about {
+  background-color: rgba(255, 255, 255, 0.514);
+}
+.block {
+  width: 300px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.block div {
+  width: 200px;
+  height: 80px;
+}
+a {
+  background-color: rgb(197, 5, 5);
+}
+section {
+  width: 100%;
+}

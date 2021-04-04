@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="plug.js"></script>
+    <script>
+        $(document).ready(function(){ 
+            
+            $('div').tooltip({color: 'red'});
+            $('div:last-child').tooltip({color: 'blue'});
+        });
+        
+    </script>
+</head>
+<body>
+    <div style="height:100px">Lorem.</div>
+    <div style="height:10px">Lorem.</div>
+    <div style="height:20px">Lorem.</div>
+    <div style="height:30px">Lorem.</div>
+    <div style="height:45px">Lorem.</div>
+</body>
+</html>

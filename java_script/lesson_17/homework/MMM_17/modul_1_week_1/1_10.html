@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Запросите у пользователя целое число и выведите в ответ, четное число или
+      нет. В задании используйте логические операторы. В задании не надо
+      использовать if или switch.
+    </p>
+
+    <script>
+      let numb = prompt("Запросите у пользователя целое число", "70");
+
+      function oddOrEven(x) {
+        return x & 1 ? "odd" : "even";
+      }
+
+      function checkNumber(argNumber) {
+        
+         return "Number " + argNumber + " is " + oddOrEven(argNumber);
+      }
+      alert(checkNumber(Number(numb)));
+    </script>
+  </body>
+</html>

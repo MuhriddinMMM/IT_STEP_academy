@@ -1,0 +1,51 @@
+body{
+    background-color: blanchedalmond;
+    font-size: 28px;
+}
+
+h3{
+    text-align: center;
+}
+.wrapper{
+    width: 30%;
+    position: relative;
+    left: 35%;
+    top: 200px;
+}
+.blocks {
+    padding-bottom: 10px;
+}
+.spease{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.blocks > input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: inherit;
+}
+.btn{
+    position: relative;
+    top: 20px;
+}
+.btn > button{
+    width: 102%;
+    padding: 10px 0;
+}
+.dis, .disEmail{
+    display: none;
+    font-size: medium;
+    color: red;
+    text-align: end;
+}
+
+.welcome{
+    text-align: right;
+}
+
+#exitRef{
+    cursor: pointer;
+    color: black;
+    z-index: 2;
+}

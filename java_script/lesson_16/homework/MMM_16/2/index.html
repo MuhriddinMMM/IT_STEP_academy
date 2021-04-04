@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <h1>PAINT</h1>
+    <section class="border">
+      <div>
+        <input class="shapess" id="square" name="shape" type="radio" />
+        <label for="square"> <div class="square"></div></label>
+      </div>
+      <div>
+        <input class="shapess" id="circle" name="shape" type="radio" />
+        <label for="circle"> <div class="circle"></div></label>
+      </div>
+      <div>
+        <input class="shapess" id="romb" name="shape" type="radio" />
+        <label for="romb"> <div class="romb"></div></label>
+      </div>
+      <div>
+        <input class="shapess" id="triangle" name="shape" type="radio" />
+        <label for="triangle"> <div class="triangle"></div></label>
+      </div>
+      <section class="checkbox">
+        <div>
+          <input
+            checked
+            id="red"
+            type="checkbox"
+            class="red colors"
+            name="radio"
+            value="#ff605f"
+          />
+          <input
+            id="green"
+            type="checkbox"
+            class="green colors"
+            name="radio"
+            value="#96d100"
+          />
+          <input
+            id="blue"
+            type="checkbox"
+            class="blue colors"
+            name="radio"
+            value="#00a8ff"
+          />
+          <input
+            id="purple"
+            type="checkbox"
+            class="purple colors"
+            name="radio"
+            value="#d066fa"
+          />
+          <input
+            id="orange"
+            type="checkbox"
+            class="orange colors"
+            name="radio"
+            value="orange"
+          />
+        </div>
+      </section>
+    </section>
+
+    <main id="main">
+      <div class="squareone"></div>
+    </main>
+
+    <script src="assets/js.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $("input:checkbox").on("click", function () {
+        var $box = $(this);
+        if ($box.is(":checked")) {
+          var group = "input:checkbox[name='" + $box.attr("name") + "']";
+
+          $(group).prop("checked", false);
+          $box.prop("checked", true);
+        } else {
+          $box.prop("checked", false);
+        }
+      });
+    </script>
+  </body>
+</html>

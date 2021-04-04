@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <img src="img/ball.png" id="ball">
+    
+    <script>
+        var ball = document.getElementById('ball');
+        
+        ball.onclick = function(e){
+            var coords = getCoords(ball);
+            var shiftX = e.pageX - coords.left;
+            var shiftY = e.pageY - coords.top;
+            console.log('X = ' + shiftX + '; Y = ' + shiftY);
+        }
+
+        ball.onmousedown = function(e) {
+
+          var coords = getCoords(ball);
+          var shiftX = e.pageX - coords.left;// сохранияем координаты нажития по области
+          var shiftY = e.pageY - coords.top;//*
+
+          ball.style.position = 'absolute';
+          document.body.appendChild(ball);
+          moveAt(e);
+
+          ball.style.zIndex = 1000; // над другими элементами
+
+          function moveAt(e) {
+            ball.style.left = e.pageX - shiftX + 'px';// переписываем движения
+            ball.style.top = e.pageY - shiftY + 'px';//*
+          }
+
+          document.onmousemove = function(e) {
+            moveAt(e);
+          };
+
+          ball.onmouseup = function() {
+            document.onmousemove = null;
+            ball.onmouseup = null;
+          };
+
+        }
+
+        ball.ondragstart = function() {
+          return false;
+        };
+        
+        //получения координат элемента относительно страницы
+        function getCoords(elem) { // кроме IE8-
+          var box = elem.getBoundingClientRect();
+
+          return {
+            top: box.top + pageYOffset,
+            left: box.left + pageXOffset
+          };
+
+        }
+    </script>
+</body>
+</html>

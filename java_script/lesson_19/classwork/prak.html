@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 800px;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+      }
+      a {
+        display: block;
+        cursor: pointer;
+        padding: 5px 50px;
+        background-color: aqua;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      h1 {
+        width: 100%;
+        text-align: center;
+      }
+
+      table {
+        display: flex;
+        flex-direction: column;
+        border-collapse: collapse;
+        width: 100%;
+        text-align: center;
+        margin: 100px;
+      }
+      td {
+        padding: 20px;
+        border: 1px solid grey;
+      }
+      tr {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ALL users</h1>
+
+    <script>
+      let xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
+
+      xhr.onload = function () {
+        let objectsArray = JSON.parse(xhr.response);
+        for (let i = 0; i < objectsArray.length; i++) {
+          let block = document.createElement("a");
+
+          let nameHeader = document.createElement("h2");
+
+          nameHeader.textContent = objectsArray[i].id;
+
+          let titleP = document.createElement("p");
+          titleP.textContent = objectsArray[i].name;
+          let bodyP = document.createElement("p");
+          bodyP.textContent = objectsArray[i].username;
+          block.append(nameHeader, titleP, bodyP);
+          document.body.append(block);
+        }
+
+        console.log(JSON.parse(xhr.response));
+
+        let ablock = document.getElementsByTagName("a");
+        console.log(ablock);
+        for (let i = 0; i < ablock.length; i++) {
+          ablock[i].onclick = function () {
+            if (document.querySelectorAll("table").length === 1) {
+              var tables = document.querySelectorAll("table")[0];
+              tables.remove();
+            }
+            xhr.open(
+              "GET",
+              `https://jsonplaceholder.typicode.com/users/${i + 1}`
+            );
+
+            xhr.onload = function () {
+              let user = JSON.parse(xhr.response);
+              console.log(user);
+
+              let tabel = document.createElement("table");
+              let tr = document.createElement("tr");
+
+              let tdName = document.createElement("td");
+              tdName.textContent = "Name";
+              let tdName1 = document.createElement("td");
+              tdName1.textContent = objectsArray[i].name;
+
+              let tdUsername = document.createElement("td");
+              tdUsername.textContent = "Username";
+              let tdUsername1 = document.createElement("td");
+              tdUsername1.textContent = objectsArray[i].username;
+
+              let tdaddress = document.createElement("td");
+              tdaddress.textContent = "address";
+              let tdaddress1 = document.createElement("td");
+              tdaddress1.textContent = objectsArray[i].address.city;
+
+              let tdemail = document.createElement("td");
+              tdemail.textContent = "email";
+              let tdemail1 = document.createElement("td");
+              tdemail1.textContent = objectsArray[i].email;
+
+                let tdphone = document.createElement("td");
+                tdphone.textContent = "phone";
+                let tdphone1 = document.createElement("td");
+                tdphone1.textContent = objectsArray[i].phone;
+
+              tr.append(
+                tdName,
+                tdName1,
+                tdUsername,
+                tdUsername1,
+                tdaddress,
+                tdaddress1,
+                tdemail,
+                tdemail1,
+                tdphone,
+                tdphone1
+              );
+
+              tabel.append(tr);
+              document.body.append(tabel);
+
+              //   let tablebefore = document.querySelectorAll("table")[0];
+              //   tablebefore.remove();
+            };
+
+            xhr.send();
+            // let objectsArray = JSON.parse(xhr.response);
+            // let tabel = document.createElement("table");
+            // for (let i = 0; i < objectsArray.length; i++) {
+            //   let tr = document.createElement("tr");
+
+            //   let tdName = document.createElement("td");
+            //   tdName.textContent = "Name";
+            //   let tdName1 = document.createElement("td");
+            //   tdName1.textContent = objectsArray[i].name;
+
+            //   tr.append(tdName, tdName1);
+            //   tabel.append(tr);
+            // }
+            // document.body.append(tabel);
+          };
+        }
+      };
+
+      xhr.send();
+    </script>
+  </body>
+</html>

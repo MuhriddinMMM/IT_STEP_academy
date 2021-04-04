@@ -1,0 +1,7 @@
+#fade{
+    display: inline-block;
+    border: 2px solid #555;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 1px 1px 10px rgba(0,0,0,.4);
+}

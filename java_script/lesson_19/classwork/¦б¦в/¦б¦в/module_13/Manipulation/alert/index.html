@@ -1,0 +1,61 @@
+<!-- 
+    Лабораторная работа №3
+    Создать свое модальное окно
+    Окно должно появлятся по нажатию на кнопку
+    Так же необходимо реализовать закрытие окна.
+    Когда всплывающее окно активно контент на странице должен быть не доступен(затемнен)
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alert</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+   <!-- Шрифтовые иконки -->
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+    <!-- Стили -->
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Ваш скрипт -->
+    <script src="script.js"></script>
+</head>
+<body>
+   <div class="container">
+       <div class="row">
+           <div class="col-md-12">
+              <form id="myForm">
+                  <div class="form-group">
+                     <!-- Кнопка -->
+                      <button class="btn btn-success" id="btn">Show</button>
+                  </div>
+              </form>
+               
+           </div>
+       </div>
+   </div>
+
+<!-- Модальное окно, по умолчанию скрыто (см. style.css) -->   
+<div class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+           <!-- Кнопка закрытия окна -->
+            <button type="button" class="close btn-close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <p>One fine body&hellip;</p>
+          </div>
+          <div class="modal-footer">
+                <!-- Кнопки закрытия окна -->
+                <button type="button" class="btn btn-default btn-close">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+    
+</body>
+</html>

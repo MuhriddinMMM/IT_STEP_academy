@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        margin: 0;
+      }
+      .cat {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        transition: 0.3s linear;
+      }
+      .bgc {
+        position: relative;
+        background-image: url(bgc.jpg);
+        width: 800px;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="layout" class="bgc">
+        <img id="cat" class="cat" src="cat.svg" alt="" />
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script> -->
+
+    <script>
+      $(".bgc").on("mousemove", function (event) {
+          $('.cat').css('left', event.clientX)
+        // let left = event.clientX;
+        // console.log(event);
+        // if (left > 775) {
+        //   left = 775;
+        // } else if (left < 0) {
+        //   left = 0;
+        // }
+        // $(".cat").css("left", left - 25 + "px");
+
+        // let top = event.clientY;
+        // if (top > 375) {
+        //   top = 375;
+        // } else if (top < 0) {
+        //   top = 0;
+        // }
+
+
+        // $(".cat").css("top", top - 25 + "px");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Вам необходимо самостоятельно решить, для какого задания какой оператор
+      ветвления лучше использовать: if, switch или тернарный. 1. Запросить у
+      пользователя его возраст и определить, кем он является: ребенком (0–2),
+      подростком (12–18), взрослым (18_60) или пенсионером (60– ...).
+    </p>
+    <script>
+      let age = prompt("Запросить у пользователя его возраст", "5");
+      console.log(+age);
+      if (0 < +age&& +age <12) {
+        alert("ребенком");
+      } else if (12 < +age&& +age < 18) {
+        alert(" подростком");
+      }
+      else if (18<+age && +age<60){
+          alert("взрослым")
+      }
+      else if (+age > 60) {
+        alert("пенсионером");
+      }
+    </script>
+  </body>
+</html>

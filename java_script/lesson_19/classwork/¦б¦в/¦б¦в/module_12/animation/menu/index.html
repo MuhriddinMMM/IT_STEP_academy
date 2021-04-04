@@ -1,0 +1,59 @@
+<!-- 
+    Лабораторная работа №4
+    Реализовать адаптивное меню
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <!-- Подкючаем шрифтовые иконки -->
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.css">
+    <!-- Ваши стили -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем jQuery -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Ваши скрипты -->
+    <script src="menu.js"></script>
+</head>
+<body>
+   <div id="wrapper">
+      <!-- Вверхняя линия -->
+       <div id="top-line">
+           <div class="logo">
+                <a href="#" data-logo='Logo' data-logo-swap='L'>Logo</a>
+                <!-- По клику на этот блок меню должно сворачиваться-->
+                <i class="fa fa-bars fa-lg" id="bars" data-status='show'></i>
+           </div>
+           <div class="top-content"></div>
+       </div>
+       <!-- Левый сайд бар, который должен сворачиваться-->
+       <div id="aside">
+           <p class="aside-title">Навигация</p>
+           <!-- Меню -->
+           <nav class="aside-nav">
+               <ul>
+                    <li>
+                        <i class="fa fa-dashboard fa-lg"></i>
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-home fa-lg"></i>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-tag fa-lg"></i>
+                        <a href="#">Products</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-users fa-lg"></i>
+                        <a href="#">Users</a>
+                    </li>
+               </ul>
+           </nav>
+       </div>
+       <!-- Основной контент -->
+       <div id="content"></div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="plug.js"></script>
+    <script>
+        $(document).ready(function(){ 
+            //$('div').myPlugin('color', 'red'); 
+            
+            var div = $('div:first-child');
+            console.log(div);
+            
+            jQuery.data(div, 'test', div.text());
+            $('p').text(jQuery.data(div, 'test'))
+        });
+        
+    </script>
+</head>
+<body>
+    <div class="result">Lorem.</div>
+    <div class="result">Earum?</div>
+    <div class="result">Iusto!</div>
+    <div class="result">Natus.</div>
+    <div class="result">Ad.</div>
+    
+    <p class=""></p>
+    
+    <button class="btn">Click</button>
+    
+</body>
+</html>

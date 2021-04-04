@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Пользователь вводит сумму денег в кошельке и цену одной шоколадки.
+      Программа выводит сколько шоколадок может купить пользователь и сколько
+      сдачи у него останется.
+    </p>
+
+    <script>
+      let kashelok = prompt(
+        "Пользователь вводит сумму денег в кошельке $$$$$$",
+        "100"
+      );
+      let shokolad = prompt("цену одной шоколадки $$$$$", "3");
+      alert(
+        Math.round(kashelok / shokolad) +
+          "   шоколадок может купить пользователь"
+      );
+      alert((kashelok % shokolad) + " \$  сдачи у него останется");
+    </script>
+  </body>
+</html>
