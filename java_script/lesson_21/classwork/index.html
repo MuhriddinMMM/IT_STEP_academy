@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      a {
+        text-decoration: none;
+        display: block;
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: burlywood;
+        cursor: pointer;
+      }
+      .actives {
+        background-color: chartreuse;
+      }
+      .texts {
+        display: none;
+      }
+      .active {
+        display: block;
+      }
+      img {
+        width: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <ul class="menu">
+        <li class="tabs"><a href="#">Mango</a></li>
+        <li class="tabs"><a href="#">Orange</a></li>
+        <li class="tabs"><a href="#">Pineapple</a></li>
+        <li class="tabs"><a href="#">Papaya</a></li>
+        <li class="tabs"><a href="#">GrapeFruit</a></li>
+        <li class="tabs"><a href="#">Pear</a></li>
+      </ul>
+      <ul class="content">
+        <li>
+          <p class="texts active">
+            <img src="mango.png" alt="" />
+            11111111Lorem ipsum, dolor sit amet consectetur adipisicing elit. At
+            laboriosam, accusamus aperiam explicabo quia esse alias laborum
+            autem libero sed vitae pariatur qui nihil voluptas facilis!
+            Blanditiis quidem laboriosam quas.
+          </p>
+        </li>
+        <li>
+          <p class="texts">
+            <img src="orange.jpg" alt="" />
+            222222222Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            At laboriosam, accusamus aperiam explicabo quia esse alias laborum
+            autem libero sed vitae pariatur qui nihil voluptas facilis!
+            Blanditiis quidem laboriosam quas.
+          </p>
+        </li>
+        <li>
+          <p class="texts">
+            <img src="Pineapple.jpg" alt="" />
+            3333333333Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            At laboriosam, accusamus aperiam explicabo quia esse alias laborum
+            autem libero sed vitae pariatur qui nihil voluptas facilis!
+            Blanditiis quidem laboriosam quas.
+          </p>
+        </li>
+        <li>
+          <p class="texts">
+            <img src="Papaya.jpg" alt="" />
+            44444444444Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            At laboriosam, accusamus aperiam explicabo quia esse alias laborum
+            autem libero sed vitae pariatur qui nihil voluptas facilis!
+            Blanditiis quidem laboriosam quas.
+          </p>
+        </li>
+        <li>
+          <p class="texts">
+            <img src="GrapeFruit.png" alt="" />
+            55555555Lorem ipsum, dolor sit amet consectetur adipisicing elit. At
+            laboriosam, accusamus aperiam explicabo quia esse alias laborum
+            autem libero sed vitae pariatur qui nihil voluptas facilis!
+            Blanditiis quidem laboriosam quas.
+          </p>
+        </li>
+        <li>
+          <p class="texts">
+            <img src="Pear.png" alt="" />
+            666666Lorem ipsum, dolor sit amet consectetur adipisicing elit. At
+            laboriosam, accusamus aperiam explicabo quia esse alias laborum
+            autem libero sed vitae pariatur qui nihil voluptas facilis!
+            Blanditiis quidem laboriosam quas.
+          </p>
+        </li>
+      </ul>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+      $(".tabs").on("click", function () {
+        $("a").removeClass("actives");
+        $("a")[$(this).index()].classList.add("actives");
+        $("p").removeClass("active");
+        $("p")[$(this).index()].classList.add("active");
+      });
+    </script>
+  </body>
+</html>

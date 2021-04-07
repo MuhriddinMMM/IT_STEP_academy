@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #btn {
+        padding: 20px 50px;
+      }
+      #close {
+        padding: 20px 100px;
+      }
+      .body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      main {
+        text-align: center;
+        width: 400px;
+        height: 100px;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        transform: scale(0);
+        transition: 1s linear;
+      }
+      .active {
+        transform: scale(1);
+      }
+      .actives {
+        background-color: cornflowerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bgc"></div>
+    <div class="body">
+      <button id="btn">Open Modal</button>
+
+      <main class="main">
+        <h2>Hello From Modal Window</h2>
+
+        <button id="close">Close</button>
+      </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      console.log($("#btn"));
+      $("#btn").on("click", function (e) {
+        e.preventDefault();
+        $("body").addClass("actives");
+        $(".main").addClass("active");
+      });
+      $(".main").on("click", function (e) {
+        e.preventDefault();
+        $(".main").removeClass("active");
+        $("body").removeClass("actives");
+      });
+    </script>
+  </body>
+</html>

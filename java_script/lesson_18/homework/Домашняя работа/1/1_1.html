@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+      }
+      input {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Задание 1 Создать html-страницу для ввода имени пользователя. Необходимо
+      проверять каждый символ, который вводит поль- зователь. Если он ввел
+      цифру, то не отображать ее в input.
+    </p>
+
+    <main>
+      <div>
+        <label for="name">Enter Your Name</label>
+        <input type="text" name="name" id="name" />
+      </div>
+    </main>
+
+    <script>
+      let name = document.getElementById("name");
+      console.log(name);
+      let value = document.getElementById("name").value;
+      console.log(value);
+    </script>
+  </body>
+</html>
