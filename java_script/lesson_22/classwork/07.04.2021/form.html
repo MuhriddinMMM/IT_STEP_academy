@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .border {
+        border-top: 2px solid grey;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>all questions</h1>
+      <div id="questions"></div>
+      <form action="">
+        <h2>Add new question:</h2>
+        <div>
+          <label for="">Question:</label> <input id="question" type="text" />
+        </div>
+        <div>
+          <label for="">Correct answer:</label>
+          <input id="correct" type="text" />
+        </div>
+        <div>
+          <label for="">Wrong answer:</label> <input id="wrong" type="text" />
+        </div>
+        <button id="btn">ADD</button>
+      </form>
+    </main>
+
+    <p class="border"></p>
+    <script>
+      let btn = document.getElementById("btn");
+      console.log(btn);
+      btn.onclick = function (event) {
+        event.preventDefault();
+        let question = document.getElementById("question").value;
+        let correct = document.getElementById("correct").value;
+        let wrong = document.getElementById("wrong").value;
+        let questions = document.createElement("div");
+        questions.innerHTML = `<p  class="border"></p>  <a>${question}</a> <p>Correct answer:  ${correct}</p> <p>Wrong answer:  ${wrong}</p>  <p  class="border"></p>`;
+        document.getElementById("questions").append(questions);
+      };
+    </script>
+  </body>
+</html>

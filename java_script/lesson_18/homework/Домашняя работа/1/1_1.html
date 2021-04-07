@@ -38,10 +38,23 @@
     </main>
 
     <script>
+      // console.log(1);
+      // document.body.onclick = (e) => {
+      //   console.log(e);
+      //   if(e.ctrlKey + e.key == "F")
+      //   console.log(e.ctrlKey + e.key == "F");
+      // };
       let name = document.getElementById("name");
-      console.log(name);
+      name.onkeypress = function (event) {
+        if (event.key.match("[0-9]")) {
+          event.stopPropagation();
+        }
+
+        // let value = document.getElementById("name").value;
+        // console.log(value);ctrlKey
+      };
+
       let value = document.getElementById("name").value;
-      console.log(value);
     </script>
   </body>
 </html>
