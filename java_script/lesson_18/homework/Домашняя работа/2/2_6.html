@@ -1,12 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      textarea {
+        width: 500px;
+        height: auto;
+      }
+      .content__textarea {
+        display: block;
+        position: relative;
+        width: 200px;
+        margin: auto;
+        text-align: justify;
+        padding: 5px;
+        border: 2px solid blue;
+        margin-bottom: 10px;
+      }
+      .content__textarea--resizer {
+        display: block;
+        position: absolute;
+        right: -10px;
+        bottom: -10px;
+        z-index: 1;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background-color: #fff;
+        border: 2px solid blue;
+        cursor: col-resize;
+      }
+      .content__table {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Задание 6 Создать html-страницу с блоком текста в рамочке. Реализовать
+      возможность изменять размер блока, если зажать мышку в правом нижнем углу
+      и тянуть ее дальше.
+    </p>
+
+    <div class="content" id="content">
+      <div class="content__textarea" id="content__textarea">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nihil cum
+        corrupti aliquid vitae quam reiciendis esse doloremque, praesentium
+        aliquam dolorum sequi assumenda quos eligendi est officiis, molestias
+        unde nesciunt!
+        <div class="content__textarea--resizer"></div>
+      </div>
+    </div>
+    <script>
+      const resDiv = document.getElementById("content__textarea");
+      const resizer = document.querySelector("div.content__textarea--resizer");
+
+      const initResize = (e) => {
+        e.preventDefault;
+        window.addEventListener("mousemove", startResize);
+        window.addEventListener("mouseup", stopResize);
+      };
+
+      const startResize = (e) => {
+        resDiv.style.width = e.clientX - resDiv.offsetLeft + "px";
+      };
+      const stopResize = (e) => {
+        window.removeEventListener("mousemove", startResize);
+        window.removeEventListener("mouseup", stopResize);
+      };
+
+      resizer.addEventListener("mousedown", initResize);
+
+      document.body.addEventListener("keydown", (event) => {
+        const resizer = document.createElement("div");
+        if (
+          (event.code === "KeyE" || event.code === "Comma") &&
+          event.ctrlKey
+        ) {
+          event.returnValue = false;
+          let elem = document.querySelector(".content__textarea");
+          if (event.code === "KeyE" && elem.nodeName === "DIV") {
+            let newEl = document.createElement("textarea");
+            newEl.setAttribute("cols", 50);
+            newEl.setAttribute("rows", 20);
+            newEl.className = "content__textarea";
+            newEl.textContent = elem.textContent;
+            elem.replaceWith(newEl);
+          } else if (event.code === "Comma" && elem.nodeName === "TEXTAREA") {
+            let newEl = document.createElement("div");
+            newEl.className = "content__textarea";
+            newEl.textContent = elem.value;
+            resizer.className = "content__textarea--resizer";
+
+            const initResize = (e) => {
+              e.preventDefault;
+              window.addEventListener("mousemove", startResize);
+              window.addEventListener("mouseup", stopResize);
+            };
+
+            const startResize = (e) => {
+              newEl.style.width = e.clientX - newEl.offsetLeft + "px";
+            };
+            const stopResize = (e) => {
+              window.removeEventListener("mousemove", startResize);
+              window.removeEventListener("mouseup", stopResize);
+            };
+
+            resizer.addEventListener("mousedown", initResize);
+            newEl.append(resizer);
+            elem.replaceWith(newEl);
+          }
+        }
+      });
+    </script>
+  </body>
 </html>

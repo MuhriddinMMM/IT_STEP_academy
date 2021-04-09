@@ -1,0 +1,35 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+textarea {
+  width: 500px;
+  height: auto;
+}
+.content__textarea {
+  display: block;
+  position: relative;
+  width: 200px;
+  margin: auto;
+  text-align: justify;
+  padding: 5px;
+  border: 2px solid blue;
+  margin-bottom: 10px;
+}
+.content__textarea--resizer {
+  display: block;
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: #fff;
+  border: 2px solid blue;
+  cursor: col-resize;
+}
+.content__table {
+  position: relative;
+}

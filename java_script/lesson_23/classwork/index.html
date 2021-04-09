@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+        background-color: burlywood;
+        width: 500px;
+      }
+      #now {
+        display: flex;
+        flex-direction: column;
+      }
+      #now > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="now">
+        <div>
+          <h2 id="name">Ukraine</h2>
+          <h4 id="datanow">253425454</h4>
+        </div>
+        <div>
+          <div>
+            <div id="img"></div>
+            <p id="weather_descriptions">MIST</p>
+          </div>
+          <div>
+            <h2 id="nowtemp">2 C</h2>
+          </div>
+          <div>
+            <p id="wind">Wind:</p>
+            <p id="precip">Precip:</p>
+            <p id="pressure">Pressure:</p>
+          </div>
+        </div>
+      </div>
+      <!-- <div>
+        <div><h4 id="next1">Tuesday</h4></div>
+      </div> -->
+    </main>
+
+    <script>
+      const key =
+        "http://api.weatherstack.com/current?access_key=75a93cc07e8ac655580bfc380936e858&query=Tashkent";
+      let xhr = new XMLHttpRequest();
+      xhr.open("GET", key);
+
+      xhr.onload = () => {
+        let myObj = JSON.parse(xhr.response);
+        console.log(myObj);
+        document.getElementById("name").innerHTML = myObj.location.name;
+        document.getElementById("datanow").innerHTML = myObj.location.localtime;
+        let icon = myObj.current.weather_icons;
+        let img = document.createElement("div");
+        img.innerHTML = `<img src="${icon}" alt="">`;
+        document.getElementById("img").append(img);
+        document.getElementById(
+          "wind"
+        ).innerHTML = `Wind: ${myObj.current.wind_speed} kph`;
+
+        document.getElementById("weather_descriptions").innerHTML =
+          myObj.current.weather_descriptions;
+        document.getElementById(
+          "nowtemp"
+        ).innerHTML = ` ${myObj.current.temperature} C`;
+        document.getElementById(
+          "precip"
+        ).innerHTML = `Precip: ${myObj.current.precip} mm`;
+
+        document.getElementById(
+          "pressure"
+        ).innerHTML = `pressure: ${myObj.current.pressure} mb`;
+      };
+      xhr.send();
+    </script>
+  </body>
+</html>

@@ -5,17 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .active {
+        background-color: brown;
+      }
+    </style>
   </head>
   <body>
-    <p>
+    <h2>
       Создать html-страницу со списком книг. При щелчке на элемент, цвет текста
       должен меняться на оран- жевый. При повторном щелчке на другую книгу,
       предыдущей необходимо возвращать прежний цвет. Если при клике мышкой была
       зажата клавиша Ctrl, то элемент добавляется/удаляется из выделенных. Если
       при клике мышкой была зажата клавиша Shift, то к выделению добавляются все
       элементы в промежутке от предыдущего кликнутого до текущего.
-    </p>
+    </h2>
+    <main>
+      <p>
+        1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+        provident!
+      </p>
+      <p>
+        2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+        provident!
+      </p>
+      <p>
+        3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+        provident!
+      </p>
+      <p>
+        4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+        provident!
+      </p>
+      <p>
+        5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+        provident!
+      </p>
+      <p>
+        6 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+        provident!
+      </p>
+      <p>
+        7 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+        provident!
+      </p>
+      <p>
+        8 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+        provident!
+      </p>
+    </main>
 
-    
+    <script>
+      let p = document.querySelectorAll("p");
+      let idBegin = -1;
+
+      for (let i = 0; i < p.length; i++) {
+        p[i].onclick = function (event) {
+          if (event.ctrlKey) {
+            idBegin = i;
+          }
+          if (event.shiftKey && idBegin != -1) {
+            let tempI = i;
+            if (idBegin > tempI) {
+              let temp = idBegin;
+              idBegin = tempI;
+              tempI = temp;
+            }
+            for (let j = idBegin; j < tempI + 1; j++) {
+              p[j].classList.add("active");
+            }
+
+            idBegin = -1;
+            return;
+          }
+          for (let iy = 0; iy < p.length; iy++) {
+            p[iy].classList.remove("active");
+          }
+          p[i].classList.add("active");
+        };
+      }
+    </script>
   </body>
 </html>
