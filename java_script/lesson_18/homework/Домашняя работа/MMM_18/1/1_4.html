@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+
+        }
+        .container{
+            max-width: 1140px;
+            margin: 0 auto;
+            display: flex;justify-content: center;
+            align-items: center;
+        }
+        .streetlight{
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 30px;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            top: 300px
+            
+            
+        }
+        .lights{
+            display: flex;
+            flex-direction: row;
+        }
+        .color {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            padding: 15px;
+            margin-right: 15px;
+        }
+        .red{
+            border: 3px solid red;
+        }
+        .yellow{
+            border: 3px solid rgb(168, 168, 1);
+        }
+        .green{
+            border: 3px solid green;
+        }
+        .btn{
+            padding: 30px;
+            border: none;
+            appearance: none;
+            -webkit-appearance: none;
+            outline: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-radius: 10px;
+            background: linear-gradient(117deg, rgba(246,0,0,1) 0%,
+             rgba(222,244,0,1) 47%, rgba(7,224,14,1) 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="streetlight">
+            <div class="lights">
+                <div class="red color"></div>
+                <div class="yellow color"></div>
+                <div class="green color"></div>
+            </div>
+            <div class="button">
+                <button id="btn" class="btn">Next</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+    let circles = document.querySelectorAll(".color")
+    let colors = ["red", "yellow", "green"]
+    let btn = document.querySelector("button")
+    let index = -1;
+
+    btn.addEventListener("click", () => {
+        if (index == -1 || index == 3)
+            index = 0;
+        else
+            circles[index++].style.backgroundColor = "";
+
+        circles[index].style.backgroundColor = colors[index];
+})
+    </script>
+</body>
+</html>

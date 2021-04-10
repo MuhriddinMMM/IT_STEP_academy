@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    
+}
+.active{
+    display: block;
+    transition: 1s ease-in;
+    
+}
+.hidden{
+    background-color: skyblue;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 200px;
+    transform: scale(0);
+    transition: 1s ease-in;
+
+}
+button{
+    width: 500px;
+    padding: 10px;
+}
+
+    </style>
+
+</head>
+<body>
+
+    <button class="btn" id="btn">Open Windows</button>
+    <div class="container">
+        
+        <div class="active">
+            
+            <div class="hidden">
+                <h1>Hello from modal Window</h1>
+                <button class="close" id="close">Close</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("#btn").on("click", function () {
+    $(".hidden").css("display","flex")
+    $(".hidden").css("transition","1s ease-in")
+
+    $(".hidden").css("transform","scale(1)")
+    
+})
+$(".close").on("click", function() {
+    // $(".hidden").css("display","none")
+    $(".hidden").css("transform","scale(0)")
+})
+    </script>
+    
+</body>
+</html>

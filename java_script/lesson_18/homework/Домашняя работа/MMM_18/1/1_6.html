@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+
+        }
+        .container{
+            max-width: 1140px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            background-color: aquamarine;
+            padding: 50px;
+        }
+        .bloks{
+            margin-top: 100px;
+            background-color: aqua;
+            height: 500px;
+            padding: 40px;
+            display: flex;
+            width: 500px;
+            justify-content: space-between;
+        }
+        button{
+            padding: 10px 25px;
+            outline: none;
+            border-radius: 15px;
+            border: none;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+        }
+        .comment__one{
+            display: none;
+            background-color: red;
+            padding: 10px 15px;
+            margin: 20px 0;
+            font-size: 1.1rem;
+            
+        }
+        .comment{
+            background-color: red;
+            padding: 10px 15px;
+            margin: 20px 0;
+            font-size: 1.1rem;
+        }
+
+        /* .first{
+            position: absolute;
+            top: 100px;
+            left: 50px;
+        } */
+        .first,.second{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .figure{
+            background-color: red;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            left: 45px;
+            top: 54px;
+            transform: rotate(45deg);
+        }
+        .figure2{
+            background-color: red;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            left: 45px;
+            top: 48px;
+            transform: rotate(45deg);
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="bloks">
+            <div class="first">
+                <div class="comment__one"><p>Tool tip 1</p>
+                <div class="figure"></div>
+                </div>
+                <button id="btn__one" class="btn__one">
+                    Button 1
+                </button>
+            </div>
+    
+            
+            <div class="second">
+                <button id="btn__two" class="btn__two">
+                    Button 2
+                </button>
+                <div class="comment"><p>Tool tip 2</p>
+                    <div class="figure2"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+        $(".btn__two").on("mouseover", function () {
+            $(".comment").css("display", "block")
+        })
+        $(".btn__two").on("mouseout", function () {
+            $(".comment").css("display", "none")
+        })
+
+        $(".btn__one").on("mouseover", function () {
+            $(".comment__one").css("display", "block")
+        })
+        $(".btn__one").on("mouseout", function () {
+            $(".comment__one").css("display", "none")
+
+        })
+
+
+        
+
+    </script>
+</body>
+</html>
