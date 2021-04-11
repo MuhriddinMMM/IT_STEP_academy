@@ -23,6 +23,11 @@
         align-items: center;
       }
     </style>
+    <style>
+      .chatme {
+        inset: auto 20px 20px auto;
+      }
+    </style>
   </head>
   <body>
     <main>
@@ -50,7 +55,7 @@
         <div><h4 id="next1">Tuesday</h4></div>
       </div> -->
     </main>
-
+    <div id="__replain_widget"></div>
     <script>
       const key =
         "http://api.weatherstack.com/current?access_key=75a93cc07e8ac655580bfc380936e858&query=Tashkent";
@@ -84,6 +89,11 @@
         ).innerHTML = `pressure: ${myObj.current.pressure} mb`;
       };
       xhr.send();
+    </script>
+
+    <script>
+      let rechat = document.getElementById("__replain_widget");
+      rechat.classList.add("chatme")
     </script>
   </body>
 </html>
