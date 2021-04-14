@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0;
+}
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.form {
+  border: 1px solid black;
+  padding: 20px;
+  width: 400px;
+}
+.title,
+.type,
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 0 0 100%;
+}
+input,
+select {
+  flex: 0 0 80%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+button {
+  width: 100%;
+  padding: 10px;
+}
+.second__block {
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+  padding: 20px;
+
+  border: 2px solid grey;
+  flex-wrap: wrap;
+}
+.result {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  width: 300px;
+  height: 160px;
+  border-radius: 15px;
+  padding: 10px 0 10px 10px;
+  margin: 5px;
+}
+.center {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 10px 10px;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+  max-width: 100%;
+}
+.img {
+  width: 100px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.atitle {
+  padding: 10px;
+  flex: 0 0 80%;
+}
+.atype,
+.year {
+  text-align: left;
+  padding: 0 10px;
+}
+.result__btn {
+  width: 85%;
+  padding: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 965px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  box-shadow: 0 0 4px 4px black;
+  padding: 20px;
+}
+#detail__img {
+  width: 500px;
+  height: 600px;
+  overflow: hidden;
+}
+#detail__about {
+  width: 600px;
+}
+#detail__about div h5 {
+  padding: 20px 0 0 40px;
+  font-size: 1.3rem;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script>
+        class Person {
+            constructor(name , age){
+                this.name =name
+                this.age = age
+            }
+
+            printPerson (){
+
+                console.log(`imyaa: ${this.name} ,  vozrast ${this.age}`);
+            }
+            gender = "X"
+        }
+
+        let jack = new Person("jack", 22)
+        console.log(jack);
+        console.log(mike.);
+    </script> -->
+
+    <!-- <script>
+      class Worker {
+        constructor(name, surname, rate, days) {
+          this.name = name;
+          this.surname = surname;
+          this.rate = rate;
+          this.days = days;
+        }
+        getSalary() {
+          return this.rate * this.days;
+        }
+      }
+      var worker = new Worker("Иван", "Иванов", 10, 31);
+      console.log(worker.name); //выведет 'Иван'
+      console.log(worker.surname); //выведет 'Иванов'
+      console.log(worker.rate); //выведет 10
+      console.log(worker.days); //выведет 31
+      console.log(worker.getSalary()); //выведет 310 - то есть 10*31
+    </script> -->
+
+    <!-- <script>
+      class Worker {
+        constructor(name, surname, rate, days) {
+          this.name = name;
+          this.surname = surname;
+          this.rate = rate;
+          this.days = days;
+        }
+        getName() {
+          return this.name;
+        }
+        getSurname() {
+          return this.surname;
+        }
+        getRate() {
+          return this.rate;
+        }
+        getDays() {
+          return this.days;
+        }
+        getSalary() {
+          return this.rate * this.days;
+        }
+      }
+      var worker = new Worker("Иван", "Иванов", 10, 31);
+
+      console.log(worker.getName()); //выведет 'Иван'
+      console.log(worker.getSurname()); //выведет 'Иванов'
+      console.log(worker.getRate()); //выведет 10
+      console.log(worker.getDays()); //выведет 31
+      console.log(worker.getSalary()); //выведет 310 - то есть 10*31
+    </script> -->
+
+    <!-- <script>
+      class Worker {
+        constructor(name, surname, rate, days) {
+          this.name = name;
+          this.surname = surname;
+          this.rate = rate;
+          this.days = days;
+        }
+        getName() {
+          return this.name;
+        }
+        getSurname() {
+          return this.surname;
+        }
+        getRate() {
+          return this.rate;
+        }
+        getDays() {
+          return this.days;
+        }
+        getSalary() {
+          return this.rate * this.days;
+        }
+        setRate(rates) {
+          return (this.rate = rates);
+        }
+        setDays(day) {
+          return this.days=day;
+        }
+      }
+      var worker = new Worker("Иван", "Иванов", 10, 31);
+      worker.setRate(20); //увеличим ставку
+      worker.setDays(10); //уменьшим дни
+      console.log(worker.getSalary()); //выведет 200 - то есть 20*10
+    </script> -->
+
+    <!-- <script>
+      var dragon = "muhriddin  shamsiddin";
+      class MyString {
+        constructor(str) {
+          this.str = str;
+        }
+        reverse() {
+          return (this.str = this.str.split("").reverse().join(""));
+        }
+         ucFirst() {
+          if (!this.str) {
+            return this.str;
+          } else {
+            return this.str[0].toUpperCase() + this.str.slice(1);
+          }
+        }
+         ucWords() {
+          let words = this.str.split(" ");
+          for (let i = 0; i < words.length; i++) {
+            words[i] = words[i].slice(0, 1).toUpperCase() + words[i].slice(1);
+          }
+          return this.str= words.join(" ");
+        }
+      }
+
+      var strs = new MyString(dragon);
+      console.log(strs.reverse());
+      console.log(strs.ucFirst());
+      console.log(strs.ucWords());
+
+
+    </script> -->
+
+    <script>
+      //     let arr = "dragon"
+      //   for(let i = 0 , j=arr.length ;i < Math.floor(arr.length / 2);i++,j--){
+
+      //   }
+      class MyString {
+        reverse(text) {
+          let str = [];
+          for (let letter of text) {
+            str.push(letter);
+          }
+
+          for (
+            let i = 0, j = str.length - 1;
+            Math.floor(i < str.length / 2);
+            i++, j--
+          ) {
+            let temp = str[i];
+            str[i] = str[j];
+            str[j] = temp;
+          }
+          let strJoin = "";
+          for (let letter of str) {
+            strJoin += letter;
+          }
+          return strJoin;
+        }
+      }
+      var strs = new MyString();
+      console.log(strs.reverse("dragon"));
+    </script>
+  </body>
+</html>

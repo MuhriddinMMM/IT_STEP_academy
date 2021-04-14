@@ -1,0 +1,30 @@
+<!-- 
+    Лабораторная работы №1
+    Дана HTML разметка, представим, что высота контента 3000px.
+    Для облегчения прокрутки контента вверх нужно добавить стрелочку "вверх"(плавно показать), когда пользователь прокрутит страницу на 150px вниз.
+    Также не забывайте скрыть стрелочку(плавно скрыть), когда пользователь находится в самом верху
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pageUp</title>
+    <!-- Шрифтовые иконки -->
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+    <!-- Стили -->
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Ваш скрипт -->
+    <script src="script.js"></script>
+</head>
+<body>
+   <!-- Контент -->
+    <div id="wrapper"></div>
+    
+    <!-- Стрелочка "вверх", по умолчанию скрыта(см. style.css)-->
+    <div id="page-up">
+        <i class="fa fa-angle-up fa-3x"></i>
+    </div>
+</body>
+</html>

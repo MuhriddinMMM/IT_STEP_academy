@@ -1,0 +1,79 @@
+/*Сброс всех отступов
+    Не стоит использовать данный сброс в реальных проектах, так как это ущерб производительности
+*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma;
+}
+ul{
+    list-style: none;
+}
+/*вверхняя линия*/
+#top-line{
+    min-width: 100%;
+    background: #1976D2;
+    height: 40px;
+}
+/*Логотип*/
+.logo{
+    width: 240px;
+    height: 100%;
+    text-align: center;
+}
+.logo a{
+    line-height: 40px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0 10px;
+    display: inline-block;
+}
+.logo i{
+    float: right;
+    line-height: 40px;
+    color: #fff;
+    background: #212121;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+/*Левый сайд бар*/
+#aside{
+    float: left;
+    height: 1000px;
+    background: #2196F3;
+    padding-top: 10px;
+    overflow: hidden;
+}
+.aside-title{
+    font-size: 13px;
+    text-align: center;
+    padding: 5px 0;
+    margin: 5px 0;
+    color: #fff;
+    border-bottom: 1px solid #BBDEFB;
+}
+/*Навигации в сайд баре*/
+.aside-nav ul li{
+    position: relative;
+    width: 200px;
+}
+.aside-nav ul li a{
+    padding: 10px;
+    color:#fff;
+    text-decoration: none;
+    font-size: 12px;
+}
+.aside-nav ul li:hover{
+    background: #1976D2;
+}
+.aside-nav ul li i{
+    margin: 10px;
+    color: #fff;
+    font-size: 15px
+}
+/*стили для контента, если он есть*/
+#content{
+    float: right;
+}

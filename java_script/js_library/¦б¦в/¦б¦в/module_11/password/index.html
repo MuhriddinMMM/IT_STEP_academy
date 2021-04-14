@@ -1,0 +1,43 @@
+<!--
+   Лабораторная работа №2
+   Проверка сложности пароля 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Using jQuery with a CDN -->
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-12">
+           <!-- Форма регистрации -->
+            <form id="reg-form">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" name="firstname">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" name="email">
+                </div>
+                <div class="form-group">
+                    <label class="pass-status">Password &nbsp;</label>
+                    <input type="password" class="form-control" name="password">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block" id="btn">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>

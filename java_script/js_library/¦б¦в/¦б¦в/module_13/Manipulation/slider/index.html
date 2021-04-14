@@ -1,0 +1,44 @@
+<!-- 
+     Лабораторная работа №4
+     Реализовать слайдер для сайта
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide</title>
+    <!-- Шрифтовые иконки -->
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.css">
+    <!-- Стили -->
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Ваш скрипт -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+       <!-- Специальная подложка 600х400 все что выходит за границы этого блока не отображается (см. style.css)-->
+        <div class="viewport">
+           <!-- Список изображение, которые нужно пролистывать -->
+            <ul class="slidewrapper" data-current="0"><!-- Счетчик положения слайда -->
+                <li class="slide">
+                    <a href="#"><img src="img/1.jpg" alt=""></a>
+                </li>
+                <li class="slide">
+                    <a href="#"><img src="img/2.jpg" alt=""></a>
+                </li>
+                <li class="slide">
+                    <a href="#"><img src="img/3.jpg" alt=""></a>
+                </li>
+                <li class="slide">
+                    <a href="#"><img src="img/4.jpg" alt=""></a>
+                </li>
+            </ul>
+        </div>
+        <!-- Стрелки для переключения слайдов -->
+        <a href="#" id="prev_slide" class="arrows fa fa-arrow-left fa-3x"></a>
+        <a href="#" id="next_slide" class="arrows fa fa-arrow-right fa-3x"></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!-- 
+    Лабораторная работа №1
+    По клику кнопки "Hide" нужно скрыть блок и заменить слово кнопки на "Show"
+    По клику кнопки "Show" нужно показать блок и заменить слово кнопки на "Hide"
+    В момент скрытия и показа блока кнопка должны быть не доступна
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="show_hide.js"></script>
+    
+</head>
+<body>
+  <!-- Стили для блока -->
+   <style>
+       div{
+           width: 200px;
+           height: 200px;
+           background: #ccc;
+       }
+    </style>
+    <!-- блок -->
+    <div id="show"></div>
+    <!-- Кнопка по нажатию которой должен происходить "экшен" обратите внимания на атрибут data-status -->
+    <button id="btn" data-status='show'>Hide</button>
+</body>
+</html>

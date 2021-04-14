@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <style>
+        #clock { /* Придать часам привлекательный внешний вид */
+             font: bold 24pt sans; background: #ddf; padding: 10px;
+             border: solid black 2px; border-radius: 10px;
+        }
+    </style>
+    
+    <h1>Перекинь время в поле</h1>
+    <span id="clock"></span> <!-- Здесь отображается время -->
+    <textarea cols=60 rows=20></textarea> <!-- Сюда можно сбросить строку -->
+    
+    <script>
+        var clock = document.getElementById('clock'); //Элемент часов
+        var icon = new Image(); //Буксирующие изображение
+        icon.src = "img/50px-Clock.png"; //адрес изображения
+        
+        //Отображаем время раз в минуту
+        function displayTime(){
+            var now = new Date(); //Получаем текущие время
+            var hrs = now.getHours(); //часы
+            var mins = now.getMinutes(); //минуты
+            var secs = now.getSeconds(); //секунды
+            
+            if(mins < 10) mins = '0' + mins; //корректно отборазим часы в формате mm
+            if(secs < 10) secs = '0' + secs; //корректно отборазим часы в формате dd
+            clock.innerHTML = hrs + ':' + mins + ':' + secs; 
+        }
+        setInterval(displayTime, 1000);
+        
+        //включить DnD на часах
+        clock.draggable = true;
+        
+        clock.ondragstart = function(event){
+            var event = event || window.event // IE
+            
+            // Свойство dataTransfer является ключом к drag-and-drop API
+            var dt = event.dataTransfer;
+            
+            // Сообщить броузеру, какие данные будут буксироваться
+            dt.setData('Text', Date() + "\n");
+            
+            // Определить ярлык, который будет служить визуальным представлением перемещаемой строки
+            if(dt.setDragImage) dt.setDragImage(icon, 0, 0);
+        }
+        
+        
+    </script>
+</body>
+</html>

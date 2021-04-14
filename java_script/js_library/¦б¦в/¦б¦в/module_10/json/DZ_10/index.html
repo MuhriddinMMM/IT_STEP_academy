@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <form method="post" name="myForm">
+        <input type="text" name="login" placeholder="Login">
+        <input type="password" name="password" placeholder="Password">
+        <button name="send">Sign in</button>
+    </form>
+    <p id="result"></p>
+    
+    <script src="ajax.js"></script>
+    <script>
+        var test = new Ajax({
+            method: 'get',
+            path: 'data.php',
+            data: 'data',
+            success: 'result'
+        });
+    </script>
+</body>
+</html>
