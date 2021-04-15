@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 800px;
+        height: 500px;
+        background-color: coral;
+      }
+      .game {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      h1 {
+        margin-right: 80px;
+      }
+      #btn_start {
+        padding: 10px 20px;
+      }
+      section {
+        display: flex;
+        flex-direction: column;
+      }
+      .one,
+      .two {
+        display: flex;
+        flex-direction: row;
+      }
+      .one i,
+      .two i {
+        font-size: 100px;
+        padding: 10px;
+        border: 2px solid rgb(0, 0, 0);
+        background-color: turquoise;
+      }
+      .one div,
+      .two div {
+        margin: 10px;
+        background-color: blue;
+      }
+      i {
+        transform: rotateY(90deg);
+        display: block;
+        cursor: pointer;
+        transition: 0.5s linear;
+      }
+      .one div:hover i {
+        transform: rotateY(0deg);
+      }
+      .two div:hover i {
+        transform: rotateY(0deg);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="game">
+        <div>
+          <h1>Game memory</h1>
+        </div>
+        <div>
+          <button id="btn_start">start</button>
+        </div>
+      </div>
+      <section>
+        <div class="one">
+          <div class="boxes">
+            <i style="color: green" class="bx bxs-square"></i>
+          </div>
+          <div class="boxes">
+            <i style="color: red" class="bx bxs-heart"></i>
+          </div>
+          <div class="boxes">
+            <i style="color: rgb(63, 0, 163)" class="bx bxs-circle"></i>
+          </div>
+          <div class="boxes">
+            <i style="color: white" class="bx bxs-virus"></i>
+          </div>
+          <div class="boxes">
+            <i style="color: yellow" class="bx bxs-star"></i>
+          </div>
+        </div>
+        <div class="two">
+          <div class="boxes">
+            <i style="color: red" class="bx bxs-heart"></i>
+          </div>
+          <div class="boxes">
+            <i style="color: yellow" class="bx bxs-star"></i>
+          </div>
+          <div class="boxes">
+            <i style="color: white" class="bx bxs-virus"></i>
+          </div>
+          <div class="boxes">
+            <i style="color: rgb(63, 0, 163)" class="bx bxs-circle"></i>
+          </div>
+          <div class="boxes">
+            <i style="color: green" class="bx bxs-square"></i>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      let iii = document.querySelectorAll("i");
+      let box = document.querySelectorAll(".boxes");
+      console.log(box);
+      for (let i = 0; i < box.length; i++) {
+        let clicks = 0;
+        box[i].onclick = function () {
+          clicks += 1;
+          console.log(clicks);
+          console.log(i);
+          console.log(clicks % 2 == 0);
+          iii[i].style.transform = "rotateY(0deg)";
+          console.log(iii[i].classList[iii[i].classList.length - 1]);
+
+          if (
+            (clicks =
+              2 &&
+              iii[i].classList[iii[i].classList.length - 1].length ==
+                iii[i].classList[iii[i].classList.length - 1].length)
+          ) {
+            console.log("yes");
+          } else if (
+            (clicks =
+              2 &&
+              iii[i].classList[iii[i].classList.length - 1].length !=
+                iii[i].classList[iii[i].classList.length - 1].length)
+          ) {
+            array[0].style.transform = "rotateY(90deg)";
+            array[1].style.transform = "rotateY(90deg)";
+          }
+        };
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(151, 148, 147);
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        margin: 0 auto;
+        border: 2px solid grey;
+        padding: 10px;
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+      .img {
+        width: 500px;
+        height: 300px;
+        overflow: hidden;
+      }
+      img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+      }
+      button i {
+        font-size: 40px;
+        color: blue;
+        display: block;
+      }
+      .buttons {
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid grey;
+        width: 480px;
+      }
+      .buttons button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+      }
+      .dots section {
+        padding: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .dots span {
+        margin: 5px;
+        display: block;
+        width: 20px;
+        border-radius: 50%;
+        text-align: center;
+        height: 20px;
+        border: 2px solid blue;
+      }
+      .active {
+        background-color: blue;
+      }
+      .blocks {
+        color: rgba(0, 0, 255, 0.37);
+      }
+
+      .full {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        height: 100vh;
+        margin: 0 auto;
+      }
+      body {
+        position: relative;
+      }
+    </style>
+
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="img">
+        <img src="1.jpg" alt="" id="photo" />
+      </div>
+      <div class="dots"></div>
+      <div class="buttons">
+        <div>
+          <button class="first">
+            <i class="bx bxs-left-arrow-circle"></i>
+          </button>
+        </div>
+        <div>
+          <button class="back"><i class="bx bx-left-arrow-circle"></i></button>
+        </div>
+        <div>
+          <button class="play"><i class="bx bxs-right-arrow"></i></button>
+        </div>
+        <div>
+          <button class="next"><i class="bx bx-right-arrow-circle"></i></button>
+        </div>
+        <div>
+          <button class="last">
+            <i class="bx bxs-right-arrow-circle"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      let photos = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
+      let btnnext = document.querySelector(".next");
+      let btnback = document.querySelector(".back");
+      let btnfirst = document.querySelector(".first");
+      let btnlast = document.querySelector(".last");
+      let play = document.querySelector(".play");
+      let photo = document.querySelector("#photo");
+      let is = document.querySelectorAll(".bx");
+      let index = 0;
+      let dot = document.querySelector(".dots");
+      let div = document.createElement("section");
+      let page = "";
+      photo.onclick = function () {
+        photo.classList.toggle("full");
+      };
+      for (let i = 0; i < photos.length; i++) {
+        page += `<span class="span"  id="img${i + 1}"></span>`;
+      }
+      div.innerHTML = page;
+      dot.append(div);
+      let span = document.querySelectorAll(".span");
+      span[0].classList.add("active");
+      btnnext.onclick = () => {
+        photo.style.opacity = 0.3;
+
+        setTimeout(setAlert2, 800);
+        function setAlert2() {
+          photo.style.opacity = 1;
+        }
+
+        if (index === photos.length - 1) index = -1;
+
+        photo.src = photos[++index];
+
+        for (let i = 0; i < span.length; i++) {
+          span[i].classList.remove("active");
+        }
+        span[index].classList.add("active");
+        console.log(index);
+
+        if (index === photos.length - 1) {
+          document.querySelector(".last").disabled = true;
+          is[4].classList.add("blocks");
+          document.querySelector(".next").disabled = true;
+          is[3].classList.add("blocks");
+        } else if (index === 0) {
+          document.querySelector(".first").disabled = true;
+          is[0].classList.add("blocks");
+          document.querySelector(".back").disabled = true;
+          is[1].classList.add("blocks");
+        } else if (0 < index < photos.length) {
+          document.querySelector(".first").disabled = false;
+          is[0].classList.remove("blocks");
+          document.querySelector(".back").disabled = false;
+          is[1].classList.remove("blocks");
+          document.querySelector(".last").disabled = false;
+          is[4].classList.remove("blocks");
+          document.querySelector(".next").disabled = false;
+          is[3].classList.remove("blocks");
+        }
+      };
+
+      btnback.onclick = () => {
+        photo.style.opacity = 0.3;
+
+        setTimeout(setAlert2, 800);
+        function setAlert2() {
+          photo.style.opacity = 1;
+        }
+        if (index === 0) index = photos.length;
+
+        photo.src = photos[--index];
+        for (let i = 0; i < span.length; i++) {
+          span[i].classList.remove("active");
+        }
+        span[index].classList.add("active");
+        console.log(index);
+
+        if (index === photos.length - 1) {
+          document.querySelector(".last").disabled = true;
+          is[4].classList.add("blocks");
+          document.querySelector(".next").disabled = true;
+          is[3].classList.add("blocks");
+        } else if (index === 0) {
+          document.querySelector(".first").disabled = true;
+          is[0].classList.add("blocks");
+          document.querySelector(".back").disabled = true;
+          is[1].classList.add("blocks");
+        } else if (0 < index < photos.length) {
+          document.querySelector(".first").disabled = false;
+          is[0].classList.remove("blocks");
+          document.querySelector(".back").disabled = false;
+          is[1].classList.remove("blocks");
+          document.querySelector(".last").disabled = false;
+          is[4].classList.remove("blocks");
+          document.querySelector(".next").disabled = false;
+          is[3].classList.remove("blocks");
+        }
+      };
+
+      btnfirst.onclick = () => {
+        photo.style.opacity = 0.3;
+
+        setTimeout(setAlert2, 800);
+        function setAlert2() {
+          photo.style.opacity = 1;
+        }
+        photo.src = photos[0];
+        for (let i = 0; i < span.length; i++) {
+          span[i].classList.remove("active");
+        }
+        span[0].classList.add("active");
+
+        index = 0;
+        console.log(index);
+        document.querySelector(".first").disabled = true;
+        is[0].classList.add("blocks");
+        document.querySelector(".back").disabled = true;
+        is[1].classList.add("blocks");
+      };
+      btnlast.onclick = () => {
+        photo.style.opacity = 0.3;
+
+        setTimeout(setAlert2, 800);
+        function setAlert2() {
+          photo.style.opacity = 1;
+        }
+        photo.src = photos[photos.length - 1];
+        for (let i = 0; i < span.length; i++) {
+          span[i].classList.remove("active");
+        }
+        span[photos.length - 1].classList.add("active");
+
+        index = photos.length - 1;
+        console.log(index);
+
+        document.querySelector(".last").disabled = true;
+        is[4].classList.add("blocks");
+        document.querySelector(".next").disabled = true;
+        is[3].classList.add("blocks");
+      };
+      for (let i = 0; i < span.length; i++) {
+        span[i].onclick = function () {
+          for (let i = 0; i < span.length; i++) {
+            span[i].classList.remove("active");
+          }
+          span[i].classList.add("active");
+          photo.src = photos[i];
+          photo.style.opacity = 0.3;
+          photo.style.transform = "rotateY(180deg)";
+          setTimeout(setAlert1, 500);
+          function setAlert1() {
+            photo.style.transform = "rotateY(0)";
+          }
+          setTimeout(setAlert2, 800);
+          function setAlert2() {
+            photo.style.opacity = 1;
+          }
+          index = i;
+          console.log(index);
+
+          if (index === photos.length - 1) {
+            document.querySelector(".last").disabled = true;
+            is[4].classList.add("blocks");
+            document.querySelector(".next").disabled = true;
+            is[3].classList.add("blocks");
+          } else if (index === 0) {
+            document.querySelector(".first").disabled = true;
+            is[0].classList.add("blocks");
+            document.querySelector(".back").disabled = true;
+            is[1].classList.add("blocks");
+          } else if (0 < index < photos.length) {
+            document.querySelector(".first").disabled = false;
+            is[0].classList.remove("blocks");
+            document.querySelector(".back").disabled = false;
+            is[1].classList.remove("blocks");
+            document.querySelector(".last").disabled = false;
+            is[4].classList.remove("blocks");
+            document.querySelector(".next").disabled = false;
+            is[3].classList.remove("blocks");
+          }
+        };
+      }
+      let id = -1;
+
+      let clicks = 0;
+      play.onclick = function () {
+        clicks++;
+        console.log(clicks);
+        is[2].classList.add("blocks");
+
+        console.log(index);
+
+        console.log(clicks % 2 == 1);
+
+        if (clicks % 2 == 1) {
+          function myTimer() {
+            photo.src = photos[index++];
+
+            console.log(index);
+            if (index === photos.length) index = 0;
+
+            console.log(index);
+            for (let i = 0; i < span.length; i++) {
+              span[i].classList.remove("active");
+            }
+            span[index - 1].classList.add("active");
+          }
+
+          console.log(id);
+          id = setInterval(myTimer, 3000);
+          console.log("id", id);
+        } else {
+          console.log("!!!", id);
+          clearInterval(id);
+        }
+      };
+    </script>
+  </body>
+</html>
