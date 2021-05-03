@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: url(https://images.unsplash.com/photo-1513530176992-0cf39c4cbed4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)
+          0 0 / 500px repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        color: white;
+      }
+      #div {
+        background-color: rgba(99, 81, 4, 0.863);
+        width: 800px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 10px 3px rgb(184, 135, 11);
+      }
+      input,
+      select,
+      button {
+        padding: 5px 10px;
+        width: 300px;
+        margin: 10px;
+      }
+      #section {
+        padding: 30px 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div">
+      <main>
+        <form action="">
+          <div>
+            <div><label for="name">YOUR NAME</label></div>
+            <div><input type="text" id="name" name="name" /></div>
+          </div>
+          <div>
+            <div><label for="coffee">coffee TYPE</label></div>
+            <div>
+              <select name="coffee" id="coffee"></select>
+            </div>
+          </div>
+          <button id="btn">SEND</button>
+        </form>
+      </main>
+      <section id="section">
+        <div>
+          <p>YOUR NAME: <span id="names"></span></p>
+          <p>coffee TYPE <span id="coffees"></span></p>
+          <p>coffee description <span id="desc"></span></p>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      let btn = document.getElementById("btn");
+      let section = document.getElementById("section");
+      let names = document.getElementById("names");
+      let coffees = document.getElementById("coffees");
+      let desc = document.getElementById("desc");
+      let select = document.getElementById("coffee");
+
+      fetch("https://api.sampleapis.com/coffee/hot")
+        .then((data) => {
+          return data.json();
+        })
+        .then((jsonData) => {
+          for (i = 0; i < jsonData.length; i++) {
+            let option = document.createElement("option");
+            option.value = jsonData[i].id - 1;
+            option.textContent = jsonData[i].title;
+            select.append(option);
+          }
+          btn.onclick = function (e) {
+            e.preventDefault();
+            let name = document.getElementById("name").value;
+
+            let coffee = document.getElementById("coffee").value;
+            console.log(jsonData[coffee]);
+            names.innerHTML = name;
+            coffees.innerHTML = jsonData[coffee].title;
+            desc.innerHTML = jsonData[coffee].description;
+          };
+        });
+    </script>
+  </body>
+</html>

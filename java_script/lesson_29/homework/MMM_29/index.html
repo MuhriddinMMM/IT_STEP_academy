@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn1">PAGE 1</button>
+    <button id="btn2">PAGE 2</button>
+    <button id="btn3">PAGE 3</button>
+
+    <p id="p1"></p>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <script>
+      document.getElementById("btn1").onclick = function () {
+        fetch("1.html")
+          .then((el1) => el1.text())
+          .then((el1) => (document.getElementById("p1").innerHTML = el1));
+      };
+      document.getElementById("btn2").onclick = function () {
+        fetch("2.html")
+          .then((el2) => el2.text())
+          .then((el2) => (document.getElementById("d2").innerHTML = el2));
+      };
+      document.getElementById("btn3").onclick = function () {
+        fetch("3.html")
+          .then((el3) => el3.text())
+          .then((el3) => (document.getElementById("d3").innerHTML = el3));
+      };
+    </script>
+  </body>
+</html>

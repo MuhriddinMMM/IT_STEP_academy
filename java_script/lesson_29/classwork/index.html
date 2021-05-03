@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script>
+      let asus = prompt("chislo", 15);
+      console.log(+asus);
+      for (let i = 1; i <= +asus; i++) {
+        console.log(i);
+        if (i % 3 === 0 && i % 5 === 0) {
+          console.log("FizzBuzz");
+        } else if (i % 3 === 0) {
+          console.log("Fizz");
+        } else if (i % 5 === 0) {
+          console.log("Buzz");
+        } else {
+          console.log(i);
+        }
+      }
+    </script> -->
+
+    <!-- <script>
+      let click = 0;
+      let alpa = "aeiouy";
+      let text = "kjafbkjdbasjkdfbkdsjfnajksdnfihekuluriwrjqewn";
+      for (let i = 0; i < text.length; i++) {
+        if (alpa.includes(text[i])) {
+          ++click;
+          console.log(text[i] + "  glasniy");
+        } else {
+          //   console.log(i);
+        }
+      }
+      console.log(click);
+    </script> -->
+
+    <script>
+      let text1 = "qwertyq";
+
+      let mapObj = new Map();
+      let arrayLetters = text1.split("").sort();
+
+      for (let i = 0; i < text1.length; i++) {
+        if (mapObj.get(arrayLetters[i])) {
+          mapObj.set(arrayLetters[i], mapObj.get(arrayLetters[i]) + 1);
+        } else {
+          mapObj.set(arrayLetters[i], 1);
+        }
+      }
+      console.log(mapObj);
+
+      let text2 = "ytwerqq";
+      let mapObj2 = new Map();
+      let arrayLetters2 = text2.split("").sort();
+      for (let j = 0; j < text2.length; j++) {
+        if (mapObj2.get(arrayLetters2[j])) {
+          mapObj2.set(arrayLetters2[j], mapObj2.get(arrayLetters2[j]) + 1);
+        } else {
+          mapObj2.set(arrayLetters2[j], 1);
+        }
+      }
+      console.log(mapObj2);
+      if (mapObj === mapObj2) {
+        console.log(true);
+      } else {
+        console.log(false);
+      }
+      for (let k = 0; k < text1.length; k++) {}
+    </script>
+  </body>
+</html>

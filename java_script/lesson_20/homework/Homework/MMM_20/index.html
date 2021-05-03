@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="text-align: center">
+    <form action="">
+      <div>
+        <label for=""
+          >string should be
+          <input type="text" id="number" required /> charackters long</label
+        >
+      </div>
+      <div>
+        <h2>which charackters are allowed to occur in the strings</h2>
+        <div>
+          <label for="Numeric"
+            ><input type="checkbox" id="Numeric" name="Numeric" /> Numeric
+            digits(0-9)</label
+          >
+          <label for="Uppercase"
+            ><input type="checkbox" id="Uppercase" name="Uppercase" />Uppercase
+            letters(A-Z)</label
+          >
+          <label for="Lowercase"
+            ><input type="checkbox" id="Lowercase" name="Lowercase" />Lowercase
+            letters(a-z)</label
+          >
+        </div>
+        <button id="btn" onclick="gfg_Run()">GENERATE</button>
+      </div>
+      <div></div>
+    </form>
+    <h1 style="color: green">Result</h1>
+
+    <h3>Click on the button to generate random password.</h3>
+
+    <br />
+
+    <div>
+      <p id="geeks"></p>
+    </div>
+
+    <script>
+      let el_down = document.getElementById("geeks");
+
+      document.querySelector("form").onsubmit = (e) => e.preventDefault();
+
+      function gfg_Run() {
+        let Numeric = document.getElementById("Numeric").checked;
+        console.log(Numeric);
+        let Uppercase = document.getElementById("Uppercase").checked;
+        console.log(Uppercase);
+        let Lowercase = document.getElementById("Lowercase").checked;
+        console.log(Lowercase);
+        let number = document.getElementById("number").value;
+        console.log(number);
+        let strs = "";
+        function generateP() {
+          let pass = "";
+          let str = "";
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
+            "abcdefghijklmnopqrstuvwxyz0123456789@#$";
+          if (Numeric === true && Uppercase === false && Lowercase === false) {
+            strs = "1234567890";
+          } else if (
+            Numeric === false &&
+            Uppercase === true &&
+            Lowercase === false
+          ) {
+            strs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+          } else if (
+            Numeric === false &&
+            Uppercase === false &&
+            Lowercase === true
+          ) {
+            strs = "abcdefghijklmnopqrstuvwxyz";
+          } else if (
+            Numeric === false &&
+            Uppercase === true &&
+            Lowercase === true
+          ) {
+            strs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "abcdefghijklmnopqrstuvwxyz";
+          } else if (
+            Numeric === true &&
+            Uppercase === false &&
+            Lowercase === true
+          ) {
+            strs = "1234567890" + "abcdefghijklmnopqrstuvwxyz";
+          } else if (
+            Numeric === true &&
+            Uppercase === true &&
+            Lowercase === false
+          ) {
+            strs = "1234567890" + "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+          } else if (
+            Numeric === true &&
+            Uppercase === true &&
+            Lowercase === true
+          ) {
+            strs =
+              "1234567890" +
+              "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
+              "abcdefghijklmnopqrstuvwxyz";
+          } else {
+            alert("choose one option");
+          }
+          for (i = 1; i <= +number; i++) {
+            let char = Math.floor(Math.random() * strs.length + 1);
+
+            pass += strs.charAt(char);
+          }
+
+          return pass;
+        }
+        el_down.innerHTML = generateP();
+      }
+    </script>
+  </body>
+</html>

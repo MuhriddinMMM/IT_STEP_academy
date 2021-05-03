@@ -1,0 +1,57 @@
+*,
+*::after,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  background-color: burlywood;
+  width: 650px;
+  margin: 0;
+}
+input,
+button {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 10px;
+}
+h2 {
+  text-align: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  width: 600px;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.flex div {
+  width: 300px;
+}
+.absolute {
+  position: absolute;
+  right: -370px;
+  color: brown;
+  display: none;
+}
+label {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+}
+td {
+  border: 1px solid grey;
+  width: 200px;
+  padding: 10px;
+}
+input::placeholder {
+  color: brown;
+}

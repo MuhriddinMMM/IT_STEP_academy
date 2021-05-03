@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Fraction {
+        constructor(numerator, denominator) {
+          this.numerator = numerator;
+          this.denominator = denominator;
+        }
+
+        reduction() {
+          let num = [this.numerator, this.denominator];
+
+          while (num[0] !== 0 && num[1] !== 0) {
+            if (num[0] > num[1]) {
+              num[0] = num[0] % num[1];
+            } else {
+              num[1] = num[1] % num[0];
+            }
+          }
+
+          let divider = num[0] + num[1];
+          console.log(this.numerator);
+          console.log(this.denominator);
+          this.numerator = this.numerator / divider;
+          this.denominator = this.denominator / divider;
+          console.log(this.numerator);
+          console.log(this.denominator);
+        }
+
+        isInteger() {
+          let a = this.numerator / this.denominator;
+          console.log(a);
+          if (a % 1 == 0) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+        addition(fraction1, fraction2) {
+          return this.numerator / this.denominator + fraction1 / fraction2;
+        }
+        subtraction(fraction1, fraction2) {
+          return this.numerator / this.denominator - fraction1 / fraction2;
+        }
+        multiplication(fraction1, fraction2) {
+          return (this.numerator / this.denominator) * (fraction1 / fraction2);
+        }
+        division(fraction1, fraction2) {
+          return (this.numerator / this.denominator) / (fraction1 / fraction2);
+        }
+      }
+
+      let shams = new Fraction(24, 4);
+      shams.reduction();
+      console.log(shams.isInteger());
+      console.log(shams.addition(2, 5));
+      console.log(shams.subtraction(2, 5));
+      console.log(shams.multiplication(1, 2));
+      console.log(shams.division(1, 2));
+
+    </script>
+
+    <!-- <script>
+      var num = [8, 64];
+
+      while (num[0] !== 0 && num[1] !== 0) {
+        if (num[0] > num[1]) {
+          num[0] = num[0] % num[1];
+        } else {
+          num[1] = num[1] % num[0];
+        }
+      }
+
+      var divider = num[0] + num[1];
+      console.log(divider);
+    </script> -->
+  </body>
+</html>

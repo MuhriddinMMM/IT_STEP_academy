@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <form
+        action="
+        "
+      >
+        <h2>User info</h2>
+        <div class="flex">
+          <div><label for="username">Fullname:</label></div>
+          <div>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <p class="absolute" id="admin">
+            Full name may only contain letters, spaces and dashes
+          </p>
+        </div>
+        <div class="flex">
+          <div><label for="file">Avatar:</label></div>
+          <div><input type="file" id="file" name="file" required /></div>
+          <p class="absolute" id="valid">Avatar is required</p>
+        </div>
+        <div class="flex">
+          <div><label for="birthday">Birthday:</label></div>
+          <div>
+            <input
+              type="date"
+              id="birthday"
+              name="birthday"
+              required
+              min="2002-01-01"
+            />
+          </div>
+          <p class="absolute" id="min">Min bithday is 01.01.2002</p>
+        </div>
+        <div class="flex">
+          <div><label for="gender">gender:</label></div>
+          <div class="flex">
+            <input type="radio" id="male" name="gender" required />
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" required />
+            <label for="female">Female</label>
+          </div>
+          <p class="absolute" id="repeat">gender is required</p>
+        </div>
+        <div class="flex">
+          <div><label for="Subscribe">Subscribe:</label></div>
+          <div><input type="checkbox" required checked /></div>
+        </div>
+        <div>
+          <button type="submit" id="btn">Register</button>
+        </div>
+      </form>
+
+      <div class="result">
+        <table></table>
+      </div>
+    </main>
+
+    <script src="assets/js/js.js"></script>
+  </body>
+</html>

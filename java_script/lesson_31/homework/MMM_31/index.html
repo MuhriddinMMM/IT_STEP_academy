@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        background: #333;
+        color: #bbb;
+        font-family: Menlo;
+      }
+
+      .controls {
+        position: fixed;
+        text-align: center;
+        top: 1em;
+        width: 100%;
+      }
+
+      .button {
+        color: #bbb;
+        font-size: 4vw;
+        margin: 0 0.5em;
+        text-decoration: none;
+      }
+
+      .button:first-child {
+        margin-left: 0;
+      }
+
+      .button:last-child {
+        margin-right: 0;
+      }
+
+      .button:hover {
+        color: white;
+      }
+
+      .stopwatch {
+        font-size: 20vw;
+        height: 100%;
+        line-height: 100vh;
+        text-align: center;
+      }
+
+      .results {
+        border-color: lime;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="controls">
+      <a href="#" class="button" onClick="stopwatch.start();">Start</a>
+      <a href="#" class="button" onClick="stopwatch.lap();">Lap</a>
+      <a href="#" class="button" onClick="stopwatch.stop();">Stop</a>
+      <a href="#" class="button" onClick="stopwatch.restart();">Restart</a>
+      <a href="#" class="button" onClick="stopwatch.clear();">Clear Laps</a>
+    </nav>
+    <div class="stopwatch"></div>
+    <ul class="results"></ul>
+    <script>
+      class Stopwatch {
+        constructor(display, results) {
+          this.running = false;
+          this.display = display;
+          this.results = results;
+          this.laps = [];
+          this.reset();
+          this.print(this.times);
+        }
+
+        reset() {
+          this.times = [0, 0, 0];
+        }
+
+        start() {
+          if (!this.time) this.time = performance.now();
+          if (!this.running) {
+            this.running = true;
+            requestAnimationFrame(this.step.bind(this));
+          }
+        }
+
+        lap() {
+          let times = this.times;
+          let li = document.createElement("li");
+          li.innerText = this.format(times);
+          this.results.appendChild(li);
+        }
+
+        stop() {
+          this.running = false;
+          this.time = null;
+        }
+
+        restart() {
+          if (!this.time) this.time = performance.now();
+          if (!this.running) {
+            this.running = true;
+            requestAnimationFrame(this.step.bind(this));
+          }
+          this.reset();
+        }
+
+        clear() {
+          clearChildren(this.results);
+        }
+
+        step(timestamp) {
+          if (!this.running) return;
+          this.calculate(timestamp);
+          this.time = timestamp;
+          this.print();
+          requestAnimationFrame(this.step.bind(this));
+        }
+
+        calculate(timestamp) {
+          var diff = timestamp - this.time;
+  
+          this.times[2] += diff / 10;
+    
+          if (this.times[2] >= 100) {
+            this.times[1] += 1;
+            this.times[2] -= 100;
+          }
+
+          if (this.times[1] >= 60) {
+            this.times[0] += 1;
+            this.times[1] -= 60;
+          }
+        }
+
+        print() {
+          this.display.innerText = this.format(this.times);
+        }
+
+        format(times) {
+          return `\
+${pad0(times[0], 2)}:\
+${pad0(times[1], 2)}:\
+${pad0(Math.floor(times[2]), 2)}`;
+        }
+      }
+
+      function pad0(value, count) {
+        var result = value.toString();
+        for (; result.length < count; --count) result = "0" + result;
+        return result;
+      }
+
+      function clearChildren(node) {
+        while (node.lastChild) node.removeChild(node.lastChild);
+      }
+
+      let stopwatch = new Stopwatch(
+        document.querySelector(".stopwatch"),
+        document.querySelector(".results")
+      );
+    </script>
+  </body>
+</html>

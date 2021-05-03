@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <form
+        action="
+        "
+      >
+        <h2>Register form</h2>
+        <div class="flex">
+          <div><label for="username">Username:</label></div>
+          <div>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <p class="absolute" id="admin">
+            Username "admin"or the "user" or "test" is not allowed
+          </p>
+        </div>
+        <div class="flex">
+          <div><label for="email">Email:</label></div>
+          <div><input type="email" id="email" name="email" required /></div>
+          <p class="absolute" id="valid">Enter a valid email address</p>
+        </div>
+        <div class="flex">
+          <div><label for="password">Password:</label></div>
+          <div>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <p class="absolute" id="min">Min length is 6 characters</p>
+        </div>
+        <div class="flex">
+          <div><label for="passwordrepeat">Repeat:</label></div>
+          <div>
+            <input
+              type="password"
+              id="passwordrepeat"
+              name="passwordrepeat"
+              required
+            />
+          </div>
+          <p class="absolute" id="repeat">The password must match</p>
+        </div>
+        <div>
+          <button type="submit" id="btn">Register</button>
+        </div>
+      </form>
+
+      <div class="result">
+        <table></table>
+      </div>
+    </main>
+
+    <script src="assets/js/js.js"></script>
+  </body>
+</html>

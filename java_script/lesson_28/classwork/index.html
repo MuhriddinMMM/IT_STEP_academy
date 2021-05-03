@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- <script>
+      let words =
+        "I am not gonna live forever, but I wanna live while I am alive Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores distinctio in omnis animi itaque repellendus dolorem quod blanditiis sequi, aperiam ratione cupiditate assumenda cumque voluptate esse, deserunt reprehenderit labore eius est quibusdam, natus placeat. Voluptatum ut quae iure atque earum obcaecati, in sint ipsum possimus odio impedit, laudantium eos blanditiis at voluptates hic inventore! Officia ipsam magni nemo eius nobis voluptates quas. Optio harum, autem consectetur quis fugiat possimus minus in obcaecati tempora vero ullam recusandae impedit atque temporibus quibusdam fuga a similique sequi aliquam dolorem, dolor magnam. Numquam aperiam blanditiis repudiandae libero. Eius enim, sed dolor rerum sit corporis.";
+
+      function countRepeatedWords(sentence) {
+        let words = sentence.split(/[,\. \n]/);
+        console.log(words);
+        let wordMap = {};
+
+        for (let i = 0; i < words.length; i++) {
+          let currentWordCount = wordMap[words[i]];
+          let count = currentWordCount ? currentWordCount : 0;
+          wordMap[words[i]] = count + 1;
+        }
+        return wordMap;
+      }
+
+      console.log(countRepeatedWords(words));
+    </script> -->
+
+    <script>
+      let str =
+        "I am not gonna live forever, but I wanna live while I am alive Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores distinctio in omnis animi itaque repellendus dolorem quod blanditiis sequi, aperiam ratione cupiditate assumenda cumque voluptate esse, deserunt reprehenderit labore eius est quibusdam, natus placeat. Voluptatum ut quae iure atque earum obcaecati, in sint ipsum possimus odio impedit, laudantium eos blanditiis at voluptates hic inventore! Officia ipsam magni nemo eius nobis voluptates quas. Optio harum, autem consectetur quis fugiat possimus minus in obcaecati tempora vero ullam recusandae impedit atque temporibus quibusdam fuga a similique sequi aliquam dolorem, dolor magnam. Numquam aperiam blanditiis repudiandae libero. Eius enim, sed dolor rerum sit corporis.";
+      let mapStr = new Map();
+
+      let array = str.split(/[ ,\.\n]/).filter((el) => el.length != 0);
+      for (let i = 0; i < array.length; i++) {
+        if (mapStr.get(array[i]))
+          mapStr.set(array[i], mapStr.get(array[i]) + 1);
+        else mapStr.set(array[i], 1);
+      }
+      console.log(mapStr.get("I"));
+    </script>
+  </body>
+</html>

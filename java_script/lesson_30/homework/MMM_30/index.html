@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function domainName(url) {
+        let patt = /(\/{2}|\.)/g;
+        let result = url.match(patt);
+        let sliced = "";
+        //console.log(result);
+        if (result[0] == "//") {
+          if (url.charAt(url.indexOf(result[0]) + 2) == "w") {
+            sliced = url.slice(
+              url.indexOf(result[1]) + 1,
+              url.indexOf(result[1], url.indexOf(result[1]) + 1)
+            );
+            // console.log(sliced);
+          } else {
+            sliced = url.slice(
+              url.indexOf(result[0]) + 2,
+              url.indexOf(result[1])
+            );
+          }
+        } else {
+          sliced = url.slice(
+            url.indexOf(result[0]) + 1,
+            url.lastIndexOf(result[1])
+          );
+        }
+        return sliced;
+      }
+      console.log(domainName("http://github.com/carbonfive/raygun"));
+      console.log(domainName("http://www.zombie-bites.com"));
+      console.log(domainName("https://www.cnet.com"));
+    </script>
+  </body>
+</html>
