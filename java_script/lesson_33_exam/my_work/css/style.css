@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-transform: uppercase;
+}
+input[type="text"] {
+  border: 1px solid gray;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #d7d7d7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.nav {
+  background-color: aliceblue;
+}
+.conatiner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.nav__upper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.nav__logo h1 {
+  color: #079494;
+  size: 50px;
+}
+.src {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.ico {
+  left: 160px;
+  padding: 5px;
+  font-size: 1.5rem;
+  display: block;
+}
+
+.nav__lower {
+  background-color: #404040;
+}
+.nav__menu {
+  display: flex;
+  flex-direction: row;
+}
+.nav__menu h3 {
+  display: block;
+  color: white;
+  padding: 10px 30px;
+}
+.nav__menu h3:hover {
+  background-color: #5a5959;
+  padding: 8px 28px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 3px solid #079494;
+}
+/* first section */
+.current {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  background-color: #f6f6f6;
+  padding: 20px;
+}
+.current__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #079494;
+}
+.current__weather {
+  display: flex;
+  flex-direction: column;
+}
+.current__blocks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 30px 0;
+  font-size: 2rem;
+}
+.current__sun {
+  font-size: 5rem;
+  padding-bottom: 20px;
+  color: yellow;
+}
+.current__temp {
+  padding-top: 30px;
+}
+.current__temp h1 {
+  font-size: 4rem;
+}
+.current__temp p {
+  font-size: 1rem;
+}
+.current__times {
+  padding-top: 30px;
+  font-size: 1.5rem;
+}
+
+/* hourly */
+.hourly {
+  margin-top: 20px;
+  background-color: #f6f6f6;
+  padding: 20px;
+}
+.hr__header {
+  color: #079494;
+}
+.hr__today {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hr__sun {
+  font-size: 4rem;
+  color: yellow;
+}
+td {
+  padding: 10px 45px;
+  text-align: center;
+}
+tr td:first-child {
+  text-align: left;
+}
+/* places */
+.places {
+  margin-top: 20px;
+  background-color: #f6f6f6;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+.places__header {
+  color: #079494;
+}
+.places__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  margin-top: 20px;
+}
+.first {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.second {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.in {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 50px;
+  background-color: #e0dede;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+.bx-place {
+  font-size: 2rem;
+  color: yellow;
+}
+.ff {
+  padding: 5px 100px 5px 10px;
+}
+
+/* days.html */
+
+.t-main {
+  margin-bottom: 20px;
+}
+.day__current {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  background-color: #ededed;
+}
+
+.days__today {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.days {
+  text-align: center;
+  padding: 15px 44px;
+  border-right: 1px solid gray;
+}
+.days:last-child {
+  border-right: none;
+}
+.days:hover {
+  background-color: #661717;
+}
+.days p,
+i,
+h2 {
+  padding: 10px 0;
+}
+.days h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #079494;
+}
+.days p {
+  color: grey;
+  font-size: 1.3rem;
+}
+.days h2 {
+  font-size: 2rem;
+}
+.d-main {
+  display: none;
+}
+
+.input{
+  text-align: center;
+  margin: 100px auto;
+}
+
+input[type="submit"]{
+  padding: 15px 30px;
+  background: #e7e7e7;
+  border: none;
+  border-radius: 1px;
+  font-family: "Nunito",sans-serif;
+  font-weight:bold;
+  font-size: 20px;
+}
+
+.input input[type="text"]{
+  width: 600px;
+  height: 55px;
+  padding: 5px 10px;
+  background: #e7e7e7;
+  border: none;
+  border-radius: 1px;
+  font-family: "Nunito",sans-serif;
+  font-weight:bold;
+  font-size: 20px;
+}

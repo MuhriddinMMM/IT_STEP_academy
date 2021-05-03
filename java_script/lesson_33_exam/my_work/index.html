@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>OpenWeatherMap Api</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>My Weather</h1>
+      </div>
+      <div class="input">
+        <input
+          type="text"
+          placeholder="Enter the city"
+          class="input_text"
+          value="Tashkent"
+        />
+        <input type="submit" value="Submit" class="submit" />
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li><a class="today" href="#">Today</a></li>
+        <li><a class="forecast" href="#">5-day Forecast</a></li>
+      </ul>
+    </nav>
+
+    <main id="t-main" class="t-main">
+      <div class="conatiner">
+        <section class="current" id="current">
+          <!-- <div class="current__weather">
+            <div class="current__info">
+              <div class="current__logo"><h1>Current Weather</h1></div>
+              <div class="current__date"><h2>02.05.2021</h2></div>
+            </div>
+            <div class="current__blocks">
+              <div class="current__img">
+                <img
+                  class=""
+                  src="http://openweathermap.org/img/wn/10d@2x.png"
+                  alt=""
+                />
+
+                <p>Sunny</p>
+              </div>
+              <div class="current__temp">
+                <h1>29&degC</h1>
+                <p class="current__temp__text">Real Feel 30&deg</p>
+              </div>
+              <div class="current__times">
+                <p>Sunrise: 7.04 AM</p>
+                <p>Sunset: 5.11 PM</p>
+                <p>Duration: 10.07 hr</p>
+              </div>
+            </div>
+          </div> -->
+        </section>
+        <section class="hourly" id="hourly">
+          <div class="hr__content">
+
+            <div class="hr__header">
+              <h1>hourly</h1>
+            </div>
+            <div class="hr__today">
+              <table>
+                <tr>
+                  <th>TODAY</th>
+                  <td>pm</td>
+                  <td>pm</td>
+                  <td>pm</td>
+                  <td>pm</td>
+                  <td>pm</td>
+                  <td>pm</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td><i class="bx bxs-sun hr__sun"></i></td>
+                  <td><i class="bx bxs-sun hr__sun"></i></td>
+                  <td><i class="bx bxs-sun hr__sun"></i></td>
+                  <td><i class="bx bxs-sun hr__sun"></i></td>
+                  <td><i class="bx bxs-sun hr__sun"></i></td>
+                  <td><i class="bx bxs-sun hr__sun"></i></td>
+                </tr>
+                <tr>
+                  <td>Forecast</td>
+                  <td>Sunny</td>
+                  <td>Sunny</td>
+                  <td>Sunny</td>
+                  <td>Sunny</td>
+                  <td>Sunny</td>
+                  <td>Sunny</td>
+                </tr>
+                <tr>
+                  <td>Temp (&degC)</td>
+                  <td>28&deg</td>
+                  <td>28&deg</td>
+                  <td>28&deg</td>
+                  <td>28&deg</td>
+                  <td>28&deg</td>
+                  <td>28&deg</td>
+                </tr>
+                <tr>
+                  <td>RealFeel</td>
+                  <td>29&deg</td>
+                  <td>29&deg</td>
+                  <td>29&deg</td>
+                  <td>29&deg</td>
+                  <td>29&deg</td>
+                  <td>29&deg</td>
+                </tr>
+                <tr>
+                  <td>Wind (km/h)</td>
+                  <td>11ESE</td>
+                  <td>11ESE</td>
+                  <td>11ESE</td>
+                  <td>11ESE</td>
+                  <td>11ESE</td>
+                  <td>11ESE</td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+        </section>
+        <section class="places">
+          <div class="places__content">
+            <div class="places__header">
+              <h1>nearby places</h1>
+            </div>
+            <div class="places__block">
+              <div class="first">
+                <div class="in">
+                  <p class="ff">Tashkent</p>
+                  <i class="bx bxs-sun bx-place"></i>
+                  <p>36&degC</p>
+                </div>
+                <div class="in">
+                  <p class="ff">Tashkent</p>
+                  <i class="bx bxs-sun bx-place"></i>
+                  <p>36&degC</p>
+                </div>
+              </div>
+              <div class="second">
+                <div class="in">
+                  <p class="ff">Tashkent</p>
+                  <i class="bx bxs-sun bx-place"></i>
+                  <p>36&degC</p>
+                </div>
+                <div class="in">
+                  <p class="ff">Tashkent</p>
+                  <i class="bx bxs-sun bx-place"></i>
+                  <p>36&degC</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div class="container">
+      <div class="card">
+        <h1 class="name" id="name"></h1>
+        <p class="temp"></p>
+        <p class="clouds"></p>
+        <p class="desc"></p>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
