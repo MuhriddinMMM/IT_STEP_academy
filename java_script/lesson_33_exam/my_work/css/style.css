@@ -53,7 +53,7 @@ img {
   background-color: aliceblue;
 }
 .conatiner {
-  max-width: 1140px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -105,7 +105,7 @@ img {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  background-color: #f6f6f6;
+  background-color: #cccccc;
   padding: 20px;
 }
 .current__info {
@@ -149,7 +149,7 @@ img {
 /* hourly */
 .hourly {
   margin-top: 20px;
-  background-color: #f6f6f6;
+  background-color: #b8b7b7;
   padding: 20px;
 }
 .hr__header {
@@ -225,7 +225,7 @@ tr td:first-child {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  background-color: #ededed;
+  background-color: #c5c5c5;
 }
 
 .days__today {
@@ -235,15 +235,13 @@ tr td:first-child {
 }
 .days {
   text-align: center;
-  padding: 15px 44px;
+  padding: 15px 35px;
   border-right: 1px solid gray;
 }
 .days:last-child {
   border-right: none;
 }
-.days:hover {
-  background-color: #661717;
-}
+
 .days p,
 i,
 h2 {
@@ -265,29 +263,74 @@ h2 {
   display: none;
 }
 
-.input{
+.input {
   text-align: center;
-  margin: 100px auto;
+  margin: 0 auto;
 }
 
-input[type="submit"]{
+input[type="submit"] {
   padding: 15px 30px;
   background: #e7e7e7;
   border: none;
   border-radius: 1px;
-  font-family: "Nunito",sans-serif;
-  font-weight:bold;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
   font-size: 20px;
 }
 
-.input input[type="text"]{
+.input input[type="text"] {
   width: 600px;
   height: 55px;
   padding: 5px 10px;
   background: #e7e7e7;
   border: none;
   border-radius: 1px;
-  font-family: "Nunito",sans-serif;
-  font-weight:bold;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
   font-size: 20px;
 }
+h1 {
+  font-weight: bold;
+  color: #0b9494;
+  font-size: 2rem;
+}
+a {
+  color: #f6f6f6;
+}
+/* .none {
+  display: none;
+}
+.block {
+  display: block;
+} */
+#tomorrow {
+  display: none;
+}
+.over {
+  background: rgba(0, 0, 0, 0.7); /* Цвет фона и значение прозрачности */
+  position: absolute; /* Абсолютное позиционирование */
+  left: 0; right: 0; top: 0; bottom: 0; /* Отступы от краев браузера */
+  }
+.c404 {
+  margin-top: 100px;
+  text-align: center; /* Выравнивание текста по центру */
+  font-size: 10em;
+  color: #fcf9f9;
+  position: relative; /* Относительное позиционирование */
+  z-index: 2; /* Порядок наложения элемента по высоте */
+  }
+.notfound {
+  text-align: center;
+  color: #fff;
+  font-size: 2em;
+  position: relative; /* Относительное позиционирование */
+  z-index: 2; /* Порядок наложения элемента по слоям в глубину */
+  }
+.notfound a {
+  color: #fff;
+  font-size: 2rem;
+  }
+.notfound a:hover {
+  color: yellow;
+  text-decoration: none;
+  }

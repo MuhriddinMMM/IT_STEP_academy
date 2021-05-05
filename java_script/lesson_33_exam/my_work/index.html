@@ -24,7 +24,7 @@
           class="input_text"
           value="Tashkent"
         />
-        <input type="submit" value="Submit" class="submit" />
+        <input type="submit" value="SEARCH" class="submit" />
       </div>
     </header>
     <nav>
@@ -36,101 +36,9 @@
 
     <main id="t-main" class="t-main">
       <div class="conatiner">
-        <section class="current" id="current">
-          <!-- <div class="current__weather">
-            <div class="current__info">
-              <div class="current__logo"><h1>Current Weather</h1></div>
-              <div class="current__date"><h2>02.05.2021</h2></div>
-            </div>
-            <div class="current__blocks">
-              <div class="current__img">
-                <img
-                  class=""
-                  src="http://openweathermap.org/img/wn/10d@2x.png"
-                  alt=""
-                />
-
-                <p>Sunny</p>
-              </div>
-              <div class="current__temp">
-                <h1>29&degC</h1>
-                <p class="current__temp__text">Real Feel 30&deg</p>
-              </div>
-              <div class="current__times">
-                <p>Sunrise: 7.04 AM</p>
-                <p>Sunset: 5.11 PM</p>
-                <p>Duration: 10.07 hr</p>
-              </div>
-            </div>
-          </div> -->
-        </section>
-        <section class="hourly" id="hourly">
-          <div class="hr__content">
-
-            <div class="hr__header">
-              <h1>hourly</h1>
-            </div>
-            <div class="hr__today">
-              <table>
-                <tr>
-                  <th>TODAY</th>
-                  <td>pm</td>
-                  <td>pm</td>
-                  <td>pm</td>
-                  <td>pm</td>
-                  <td>pm</td>
-                  <td>pm</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td><i class="bx bxs-sun hr__sun"></i></td>
-                  <td><i class="bx bxs-sun hr__sun"></i></td>
-                  <td><i class="bx bxs-sun hr__sun"></i></td>
-                  <td><i class="bx bxs-sun hr__sun"></i></td>
-                  <td><i class="bx bxs-sun hr__sun"></i></td>
-                  <td><i class="bx bxs-sun hr__sun"></i></td>
-                </tr>
-                <tr>
-                  <td>Forecast</td>
-                  <td>Sunny</td>
-                  <td>Sunny</td>
-                  <td>Sunny</td>
-                  <td>Sunny</td>
-                  <td>Sunny</td>
-                  <td>Sunny</td>
-                </tr>
-                <tr>
-                  <td>Temp (&degC)</td>
-                  <td>28&deg</td>
-                  <td>28&deg</td>
-                  <td>28&deg</td>
-                  <td>28&deg</td>
-                  <td>28&deg</td>
-                  <td>28&deg</td>
-                </tr>
-                <tr>
-                  <td>RealFeel</td>
-                  <td>29&deg</td>
-                  <td>29&deg</td>
-                  <td>29&deg</td>
-                  <td>29&deg</td>
-                  <td>29&deg</td>
-                  <td>29&deg</td>
-                </tr>
-                <tr>
-                  <td>Wind (km/h)</td>
-                  <td>11ESE</td>
-                  <td>11ESE</td>
-                  <td>11ESE</td>
-                  <td>11ESE</td>
-                  <td>11ESE</td>
-                  <td>11ESE</td>
-                </tr>
-              </table>
-            </div>
-
-          </div>
-        </section>
+        <section class="current" id="current"></section>
+        <section class="day__current" id="tomorrow"></section>
+        <section class="hourly" id="hourly"></section>
         <section class="places">
           <div class="places__content">
             <div class="places__header">
@@ -166,15 +74,15 @@
         </section>
       </div>
     </main>
-
-    <div class="container">
-      <div class="card">
-        <h1 class="name" id="name"></h1>
-        <p class="temp"></p>
-        <p class="clouds"></p>
-        <p class="desc"></p>
+    <main style="display: none" class="error" id="error">
+      <div class="over"></div>
+      <div class="c404">404</div>
+      <div class="notfound">
+        страница не найдена<br />
+        <a id="page404" href="#"> перейти на главную страницу..</a>
       </div>
-    </div>
+    </main>
+
     <script src="app.js"></script>
   </body>
 </html>
