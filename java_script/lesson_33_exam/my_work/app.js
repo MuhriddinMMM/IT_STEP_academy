@@ -73,7 +73,64 @@ button.addEventListener("click", function (name) {
 
 
 
-      
+      let lat = data.city.coord.lat;
+      let lon = data.city.coord.lon;
+      // let icon = <img src="http://openweathermap.org/img/wn/${data["list"][0]["weather"][0]["icon"]}@2x.png" alt=""> 
+      // console.log(icon);
+      fetch(
+        http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5&&appid=81e4c013d025c8ecaaafcae614d545e0
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data[0]);
+          console.log(data[1].local_names.en);
+          console.log(data[2].local_names.en);
+          console.log(data[3].local_names.en);
+          console.log(data[4].local_names.en);
+
+          // let placesId = document.getElementById('places')
+          let nearby = document.createElement("div");
+          nearby.classList.add("places__content");
+
+
+
+          // console.log(data[0]["list"][0]["weather"][0]["icon"]);
+          nearby.innerHTML = `
+                      <div class="places__header">
+                      <h1>nearby places</h1>
+                    </div>
+                    <div class="places__block">
+                      <div class="first">
+                        <div class="in">
+                          <p class="ff">${data[1].local_names.en}</p>
+                          
+                          <p>36&degC</p>
+                        </div>
+                        <div class="in">
+                          <p class="ff">${data[2].local_names.en}</p>
+                          
+                          <p>36&degC</p>
+                        </div>
+                      </div>
+                      <div class="second">
+                        <div class="in">
+                          <p class="ff">${data[3].local_names.en}</p>
+                          
+                          <p>36&degC</p>
+                        </div>
+                        <div class="in">
+                          <p class="ff">${data[4].local_names.en}</p>
+                          
+                          <p>36&degC</p>
+                        </div>
+                      </div>
+                    </div>
+                      `;
+
+          document.getElementById("places").append(nearby);
+        })
+
+        .catch((err) => alert("Wrong city name!"));
     })
 
     .catch((err) => {
