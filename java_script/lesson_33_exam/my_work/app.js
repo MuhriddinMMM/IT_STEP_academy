@@ -4,7 +4,7 @@ let temp = document.querySelector(".temp");
 let desc = document.querySelector(".desc");
 let clouds = document.querySelector(".clouds");
 let button = document.querySelector(".submit");
-
+let clicks = 0;
 button.addEventListener("click", function (name) {
   fetch(
     "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -13,6 +13,11 @@ button.addEventListener("click", function (name) {
   )
     .then((response) => response.json())
     .then((data) => {
+      let elemmm = document.getElementsByClassName("current__weather");
+
+      if (elemmm.length > 0) {
+        elemmm[0].remove();
+      }
       document.getElementById("error").style.display = "none";
       document.getElementById("t-main").style.display = "block";
       let currentWeather = document.createElement("div");
@@ -60,77 +65,6 @@ button.addEventListener("click", function (name) {
       
       `;
       document.getElementById("current").append(currentWeather);
-
-      // let tempValue = data["main"]["temp"];
-      // let nameValue = data["name"];
-      // let descValue = data["weather"][0]["description"];
-
-      // main.innerHTML = nameValue;
-      // desc.innerHTML = "Desc - " + descValue;
-      // temp.innerHTML = "Temp - " + tempValue;
-      // input.value = "";
-
-
-
-
-      let lat = data.city.coord.lat;
-      let lon = data.city.coord.lon;
-      // let icon = <img src="http://openweathermap.org/img/wn/${data["list"][0]["weather"][0]["icon"]}@2x.png" alt=""> 
-      // console.log(icon);
-      fetch(
-        http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5&&appid=81e4c013d025c8ecaaafcae614d545e0
-      )
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data[0]);
-          console.log(data[1].local_names.en);
-          console.log(data[2].local_names.en);
-          console.log(data[3].local_names.en);
-          console.log(data[4].local_names.en);
-
-          // let placesId = document.getElementById('places')
-          let nearby = document.createElement("div");
-          nearby.classList.add("places__content");
-
-
-
-          // console.log(data[0]["list"][0]["weather"][0]["icon"]);
-          nearby.innerHTML = `
-                      <div class="places__header">
-                      <h1>nearby places</h1>
-                    </div>
-                    <div class="places__block">
-                      <div class="first">
-                        <div class="in">
-                          <p class="ff">${data[1].local_names.en}</p>
-                          
-                          <p>36&degC</p>
-                        </div>
-                        <div class="in">
-                          <p class="ff">${data[2].local_names.en}</p>
-                          
-                          <p>36&degC</p>
-                        </div>
-                      </div>
-                      <div class="second">
-                        <div class="in">
-                          <p class="ff">${data[3].local_names.en}</p>
-                          
-                          <p>36&degC</p>
-                        </div>
-                        <div class="in">
-                          <p class="ff">${data[4].local_names.en}</p>
-                          
-                          <p>36&degC</p>
-                        </div>
-                      </div>
-                    </div>
-                      `;
-
-          document.getElementById("places").append(nearby);
-        })
-
-        .catch((err) => alert("Wrong city name!"));
     })
 
     .catch((err) => {
@@ -145,6 +79,11 @@ button.addEventListener("click", function (name) {
   )
     .then((response) => response.json())
     .then((data) => {
+      let elemmm2 = document.getElementsByClassName("hr__content");
+
+      if (elemmm2.length > 0) {
+        elemmm2[0].remove();
+      }
       let time1 = new Date(data["list"][0]["dt"] * 1000);
       let time2 = new Date(data["list"][1]["dt"] * 1000);
       let time3 = new Date(data["list"][2]["dt"] * 1000);
@@ -154,7 +93,6 @@ button.addEventListener("click", function (name) {
 
       let hourly = document.createElement("div");
       hourly.classList.add("hr__content");
-      console.log(data["list"][0]["weather"][0]["icon"]);
       hourly.innerHTML = ` <div class="hr__header">
               <h1>hourly</h1>
             </div>
@@ -263,7 +201,12 @@ button.addEventListener("click", function (name) {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data["list"][0]["weather"][0]["description"]);
+      let elemmm3 = document.getElementsByClassName("days__today");
+
+      if (elemmm3.length > 0) {
+        elemmm3[0].remove();
+      }
+
       let time11 = new Date(data["list"][0]["dt"] * 1000);
       let time22 = new Date(data["list"][8]["dt"] * 1000);
       let time33 = new Date(data["list"][16]["dt"] * 1000);
@@ -387,6 +330,167 @@ button.addEventListener("click", function (name) {
         `;
 
       document.getElementById("tomorrow").append(days5);
+      let day5 = document.getElementsByClassName("days");
+      console.log(day5);
+      for (let i = 0; i < day5.length; i++) {
+        console.log(i);
+        day5[i].onclick = function () {
+          console.log(day5[i]);
+          console.log(document.getElementsByClassName("hr__content")[0]);
+          document.getElementsByClassName("hr__content")[0].remove();
+          //  let elemmm2 = document.getElementsByClassName("hr__content");
+
+          //  if (elemmm2.length > 0) {
+          //    elemmm2[0].remove();
+          //  }
+          let time1 = new Date(data["list"][0]["dt"] * 1000);
+          let time2 = new Date(data["list"][1]["dt"] * 1000);
+          let time3 = new Date(data["list"][2]["dt"] * 1000);
+          let time4 = new Date(data["list"][3]["dt"] * 1000);
+          let time5 = new Date(data["list"][4]["dt"] * 1000);
+          let time6 = new Date(data["list"][5]["dt"] * 1000);
+
+          let hourly = document.createElement("div");
+          hourly.classList.add("hr__content");
+          hourly.innerHTML = ` <div class="hr__header">
+              <h1>hourly</h1>
+            </div>
+            <div class="hr__today">
+              <table>
+                <tr>
+                  <th>TODAY</th>
+                  <td>${time1.getHours()}:00 </td>
+                  <td>${time2.getHours()}:00 </td>
+                  <td>${time3.getHours()}:00</td>
+                  <td>${time4.getHours()}:00</td>
+                  <td>${time5.getHours()}:00</td>
+                  <td>${time6.getHours()}:00</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td><img src="http://openweathermap.org/img/wn/${
+                    data["list"][0]["weather"][0]["icon"]
+                  }@2x.png" alt=""></td>
+                  <td><img src="http://openweathermap.org/img/wn/${
+                    data["list"][1]["weather"][0]["icon"]
+                  }@2x.png" alt=""></td>
+                  <td><img src="http://openweathermap.org/img/wn/${
+                    data["list"][2]["weather"][0]["icon"]
+                  }@2x.png" alt=""></td>
+                  <td><img src="http://openweathermap.org/img/wn/${
+                    data["list"][3]["weather"][0]["icon"]
+                  }@2x.png" alt=""></td>
+                  <td><img src="http://openweathermap.org/img/wn/${
+                    data["list"][4]["weather"][0]["icon"]
+                  }@2x.png" alt=""></td>
+                  <td><img src="http://openweathermap.org/img/wn/${
+                    data["list"][5]["weather"][0]["icon"]
+                  }@2x.png" alt=""></td>
+                </tr>
+                <tr>
+                  <td>Forecast</td>
+                  <td>${data["list"][0]["weather"][0]["description"]}</td>
+                  <td>${data["list"][1]["weather"][0]["description"]}</td>
+                  <td>${data["list"][2]["weather"][0]["description"]}</td>
+                  <td>${data["list"][3]["weather"][0]["description"]}</td>
+                  <td>${data["list"][4]["weather"][0]["description"]}</td>
+                  <td>${data["list"][5]["weather"][0]["description"]}</td>
+                </tr>
+                <tr>
+                  <td>Temp (&degC)</td>
+                  <td>${Math.floor(
+                    data["list"][0]["main"]["temp"] - 273
+                  )}&deg</td>
+                  <td>${Math.floor(
+                    data["list"][1]["main"]["temp"] - 273
+                  )}&deg</td>
+                  <td>${Math.floor(
+                    data["list"][2]["main"]["temp"] - 273
+                  )}&deg</td>
+                  <td>${Math.floor(
+                    data["list"][3]["main"]["temp"] - 273
+                  )}&deg</td>
+                  <td>${Math.floor(
+                    data["list"][4]["main"]["temp"] - 273
+                  )}&deg</td>
+                  <td>${Math.floor(
+                    data["list"][5]["main"]["temp"] - 273
+                  )}&deg</td>
+                </tr>
+                <tr>
+                  <td>RealFeel</td>
+                  <td>${Math.floor(
+                    data["list"][0]["main"]["feels_like"] - 273
+                  )}&deg</td>
+                  <td>${Math.floor(
+                    data["list"][1]["main"]["feels_like"] - 273
+                  )}&deg</td>
+                  <td>${Math.floor(
+                    data["list"][2]["main"]["feels_like"] - 273
+                  )}&deg</td>
+                  <td>${Math.floor(
+                    data["list"][3]["main"]["feels_like"] - 273
+                  )}&deg</td>
+                  <td>${Math.floor(
+                    data["list"][4]["main"]["feels_like"] - 273
+                  )}&deg</td>
+                  <td>${Math.floor(
+                    data["list"][5]["main"]["feels_like"] - 273
+                  )}&deg</td>
+                </tr>
+                <tr>
+                  <td>Wind (km/h)</td>
+                  <td>${Math.floor(data["list"][0]["wind"]["speed"])}</td>
+                  <td>${Math.floor(data["list"][1]["wind"]["speed"])}</td>
+                  <td>${Math.floor(data["list"][2]["wind"]["speed"])}</td>
+                  <td>${Math.floor(data["list"][3]["wind"]["speed"])}</td>
+                  <td>${Math.floor(data["list"][4]["wind"]["speed"])}</td>
+                  <td>${Math.floor(data["list"][5]["wind"]["speed"])}</td>
+                </tr>
+              </table>
+            </div>`;
+
+          document.getElementById("hourly").append(hourly);
+        };
+      }
+      let lat = data.city.coord.lat;
+      let lon = data.city.coord.lon;
+      fetch(
+        `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5&&appid=81e4c013d025c8ecaaafcae614d545e0`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          document.querySelector(".places__block").remove();
+          let test = document.createElement("div");
+          test.className = "places__block";
+          test.id = "places";
+          document.querySelector(".places__content").append(test);
+          for (let i = 0; i < data.length - 1; i++) {
+            let nearby = document.createElement("div");
+            nearby.classList.add("first");
+
+            nearby.innerHTML = `
+                      
+                <div class="in">
+                  <p class="ff">${data[i + 1]["name"]}</p>
+                </div>
+              `;
+
+            document.getElementById("places").append(nearby);
+          }
+          let h11 = document.getElementsByClassName("shams");
+
+          if (h11.length > 0) {
+            h11[0].remove();
+          }
+          let h1 = document.createElement("h1");
+          h1.classList.add("shams")
+          h1.innerHTML = "nearby places";
+          document.querySelector(".places__header").append(h1);
+          // let placesId = document.getElementById('places')
+
+          // console.log(data[0]["list"][0]["weather"][0]["icon"]);
+        });
     });
   let today = document.getElementsByClassName("today")[0];
   let forecast = document.getElementsByClassName("forecast")[0];
@@ -401,23 +505,6 @@ button.addEventListener("click", function (name) {
     current.style.display = "none";
     tomorrow.style.display = "block";
   };
-
-  // let today = document.getElementsByClassName("today")[0];
-  // console.log(today);
-  // let forecast = document.getElementsByClassName("forecast")[0];
-  // console.log(forecast);
-  // let current = document.querySelector(".current__weather");
-  // console.log(current);
-  // let days = document.getElementsByClassName("days__today ");
-
-  // today.onclick = () => {
-  //   current.classList.remove("none");
-  //   days.classList.add("none");
-  // };
-  // forecast.onclick = () => {
-  //   current.classList.remove("none");
-  //   days.classList.add("none");
-  // };
 });
 
 document.getElementById("page404").onclick = function () {

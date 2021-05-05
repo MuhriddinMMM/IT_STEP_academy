@@ -174,7 +174,7 @@ tr td:first-child {
 /* places */
 .places {
   margin-top: 20px;
-  background-color: #f6f6f6;
+  background-color: #a8a8a8;
   padding: 20px;
   margin-bottom: 40px;
 }
@@ -183,7 +183,8 @@ tr td:first-child {
 }
 .places__block {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   font-size: 1.6rem;
@@ -193,6 +194,7 @@ tr td:first-child {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex: 0 0 40%;
 }
 .second {
   display: flex;
@@ -204,7 +206,7 @@ tr td:first-child {
   align-items: center;
   justify-content: space-between;
   margin: 10px 50px;
-  background-color: #e0dede;
+  background-color: #d3d3d3;
   border-radius: 50px;
   padding: 10px 20px;
 }
@@ -309,8 +311,11 @@ a {
 .over {
   background: rgba(0, 0, 0, 0.7); /* Цвет фона и значение прозрачности */
   position: absolute; /* Абсолютное позиционирование */
-  left: 0; right: 0; top: 0; bottom: 0; /* Отступы от краев браузера */
-  }
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; /* Отступы от краев браузера */
+}
 .c404 {
   margin-top: 100px;
   text-align: center; /* Выравнивание текста по центру */
@@ -318,19 +323,19 @@ a {
   color: #fcf9f9;
   position: relative; /* Относительное позиционирование */
   z-index: 2; /* Порядок наложения элемента по высоте */
-  }
+}
 .notfound {
   text-align: center;
   color: #fff;
   font-size: 2em;
   position: relative; /* Относительное позиционирование */
   z-index: 2; /* Порядок наложения элемента по слоям в глубину */
-  }
+}
 .notfound a {
   color: #fff;
   font-size: 2rem;
-  }
+}
 .notfound a:hover {
   color: yellow;
   text-decoration: none;
-  }
+}
