@@ -5,8 +5,8 @@ let desc = document.querySelector(".desc");
 let clouds = document.querySelector(".clouds");
 let button = document.querySelector(".submit");
 
-button.addEventListener("click", function (name) {
-  fetch(
+function shams(name) {
+   fetch(
     "https://api.openweathermap.org/data/2.5/weather?q=" +
       input.value +
       "&appid=81e4c013d025c8ecaaafcae614d545e0"
@@ -20,4 +20,8 @@ button.addEventListener("click", function (name) {
     })
 
     .catch((err) => alert("Wrong city name!"));
-});
+}
+
+button.addEventListener("click", shams);
+
+document.getElementById("name").onclick = shams;
