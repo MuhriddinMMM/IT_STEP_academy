@@ -1,0 +1,15 @@
+<%- include ("../partials/head") %>
+<p>content index</p>
+<ul>
+  <% for (let c of contents){%>
+  <li class="list-group-item">
+    <p><%= c.id %></p>
+    <p><%= c.title %></p>
+    <p><%= c.content%></p>
+    <br />
+    <a href="blog/<%= c.id%>">more ...</a>
+  </li>
+  <% } %>
+</ul>
+<a class="btn btn-success mb-4" href="/blog/new">sozdat BLOG</a>
+<%- include ("../partials/footer") %>

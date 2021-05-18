@@ -1,0 +1,16 @@
+<%- include ("../partials/head") %>
+<p>cooments index</p>
+
+<ul>
+  <% for (let c of comments){%>
+  <li class="list-group-item">
+    <p><%= c.id %></p>
+    <p><%= c.comment %></p>
+    <p><%= c.username%></p>
+    <br />
+    <a href="comments/<%= c.id%>">more ...</a>
+  </li>
+  <% } %>
+</ul>
+<a class="btn btn-success mb-4" href="/comments/new">sozdat kommentariy</a>
+<%- include ("../partials/footer") %>
