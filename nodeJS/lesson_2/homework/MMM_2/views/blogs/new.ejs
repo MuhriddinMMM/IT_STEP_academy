@@ -1,0 +1,49 @@
+<%- include('../partials/head') %>
+<h1>ОCREATE BLOG</h1>
+
+<form action="/blogs" method="post">
+  <div class="form-group mb-4">
+    <label for="author" class="form-label">author NAME</label>
+    <input type="text" name="author" id="author" class="form-control" />
+  </div>
+  <div class="form-group mb-4">
+    <label for="title" class="form-label">title NAME</label>
+    <input type="text" name="title" id="title" class="form-control" />
+  </div>
+  <div class="form-group mb-4">
+    <label for="description" class="form-label">description </label>
+    <input
+      type="text"
+      name="description"
+      id="description"
+      class="form-control"
+    />
+  </div>
+  <div class="form-group mb-4">
+    <label for="urlToImage" class="form-label">urlToImage</label>
+    <input type="url" name="urlToImage" id="urlToImage" class="form-control" />
+  </div>
+  <div class="form-group mb-4">
+    <label for="publishedAt" class="form-label">publishedAt </label>
+    <input
+      type="datetime-local"
+      name="publishedAt"
+      id="publishedAt"
+      class="form-control"
+    />
+  </div>
+
+  <div class="form-group mb-4">
+    <label for="content" class="form-label">content</label>
+    <textarea
+      name="content"
+      id="content"
+      class="form-control"
+      rows="10"
+    ></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary w-100 mb-5">PUBLISH</button>
+</form>
+
+<%- include('../partials/footer') %>

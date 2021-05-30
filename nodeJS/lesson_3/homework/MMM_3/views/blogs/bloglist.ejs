@@ -1,0 +1,56 @@
+<%- include('../partials/head') %>
+<h1>All blogs</h1>
+
+<div class="main">
+  <% for (let c of blogs) { %>
+  <div class="card">
+    <div class="post">
+      <div class="post-image">
+        <img src="<%= c.urlToImage %> " />
+      </div>
+
+      <div class="post-content">
+        <p class="post-header">
+          <a
+            style="
+              background-color: rgb(243, 199, 86);
+              display: block;
+              padding: 5px;
+              border-radius: 10px;
+            "
+            href="blogs/<%= c.id%>"
+          >
+            <%= c.title %>
+            <span style="background-color: rgb(91, 223, 150)"
+              >... more to click</span
+            ></a
+          >
+        </p>
+        <p class="post-text"><%= c.description %></p>
+        <p class="post-text"><%= c.content %></p>
+        <div class="author">
+          <img
+            src="https://icon-library.com/images/author-icon/author-icon-21.jpg?format=auto&height=80&version=1543776877&width=80"
+            alt=""
+            class="author-image"
+          />
+          <div class="author-content">
+            <p class="author-name"><%= c.author %></p>
+            <p class="date"><%= c.publishedAt %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% } %>
+</div>
+
+<br />
+<a class="btn btn-success p-4" style="color: cornsilk" href="/blogs/new"
+  >Создать BLOGS</a
+>
+<br />
+<br />
+<br />
+<a class="btn btn-warning" href="/">Назад</a>
+<%- include('../partials/footer') %>

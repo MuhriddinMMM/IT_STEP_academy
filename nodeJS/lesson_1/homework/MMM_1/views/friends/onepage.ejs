@@ -1,0 +1,13 @@
+<%- include ("../partials/head") %>
+<h1>ABOUT MY FRIENDS</h1>
+
+<ul>
+  <% for (let c of friends){%>
+  <li class="list-group-item">
+    
+    <p><%= c.friendname %>.  <%= c.aboutfriend %></p>
+    <br />
+  </li>
+  <% } %>
+</ul>
+<%- include ("../partials/footer") %>

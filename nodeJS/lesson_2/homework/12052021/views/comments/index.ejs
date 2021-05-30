@@ -1,0 +1,18 @@
+<%- include('../partials/head') %>
+<h1>All comments</h1>
+
+<ul class="list-group">
+  <% for (let c of comments) { %>
+  <li class="list-group-item">
+    <%= c.comment %> - <b><%= c.username.toUpperCase() %></b>
+  </li>
+  <% } %>
+</ul>
+
+<br />
+<a href="/comments/new">Создать комментарий</a>
+<br />
+<br />
+<br />
+<a href="/">Назад</a>
+<%- include('../partials/footer') %>

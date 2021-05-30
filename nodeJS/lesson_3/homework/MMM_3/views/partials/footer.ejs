@@ -1,0 +1,33 @@
+<footer class="text-center">&copy; 2021 Copyright</footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>$(document).on("ready", function () {
+  $("body").addClass("js");
+  var $menu = $("#menu"),
+    $menulink = $(".menu-link");
+
+  $menulink.click(function () {
+    $menulink.toggleClass("active");
+    $menu.toggleClass("active");
+    return false;
+  });
+
+  var winHeight = $(window).height(),
+    docHeight = $(document).height(),
+    progressBar = $("progress"),
+    max,
+    value;
+
+ 
+  max = docHeight - winHeight;
+  progressBar.attr("max", max);
+
+  $(document).on("scroll", function () {
+    value = $(window).scrollTop();
+    progressBar.attr("value", value);
+  });
+});
+</script>
+</body>
+</html>

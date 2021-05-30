@@ -1,0 +1,28 @@
+<%- include ("../partials/head") %>
+<%- include ("../partials/shows") %>
+<progress value="0"></progress>
+<div class="wrapper"> 
+  <h1><%=blog.author %></h1>
+  <p class="teaser"><%=blog.title %></p>
+  <figure class="hero-figure">
+    <img src="<%=blog.urlToImage %>" />
+    <figcaption>Credit: Lorem Picsum</figcaption>
+  </figure>
+  <div class="article-meta">
+    <img src="https://picsum.photos/200/200" alt="Author" />
+    <div class="meta-data">
+      <span class="meta-author"><%=blog.author %></span><br />
+      <span class="meta-date"><%=blog.publishedAt %></span>
+    </div>
+    <hr />
+  </div>
+  <p><%=blog.description %></p>
+  <blockquote><%=blog.description %></blockquote>
+  <p><%=blog.content %></p> 
+</div> 
+</div>
+</div>
+<div style="display: flex; justify-content: center;">
+<a class="btn btn-success mb-4" href="/blogs">BACK</a>
+</div>
+<%- include ("../partials/footer") %>
