@@ -1,0 +1,23 @@
+{
+  "name": "1",
+  "version": "1.0.0",
+  "description": "lesson",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev":"nodemon index.js"
+  },
+  "keywords": [
+    "node",
+    "node",
+    "js"
+  ],
+  "author": "MMM <muxriddin.murodov@mail>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.11"
+  }
+}

@@ -1,0 +1,47 @@
+@import "reset";
+@import "setup";
+// !MENU
+
+@include mobile_min() {
+  .l-header {
+    max-width: 1170px;
+    width: calc(100% - 3rem);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .nav {
+      display: flex;
+      align-items: center;
+      &__logo {
+        width: 90px;
+        height: 55px;
+        display: block;
+      }
+      &__list {
+        display: flex;
+        flex-direction: row;
+      }
+      &__item {
+        padding: 0 10px;
+        margin: 0 30px;
+      }
+      &__link {
+      color: $text-color;
+      }
+      .mobile-toggle {
+        display: none;
+        cursor: pointer;
+        font-size: 20px;
+        position: absolute;
+        right: 22px;
+        top: 20px;
+        width: 30px;
+      }
+    }
+  }
+}
+@include mobile_max() {
+  
+}

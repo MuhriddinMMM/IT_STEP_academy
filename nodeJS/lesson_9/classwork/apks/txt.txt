@@ -1,0 +1,6 @@
+npm install nodemon --save dev
+npm run start-dev
+
+
+//FD vsegda popdayet v globalniy obyekt
+FE ne vsegda papdayet v g.o. popdayet tolka cherez var
