@@ -1,0 +1,32 @@
+[
+  {
+    "imgUrl": "img/clothes1.jpg",
+    "title": "Blue Polo",
+    "price": "20.99",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus temporibus quos ipsa dolores sunt dolore natus ea fugit nemo saepe?"
+  },
+  {
+    "imgUrl": "img/clothes2.jpg",
+    "title": "Blue Polo",
+    "price": "30.99",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus temporibus quos ipsa dolores sunt dolore natus ea fugit nemo saepe?"
+  },
+  {
+    "imgUrl": "img/clothes3.jpg",
+    "title": "Blue Polo",
+    "price": "40.99",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus temporibus quos ipsa dolores sunt dolore natus ea fugit nemo saepe?"
+  },
+  {
+    "imgUrl": "img/clothes3.jpg",
+    "title": "Blue Polo",
+    "price": "40.99",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus temporibus quos ipsa dolores sunt dolore natus ea fugit nemo saepe?"
+  },
+  {
+    "imgUrl": "img/clothes3.jpg",
+    "title": "Blue Polo",
+    "price": "40.99",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus temporibus quos ipsa dolores sunt dolore natus ea fugit nemo saepe?"
+  }
+]

@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(255, 255, 255);
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+a {
+  color: inherit;
+}
+nav li a {
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+}
+nav li a:hover {
+  color: rgb(247, 30, 30);
+}
+li a img {
+  width: 60px;
+  height: auto;
+}
+
+header {
+  background-color: rgb(255, 255, 255);
+}
+main {
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  height: 700px;
+  background: url(https://wallpapercave.com/wp/wp6488784.jpg) 450px 0 / cover;
+}
+h1 {
+  font-size: 45px;
+  font-weight: 300;
+}
+h2 {
+  font-size: 30px;
+  text-align: center;
+  padding: 20px;
+}
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.product-card {
+  padding: 10px;
+  width: 350px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px;
+  box-shadow: 0 0 5px rgb(104, 104, 104);
+}
+.product-card button {
+  width: 130px;
+  background-color: rgb(141, 221, 12);
+  font-family: inherit;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+button:active {
+  background-color: coral;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  margin: 0 auto;
+}
+form input {
+  text-align: center;
+  font-family: inherit;
+  padding: 8px 15px;
+  height: 30px;
+  border-radius: 8px;
+  border: 0;
+  margin-bottom: 15px;
+  box-shadow: 0 0 5px rgb(75, 74, 74);
+  font-size: 16px;
+  outline: none;
+}
+form input::placeholder {
+  text-align: center;
+}
+
+.login-header {
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+.product-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.product-images img {
+  padding: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  display: flex;
+  justify-content: flex-start;
+}
+th,
+td {
+  width: 200px;
+  height: 30px;
+  padding: 5px 20px;
+  border: 1px solid rgb(17, 17, 17);
+}
+.btn-buy {
+  width: 200px;
+  height: 50px;
+  border: 0;
+  background-color: rgb(10, 180, 138);
+  border-radius: 30px;
+  font-size: 20px;
+  font-family: inherit;
+  font-weight: 700;
+}
+.price {
+  font-size: 45px;
+}
+.buy {
+  width: 400px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+.modal {
+  position: absolute;
+  left: calc(50%-250px);
+  top: calc(50%-250px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  box-shadow: 0 0 10px yellow;
+  border-radius: 30px;
+  font-size: 40px;
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+.btn-order {
+  margin: 20px;
+  text-align: center;
+  font-family: inherit;
+  padding: 8px 15px;
+  height: 30px;
+  width: 200px;
+  border-radius: 8px;
+  border: 0;
+  margin-bottom: 15px;
+  box-shadow: 0 0 5px rgb(75, 74, 74);
+  font-size: 16px;
+  outline: none;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+li {
+  text-align: justify;
+}
+.footer {
+  background-color: #02091a;
+  padding: 70px 0;
+  margin-top: 200px;
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer ul {
+  display: flex;
+  flex-direction: column;
+}
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}

@@ -1,40 +1,30 @@
-const http = require("http");
-const fs = require("fs");
-const path = require("path");
+const isEven = (num) => num % 2 == 0;
 
+const isPrime = (num) => {
+  for (let i = 2; i < num; i++) {
+    if (num % i == 0) return false;
+  }
+  return true;
+};
 
-
-const server = http.createServer((req, res) => { 
-
-function isPrime(num) {
-  for (let i = 2, max = Math.sqrt(num); i <= max; i++) {
-    if (num % i === 0) {
-        
-      return false;
+const showDevisors = (num) => {
+  for (let i = 1; i <= num; i++) {
+    if (num % i == 0) {
+      console.log(i);
     }
   }
-  return num > 1;
-}
+};
 
-
-function getPrimesFor(num) {
-  const primes = [];
-
-  for (let i = 2; i <= num; i++) {
-    if (isPrime(i)) {
-      primes.push(i);
+const identifyDevisors = (num) => {
+  let arrDevisors = [];
+  for (let i = 1; i <= num; i++) {
+    if (num % i == 0) {
+      arrDevisors.push(i);
     }
   }
+  return arrDevisors;
+};
 
-  return primes;
-}
-
-console.log(getPrimesFor(123));
-
-})
-
-
-const PORT = process.env.PORT || 3000;
-server.listen(3000, () => {
-  console.log(`server has been started on ... ${PORT}`);
-});
+console.log(isEven(10));
+console.log(showDevisors(5));
+console.log(identifyDevisors(24));

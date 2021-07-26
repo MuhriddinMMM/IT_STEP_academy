@@ -1,0 +1,23 @@
+[
+  {
+    "name": "ibrohim",
+    "lastName": "rustamjonov",
+    "age": "28",
+    "date": "Mon Jul 19 2021 11:40:21 GMT+0500 (Узбекистан, стандартное время)",
+    "count": 1
+  },
+  {
+    "name": "shamsiddin",
+    "lastName": "shukurov",
+    "age": "28",
+    "date": "Mon Jul 19 2021 11:40:21 GMT+0500 (Узбекистан, стандартное время)",
+    "count": 2
+  },
+  {
+    "name": "murodov",
+    "lastName": "shukurov",
+    "age": "28",
+    "date": "Mon Jul 19 2021 11:40:21 GMT+0500 (Узбекистан, стандартное время)",
+    "count": 3
+  }
+]

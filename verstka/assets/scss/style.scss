@@ -3,11 +3,9 @@
 // !MENU
 
 @include mobile_min() {
+  
   .l-header {
-    max-width: 1170px;
-    width: calc(100% - 3rem);
-    margin-left: auto;
-    margin-right: auto;
+    @import %container;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
