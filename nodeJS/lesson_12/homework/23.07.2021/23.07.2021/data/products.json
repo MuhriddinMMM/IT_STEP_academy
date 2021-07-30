@@ -1,0 +1,26 @@
+[
+    {
+        "imgUrl": "images/product-image-placeholder.jpg",
+        "title": "Blue Polo",
+        "price": 19.99,
+        "description": "Brand new polo designed by Levi's. Lorem, ipsum dolor sit amet consectetur adipisicing elit."
+    },
+    {
+        "imgUrl": "images/product-image-placeholder.jpg",
+        "title": "Blue Polo",
+        "price": 39.99,
+        "description": "Brand new polo designed by Levi's. Lorem, ipsum dolor sit amet consectetur adipisicing elit."
+    },
+    {
+        "imgUrl": "images/product-image-placeholder.jpg",
+        "title": "Blue Polo",
+        "price": 99.99,
+        "description": "Brand new polo designed by Levi's. Lorem, ipsum dolor sit amet consectetur adipisicing elit."
+    },
+    {
+        "imgUrl": "images/product-image-placeholder.jpg",
+        "title": "Blue Polo",
+        "price": 99.99,
+        "description": "Brand new polo designed by Levi's. Lorem, ipsum dolor sit amet consectetur adipisicing elit."
+    }
+]

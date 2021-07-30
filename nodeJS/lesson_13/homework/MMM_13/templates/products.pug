@@ -1,0 +1,51 @@
+include includes/head
+include includes/nav
+include includes/footer
+doctype html
+html(lang="en")
+  head
+    +head("E-commerce")
+  body 
+    +nav
+    .container 
+       h1(class="title-products") PRODUCTS
+    .container 
+        h2(class="center") GALLERY
+        .flex-center
+            .content(style="max-width: 500px")
+                img(class="mySlides"
+                src="img/gallery/gallery1.jpg"
+                style="width: 100%")
+                img(class="mySlides"
+                src="img/gallery/gallery2.jpg"
+                style="width: 100%")
+                img(class="mySlides"
+                src="img/gallery/gallery3.jpg"
+                style="width: 100%")
+                img(class="mySlides"
+                src="img/gallery/gallery4.jpg"
+                style="width: 100%")
+    .container 
+        .products
+            each prod in productlist
+                .single-product
+                    .product-img
+                        img(src=prod.imgUrl alt="")
+                        .new-product
+                            span New
+                    .product-caption
+                        .product-ratting
+                            i(class="far fa-star") 
+                            i(class="far fa-star")
+                            i(class="far fa-star") 
+                            i(class="far fa-star low-star")
+                            i(class="far fa-star low-star")
+                        .price 
+                            ul
+                                li $#{prod.price}
+                                li(class="discount") $#{prod.discount}
+                        .wrapper
+                            form( action="/learnmore" method="POST")
+                                button(type="submit" value="learnmore") Learn more...
+                            button Add to card
+    +footer 

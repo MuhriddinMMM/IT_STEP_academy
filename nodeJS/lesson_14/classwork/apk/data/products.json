@@ -1,0 +1,67 @@
+[
+  {
+    "imgUrl": "img/clothes1.jpg",
+    "title": "Blue Polo",
+    "price": "20.99",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus temporibus quos ipsa dolores sunt dolore natus ea fugit nemo saepe?"
+  },
+  {
+    "imgUrl": "img/clothes2.jpg",
+    "title": "Blue Polo",
+    "price": "30.99",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus temporibus quos ipsa dolores sunt dolore natus ea fugit nemo saepe?"
+  },
+  {
+    "imgUrl": "img/clothes3.jpg",
+    "title": "Blue Polo",
+    "price": "40.99",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus temporibus quos ipsa dolores sunt dolore natus ea fugit nemo saepe?"
+  },
+  {
+    "imgUrl": "img/clothes3.jpg",
+    "title": "Blue Polo",
+    "price": "40.99",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus temporibus quos ipsa dolores sunt dolore natus ea fugit nemo saepe?"
+  },
+  {
+    "imgUrl": "img/clothes3.jpg",
+    "title": "Blue Polo",
+    "price": "40.99",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus temporibus quos ipsa dolores sunt dolore natus ea fugit nemo saepe?"
+  },
+  {
+    "id": "6f72dba8-0a07-4d44-9026-79a70c9eeaef",
+    "title": "11111",
+    "description": "qqqqqqqqqqqqqqqqqqqqqq",
+    "imgUrl": "https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg",
+    "price": "4500000"
+  },
+  {
+    "id": "87a6a480-ca9a-415c-bc64-0ffe69bd44bf",
+    "title": "galaxy",
+    "description": "weqweqweqweeqeeeeeqe",
+    "imgUrl": "https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg",
+    "price": "5157000"
+  },
+  {
+    "id": "23c2b93c-96ad-4045-8c52-6c6c85c84ac2",
+    "title": "asdsad",
+    "description": "kikiykiukiukuyikyuik",
+    "imgUrl": "https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg",
+    "price": "4 500 000.0000"
+  },
+  {
+    "id": "7ac196f8-4799-4997-b173-f925a14e293e",
+    "title": "crack",
+    "description": "asxaaxasxasxasxasx",
+    "imgUrl": "https://www.interfacemedia.com/media/2350/img-vr-tilt-brush-website-hero-shot.jpg",
+    "price": "5157000"
+  },
+  {
+    "id": "5c3b1842-0fbc-47b4-9586-6e4d92ccee26",
+    "title": "crack",
+    "description": "wqeqweqweqweqweqweq",
+    "imgUrl": "https://www.interfacemedia.com/media/2350/img-vr-tilt-brush-website-hero-shot.jpg",
+    "price": "5157000"
+  }
+]

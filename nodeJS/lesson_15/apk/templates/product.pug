@@ -1,0 +1,32 @@
+include includes/head
+include includes/nav
+include includes/footer
+doctype html
+html(lang="en")
+  head
+    +head("E-commerce")
+  body 
+    +nav
+    .container 
+        h1 PRoduct INFO
+        h2 PRoduct TITLE #{productlist.title}
+        .product-images
+            img(src=productlist.imgUrl width="600px" alt="")
+            img(src="img/product2.jpg" alt="" width="350")
+            img( src="img/product3.jpg" width="300" alt="")
+        .buy
+            p(class="price") $#{productlist.price}
+            button(class="btn-buy") BUY
+        p #{productlist.description}
+        table 
+            tbody
+                tr
+                    th SIZE
+                    td S
+                tr
+                    th COLOUR
+                    td RED
+                tr
+                    th PRICE
+                    td $99
+    +footer 

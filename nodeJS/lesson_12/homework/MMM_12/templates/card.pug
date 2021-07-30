@@ -1,0 +1,27 @@
+include head
+include nav
+include footer
+doctype html
+html(lang="en")
+  head
+    +head("E-commerce")
+  body 
+    +nav
+    .container 
+        h1 CARD
+        table 
+            tbody
+                tr
+                    th 1
+                    td T shirt is red
+                tr
+                    th 2
+                    td Jeans is blue
+                tr
+                    th 3
+                    td more interesting
+        button(class="btn-order") ORDER
+        .modal.hidden 
+            h3 ORDERed  :)
+            button CLOSE
+    +footer 

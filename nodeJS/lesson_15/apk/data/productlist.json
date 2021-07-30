@@ -1,0 +1,155 @@
+[
+  {
+    "imgUrl": "img/category/cat1.jpg",
+    "price": "12.00",
+    "discount": "34.00",
+    "quantity": 1
+  },
+  {
+    "imgUrl": "img/category/cat2.jpg",
+    "price": "45.00",
+    "discount": "65.00",
+    "quantity": 1
+  },
+  {
+    "imgUrl": "img/category/cat3.jpg",
+    "price": "26.00",
+    "discount": "54.00",
+    "quantity": 1
+  },
+  {
+    "imgUrl": "img/category/category_1.png",
+    "price": "35.00",
+    "discount": "74.00",
+    "quantity": 1
+  },
+  {
+    "imgUrl": "img/category/category_2.png",
+    "price": "29.00",
+    "discount": "53.00",
+    "quantity": 1
+  },
+  {
+    "imgUrl": "img/category/category_3.png",
+    "price": "34.00",
+    "discount": "75.00",
+    "quantity": 1
+  },
+  {
+    "imgUrl": "img/category/category_4.png",
+    "price": "31.00",
+    "discount": "43.00",
+    "quantity": 1
+  },
+  {
+    "imgUrl": "img/category/category_5.png",
+    "price": "57.00",
+    "discount": "99.00",
+    "quantity": 1
+  },
+  {
+    "imgUrl": "img/category/category_6.png",
+    "price": "39.00",
+    "discount": "69.00",
+    "quantity": 1
+  },
+  {
+    "imgUrl": "img/category/category_7.png",
+    "price": "29.00",
+    "discount": "45.00",
+    "quantity": 1
+  },
+  {
+    "imgUrl": "img/category/category_8.png",
+    "price": "19.00",
+    "discount": "28.00",
+    "quantity": 1
+  },
+  {
+    "imgUrl": "img/category/category_9.png",
+    "price": "15.00",
+    "discount": "34.00",
+    "quantity": 1
+  },
+  {
+    "imgUrl": "img/category/category_10.png",
+    "price": "19.00",
+    "discount": "57.00",
+    "quantity": 1
+  },
+  {
+    "imgUrl": "img/category/category_11.png",
+    "price": "48.00",
+    "discount": "87.00",
+    "quantity": 1
+  },
+  {
+    "imgUrl": "img/category/category_12.png",
+    "price": "36.00",
+    "discount": "89.00",
+    "quantity": 1
+  },
+  {
+    "imgUrl": "img/category/product1.png",
+    "price": "36.00",
+    "discount": "86.00",
+    "quantity": 1
+  },
+  {
+    "imgUrl": "img/category/product2.png",
+    "price": "45.00",
+    "discount": "67.00",
+    "quantity": 1
+  },
+  {
+    "imgUrl": "img/category/product3.png",
+    "price": "45.00",
+    "discount": "86.00",
+    "quantity": 1
+  },
+  {
+    "imgUrl": "img/category/product4.png",
+    "price": "34.00",
+    "discount": "56.00",
+    "quantity": 1
+  },
+  {
+    "imgUrl": "img/category/product5.png",
+    "price": "29.00",
+    "discount": "87.00",
+    "quantity": 1
+  },
+  {
+    "imgUrl": "img/category/product6.png",
+    "price": "54.00",
+    "discount": "75.00",
+    "quantity": 1
+  },
+  {
+    "id": "5a2c5acb-f2b1-4b92-8464-735022b34017",
+    "title": "KOSTYUM",
+    "description": "samiy luchshi THE BEST SUIT",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVxwCywUuZonO_z6Xxzhf93mz3fnmc6WgafQ&usqp=CAU",
+    "price": "50",
+    "discount": "100",
+    "quantity": 11
+  },
+  {
+    "id": "7e03083f-87d8-4aa9-8311-f03cd5945783",
+    "title": "crack",
+    "description": "dsfsfsfdfsdfsdfdsfs",
+    "imgUrl": "https://images.unsplash.com/photo-1426901555017-389235de7b0d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYyNzQ3NDAzMw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600",
+    "price": "4500000",
+    "discount": "100",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc3091a6",
+    "title": "galaxy",
+    "description": "wwwwwwwwwwwwwww",
+    "imgUrl": "https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg",
+    "price": "4500000",
+    "discount": "100",
+    "quantity": 1
+  }
+]

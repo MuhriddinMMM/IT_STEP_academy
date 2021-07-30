@@ -1,0 +1,28 @@
+include head
+include nav
+include footer
+doctype html
+html(lang="en")
+  head
+    +head("E-commerce")
+  body 
+    +nav
+    div(class="container")
+      main
+        h1 Sales 
+          span up to 70%
+    .container
+      section
+        h2 Products
+        .cards-wrapper
+          each prod in products
+            .product-card
+              img(width="300px" src=prod.imgUrl alt="")
+              h3 #{prod.title}
+              p $#{prod.price}
+              p #{prod.description}
+              .wrapper
+                form(action="/learnmore" method="POST")
+                    button(type="submit" value="learnmore") Learn more...
+                button Add to card
+    +footer 

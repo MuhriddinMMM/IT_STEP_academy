@@ -1,0 +1,107 @@
+[
+  {
+    "imgUrl": "img/category/cat1.jpg",
+    "price": "12.00",
+    "discount": "34.00"
+  },
+  {
+    "imgUrl": "img/category/cat2.jpg",
+    "price": "45.00",
+    "discount": "65.00"
+  },
+  {
+    "imgUrl": "img/category/cat3.jpg",
+    "price": "26.00",
+    "discount": "54.00"
+  },
+  {
+    "imgUrl": "img/category/category_1.png",
+    "price": "35.00",
+    "discount": "74.00"
+  },
+  {
+    "imgUrl": "img/category/category_2.png",
+    "price": "29.00",
+    "discount": "53.00"
+  },
+  {
+    "imgUrl": "img/category/category_3.png",
+    "price": "34.00",
+    "discount": "75.00"
+  },
+  {
+    "imgUrl": "img/category/category_4.png",
+    "price": "31.00",
+    "discount": "43.00"
+  },
+  {
+    "imgUrl": "img/category/category_5.png",
+    "price": "57.00",
+    "discount": "99.00"
+  },
+  {
+    "imgUrl": "img/category/category_6.png",
+    "price": "39.00",
+    "discount": "69.00"
+  },
+  {
+    "imgUrl": "img/category/category_7.png",
+    "price": "29.00",
+    "discount": "45.00"
+  },
+  {
+    "imgUrl": "img/category/category_8.png",
+    "price": "19.00",
+    "discount": "28.00"
+  },
+  {
+    "imgUrl": "img/category/category_9.png",
+    "price": "15.00",
+    "discount": "34.00"
+  },
+  {
+    "imgUrl": "img/category/category_10.png",
+    "price": "19.00",
+    "discount": "57.00"
+  },
+  {
+    "imgUrl": "img/category/category_11.png",
+    "price": "48.00",
+    "discount": "87.00"
+  },
+  {
+    "imgUrl": "img/category/category_12.png",
+    "price": "36.00",
+    "discount": "89.00"
+  },
+  {
+    "imgUrl": "img/category/product1.png",
+    "price": "36.00",
+    "discount": "86.00"
+  },
+  {
+    "imgUrl": "img/category/product2.png",
+    "price": "45.00",
+    "discount": "67.00"
+  },
+  {
+    "imgUrl": "img/category/product3.png",
+    "price": "45.00",
+    "discount": "86.00"
+  },
+  {
+    "imgUrl": "img/category/product4.png",
+    "price": "34.00",
+    "discount": "56.00"
+  },
+  {
+    "imgUrl": "img/category/product5.png",
+    "price": "29.00",
+    "discount": "87.00"
+  },
+  {
+    "imgUrl": "img/category/product6.png",
+    "price": "54.00",
+    "discount": "75.00"
+  }
+]

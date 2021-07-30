@@ -1,0 +1,18 @@
+include includes/head
+include includes/nav
+
+doctype html
+html(lang="en")
+    +head('Add product')
+    body
+        .container
+            header
+                +nav
+            main 
+                section
+                    h1 Add product
+                    form(action="/admin/add-product" method="post")
+                        input(type="text" name="productImgUrl")
+                        input(type="text" name="productTitle")
+                        input(type="text" name="productPrice")
+                        textarea(name="productDescription") 

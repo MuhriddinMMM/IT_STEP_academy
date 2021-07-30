@@ -1,0 +1,21 @@
+include includes/head
+include includes/nav
+
+doctype html
+html(lang="en")
+    +head('Sign up')
+    body 
+        .container
+            header
+                +nav
+            h1.login-header Sign up
+            form(action="/auth/register" method="POST")
+                input(type="text" name="username" placeholder="Username" required)
+                input(type="password" name="password" placeholder="Password" required)
+                input(type="password" name="password-repeat" placeholder="Repeat password" required)
+                input(type="text" name="fullName" placeholder="Full name" required)
+                label
+                    input.checkbox(type="checkbox" name="agree" required)
+                    | I agree with terms and conditions
+                input(type="submit" value="Sign up")
+        </form>

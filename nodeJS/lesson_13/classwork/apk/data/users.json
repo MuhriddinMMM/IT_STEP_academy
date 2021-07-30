@@ -1,0 +1,50 @@
+[
+  {
+    "username": "Shamsiddinkhon@mail.ru",
+    "password": "12345678",
+    "userId": 1,
+    "bithDate": "1997.02.23"
+  },
+  {
+    "username": "avazbekhayitov@gmail.com",
+    "password": "12345678",
+    "userId": 2,
+    "bithDate": "1997.02.23"
+  },
+  {
+    "username": "maksimumtv.uz",
+    "password": "123",
+    "password-repeat": "123",
+    "fullname": "12312312",
+    "agree": "on"
+  },
+  {
+    "username": "maksimumtv.uz1",
+    "password": "123",
+    "password-repeat": "123",
+    "fullname": "12312312",
+    "agree": "on"
+  },
+  {
+    "username": "maksimumtv.uz3",
+    "password": "123",
+    "password-repeat": "123",
+    "fullname": "12312312",
+    "agree": "on"
+  },
+  {
+    "username": "maksimumtv.uz5",
+    "password": "123",
+    "password-repeat": "123",
+    "fullname": "12312312",
+    "agree": "on"
+  },
+  {
+    "username": "maksimumtv.uz4",
+    "password": "123",
+    "password-repeat": "123",
+    "fullname": "12312312",
+    "agree": "on"
+  },
+  { "username": "maksimumtv.uz6", "password": "123", "fullname": "12312312" }
+]

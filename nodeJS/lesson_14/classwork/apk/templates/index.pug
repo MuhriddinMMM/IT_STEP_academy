@@ -1,0 +1,28 @@
+include includes/head
+include includes/nav
+include includes/footer
+doctype html
+html(lang="en")
+  head
+    +head("E-commerce")
+  body 
+    +nav
+    div(class="container")
+      main
+        h1 Sales 
+          span up to 70%
+    .container
+      section
+        h2 Products
+        .cards-wrapper
+          each prod in products
+            .product-card
+              .img-product
+                img.card-image(src=prod.imgUrl alt="")
+              h3.card-title #{prod.title}
+              p.card-price $#{prod.price}
+              p.card-description #{prod.description}
+              .wrapper
+                a.btn-link(href="/product") Details
+                button Add to card
+    +footer 

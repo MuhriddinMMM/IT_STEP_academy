@@ -2,8 +2,9 @@
     "name": "chatIO",
     "version": "0.0.1",
     "private": "true",
-    "dependencies":{
-        "socket.io": "*",
-        "express": "*"
+    "dependencies": {
+        "express": "*",
+        "nodemon": "^2.0.12",
+        "socket.io": "*"
     }
 }

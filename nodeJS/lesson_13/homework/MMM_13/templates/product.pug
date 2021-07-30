@@ -1,0 +1,32 @@
+include includes/head
+include includes/nav
+include includes/footer
+doctype html
+html(lang="en")
+  head
+    +head("E-commerce")
+  body 
+    +nav
+    .container 
+        h1 PRoduct INFO
+        h2 PRoduct TITLE
+        .product-images
+            img(src="img/product1.jpg" width="600px" alt="")
+            img(src="img/product2.jpg" alt="" width="350")
+            img( src="img/product3.jpg" width="300" alt="")
+        .buy
+            p(class="price") $99
+            button(class="btn-buy") BUY
+        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam iure in, doloribus ipsam omnis doloremque quis aut minus velit neque nesciunt molestiae eos aliquam sed mollitia facilis iusto assumenda! Laboriosam culpa distinctio earum nam quasi blanditiis quisquam, unde consectetur dicta dolore vitae sint ex! Fugit sint, adipisci inventore eligendi tempora possimus quos esse placeat totam nulla rem ex alias minima suscipit dolorem accusamus dolor libero corrupti quae est at? Asperiores, eos obcaecati. Provident esse eius voluptas illo sapiente odit amet possimus recusandae consequuntur, delectus inventore ea iste itaque neque? Minus cupiditate ipsum placeat vero eaque optio ullam quos sapiente similique!
+        table 
+            tbody
+                tr
+                    th SIZE
+                    td S
+                tr
+                    th COLOUR
+                    td RED
+                tr
+                    th PRICE
+                    td $99
+    +footer 

@@ -1,0 +1,63 @@
+include head 
+include nav
+include footer
+doctype html
+html(lang="en")
+    head
+        +head('E-commerce')
+
+    body 
+        +nav 
+        .container 
+            h1.about-title ABOUT
+            .video-about
+                iframe(width="560" height="315" src="https://www.youtube.com/embed/ad-GuV6YIMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen) 
+            .about-icon
+                .icon 
+                    .single_feature_part
+                        img(src="img/icon/feature_icon_1.svg" alt="#")
+                        h4 Credit Card Support
+                div 
+                    .single_feature_part
+                        img(src="img/icon/feature_icon_2.svg" alt="#")
+                        h4 Online Order
+                div 
+                    .single_feature_part
+                        img(src="img/icon/feature_icon_3.svg" alt="#")
+                        h4 Free Delivery
+                div 
+                    .single_feature_part
+                        img(src="img/icon/feature_icon_4.svg" alt="#")
+                        h4 Free Delivery
+        section.subscribe_part.section_padding
+                .container 
+                    .row.justify-content-center
+                        div 
+                            .subscribe_part_content
+                                h2 SUBSCRIBE !!!
+                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, perspiciatis eligendi hic sapiente similique ducimus maiores ipsa corrupti atque, libero optio, laudantium recusandae quibusdam. Quaerat iure id hic ex magnam?
+                                .subscribe_form
+                                    input(type="email" placeholder="Enter your mail")
+                                    a(href="#" class="btn_1") Subscribe    
+        .container 
+                h2.map-office OUR MAIN OFFICE
+                .map-about
+                    iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.1269927706066!2d69.28207261508645!3d41.30610087927171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b71790fb19d%3A0x3200873b75e5132f!2sIT%20Step%20Academy!5e0!3m2!1sru!2s!4v1627022708470!5m2!1sru!2s" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy")
+        .container 
+                .address 
+                    ul.contacts
+                        li
+                            i.fa.fa-map-marker(aria-hidden="true")
+                                span  г. Ташкент, Мирабадский район, ул. Истикбол 14
+                            
+                        li
+                            i.fa.fa-phone(aria-hidden="true")
+                                span +998(78) 113-33-43  +998(90) 330-33-43
+                        li
+                            i.fa.fa-envelope(aria-hidden="true") 
+                                span tashkent@itstep.org
+                        li
+                            i.fa.fa-calendar(aria-hidden="true") 
+                                span 09:30-19:00 (пн -пт) ; 10:00-17:00 (сб-вс);        
+        +footer 
+        
