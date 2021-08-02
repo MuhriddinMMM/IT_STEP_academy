@@ -1,5 +1,6 @@
 const path = require("path");
 const express = require("express");
+const PORT = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 const authRouters = require("./routes/authRoutes");
 const cardHandlers = require("./routes/cardRoute");
@@ -31,4 +32,4 @@ app.use(homeHandlers);
 app.use("*", (req, res) => {
   res.status(404).render("page404");
 });
-app.listen(3000);
+app.listen(PORT);
