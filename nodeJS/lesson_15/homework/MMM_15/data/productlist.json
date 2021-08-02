@@ -1,0 +1,191 @@
+[
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc309000",
+    "title": "clothes000",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/cat1.jpg",
+    "price": "12.00",
+    "discount": "34.00",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc309001",
+    "title": "clothes001",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/cat2.jpg",
+    "price": "45.00",
+    "discount": "65.00",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc309002",
+    "title": "clothes002",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/cat3.jpg",
+    "price": "26.00",
+    "discount": "54.00",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc309003",
+    "title": "clothes003",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/category_1.png",
+    "price": "35.00",
+    "discount": "74.00",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc309004",
+    "title": "clothes004",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/category_2.png",
+    "price": "29.00",
+    "discount": "53.00",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc309005",
+    "title": "clothes005",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/category_3.png",
+    "price": "34.00",
+    "discount": "75.00",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc309006",
+    "title": "clothes006",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/category_4.png",
+    "price": "31.00",
+    "discount": "43.00",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc309007",
+    "title": "clothes007",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/category_5.png",
+    "price": "57.00",
+    "discount": "99.00",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc309008",
+    "title": "clothes008",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/category_6.png",
+    "price": "39.00",
+    "discount": "69.00",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc309009",
+    "title": "clothes009",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/category_7.png",
+    "price": "29.00",
+    "discount": "45.00",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc3090010",
+    "title": "clothes010",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/category_8.png",
+    "price": "19.00",
+    "discount": "28.00",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc309011",
+    "title": "clothes011",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/category_9.png",
+    "price": "15.00",
+    "discount": "34.00",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc309012",
+    "title": "clothes012",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/category_10.png",
+    "price": "19.00",
+    "discount": "57.00",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc309013",
+    "title": "clothes013",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/category_11.png",
+    "price": "48.00",
+    "discount": "87.00",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc309014",
+    "title": "clothes014",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/category_12.png",
+    "price": "36.00",
+    "discount": "89.00",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc309015",
+    "title": "clothes015",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/product1.png",
+    "price": "36.00",
+    "discount": "86.00",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc309016",
+    "title": "clothes016",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/product2.png",
+    "price": "45.00",
+    "discount": "67.00",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc309017",
+    "title": "clothes017",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/product3.png",
+    "price": "45.00",
+    "discount": "86.00",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc309018",
+    "title": "clothes018",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/product4.png",
+    "price": "34.00",
+    "discount": "56.00",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc309019",
+    "title": "clothes019",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/product5.png",
+    "price": "29.00",
+    "discount": "87.00",
+    "quantity": 1
+  },
+  {
+    "id": "b9ed2358-2404-4179-8efe-2db0fc309020",
+    "title": "clothes020",
+    "description": "Cras sit amet nibh libero, in gravida nulla. Nulla vemetusscelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentumnunc ac nisi vulputate fringilla. Donec lacinia congue felisin faucibus.",
+    "imgUrl": "img/category/product6.png",
+    "price": "54.00",
+    "discount": "75.00",
+    "quantity": 1
+  }
+]
