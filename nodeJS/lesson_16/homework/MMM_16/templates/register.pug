@@ -1,0 +1,20 @@
+include includes/head
+include includes/nav
+include includes/footer
+doctype html
+html(lang="en")
+  head
+    +head("SIGN UP")
+  body 
+    +nav
+    .container 
+        h1.login-header SIGN UP
+        form.formauth(action="/auth/register" method="POST")
+            input(type="text" name="username" placeholder="Username" required)
+            input(type="password" name="password" placeholder="Password" required)
+            input(type="password" name="password-repeat" placeholder="Repeat password" required)
+            input(type="text" name="fullname" placeholder="Full name" required)
+            label I agree with terms and condition
+                input.checkbox(type="checkbox", name="agree" required) 
+            input(type="submit" value="Sign up")
+    +footer 
