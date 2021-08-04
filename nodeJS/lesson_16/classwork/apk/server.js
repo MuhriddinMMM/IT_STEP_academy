@@ -1,15 +1,27 @@
 const path = require("path");
 const express = require("express");
+const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 const authRouters = require("./routes/authRoutes");
 const cardHandlers = require("./routes/cardRoute");
 const aboutHandlers = require("./routes/aboutRoute");
 const homeHandlers = require("./routes/homeRoute");
-
 const addingproductHandlers = require("./routes/addingproductRoute");
-
 const productsHandlers = require("./routes/productsRoute");
+const dbURL =
+  "mongodb+srv://dbnodejsuser:dbnodejspassword@cluster0.arh6c.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+mongoose
+  .connect(dbURL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then((result) => {
+    console.log("connected to db");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 const app = express();
 app.set("views", "templates");

@@ -187,32 +187,5 @@
     "price": "54.00",
     "discount": "75.00",
     "quantity": 1
-  },
-  {
-    "id": "017b0281-0c2e-4dd7-8827-78307dd11b22",
-    "title": "galaxy",
-    "description": "sssssss",
-    "imgUrl": "https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg",
-    "price": "4500000",
-    "discount": "87",
-    "quantity": 10
-  },
-  {
-    "id": "49a007b4-b12d-42f3-a70d-31131cbe4b08",
-    "title": "KOSTYUM",
-    "description": "ssssssq11111111111111",
-    "imgUrl": "https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg",
-    "price": "4500000",
-    "discount": "100",
-    "quantity": 10
-  },
-  {
-    "id": "42d29336-44a1-4360-bed5-846736ef086f",
-    "title": "crack1111",
-    "description": "2131231232132",
-    "imgUrl": "https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg",
-    "price": "4500000",
-    "discount": "87",
-    "quantity": 1000
   }
 ]

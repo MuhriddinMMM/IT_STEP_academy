@@ -25,7 +25,7 @@ async function start() {
   try {
     await mongoose.connect(
       // 'mongodb+srv://dbmuhriddin:dbmatiz179@cluster0.pqv6k.mongodb.net/todos',
-      "mongodb+srv://dbmuhriddin:dbmatiz179@cluster0.pqv6k.mongodb.net/todos",
+      "mongodb+srv://dbnodejsuser:dbnodejspassword@cluster0.arh6c.mongodb.net/myFirstDatabase",
       {
         useNewUrlParser: true,
         useFindAndModify: false,
