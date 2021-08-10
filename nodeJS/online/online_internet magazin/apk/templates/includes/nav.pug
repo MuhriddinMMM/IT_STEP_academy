@@ -1,0 +1,101 @@
+mixin nav
+    header
+        .header-area
+            .main-header
+                .header-top.top-bg.d-none.d-lg-block
+                    .container-fluid
+                        .col-xl-12
+                            .row.d-flex.justify-content-between.align-items-center
+                                .header-info-left.d-flex
+                                    .flag
+                                        img(src='/img/icon/header_icon1.png' alt='' style="width:25px;")
+                                    .select-this
+                                        form(action='#')
+                                            .select-itms
+                                                select#select1(name='select')
+                                                    option(value='') RU
+                                                    option(value='') UZ
+                                    ul.contact-now
+                                        li
+                                            a(href="tel:+777 1234567") +777 1234567
+                                .header-info-right
+                                    ul
+                                        li
+                                            a(href='/')  Мой аккаунт 
+                                        li
+                                            a(href='/') Лист желаний  
+                                        li
+                                            a(href='/') Заказы
+                                        li
+                                            a(href='/') Cart
+                                        li
+                                            a(href='/') Checkout
+                .header-bottom.header-sticky
+                    .container-fluid
+                        .row.align-items-center
+                            // Logo
+                            .col-xl-1.col-lg-1.col-md-1.col-sm-3
+                                .logo
+                                    a(href='/')
+                                        img(src='/img/logo/logo.png' alt='')
+                            .col-xl-6.col-lg-8.col-md-7.col-sm-5
+                                // Main-menu
+                                .main-menu.f-right.d-none.d-lg-block
+                                    nav
+                                        ul#navigation
+                                            li
+                                                a(href='/') Home
+                                            li
+                                                a(href='/') Catagori
+                                            li.hot
+                                                a(href='#') Latest
+                                                ul.submenu
+                                                    li
+                                                        a(href='/')  Product list
+                                                    li
+                                                        a(href='/')  Product Details
+                                            li
+                                                a(href='/') Blog
+                                                ul.submenu
+                                                    li
+                                                        a(href='/') Blog
+                                                    li
+                                                        a(href='/') Blog Details
+                                            li
+                                                a(href='#') Pages
+                                                ul.submenu
+                                                    li
+                                                        a(href='/') Login
+                                                    li
+                                                        a(href='/') Card
+                                                    li
+                                                        a(href='/') Element
+                                                    li
+                                                        a(href='/') About
+                                                    li
+                                                        a(href='/') Confirmation
+                                                    li
+                                                        a(href='/') Shopping Cart
+                                                    li
+                                                        a(href='/') Product Checkout
+                                            li
+                                                a(href='/') Contact
+                            .col-xl-5.col-lg-3.col-md-3.col-sm-3.fix-card
+                                ul.header-right.f-right.d-none.d-lg-block.d-flex.justify-content-between
+                                    li.d-none.d-xl-block
+                                        .form-box.f-right
+                                            input(type='text' name='Search' placeholder='Поиск товаров')
+                                            .search-icon
+                                                i.fas.fa-search.special-tag
+                                    li.d-none.d-xl-block
+                                        .favorit-items
+                                            i.far.fa-heart
+                                    li
+                                        .shopping-card
+                                            a(href='/')
+                                                i.fas.fa-shopping-cart
+                                    li.d-none.d-lg-block
+                                        a.btn.header-btn(href='#') Войти
+                            // Mobile Menu
+                            .col-12
+                                .mobile_menu.d-block.d-lg-none

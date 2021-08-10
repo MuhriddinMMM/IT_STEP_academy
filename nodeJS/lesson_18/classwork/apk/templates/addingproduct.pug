@@ -1,0 +1,43 @@
+include includes/head
+include includes/nav
+include includes/footer
+doctype html
+html(lang="en")
+  head
+    +head("E-commerce")
+  body 
+    +nav
+    .container
+        form(action="/addingproductlist" method="POST")
+            .form-group 
+                label.form-label(for="title") TITLE 
+                input.form-control(type="text" name="title" id="title" required)
+            .form-group 
+                label.form-label(for="mainimgUrl") mainimgUrl 
+                input.form-control(type="text" name="mainimgUrl" id="mainimgUrl" required)
+            .form-group 
+                label.form-label(for="secondimgUrl") secondimgUrl 
+                input.form-control(type="text" name="secondimgUrl" id="secondimgUrl" required)
+            .form-group 
+                label.form-label(for="thirdimgUrl") thirdimgUrl 
+                input.form-control(type="text" name="thirdimgUrl" id="thirdimgUrl" required)
+            .form-group 
+                label.form-label(for="vendorCode") vendorCode 
+                input.form-control(type="number" name="vendorCode" id="vendorCode" required)
+            .form-group 
+                label.form-label(for="color") color 
+                input.form-control(type="text" name="color" id="color" required)   
+            .form-group 
+                label.form-label(for="price") price 
+                input.form-control(type="number" name="price" id="price" required)
+            .form-group 
+                label.form-label(for="discount") discount 
+                input.form-control(type="number" name="discount" id="discount" required)
+            .form-group 
+                label.form-label(for="discount") 
+                button.form-control.add-size-btn.btn-addproduct(type="button" required) ADD SIZE
+            .form-group 
+                label.form-label(for="description") description 
+                textarea.form-control(name="description" id="description" rows="10" required)
+            button.btn-addproduct(type="submit") PUBLISH
+    +footer 

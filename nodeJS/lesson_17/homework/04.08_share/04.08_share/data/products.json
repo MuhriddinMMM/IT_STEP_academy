@@ -1,0 +1,77 @@
+[
+  {
+    "imgUrl": "images/product-image-placeholder.jpg",
+    "title": "Blue Polo",
+    "price": 19.99,
+    "description": "Brand new polo designed by Levi's. Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "qty": 10,
+    "prodId": 0
+  },
+  {
+    "imgUrl": "images/product-image-placeholder.jpg",
+    "title": "Blue Polo",
+    "price": 39.99,
+    "description": "Brand new polo designed by Levi's. Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "prodId": 1
+  },
+  {
+    "imgUrl": "images/product-image-placeholder.jpg",
+    "title": "Blue Polo",
+    "price": 99.99,
+    "description": "Brand new polo designed by Levi's. Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "prodId": 2
+  },
+  {
+    "imgUrl": "images/product-image-placeholder.jpg",
+    "title": "Blue Polo",
+    "price": 99.99,
+    "description": "Brand new polo designed by Levi's. Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "prodId": 3
+  },
+  {
+    "imgUrl": "111",
+    "title": "111",
+    "price": "111",
+    "description": "111",
+    "prodId": 4
+  },
+  {
+    "imgUrl": "555",
+    "title": "555",
+    "price": "555",
+    "description": "555",
+    "prodId": 5
+  },
+  {
+    "imgUrl": "yyyy",
+    "title": "yyyy",
+    "price": "yyyy",
+    "description": "yyyy",
+    "prodId": 6
+  },
+  {
+    "imgUrl": "zzz",
+    "title": "zzz",
+    "price": "zzz",
+    "description": "zzz"
+  },
+  {
+    "imgUrl": "zzz",
+    "title": "zzz",
+    "price": "zzz",
+    "description": "zzz"
+  },
+  {
+    "imgUrl": "zzzzz",
+    "title": "zzzzz",
+    "price": "zzzzz",
+    "description": "zzzzz"
+  },
+  {
+    "imgUrl": "bbb",
+    "title": "bbb",
+    "price": "bbb",
+    "description": "bbb",
+    "prodId": 10
+  }
+]

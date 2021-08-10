@@ -1,0 +1,25 @@
+include includes/head
+include includes/nav
+include includes/footer
+doctype html
+html(lang="en")
+  head
+    +head("E-commerce")
+  body 
+    +nav
+    .container
+        form(action="/addproductlist" method="POST")
+            .form-group 
+                label.form-label(for="title") TITLE 
+                input.form-control(type="text" name="title" id="title")
+            .form-group 
+                label.form-label(for="imgUrl") imgUrl 
+                input.form-control(type="text" name="imgUrl" id="imgUrl")
+            .form-group 
+                label.form-label(for="price") price 
+                input.form-control(type="text" name="price" id="price")
+            .form-group 
+                label.form-label(for="description") description 
+                textarea.form-control(name="description" id="description" rows="10")
+            button.btn-addproduct(type="submit") PUBLISH
+    +footer 

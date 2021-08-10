@@ -1,0 +1,21 @@
+include includes/head
+include includes/nav
+include includes/footer
+
+doctype html
+html(lang="en")
+    +head('Sign in')
+    body
+        .container
+            header
+                +nav
+            section   
+                h1.login-header Sign in
+                form(action="/auth/login" method="POST")
+                    input(type="text" name="username" placeholder="Username" required)
+                    input(type="password" name="password" placeholder="Password" required)
+                    input(type="submit" value="Sign in")
+                    p No account? 
+                        a(href='/auth/register') Sign up
+        +footer
+        script(src="scripts/script.js")

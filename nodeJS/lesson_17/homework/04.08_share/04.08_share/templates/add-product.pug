@@ -1,0 +1,21 @@
+include includes/head
+include includes/nav
+include includes/footer
+
+doctype html
+html(lang="en")
+    +head('Add product')
+    body
+        .container
+            header
+                +nav
+            main 
+                section
+                    h1.text-center Add product
+                    form(action="/admin/add-product" method="post")
+                        input(type="text" name="imgUrl" placeholder="Link to the image" required)
+                        input(type="text" name="title" placeholder="Product title" required)
+                        input(type="text" name="price" placeholder="Product price" required)
+                        textarea(name="description" placeholder="Product description" required)
+                        input(type="submit", value="Add product")
+        +footer

@@ -1,0 +1,36 @@
+include includes/head
+include includes/nav
+include includes/footer
+doctype html
+html(lang="en")
+  head
+    +head("E-commerce")
+  body 
+    +nav
+    div(class="container")
+      main
+        h1 Sales 
+          span up to 70%
+    .container 
+      .products
+        each prod in productlist
+          .single-product
+            .product-img
+              img(src=prod.imgUrl alt="")
+              .new-product
+                span New
+            .product-caption
+              .product-ratting
+                i(class="far fa-star") 
+                i(class="far fa-star")
+                i(class="far fa-star") 
+                i(class="far fa-star low-star")
+                i(class="far fa-star low-star")
+              .price 
+                ul
+                  li $#{prod.price} 
+                  li(class="discount") $#{prod.discount}
+              .wrapper
+                a.product-id(href=`/${prod.id}`)  Learn more
+                button Add to card
+    +footer 

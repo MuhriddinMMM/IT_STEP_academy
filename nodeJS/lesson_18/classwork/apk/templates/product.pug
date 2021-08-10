@@ -1,0 +1,40 @@
+include includes/head
+include includes/nav
+include includes/footer
+doctype html
+html(lang="en")
+  head
+    +head("E-commerce")
+  body 
+    +nav
+    .container 
+        .product-detail
+            each img in productlist.imgUrls
+                .pr-img 
+                    img(src=img , alt="")
+        .pr-description
+            h1     #{productlist.title}
+            .p-rating 
+                .product-ratting
+                        i(class="far fa-star") 
+                        i(class="far fa-star")
+                        i(class="far fa-star") 
+                        i(class="far fa-star low-star")
+                        i(class="far fa-star low-star")
+                p 3 Review(S)
+            ul.flex-colomn  
+                li(class="price") $#{productlist.price}
+                li.discount.price $#{productlist.discount}
+            p.p-quantity Availability: #{productlist.quantity} 
+            p.description-p #{productlist.description}
+            ul.flex-colomn 
+                li Size :
+                    each size in productlist.sizes
+                        b #{size.size + " "}
+                        span #{size.quantity} шт.
+                        br
+                li Colour : #{productlist.color} 
+                li Shipping details :
+                li Articul :#{productlist.vendorCode}
+            button(class="btn-buy") BUY
+    +footer 

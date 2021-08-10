@@ -1,0 +1,679 @@
+include includes/head
+include includes/nav
+include includes/footer
+include includes/preloader
+doctype html
+html(lang="en")
+    head
+        +head("iHerb")
+    body
+        +preloader
+        +nav
+        main
+            // slider Area Start
+            .slider-area
+                // Mobile Menu
+                .slider-active
+                    .single-slider.slider-height(data-background='/img/hero/h1_hero.jpg')
+                        .container
+                            .row.d-flex.align-items-center.justify-content-between
+                                .col-xl-6.col-lg-6.col-md-6.col-sm-6.d-none.d-md-block
+                                    .hero__img(data-animation='bounceIn' data-delay='.4s')
+                                        img(src='/img/hero/hero_man.png' alt='')
+                                .col-xl-5.col-lg-5.col-md-5.col-sm-8
+                                    .hero__caption
+                                        span(data-animation='fadeInRight' data-delay='.4s') 60% Discount
+                                        h1(data-animation='fadeInRight' data-delay='.6s')
+                                            | Winter 
+                                            br
+                                            |  Collection
+                                        p(data-animation='fadeInRight' data-delay='.8s') Best Cloth Collection By 2020!
+                                        // Hero-btn
+                                        .hero__btn(data-animation='fadeInRight' data-delay='1s')
+                                            a.btn.hero-btn(href='industries.html') Shop Now
+                    .single-slider.slider-height(data-background='/img/hero/h1_hero.jpg')
+                        .container
+                            .row.d-flex.align-items-center.justify-content-between
+                                .col-xl-6.col-lg-6.col-md-6.col-sm-6.d-none.d-md-block
+                                    .hero__img(data-animation='bounceIn' data-delay='.4s')
+                                        img(src='/img/hero/hero_man.png' alt='')
+                                .col-xl-5.col-lg-5.col-md-5.col-sm-8
+                                    .hero__caption
+                                        span(data-animation='fadeInRight' data-delay='.4s') 60% Discount
+                                        h1(data-animation='fadeInRight' data-delay='.6s')
+                                            | Winter 
+                                            br
+                                            |  Collection
+                                        p(data-animation='fadeInRight' data-delay='.8s') Best Cloth Collection By 2020!
+                                        // Hero-btn
+                                        .hero__btn(data-animation='fadeInRight' data-delay='1s')
+                                            a.btn.hero-btn(href='industries.html') Shop Now
+            // slider Area End
+            // Category Area Start
+            section.category-area.section-padding30
+                .container-fluid
+                    // Section Tittle
+                    .row
+                        .col-lg-12
+                            .section-tittle.text-center.mb-85
+                                h2 Shop by Category
+                    .row
+                        .col-xl-4.col-lg-6
+                            .single-category.mb-30
+                                .category-img
+                                    img(src='/img/categori/cat1.jpg' alt='')
+                                    .category-caption
+                                        h2 Owmen`s
+                                        span.best
+                                            a(href='#') Best New Deals
+                                        span.collection New Collection
+                        .col-xl-4.col-lg-6
+                            .single-category.mb-30
+                                .category-img.text-center
+                                    img(src='/img/categori/cat2.jpg' alt='')
+                                    .category-caption
+                                        span.collection Discount!
+                                        h2 Winter Cloth
+                                        p New Collection
+                        .col-xl-4.col-lg-6
+                            .single-category.mb-30
+                                .category-img
+                                    img(src='/img/categori/cat3.jpg' alt='')
+                                    .category-caption
+                                        h2 Man`s Cloth
+                                        span.best
+                                            a(href='#') Best New Deals
+                                        span.collection New Collection
+            // Category Area End
+            // Latest Products Start
+            section.latest-product-area.padding-bottom
+                .container
+                    .row.product-btn.d-flex.justify-content-end.align-items-end
+                        // Section Tittle
+                        .col-xl-4.col-lg-5.col-md-5
+                            .section-tittle.mb-30
+                                h2 Latest Products
+                        .col-xl-8.col-lg-7.col-md-7
+                            .properties__button.f-right
+                                // Nav Button
+                                nav
+                                    #nav-tab.nav.nav-tabs(role='tablist')
+                                        a#nav-home-tab.nav-item.nav-link.active(data-toggle='tab' href='#nav-home' role='tab' aria-controls='nav-home' aria-selected='true') All
+                                        a#nav-profile-tab.nav-item.nav-link(data-toggle='tab' href='#nav-profile' role='tab' aria-controls='nav-profile' aria-selected='false') New
+                                        a#nav-contact-tab.nav-item.nav-link(data-toggle='tab' href='#nav-contact' role='tab' aria-controls='nav-contact' aria-selected='false') Featured
+                                        a#nav-last-tab.nav-item.nav-link(data-toggle='tab' href='#nav-last' role='tab' aria-controls='nav-contact' aria-selected='false') Offer
+                                // End Nav Button
+                    // Nav Card
+                    #nav-tabContent.tab-content
+                        // card one
+                        #nav-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='nav-home-tab')
+                            .row
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product1.png' alt='')
+                                            .new-product
+                                                span New
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product2.png' alt='')
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product3.png' alt='')
+                                            .new-product
+                                                span New
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product4.png' alt='')
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product5.png' alt='')
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product6.png' alt='')
+                                            .new-product
+                                                span New
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                        // Card two
+                        #nav-profile.tab-pane.fade(role='tabpanel' aria-labelledby='nav-profile-tab')
+                            .row
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product4.png' alt='')
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product5.png' alt='')
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product6.png' alt='')
+                                            .new-product
+                                                span New
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product2.png' alt='')
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product3.png' alt='')
+                                            .new-product
+                                                span New
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product1.png' alt='')
+                                            .new-product
+                                                span New
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                        // Card three
+                        #nav-contact.tab-pane.fade(role='tabpanel' aria-labelledby='nav-contact-tab')
+                            .row
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product2.png' alt='')
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product3.png' alt='')
+                                            .new-product
+                                                span New
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product1.png' alt='')
+                                            .new-product
+                                                span New
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product4.png' alt='')
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product6.png' alt='')
+                                            .new-product
+                                                span New
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product5.png' alt='')
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                        // card foure
+                        #nav-last.tab-pane.fade(role='tabpanel' aria-labelledby='nav-last-tab')
+                            .row
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product1.png' alt='')
+                                            .new-product
+                                                span New
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product2.png' alt='')
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product3.png' alt='')
+                                            .new-product
+                                                span New
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product4.png' alt='')
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product5.png' alt='')
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                                .col-xl-4.col-lg-4.col-md-6
+                                    .single-product.mb-60
+                                        .product-img
+                                            img(src='/img/categori/product6.png' alt='')
+                                            .new-product
+                                                span New
+                                        .product-caption
+                                            .product-ratting
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star
+                                                i.far.fa-star.low-star
+                                                i.far.fa-star.low-star
+                                            h4
+                                                a(href='#') Green Dress with details
+                                            .price
+                                                ul
+                                                    li $40.00
+                                                    li.discount $60.00
+                    // End Nav Card
+                                // Latest Products End
+                                // Best Product Start
+                                .best-product-area.lf-padding
+                                    .product-wrapper.bg-height(style="background-image: url('/img/categori/card.png')")
+                                        .container.position-relative
+                                            .row.justify-content-between.align-items-end
+                                                .product-man.position-absolute.d-none.d-lg-block
+                                                    img(src='/img/categori/card-man.png' alt='')
+                                                .col-xl-2.col-lg-2.col-md-2.d-none.d-lg-block
+                                                    .vertical-text
+                                                        span Manz
+                                                .col-xl-8.col-lg-8
+                                                    .best-product-caption
+                                                        h2
+                                                            | Find The Best Product
+                                                            br
+                                                            |  from Our Shop
+                                                        p Designers who are interesten creating state ofthe.
+                                                        a.black-btn(href='#') Shop Now
+                                    // Shape
+                                    .shape.bounce-animate.d-none.d-md-block
+                                        img(src='/img/categori/card-shape.png' alt='')
+                                // Best Product End
+                                // Best Collection Start
+                                .best-collection-area.section-padding2
+                                    .container
+                                        .row.d-flex.justify-content-between.align-items-end
+                                            // Left content
+                                            .col-xl-4.col-lg-4.col-md-6
+                                                .best-left-cap
+                                                    h2 Best Collection of This Month
+                                                    p Designers who are interesten crea.
+                                                    a.btn.shop1-btn(href='#') Shop Now
+                                                .best-left-img.mb-30.d-none.d-sm-block
+                                                    img(src='/img/collection/collection1.png' alt='')
+                                            // Mid Img
+                                            .col-xl-2.col-lg-2.d-none.d-lg-block
+                                                .best-mid-img.mb-30
+                                                    img(src='/img/collection/collection2.png' alt='')
+                                            // Riht Caption
+                                            .col-xl-4.col-lg-6.col-md-6
+                                                .best-right-cap
+                                                    .best-single.mb-30
+                                                        .single-cap
+                                                            h4
+                                                                | Menz Winter
+                                                                br
+                                                                |  Jacket
+                                                        .single-img
+                                                            img(src='/img/collection/collection3.png' alt='')
+                                                .best-right-cap
+                                                    .best-single.mb-30
+                                                        .single-cap.active
+                                                            h4
+                                                                | Menz Winter
+                                                                br
+                                                                | Jacket
+                                                        .single-img
+                                                            img(src='/img/collection/collection4.png' alt='')
+                                                .best-right-cap
+                                                    .best-single.mb-30
+                                                        .single-cap
+                                                            h4
+                                                                | Menz Winter
+                                                                br
+                                                                |  Jacket
+                                                        .single-img
+                                                            img(src='/img/collection/collection5.png' alt='')
+                                // Best Collection End
+                                // Latest Offers Start
+                                .latest-wrapper.lf-padding
+                                    .latest-area.latest-height.d-flex.align-items-center(data-background='/img/collection/latest-offer.png')
+                                        .container
+                                            .row.d-flex.align-items-center
+                                                .col-xl-5.col-lg-5.col-md-6.offset-xl-1.offset-lg-1
+                                                    .latest-caption
+                                                        h2
+                                                            | Get Our
+                                                            br
+                                                            | Latest Offers News
+                                                        p Subscribe news latter
+                                                .col-xl-5.col-lg-5.col-md-6
+                                                    .latest-subscribe
+                                                        form(action='#')
+                                                            input(type='email' placeholder='Your email here')
+                                                            button Shop Now
+                                        // man Shape
+                                        .man-shape
+                                            img(src='/img/collection/latest-man.png' alt='')
+                                // Latest Offers End
+                                // Shop Method Start
+                                .shop-method-area.section-padding30
+                                    .container
+                                        .row.d-flex.justify-content-between
+                                            .col-xl-3.col-lg-3.col-md-6
+                                                .single-method.mb-40
+                                                    i.ti-package
+                                                    h6 Free Shipping Method
+                                                    p aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.
+                                            .col-xl-3.col-lg-3.col-md-6
+                                                .single-method.mb-40
+                                                    i.ti-unlock
+                                                    h6 Secure Payment System
+                                                    p aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.
+                                            .col-xl-3.col-lg-3.col-md-6
+                                                .single-method.mb-40
+                                                    i.ti-reload
+                                                    h6 Secure Payment System
+                                                    p aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.
+                                // Shop Method End
+                                // Gallery Start
+                                .gallery-wrapper.lf-padding
+                                    .gallery-area
+                                        .container-fluid
+                                            .row
+                                                .gallery-items
+                                                    img(src='/img/gallery/gallery1.jpg' alt='')
+                                                .gallery-items
+                                                    img(src='/img/gallery/gallery2.jpg' alt='')
+                                                .gallery-items
+                                                    img(src='/img/gallery/gallery3.jpg' alt='')
+                                                .gallery-items
+                                                    img(src='/img/gallery/gallery4.jpg' alt='')
+                                                .gallery-items
+                                                    img(src='/img/gallery/gallery5.jpg' alt='')
+                                // Gallery End
+        +footer

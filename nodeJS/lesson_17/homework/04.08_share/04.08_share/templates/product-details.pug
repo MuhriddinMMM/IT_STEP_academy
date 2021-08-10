@@ -1,0 +1,35 @@
+include includes/head
+include includes/nav
+include includes/footer
+
+doctype html
+html(lang="en")
+    +head('...')
+    body 
+        .container
+            header
+                +nav
+            main 
+                section
+                    h1.product-info  Product Info
+                    h2 #{product.title}
+                    div.product-images
+                        img(src="https://www.free-mockup.com/wp-content/uploads/edd/2018/09/Realistic-T-Shirt-Free-Mockup.jpg" alt="" width="500")
+                        img(src="https://www.free-mockup.com/wp-content/uploads/edd/2018/09/Realistic-T-Shirt-Free-Mockup.jpg" alt="" width="250")
+                        img(src="https://www.free-mockup.com/wp-content/uploads/edd/2018/09/Realistic-T-Shirt-Free-Mockup.jpg" alt="" width="250")
+                    button.btn-buy Buy
+                    p.price $#{product.price}
+                    p #{product.description}
+                    table
+                        tbody
+                            tr
+                                th Размер
+                                td S
+                            tr
+                                th Цвет
+                                td Black
+                            tr
+                                th Цена
+                                 td $20.99
+        +footer
+        script(src="scripts/script.js")
