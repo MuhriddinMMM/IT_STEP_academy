@@ -1,0 +1,40 @@
+include includes/head
+include includes/nav
+include includes/footer
+
+doctype html
+html(lang="en")
+    +head('...')
+    body 
+        .container
+            header
+                +nav
+            main 
+                section
+                    h1 #{product.title}
+                    div.product-images
+                        each img in product.imgUrls
+                            img(src=img alt="" width="300")      
+                    button.btn-buy Buy
+                    p.price $#{product.price}
+                    p 
+                        b Артикул: 
+                        | #{product.vendorCode}
+                    p #{product.description}
+                    table
+                        tbody
+                            tr
+                                th Размер
+                                td 
+                                    each size in product.sizes 
+                                        b #{size.size + ' '}
+                                        span #{size.qty} шт.
+                                        br
+                            tr
+                                th Цвет
+                                td #{product.color.toUpperCase()}
+                            tr
+                                th Цена
+                                 td $#{product.price}
+        +footer
+        script(src="scripts/script.js")

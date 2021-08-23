@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      main {
+        max-width: 1140px;
+        margin: 0 auto;
+      }
+      input,
+      button,
+      a {
+        padding: 10px 20px;
+        font-size: 24 px;
+        margin-top: 20px;
+      }
+      a {
+        display: block;
+        text-decoration: none;
+        background-color: aqua;
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form action="/add-user" method="POST">
+        <input type="text" name="name" placeholder="Name" />
+        <input type="number" name="age" placeholder="Age" />
+        <input type="text" name="sex" placeholder="Sex" />
+
+        <button type="submit">Add user</button>
+
+        <a href="/get-users"> Get USERS</a>
+         <a href="/delete-users"> DELETE USERS</a>
+      </form>
+    </main>
+  </body>
+</html>

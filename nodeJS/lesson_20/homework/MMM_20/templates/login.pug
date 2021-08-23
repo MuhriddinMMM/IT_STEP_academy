@@ -1,0 +1,21 @@
+include includes/head
+include includes/nav
+include includes/footer
+doctype html
+html(lang="en")
+  head
+    +head("E-commerce")
+  body 
+    +nav
+    .container 
+        h1.login-header SIGN IN
+        form.formauth(action="/auth/login" method="POST")
+            input(type="email" name="username" placeholder="Username")
+            input(type="password" name="password" placeholder="Password")
+            input(type="submit" value="Sign in")
+            p No account?
+              a(href="/auth/register") Sign up
+            p(style="color:red;") for ADMIN adding product
+            p username: admin@gmail.com
+            p password: admin
+    +footer 

@@ -1,0 +1,52 @@
+[
+  {
+    "imgUrl": "/images/blue_polo_123.jpg",
+    "imgUrls": [
+      "/images/blue_polo_123.jpg",
+      "https://www.sportyfied.com/thumbs/regular/craft_192466_1381_craft_classic_pique_f_700x700.png",
+      "https://media.tedbaker.com/t_m_pdp_primary,q_auto:best,f_auto/Product/Mens/249615_MID-BLUE_1"
+    ],
+    "title": "Blue Polo",
+    "price": 19.99,
+    "description": "Brand new polo designed by Levi's. Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "qty": 10,
+    "prodId": 0,
+    "vendorCode": 123,
+    "color": "blue",
+    "sizes": [
+      {
+        "size": "XS",
+        "qty": 2
+      },
+      {
+        "size": "S",
+        "qty": 8
+      }
+    ]
+  },
+  {
+    "imgUrl": "/images/white_polo_124.jpg",
+    "imgUrls": [
+      "/images/white_polo_124.jpg",
+      "https://assets.burberry.com/is/image/Burberryltd/286E57EE-CF1E-4ABB-BA22-59146C46B2BC.jpg?$BBY_V2_ML_1x1$&wid=2500&hei=2500",
+      "https://www.asket.com/imgproxy/e:1/format:jpeg/width:1080/resize:fit/quality:80/plain/https://asket.centracdn.net/client/dynamic/images/4_afa2cc2b5d-asket_piq_white_slide_01-original.jpg@jpg"
+    ],
+    "title": "White Polo",
+    "price": 19.99,
+    "description": "Brand new polo designed by Levi's. Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "qty": 20,
+    "prodId": 1,
+    "vendorCode": 124,
+    "color": "white",
+    "sizes": [
+      {
+        "size": "XS",
+        "qty": 12
+      },
+      {
+        "size": "S",
+        "qty": 8
+      }
+    ]
+  }
+]

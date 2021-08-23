@@ -1,0 +1,39 @@
+include includes/head
+include includes/nav
+include includes/footer
+doctype html
+html(lang="en")
+  head
+    +head("E-commerce")
+  body 
+    +nav
+    div(class="container")
+      h2 Search book
+      form(action="/search" method="POST")
+        .form-content
+          .form-group 
+            select(name="select" required) 
+              option(value="title") title 
+              option(value="description")   description
+          .form-group  
+            input.form-control(type="text" name="search" id="search" required placeholder="search")
+          .form-group 
+            button.btn-addproduct.submit(type="submit") search
+      form(action="/delete" method="POST")
+        .form-content
+          .form-group 
+            button.btn-addproduct.submit(type="submit") DELETE ALL BOOKS
+    .container 
+      .books-list
+        each book in result
+          .book-block 
+            .book-img
+              img(src=book.mainImgUrl, alt="")
+            .book-about
+              .book-title 
+                h3  #{book.title}
+              .book-price 
+                p $ #{book.price}
+              .book-description
+                p #{book.description}
+    +footer 

@@ -1,0 +1,30 @@
+include includes/head
+include includes/nav
+include includes/footer
+
+doctype html
+html(lang="en")
+    +head('Levi\'s Apparel E-shop')
+    body 
+        .container
+            header
+                +nav
+                main 
+                    h1 Sales 
+                        span up to 70%
+            main 
+                section
+                    h2 Products
+                .cards-wrapper
+                    each prod in products
+                        .product-card
+                            img.card-image(src=prod.imgUrl alt="" width="320")
+                            .card-body
+                                h3.card-title #{prod.title}
+                                p.card-price $#{prod.price}
+                                p.card-description #{prod.description}
+                                .wrapper
+                                    a.btn-link(href='/product/' + prod.prodId) Details
+                                    button Add to cart
+        +footer
+        script(src="/scripts/script.js")
