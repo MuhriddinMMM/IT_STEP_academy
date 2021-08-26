@@ -18,8 +18,9 @@
 // module.exports = new Database();
 
 let promise = new Promise((resolve, reject) => {
+   reject("o noooooooooooo");
     resolve("YES uraa");
-  reject("o noooooooooooo");
+ 
 });
 
 console.log(

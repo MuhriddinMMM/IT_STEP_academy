@@ -53,14 +53,14 @@ Vue.component("product", {
           variantId: 2234,
           variantColor: "green",
           variantImage:
-            "https://www.vuemastery.com/images/challenges/vmSocks-green-onWhite.jpg",
+            "https://cdn.shopify.com/s/files/1/0277/2195/7460/products/mens-kelly-green-socks_500x@2x.jpg?v=1580853287",
           variantQuantity: 10,
         },
         {
           variantId: 2235,
           variantColor: "blue",
           variantImage:
-            "https://www.vuemastery.com/images/challenges/vmSocks-blue-onWhite.jpg",
+            "https://cdn.shopify.com/s/files/1/0277/2195/7460/products/mens-royal-blue-socks_1001x.jpg?v=1580853311",
           variantQuantity: 0,
         },
       ],
